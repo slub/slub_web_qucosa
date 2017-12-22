@@ -1,0 +1,265 @@
+/* Bibliotheksportal-Stylesheet [CONTENT] */
+/* Autor: Thomas Jung, Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden | 2007 */
+/* Telefon: +49 (0)351 5636328 Email: jung@slub-dresden.de */
+
+#content {
+	position:relative;
+	top:0;
+	left: 156px;
+  width: 580px;
+	margin-top:40px;
+	min-height:550px;
+	line-height:170%;
+	color:#444;
+}
+
+/* #content > div:last-child *:last-child { margin-bottom: 0; } */
+
+#content p {
+	position:relative;
+	margin:10px 0 0;
+}
+
+#content strong {
+	font-weight:bold;
+}
+
+.trenner {
+	position:relative;
+	top:0;
+	left:0;
+	width:505px;
+	height:20px;
+	overflow:hidden;
+	border-style:dashed;
+	border-color:#999;
+	border-width:0 0 1px;
+}
+
+h2 {
+	font-size: 1.6em;
+	line-height: 2em;
+	margin: 20px 0 5px 0;
+}
+
+h3 {
+	font-size:1.3em;
+	font-weight:bold;
+	margin:20px 0 5px 0;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.efre {
+    position:relative;
+    top:0;
+    left:0;
+    background:url(../images/euflagge.jpg) no-repeat 0 7px;
+    padding:6px 0 10px 120px;
+    border-color:#ccc;
+    border-style:dotted;
+    border-width:1px 0 1px 0;
+    margin:20px 0 0 0 !important;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.prettylist {
+    padding: 5px 0 0 20px; 
+    list-style-type: disc;
+}
+
+ul.prettylist {
+    list-style-type: disc;
+}
+
+ul ul.prettylist {
+    list-style-type: circle;
+}
+
+ol.prettylist {
+    list-style-type: decimal;
+}
+
+p.indent {
+    padding-left:0.75em;
+    border-left:1em solid #eee;
+}
+
+span.quote {
+    font-style: italic;
+    quotes:"\00BB" "\00AB" "\203A" "\2039";
+}
+
+a.external {
+/*    padding-left: 10px; */
+/*    background:url("http://digital.slub-dresden.de/fileadmin/images/slub_external.gif") no-repeat left center; */
+}
+
+ol.prominentlist {
+    padding: 0 0 0 20px;
+}
+
+p.question {
+    font-weight: bold;
+    font-size: larger;
+    padding: 0 5px;
+}
+
+p.answer {
+    padding: 2px 10px;
+}
+
+#stats .updatedate {
+    font-size: x-small;
+}
+
+#stats table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+#stats th {
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#stats td {
+    text-align: center;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#stats .row1 {
+    text-align: left;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#stats .indent {
+    padding-left: 40px;
+}
+
+#stats .clear {
+    border: none;
+}
+
+#stats .overview {
+    font-weight: bold;
+}
+
+#stats .summary {
+    font-weight: bold;
+}
+
+#techshort table {
+    border-collapse: collapse;
+}
+
+#techshort th {
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    vertical-align: top;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#techshort td {
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#createpdf h2 {
+}
+
+#createpdf h4 {
+    clear: both;
+    margin: 20px 0 10px 5px;
+}
+
+#createpdf h5 {
+    margin: 10px 10px;
+}
+
+.paginationControl {
+	position: relative;
+	display: block;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #ddd;
+	background: #eee;
+	padding: 5px;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.paginationControl { font-size: 10px; }
+
+
+
+/*
+
+	Recherche-Designs
+
+*/
+
+.qucosa-search-form { border: 1px solid #ccc; border-width: 1px 0; margin: 20px 0; padding: 10px; background: #efefef; text-align: center }
+.qucosa-search-form label { display: none; }
+.qucosa-search-form input[type="text"] { width: 450px; }
+.bodytext .detail { font-size: 11px; color: #999; line-height: 15px; }
+
+.tx-dlf-listview { margin-top: -20px; }
+.tx-dlf-listview .sorting form { border-bottom: 1px solid #ccc; padding: 10px 0 7px 0; text-align: right; }
+.tx-dlf-listview .sorting form label { font-size: 11px; color: #999; }
+.tx-dlf-listview .sorting form select { display: inline; height: 24px; padding: 3px 12px; margin: 0 5px; font-size: 11px; line-height: 1.42857143; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+
+#content .tx-dlf-listview h2 { margin: 10px 0 -5px 0; }
+#content .tx-dlf-listview p.tx-dlf-search-numHits { margin: 0; border-bottom: 1px dashed #ccc; font-size: 11px; }
+#content .tx-dlf-listview p.result-count { float: right; margin-top: -22px; color: #999; font-size: 11px; }
+
+#content p.tx-dlf-listview-pagebrowser { border-bottom: 1px solid #eee; color: #ccc; text-align: center; margin: 5px 0; }
+p.tx-dlf-listview-pagebrowser a { border: 0 none; padding: 2px 4px; background: transparent; }
+
+ol.tx-dlf-listview-list { list-style: none; }
+ol.tx-dlf-listview-list li { border-bottom: 1px solid #eee; padding: 10px 0; }
+ol.tx-dlf-listview-list dt { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0 }
+ol.tx-dlf-listview-list dd a { text-decoration: none; font-size: 1.3em; border: 0 none; }
+ol.tx-dlf-listview-list dd.author { color: #666; font-size: 0.85em; }
+.tx-dlf-metadata dl { margin: 0; }
+.tx-dlf-metadata dt, .tx-dlf-metadata dd { line-height: 18px; }
+.tx-dlf-metadata dt { width: 35%; float: left; margin-top: 6px; padding-left: 5px; }
+.tx-dlf-metadata dd { border-bottom: 1px solid #eee; padding: 6px 0 6px 35%; }
+.tx-dlf-metadata dd:nth-of-type(even) { background: #f6f6f6; }
+.tx-dlf-metadata dd:after { position: relative; display: table; clear: both; content: ""; }
+.tx-dlf-metadata dt.title { position: relative; height: 1px; width: 1px; overflow: hidden; display: block; width: 100%; clear: both; float: none; }
+
+.tx-dlf-metadata dt.author, .tx-dlf-metadata dt.subtitle { display: none; }
+.tx-dlf-metadata dd.author { padding: 2px 4px; background: #f6f6f6; float: left; margin: 4px 8px 4px 0; border: 1px solid #eee; border-radius: 0 7px; }
+.tx-dlf-metadata dd.title { position: relative; border: 0 none; background: transparent; padding: 5px 0 20px 0; display: block; font-size: 1.8em; line-height: 1.2; border: 0 none; }
+.tx-dlf-metadata dd.subtitle, .tx-dlf-metadata dd.abstract, .tx-dlf-metadata dd.toc { background: transparent; border: 0 none; padding: 0; }
+.tx-dlf-metadata dd.subtitle { margin: -20px 0 20px 0; font-weight: bold; color: #666; }
+.tx-dlf-metadata dt.abstract, .tx-dlf-metadata dt.toc { float: none; margin-top: 20px; padding: 0; }
+.tx-dlf-metadata dd.abstract { }
+.tx-dlf-metadata dd.toc { margin-bottom: 20px; }
+.tx-dlf-metadata dd.toc pre { position: relative; border-radius: 0 20px; border: 0 none; font-size: 12px; background: #eee; }
+
+.tx-dlf-toolbox { margin-top: 20px; }
+.tx-dlf-toolbox:after { position: relative; display: table; content: ""; clear: both; }
+.tx-dlf-tools-pdf-page a { position: relative; float: left; margin: 10px 20px 10px 0; padding: 12px 12px 12px 40px; border: 0 none; box-shadow: 0 2px 6px rgba(0,0,0,0.2); border-radius: 0 10px; color: #fff; background: #666 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAQAAABKIxwrAAAAw0lEQVR4AZWUN3bDMBAF16Fx9tFQMlS8GSqnipVLS7qFonUQhnE2w2ecEm/+AotkdTjH4dmSAzlbPI5z64aAI8o7gaqXPNHPI5dNecUwi1oArfyqM1RrVu5Rgp/dOE7U3zk3HEzUwRl+hu6N7Qx9Y+Qz9Nxghk69ekpC0dILEtJ69WrtBTExRaVXI9XaPaCBe1QGbzhAA/eoDE5P9Ue7QeV3zuXO/ATMRIag70YWvIj8OP++z35NFQS8T3ur3T/BRn+CD6JcSB8JCkBqAAAAAElFTkSuQmCC') no-repeat 10px center; }
+.tx-dlf-tools-pdf-page a:hover { text-decoration: none; opacity: 0.6; }
+.tx-dlf-tools-pdf-page a:visited { color: #fff; }
+.tx-dlf-tools-pdf-page a:active { top: 2px; box-shadow: 0 0 3px rgba(0,0,0,0.2); }
+
+
+

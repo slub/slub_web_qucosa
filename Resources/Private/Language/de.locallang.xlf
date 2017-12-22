@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-22T18:10:02Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="tx_slubwebqucosa.gotohomepage" approved="yes">
+			<source>Goto Homepage</source>
+			<target>zur Startseite</target>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.jumptotop" approved="yes">
+			<source>Jump to top of Page</source>
+			<target>Zum Seitenanfang</target>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.printthispage" approved="yes">
+			<source>Print Page</source>
+			<target>Seite drucken</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

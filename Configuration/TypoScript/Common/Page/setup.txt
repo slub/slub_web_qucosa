@@ -1,0 +1,10 @@
+page = PAGE
+page {
+  shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/favicon.ico
+
+  includeCSS {
+    layout = EXT:slub_web_qucosa/Resources/Public/Css/layout.css
+    content = EXT:slub_web_qucosa/Resources/Public/Css/content.css
+  }
+
+}

@@ -1,0 +1,36 @@
+{namespace si=Slub\SlubWebQucosa\ViewHelpers}
+<a id="top"></a>
+
+<div id="bgtop"><div id="ghosticon"></div></div>
+
+<div id="container">
+  <div id="navlogo">
+    <f:link.page pageUid="{rootPageId}" id="homelink" title="<f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />">&nbsp;</f:link.page>
+  </div>
+
+</div>
+
+<div class="pageOuter">
+	<div class="pageWrapper">
+		<div class="pageContainer">
+			<header role="banner">
+				<h1>
+        </h1>
+				<nav class="mainNav">
+					<a id="skip2nav"></a>
+          <f:cObject typoscriptObjectPath="lib.menu" />
+          <f:cObject typoscriptObjectPath="lib.langmenu" />
+					<div class="clearfix"></div>
+				</nav>
+			</header>
+
+      <f:render section="Content" optional="true" arguments="{_all}" />
+
+		</div>
+
+    <f:render section="Footer" partial="Footer" arguments="{_all}" />
+
+	</div>
+</div>
+
+<f:render section="Piwik" partial="SLUB/Piwik" />

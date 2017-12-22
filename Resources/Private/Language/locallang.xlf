@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-23T09:38:24Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="tx_slubwebqucosa.printthispage" xml:space="preserve">
+			<source>Print Page</source>
+		</trans-unit>
+    <trans-unit id="tx_slubwebqucosa.jumptotop" xml:space="preserve">
+			<source>Jump to top of Page</source>
+		</trans-unit>
+    <trans-unit id="tx_slubwebqucosa.gotohomepage" xml:space="preserve">
+			<source>Goto Homepage</source>
+		</trans-unit>
+  </body>
+</file>
+</xliff>
