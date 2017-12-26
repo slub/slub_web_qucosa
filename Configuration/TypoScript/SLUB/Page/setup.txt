@@ -29,11 +29,8 @@ page {
       rootPageId = TEXT
       rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
 
-      homePageId = TEXT
-      homePageId.value = {$plugin.tx_slubaddressbooks.homePageId}
-
       imprintPageId = TEXT
-      imprintPageId.value = {$plugin.tx_slubaddressbooks.imprintPid}
+      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
 
     }
   }

@@ -1,4 +1,6 @@
 plugin.tx_slubwebqucosa {
 	# cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= Rootpage Uid
 	rootPid =
+  # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= Imprint page Uid
+	imprintPid =
 }

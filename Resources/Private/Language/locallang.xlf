@@ -14,6 +14,16 @@
     <trans-unit id="tx_slubwebqucosa.gotohomepage" xml:space="preserve">
 			<source>Goto Homepage</source>
 		</trans-unit>
+    <trans-unit id="tx_slubwebqucosa.skiptocontent" xml:space="preserve">
+			<source>Skip to Content</source>
+		</trans-unit>
+    <trans-unit id="tx_slubwebqucosa.skiptomainnav" xml:space="preserve">
+			<source>Skip to Main Navigation</source>
+		</trans-unit>
+    <trans-unit id="tx_slubwebqucosa.gotoimprint" xml:space="preserve">
+			<source>Goto Imprint</source>
+		</trans-unit>
+
   </body>
 </file>
 </xliff>
