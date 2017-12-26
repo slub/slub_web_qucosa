@@ -11,7 +11,7 @@
   <div id="main">
     <div id="header">
     </div>
-    <div id="skip2nav">
+    <div id="skip_nav">
       <ul>
         <li>
           <f:link.page pageUid="{rootPageId}" accesskey="1" title="<f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />">
@@ -41,28 +41,18 @@
       </div>
   </div>
   <f:render section="Footer" partial="Footer" arguments="{_all}" />
-</div>
+  <div id="mainbottom"></div>
 
-<div class="pageOuter">
-	<div class="pageWrapper">
-		<div class="pageContainer">
-			<header role="banner">
-				<h1>
-        </h1>
-				<nav class="mainNav">
-					<a id="skip2nav"></a>
-          <f:cObject typoscriptObjectPath="lib.menu" />
-          <f:cObject typoscriptObjectPath="lib.langmenu" />
-					<div class="clearfix"></div>
-				</nav>
-			</header>
+  <div id="navbar">
 
-
-
-		</div>
-
-
-	</div>
+    <a id="skip2nav"></a>
+    <a id="a_nav"></a>
+    <f:cObject typoscriptObjectPath="lib.mainnav" />
+    <f:cObject typoscriptObjectPath="lib.navsearch" />
+    <f:cObject typoscriptObjectPath="lib.langnav" />
+    <div id="navend"></div>
+  </div>
+  <div id="qucosainstall">Diese Website ist eine Installation von Qucosa - Quality Content of Saxony!</div>
 </div>
 
 <f:render section="Piwik" partial="SLUB/Piwik" />

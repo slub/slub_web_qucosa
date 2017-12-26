@@ -27,3 +27,15 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 #header { background-image:url(../../Images/SLUB/header.jpg); }
 #navlogo #homelink { background-image:url(../../Images/SLUB/logo.jpg); }
 #ghosticon { background-image: url(../../Images/SLUB/ghosticon.png); }
+
+#langnav {
+	padding-right: 20px;
+	padding-top: 5px;
+	font-size:0.8em;
+	text-align: right;
+}
+
+ul#langnav li {
+	display:inline;
+	padding-right: 10px;
+}
