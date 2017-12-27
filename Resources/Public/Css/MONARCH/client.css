@@ -1,0 +1,45 @@
+
+
+ol.prominentlist,
+a, a:visited, h3, ul.errors li, #nav .buttonactive,
+.tx-slubopus4frontend input.addButton:hover,
+.tx-slubopus4frontend input.remButton:hover,
+#tx_slubopus4frontend-form fieldset input:focus,
+.tx-slubopus4frontend fieldset textarea:focus,
+#tx_slubopus4frontend-prevStep:hover,
+#tx_slubopus4frontend-submit:hover,
+#tx_slubopus4frontend-reset:hover { color:#487; }
+
+#dedscontent .tabbar,
+#dedscontent .tabcontent,
+#dedscontent .inputselected,
+.tx-slubopus4frontend .processsteps a,
+.tx-slubopus4frontend .processsteps a:visited,
+.tx-slubopus4frontend fieldset textarea:focus,
+.tx-slubopus4frontend fieldset select:focus  { border-color: #487; }
+
+.tx-dlf-toolbox .tx-dlf-tools-pdf-page a, #smallsearch, #dedscontent .tabbar a.active,
+.tx-slubopus4frontend .processsteps a.selected, #dedscontent form#search input[type="submit"],
+.tx-slubopus4frontend .processsteps a:visited,
+.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #487; }
+
+#header { background-image:url(../../Images/MONARCH/header.jpg); }
+#navlogo #homelink { background-image:url(../../Images/MONARCH/logo.jpg); }
+#ghosticon { background-image: url(../../Images/MONARCH/ghosticon.png); }
+
+#content ul { list-style-type: disc; margin: 0 0 0 16px; }
+#content .tx-zentigrator-pi1 .formList ul { list-style-type: none; }
+
+#chlinks { position: relative; }
+
+#oalink {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 90px;
+	height: 80px;
+	background: url(../../Images/MONARCH/oalogo.jpg) no-repeat 0 0;
+	display: block;
+}
+
+#oalink a { position: relative; display: block; text-indent: -9000px; overflow: hidden; border: none; height: 100%; width: 100%; }
