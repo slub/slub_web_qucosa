@@ -213,7 +213,7 @@ a:focus, a:hover { border-color:#999; color:#999; }
 
 #mainbottom {
 	position:relative;
-	top:0;
+	top:0px;
 	left:105px;
 	width:770px;
 	height:200px;

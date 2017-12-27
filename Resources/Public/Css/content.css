@@ -57,7 +57,7 @@ h4 {
     position:relative;
     top:0;
     left:0;
-    background:url(../images/euflagge.jpg) no-repeat 0 7px;
+    background:url(../Images/euflagge.jpg) no-repeat 0 7px;
     padding:6px 0 10px 120px;
     border-color:#ccc;
     border-style:dotted;
@@ -68,7 +68,7 @@ h4 {
 }
 
 .prettylist {
-    padding: 5px 0 0 20px; 
+    padding: 5px 0 0 20px;
     list-style-type: disc;
 }
 
@@ -95,8 +95,7 @@ span.quote {
 }
 
 a.external {
-/*    padding-left: 10px; */
-/*    background:url("http://digital.slub-dresden.de/fileadmin/images/slub_external.gif") no-repeat left center; */
+
 }
 
 ol.prominentlist {
@@ -260,6 +259,3 @@ ol.tx-dlf-listview-list dd.author { color: #666; font-size: 0.85em; }
 .tx-dlf-tools-pdf-page a:hover { text-decoration: none; opacity: 0.6; }
 .tx-dlf-tools-pdf-page a:visited { color: #fff; }
 .tx-dlf-tools-pdf-page a:active { top: 2px; box-shadow: 0 0 3px rgba(0,0,0,0.2); }
-
-
-
