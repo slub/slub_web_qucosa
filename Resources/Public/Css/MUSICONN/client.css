@@ -117,7 +117,7 @@ div.searchExtForm form.form-inline .form-group label {
 	font-weight:normal;
 }
 
-.slub-forms-fieldset legend {
+#slubForm .slub-forms-fieldset:last-of-type legend{
 	display:none;
 }
 
