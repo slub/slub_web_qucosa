@@ -10,7 +10,7 @@ page {
   }
 
   includeCSS {
-    slub = EXT:slub_web_qucosa/Resources/Public/Css/SLUB/client.css
+    client = EXT:slub_web_qucosa/Resources/Public/Css/SLUB/client.css
   }
 
   10 = FLUIDTEMPLATE
