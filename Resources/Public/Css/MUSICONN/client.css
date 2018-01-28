@@ -36,7 +36,7 @@ body {
 	height:145px;
 	background-image: url(../../Images/MUSICONN/header.jpg);
 	background-repeat:no-repeat;
-	background-position: center -50px
+	background-position: center center;
 }
 
 #navlogo {
@@ -45,6 +45,7 @@ body {
 
 #navlogo #homelink {
 	background-image: url(../../Images/MUSICONN/logo.png);
+	background-size: contain;
 }
 
 div.footer {
@@ -71,11 +72,11 @@ div.footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color:#2056ae;
+	color:#005be3;
 }
 
 a {
-	color:#2056ae;
+	color:#005be3;
 	border:none;
 }
 
