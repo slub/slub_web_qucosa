@@ -39,3 +39,12 @@ ul#langnav li {
 	display:inline;
 	padding-right: 10px;
 }
+
+/* search form */
+div.searchExtForm form.form-inline .form-group {
+	margin:3px 0px;
+}
+
+div.searchExtForm form.form-inline .form-group label {
+	min-width: 150px;
+}

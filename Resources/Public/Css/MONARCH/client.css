@@ -43,3 +43,12 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 }
 
 #oalink a { position: relative; display: block; text-indent: -9000px; overflow: hidden; border: none; height: 100%; width: 100%; }
+
+/* search form */
+div.searchExtForm form.form-inline .form-group {
+	margin:3px 0px;
+}
+
+div.searchExtForm form.form-inline .form-group label {
+	min-width: 150px;
+}
