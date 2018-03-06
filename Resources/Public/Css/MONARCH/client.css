@@ -27,9 +27,6 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 #navlogo #homelink { background-image:url(../../Images/MONARCH/logo.jpg); }
 #ghosticon { background-image: url(../../Images/MONARCH/ghosticon.png); }
 
-#content ul { list-style-type: disc; margin: 0 0 0 16px; }
-#content .tx-zentigrator-pi1 .formList ul { list-style-type: none; }
-
 #chlinks { position: relative; }
 
 #oalink {
