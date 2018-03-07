@@ -1,0 +1,62 @@
+.ie {
+	.grid-3 {display: block;
+		> div {width: 33%; display: inline-block;}
+	}
+
+	header {
+		.logo {border-right: none}
+	
+		#mainnav {
+			ul {display: block;
+				li { }
+
+			}
+		}
+	}
+}
+
+
+
+
+/*  Breakpoint Tablett & Landscape */
+@media only screen and (min-width: 40em) {
+
+	.ie {
+
+		header {
+			#mainnav {
+				ul {display: flex;
+					li {flex-grow: 1; border-left: 4px solid #fff;
+						&:first-child {border-left: none}}
+
+				}
+			}
+		}
+	}
+
+
+	.ie10 {
+		header {
+			#mainnav {width: 80%;
+				ul {
+					li {
+						a {}
+					}
+				}
+			}
+		}
+	}
+
+
+	.lte-ie10 {
+		header {
+			#mainnav {width: 80%;
+				ul {display: table;
+					li {display: table-cell;
+						a {}
+					}
+				}
+			}
+		}
+	}
+}

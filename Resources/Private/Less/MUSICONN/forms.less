@@ -1,0 +1,280 @@
+/* ##################################################### */
+/* ############## Placeholder ########################## */
+/* ##################################################### */
+
+::-webkit-input-placeholder {
+    color: @color2;
+    font-family: fira_sans, sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+::-moz-placeholder {
+    color: @color2;
+    font-family: fira_sans, sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+:-ms-input-placeholder {
+    color: @color2;
+    font-family: fira_sans, sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+:-moz-placeholder {
+    color: @color2;
+    font-family: fira_sans, sans-serif;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+
+
+/* ##################################################### */
+/* ############## Turn off native styling ############## */
+/* ##################################################### */
+
+ textarea, input, input[type="text"], input[type="button"], input[type="password"], input[type="search"], input[type="submit"], button[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+
+
+
+
+/* ##################################################### */
+/* ############## Core styling ######################### */
+/* ##################################################### */
+
+ textarea, input, input[type="text"], input[type="button"], input[type="email"], input[type="tel"], input[type="password"], input[type="search"] {
+     border:none;
+     width: 100%;
+     padding: .5em 1em;
+     font-size: 105%;
+     line-height: 1.8;
+     color:@color2;
+     font-family: fira_sans, sans-serif;
+}
+ input[type="submit"], button[type="submit"] {
+     border:none;
+     letter-spacing: .7px;
+     cursor:pointer;
+     line-height: 1.8;
+     font-size: 105%;
+     transition: .3s;
+     padding:1.5em 2.5em;
+     margin:2em 0;
+     text-align: center;
+     background-color: @color1;
+     color: @color4;
+     font-weight: 600;
+     text-transform: uppercase;
+     &:hover {
+        background-color: @color5
+    }
+}
+
+
+
+
+/* ##################################################### */
+/* ############## Searchfield ########################## */
+/* ##################################################### */
+
+ .suche {
+    position: absolute;
+     left:0;
+     top:100%;
+     form {
+         display:flex;
+         border: 1px solid @color1;
+         margin:@gutter/2;
+         input[type="search"] {
+            flex-grow:2
+        }
+         button[type="submit"] {
+            width: 70px;
+            color: @color2;
+             margin:0;
+             padding:0;
+             background-color: @color4
+        }
+    }
+}
+
+
+
+
+/* ##################################################### */
+/* ############## Recherche ############################ */
+/* ##################################################### */
+
+ .controls {
+    display: flex;
+     button {
+        text-align: left;
+         line-height: 1.3;
+        color:@color2;
+         background-color: @color3;
+         &:hover {
+            background-color: @color1;
+            color: @color4;
+        }
+         &#einfach {
+            margin-right: 4px
+        }
+         &.current {
+            color:@color4;
+             background-color: @color1;
+        }
+    }
+}
+ .form {
+    display:none;
+     &.current {
+        display: block
+    }
+}
+ .recherche {
+     label {
+        display:block;
+        border: 2px solid @color1;
+        padding: .6em 1em .5em;
+        border-radius: 6px;
+         margin-bottom: -2px;
+         text-transform: uppercase;
+         letter-spacing: .5px;
+    }
+     .widget-text {
+        margin-bottom: 1em;
+         input {
+            border: 2px solid @color1;
+            border-radius: 6px;
+            flex-grow: 2;
+             &:focus {
+                border-color: @color5
+            }
+        }
+    }
+     .widget-select {
+        position: relative;
+        margin-bottom: 1em;
+         &:after {
+            content: "▼";
+             position: absolute;
+             bottom: 20px;
+             right: 1em;
+             z-index: 2;
+             pointer-events: none;
+             line-height: 0
+        }
+         select {
+            flex-grow: 2;
+            outline: none;
+            padding: .8em 1em .8em .7em;
+            font-size: 1rem;
+            background: none;
+            appearance: none;
+            border: 2px solid @color1;
+             cursor: pointer;
+            color:@color2;
+            font-family: fira_sans, sans-serif;
+            border-radius: 6px;
+             display:block;
+             width: 100%;
+             &:focus {
+                border-color: @color5
+            }
+        }
+    }
+     .widget-date {
+        display: flex;
+         flex-wrap: wrap;
+         label {
+            width: 100%;
+        }
+         p, input {
+            flex-grow: 1;
+            border: 2px solid @color1;
+            border-radius: 6px;
+            margin-bottom: -2px;
+            max-width: 40%;
+        }
+         p {
+            padding:.7em 1em .5em;
+             margin:0 -2px -2px;
+             text-align: center;
+            flex-grow: 1;
+            color:@color2;
+            font-weight: 600;
+        }
+    }
+     .widget-submit {
+        text-align: right;
+    }
+}
+
+
+
+
+/* ##################################################### */
+/* ############## jQuery Datepicker #################### */
+/* ##################################################### */
+
+ .ui-datepicker {
+    background: @color1;
+     color: @color4;
+     .ui-datepicker-header {
+        display: flex;
+         a {
+            padding:.5em 1em;
+             color:@color4;
+             cursor: pointer;
+             span {
+                display: none
+            }
+             &[title="Next"] {
+                order: 2;
+                 &:before {
+                    content: ">"
+                }
+            }
+             &[title="Prev"] {
+                 &:before {
+                    content: "<"
+                }
+            }
+             &:hover {
+                background: @color5
+            }
+        }
+         > div {
+            flex-grow: 2;
+             text-align: center;
+            padding:.5em 1em;
+        }
+    }
+     table {
+        width: 100%;
+         margin:0;
+         th {
+            font-weight: 400;
+            padding: .5em;
+             line-height: 1.8;
+             background-color: lighten(@color1,5%)
+        }
+         td {
+             a {
+                color:@color4;
+                 padding: .5em;
+                 line-height: 1.8;
+                 &:hover {
+                    background: @color5
+                }
+            }
+        }
+    }
+}
+ 

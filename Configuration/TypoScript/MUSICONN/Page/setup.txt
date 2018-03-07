@@ -1,16 +1,17 @@
 page {
 
-  bodyTag = <body>
+  bodyTag = <body id="top" itemscope itemtype="http://schema.org/WebPage">
 
   meta {
+    viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0
     author = SLUB Dresden
     description.field = description
     keywords.field = description
-    robots = all
+    robots = index,follow
   }
 
   includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/MUSICONN/client.css
+    client = EXT:slub_web_qucosa/Resources/Public/Css/MUSICONN/main.css
   }
 
   includeJSFooter {

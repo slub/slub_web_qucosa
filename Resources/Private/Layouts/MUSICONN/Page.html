@@ -1,0 +1,60 @@
+{namespace si=Slub\SlubWebQucosa\ViewHelpers}
+<a id="totop" href="#top" role="button"><span class="icon-arrow-up"></span></a>
+
+<f:render section="Header" partial="MUSICONN/Header" arguments="{_all}" />
+
+<div id="container">
+  <div id="navlogo">
+    <f:link.page pageUid="{rootPageId}" id="homelink" title="<f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />">&nbsp;</f:link.page>
+  </div>
+  <div id="maintop"></div>
+  <div id="main">
+    <div id="header">
+    </div>
+    <div id="skip_nav">
+      <ul>
+        <li>
+          <f:link.page pageUid="{rootPageId}" accesskey="1" title="<f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />">
+            <f:translate key="tx_slubwebqucosa.gotohomepage" extensionName="slub_web_qucosa"/>
+          </f:link.page>
+        </li>
+        <li>
+          <f:link.page section="skip2content" accesskey="2" title="<f:translate key='tx_slubwebqucosa.skiptocontent' extensionName='slub_web_qucosa' />">
+            <f:translate key="tx_slubwebqucosa.skiptocontent" extensionName="slub_web_qucosa"/>
+          </f:link.page>
+        </li>
+        <li>
+          <f:link.page section="skip2nav" accesskey="3" title="<f:translate key='tx_slubwebqucosa.skiptomainnav' extensionName='slub_web_qucosa' />">
+            <f:translate key="tx_slubwebqucosa.skiptomainnav" extensionName="slub_web_qucosa"/>
+          </f:link.page>
+        </li>
+        <li>
+          <f:link.page pageUid="{imprintPageId}" accesskey="4" title="<f:translate key='tx_slubwebqucosa.gotoimprint' extensionName='slub_web_qucosa' />">
+            <f:translate key="tx_slubwebqucosa.gotoimprint" extensionName="slub_web_qucosa"/>
+          </f:link.page>
+        </li>
+      </ul>
+    </div>
+    <a id="skip2content"></a>
+		  <div id="content">
+        <f:render section="Content" optional="true" arguments="{_all}" />
+      </div>
+  </div>
+  <div id="mainbottom"></div>
+
+  <div id="navbar">
+
+    <a id="skip2nav"></a>
+    <a id="a_nav"></a>
+    <f:cObject typoscriptObjectPath="lib.mainnav" />
+    <f:cObject typoscriptObjectPath="lib.navsearch" />
+    <f:render section="LangNav" />
+    <div id="navend"></div>
+  </div>
+  <div id="qucosainstall">Diese Website ist eine Installation von Qucosa - Quality Content of Saxony!</div>
+</div>
+
+
+<f:render section="Footer" partial="MUSICONN/Footer" arguments="{_all}" />
+
+<f:render section="Piwik" />
