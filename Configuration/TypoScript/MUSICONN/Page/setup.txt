@@ -12,6 +12,8 @@ page {
 
   includeCSS {
     client = EXT:slub_web_qucosa/Resources/Public/Css/MUSICONN/main.css
+    layoutx >
+    content >
   }
 
   includeJSFooter {
@@ -34,8 +36,14 @@ page {
       rootPageId = TEXT
       rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
 
-      imprintPageId = TEXT
-      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
+      pageIdContact = TEXT
+      pageIdContact.value = {$plugin.tx_slubwebqucosa.pageIdContact}
+
+      pageIdImprint = TEXT
+      pageIdImprint.value = {$plugin.tx_slubwebqucosa.pageIdImprint}
+
+      pageIdPrivacy = TEXT
+      pageIdPrivacy.value = {$plugin.tx_slubwebqucosa.pageIdPrivacy}
 
     }
   }
