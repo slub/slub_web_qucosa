@@ -9,7 +9,7 @@
                     <span itemprop="name">{si:pageInfo(uid:'{pageIdContact}', field:'title')}</span>
                   </f:link.page>
                 </li>
-                <li class="language"><a href="#" title="" itemprop="url" hreflang="en" lang="en"><span class="icon-earth"></span><span itemprop="name">English</span></a></li>
+                  <f:cObject typoscriptObjectPath="lib.langnav" />
                 <li>
                   <f:link.page pageUid="{pageIdImprint}" accesskey="1" title="{si:pageInfo(uid:'{pageIdImprint}', field:'title')}" additionalAttributes="{itemprop:'url'}">
                     <span itemprop="name">{si:pageInfo(uid:'{pageIdImprint}', field:'title')}</span>

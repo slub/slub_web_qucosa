@@ -74,22 +74,33 @@ lib.langnav {
   1 = TMENU
   1 {
     noBlur = 1
-    #expAll = 0
+    expAll = 0
     accessKey = 1
-    wrap = <ul id="langnav">|</ul>
-
     NO = 1
     NO {
-      linkWrap = <li class="lang_de">|</li> || <li class="lang_en">|</li>
-      # wrap the page title! otherways you see the current page title instead of the language.
-      stdWrap.override = Deutsch || English
+        doNotLinkIt = 1
+        linkWrap = <li class="language">|</li>
+        stdWrap.override = <span class="icon-earth"></span><span itemprop="name">Deutsch</span> || <span class="icon-earth"></span><span itemprop="name">English</span>
+        stdWrap {
+            typolink {
+                parameter.data = page:uid
+                additionalParams = &L=0 || &L=1 || &L=2
+                ATagParams = itemprop="url" hreflang="de" lang="de" || itemprop="url" hreflang="en" lang="en"
+                title = Deutsch || English
+                addQueryString = 1
+                addQueryString.exclude = L,id,no_cache
+                addQueryString.method = GET
+                no_cache = 0
+            }
+        }
       }
-    # active language
-    ACT < .NO
+    # active language should not be shown
+    ACT = 1
     ACT {
-      linkWrap = <li class="lang_de active">|</li> || <li class="lang_en active">|</li>
+        doNotLinkIt = 1
+        stdWrap.cObject = TEXT
+        stdWrap.cObject.value =
     }
-
     # NO + Translation doesn't exist
     USERDEF1 < .NO
 
