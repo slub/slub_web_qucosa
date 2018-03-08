@@ -15,16 +15,14 @@
 
       <a class="trigger"><span class="icon-menu"></span></a>
 
-        <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mainnav">
-            <f:cObject typoscriptObjectPath="lib.mainnav" />
-        </nav>
+      <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mainnav">
+          <f:cObject typoscriptObjectPath="lib.mainnav" />
+      </nav>
 
-        <div class="suche">
-            <form>
-                <input name="suche" value="" type="search" placeholder="SUCHE">
-                <button type="submit"><span class="icon-search"></span></button>
-            </form>
-        </div>
+      <div class="suche">
+          <f:cObject typoscriptObjectPath="lib.navsearch" />
+      </div>
 
     </header>
+
 </f:section>
