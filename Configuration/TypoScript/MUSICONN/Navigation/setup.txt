@@ -41,6 +41,31 @@ lib.navsearch {
   persistence =< plugin.tx:dpf.persistence
 }
 
+lib.footernav = HMENU
+lib.footernav {
+  special = directory
+  special.value = {$plugin.tx_slubwebqucosa.footerNav}
+  1 = TMENU
+  1 {
+      noBlur = 1
+      #accessKey = 1
+      wrap = <ul>|</ul>
+      NO = 1
+      NO {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+      ACT = 1
+      ACT {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+  }
+}
 
 lib.langnav = HMENU
 lib.langnav {

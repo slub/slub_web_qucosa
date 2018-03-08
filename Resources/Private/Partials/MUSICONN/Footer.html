@@ -1,21 +1,29 @@
 <f:section name="Footer">
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
-        <div>
-            <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div>
+        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+          <f:cObject typoscriptObjectPath="lib.footernav" />
 
-                <ul>
-                    <li><a href="#" title="" itemprop="url"><span itemprop="name">Kontakt</span></a></li>
-                    <li class="language"><a href="#" title="" itemprop="url" hreflang="en" lang="en"><span class="icon-earth"></span><span itemprop="name">English</span></a></li>
-                    <li><a href="#" title="" itemprop="url"><span itemprop="name">Impressum</span></a></li>
-                    <li><a href="#" title="" itemprop="url"><span itemprop="name">Datenschutz</span></a></li>
-                </ul>
+            <ul>
+                <li><a href="#" title="" itemprop="url"><span itemprop="name">Kontakt</span></a></li>
+                <li class="language"><a href="#" title="" itemprop="url" hreflang="en" lang="en"><span class="icon-earth"></span><span itemprop="name">English</span></a></li>
+                <li><a href="#" title="" itemprop="url"><span itemprop="name">Impressum</span></a></li>
+                <li><a href="#" title="" itemprop="url"><span itemprop="name">Datenschutz</span></a></li>
+            </ul>
 
-            </nav>
+        </nav>
 
-            <div class="partner">
-                <div class="slub"><a href="#" title="" itemprop="url"><span itemprop="name">Ein Projekt der<span> SLUB</span></span></a></div>
-                <div class="dfg"><a href="#" title="" itemprop="url"><span itemprop="name">Gefördert von<span> DFG</span></span></a></div>
-            </div>
+        <div class="partner">
+          <div class="slub">
+              <a href="https://www.slub-dresden.de/" title="Sächsische Landesbibliothek – Staats- und Universitätsbibliothek Dresden" itemprop="url">
+                  <span itemprop="name">Ein Projekt der <span> SLUB</span></span>
+              </a>
+          </div>
+          <div class="dfg">
+              <a href="http://www.dfg.de/" title="Deutsche Forschungsgemeinschaft" target="_blank" class="iconlink">
+                  <span itemprop="name">Gefördert von <span> DFG</span></span>
+              </a>
+          </div>
         </div>
     </footer>
 </f:section>
