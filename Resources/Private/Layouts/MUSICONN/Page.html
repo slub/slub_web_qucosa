@@ -9,54 +9,15 @@
     <div class="banner">
         <div class="wrap">
             <img src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn-publish-button.svg" alt="musiconn.PUBLISH">
-            <h1>Willkommen auf <span>musiconn.publish</span></h1>
+            <h1>{data.title}</h1>
         </div>
     </div>
 
-</main>
-
-
-<div id="container">
-  <div id="navlogo">
-    <f:link.page pageUid="{rootPageId}" id="homelink" title="<f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />">&nbsp;</f:link.page>
-  </div>
-  <div id="maintop"></div>
-  <div id="main">
-    <div id="header">
-    </div>
-    <div id="skip_nav">
-      <ul>
-        <li>
-          <f:link.page pageUid="{rootPageId}" accesskey="1" title="<f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />">
-            <f:translate key="tx_slubwebqucosa.gotohomepage" extensionName="slub_web_qucosa"/>
-          </f:link.page>
-        </li>
-        <li>
-          <f:link.page section="skip2content" accesskey="2" title="<f:translate key='tx_slubwebqucosa.skiptocontent' extensionName='slub_web_qucosa' />">
-            <f:translate key="tx_slubwebqucosa.skiptocontent" extensionName="slub_web_qucosa"/>
-          </f:link.page>
-        </li>
-        <li>
-          <f:link.page section="skip2nav" accesskey="3" title="<f:translate key='tx_slubwebqucosa.skiptomainnav' extensionName='slub_web_qucosa' />">
-            <f:translate key="tx_slubwebqucosa.skiptomainnav" extensionName="slub_web_qucosa"/>
-          </f:link.page>
-        </li>
-        <li>
-          <f:link.page pageUid="{imprintPageId}" accesskey="4" title="<f:translate key='tx_slubwebqucosa.gotoimprint' extensionName='slub_web_qucosa' />">
-            <f:translate key="tx_slubwebqucosa.gotoimprint" extensionName="slub_web_qucosa"/>
-          </f:link.page>
-        </li>
-      </ul>
-    </div>
-    <a id="skip2content"></a>
-		  <div id="content">
+    <div class="wrap grid">
         <f:render section="Content" optional="true" arguments="{_all}" />
-      </div>
-  </div>
-  <div id="mainbottom"></div>
+    </div>
 
-</div>
-
+</main>
 
 <f:render section="Footer" partial="MUSICONN/Footer" arguments="{_all}" />
 
