@@ -1,0 +1,74 @@
+lib.mainnav = HMENU
+lib.mainnav {
+  special = directory
+  special.value = {$plugin.tx_slubwebqucosa.rootPid}
+  1 = TMENU
+  1 {
+      noBlur = 1
+      #accessKey = 1
+      wrap = <ul>|</ul>
+      NO = 1
+      NO {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+      ACT = 1
+      ACT {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+  }
+}
+
+lib.navsearch = USER
+lib.navsearch {
+  userFunc = tx_extbase_core_bootstrap->run
+  vendorName = EWW
+  pluginName = Frontendsearch
+  extensionName = Dpf
+  controller = SearchFE
+  switchableControllerActions {
+      SearchFE {
+          1 = showSearchForm
+      }
+  }
+
+  settings =< plugin.tx_dpf.settings
+  persistence =< plugin.tx:dpf.persistence
+}
+
+
+lib.langnav = HMENU
+lib.langnav {
+  special = language
+  special.value = 0,1
+  1 = TMENU
+  1 {
+    noBlur = 1
+    #expAll = 0
+    accessKey = 1
+    wrap = <ul id="langnav">|</ul>
+
+    NO = 1
+    NO {
+      linkWrap = <li class="lang_de">|</li> || <li class="lang_en">|</li>
+      # wrap the page title! otherways you see the current page title instead of the language.
+      stdWrap.override = Deutsch || English
+      }
+    # active language
+    ACT < .NO
+    ACT {
+      linkWrap = <li class="lang_de active">|</li> || <li class="lang_en active">|</li>
+    }
+
+    # NO + Translation doesn't exist
+    USERDEF1 < .NO
+
+    # ACT + Translation doesn't exist
+    USERDEF2 < .ACT
+  }
+}
