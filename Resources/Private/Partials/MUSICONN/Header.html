@@ -2,11 +2,18 @@
 
     <header itemscope itemtype="http://schema.org/WPHeader">
 
-      <a class="logo" href="#" title="musiconn - für vernetzte Musikwissenschaft" itemprop="url">
-        <span itemprop="name">Home</span><img src="layout/images/musiconn_logo_weiss.svg" alt="musiconn Logo">
-      </a>
+      <f:link.page pageUid="{rootPageId}" class="logo" title="<f:translate key='tx_slubwebqucosa.musiconn.gotohomepage' extensionName='slub_web_qucosa' />" additionalAttributes="{itemprop:'url'}">
+          <span itemprop="name"><f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' /></span>
+          <f:comment>
+            TYPO3 6.2 image viewhelper does not work with svg :-(
+            width and height will be set to "0"
+            see https://forge.typo3.org/issues/62940
+            <f:image src="EXT:slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn_logo_weiss.svg" alt="musiconn Logo" />
+          </f:comment>
+          <img src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn_logo_weiss.svg" alt="musiconn Logo">
+      </f:link.page>
 
-        <a class="trigger"><span class="icon-menu"></span></a>
+      <a class="trigger"><span class="icon-menu"></span></a>
 
         <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mainnav">
 

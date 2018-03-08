@@ -14,6 +14,9 @@
     <trans-unit id="tx_slubwebqucosa.gotohomepage" xml:space="preserve">
 			<source>Goto Homepage</source>
 		</trans-unit>
+    <trans-unit id="tx_slubwebqucosa.musiconn.gotohomepage" xml:space="preserve">
+			<source>musiconn - für vernetzte Musikwissenschaft</source>
+		</trans-unit>
     <trans-unit id="tx_slubwebqucosa.skiptocontent" xml:space="preserve">
 			<source>Skip to Content</source>
 		</trans-unit>
