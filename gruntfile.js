@@ -24,20 +24,20 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "Resources/Public/Javascript/custom-dist.js" : ['Resources/Private/Javascript/custom.js'],
+                    "Resources/Public/Js/MUSICONN/custom-dist.js" : ['Resources/Private/JavaScript/MUSICONN/custom.js'],
                 }
             }
         },
         watch: {
             styles: {
-                files: ['Resources/Private/Less/**/*.less'],
+                files: ['Resources/Private/Less/MUSICONN/**/*.less'],
                 tasks: ['less'],
                 options: {
                     nospawn: true
                 }
             },
             js: {
-                files: ['Resources/Private/Javascript/*.js'],
+                files: ['Resources/Private/JavaScript/MUSICONN/*.js'],
                 tasks: ['uglify']
             }
         }
