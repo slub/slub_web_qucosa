@@ -12,7 +12,7 @@ $( ".trigger" ).click(function() {
 });
 
 
-// Recherche Suchauswahl
+/* Recherche Suchauswahl - nicht mehr benötigt
 
 
 $(document).ready(function(){
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 })
 
-
+*/
 
 // Scroll to top Funktion
 
@@ -83,7 +83,7 @@ $('a[href*="#"]')
 
 
 
-// Internet Explorer Version in body-Klasse ergänzen
+// Internet Explorer Version in body-Klasse ergänzen - entfernen falls Typo3 das übernimmt
 
 
 (function () {
@@ -125,6 +125,7 @@ $('a[href*="#"]')
 
 
   $( function() {
-    $( "#startdate" ).datepicker();
-    $( "#enddate" ).datepicker();
+    //$( "#startdate" ).datepicker();
+    //$( "#enddate" ).datepicker();
+    $( ".datetimepicker" ).datepicker();
   } );

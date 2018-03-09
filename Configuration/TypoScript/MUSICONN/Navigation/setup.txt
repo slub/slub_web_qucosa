@@ -17,7 +17,7 @@ lib.mainnav {
       ACT = 1
       ACT {
           ATagTitle.field = description // title
-          allWrap = <li>|</li>
+          allWrap = <li class="active">|</li>
           ATagParams = itemprop="url"
           stdWrap.wrap = <span itemprop="name">|</span>
       }
