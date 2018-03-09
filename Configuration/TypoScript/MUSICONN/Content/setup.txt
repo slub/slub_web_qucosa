@@ -1,0 +1,11 @@
+tt_content.stdWrap.innerWrap.cObject {
+
+  default.20.10.value = wrap grid
+
+  22 = TEXT
+  22.value = <div class="wrap grid-3 smallspace blocks">|</div>
+
+  23 = TEXT
+  23.value = <div class="wrap recherche">|</div>
+
+}
