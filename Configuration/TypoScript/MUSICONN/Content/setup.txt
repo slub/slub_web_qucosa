@@ -9,3 +9,19 @@ tt_content.stdWrap.innerWrap.cObject {
   23.value = <div class="wrap recherche">|</div>
 
 }
+
+tt_content.image.20 {
+
+  imageStdWrap >
+  imageColumnStdWrap >
+  imageStdWrapNoWidth >
+  imageStdWrapNoWidth.wrap >
+  rendering.singleNoCaption.allStdWrap >
+  rendering.noCaption.rowStdWrap >
+  rendering.noCaption.columnStdWrap >
+  rendering.noCaption.allStdWrap >
+  rendering.splitCaption.rowStdWrap >
+  rendering.splitCaption.columnStdWrap >
+  layout.default.value = ###IMAGES######TEXT###
+
+}

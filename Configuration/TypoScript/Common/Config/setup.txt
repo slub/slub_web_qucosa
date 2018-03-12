@@ -4,6 +4,8 @@ config {
   prefixLocalAnchors = all
   uniqueLinkVars = 1
 
+  removeDefaultCss = 1
+
   #Cache
 	cache_clearAtMidnight = 1
 	sendCacheHeaders = 1
