@@ -3,8 +3,10 @@ plugin.tx_slubwebqucosa {
 	rootPid =
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Footer Contact Uid
 	pageIdContact =
-  # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Footer Imprint Uid
+  # cat=plugin.tx_slubwebqucosa/links/0143; type=int+; label= Footer Imprint Uid
 	pageIdImprint =
-  # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Footer Privacy Uid
+  # cat=plugin.tx_slubwebqucosa/links/0144; type=int+; label= Footer Privacy Uid
 	pageIdPrivacy =
+  # cat=plugin.tx_slubwebqucosa/links/0145; type=int+; label= FAQ Uid
+	pageIdFaq =
 }

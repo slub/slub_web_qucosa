@@ -8,6 +8,9 @@ tt_content.stdWrap.innerWrap.cObject {
   23 = TEXT
   23.value = <div class="wrap recherche">|</div>
 
+  24 = TEXT
+  24.value = <div class="accordion">|</div>
+
 }
 
 tt_content.image.20 {

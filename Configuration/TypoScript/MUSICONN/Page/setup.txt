@@ -70,6 +70,9 @@ page {
       pageIdPrivacy = TEXT
       pageIdPrivacy.value = {$plugin.tx_slubwebqucosa.pageIdPrivacy}
 
+      pageIdFaq = TEXT
+      pageIdFaq.value = {$plugin.tx_slubwebqucosa.pageIdFaq}
+
     }
   }
 }

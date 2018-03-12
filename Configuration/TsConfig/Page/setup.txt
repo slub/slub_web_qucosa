@@ -6,8 +6,9 @@ TCEFORM {
 		colPos.altLabels.2 = Seitenleiste
 		section_frame {
 			removeItems = 5,6,10,11,12,20,21
-			addItems.22 = Startseite Neuerscheinungen
-			addItems.23 = Recherche
+			addItems.22 = Musiconn: Startseite Neuerscheinungen
+			addItems.23 = Musiconn: Recherche Plugin
+      addItems.24 = Musiconn: FAQ Element
 		}
 		header_layout.disabled = 0
 		header_layout.altLabels.0 = Standard
