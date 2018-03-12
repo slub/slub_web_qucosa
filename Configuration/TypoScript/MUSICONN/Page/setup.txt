@@ -40,8 +40,8 @@ page {
   }
 
   includeJSFooter {
-    jquery = EXT:slub_web_qucosa/Resources/Public/Js/jquery-3.3.1.min.js
-    jquery-ui = EXT:slub_web_qucosa/Resources/Public/Js/jquery-ui.min.js
+    jquery = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-3.3.1.min.js
+    jquery-ui = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-ui.min.js
     custom = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/custom-dist.js
   }
 
