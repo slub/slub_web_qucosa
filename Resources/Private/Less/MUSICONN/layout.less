@@ -18,37 +18,86 @@
         }
     }
 }
- .blocks {
-     a {
-        display: block;
+
+
+.blocks {
+    figure {
         position: relative;
-         img {
-            -webkit-filter: grayscale(1);
-             filter: grayscale(1);
-             opacity: .1;
-            transition: .6s;
-        }
-         p {
-            position: absolute;
-             top:40%;
-             left:0;
-             width: 100%;
-             text-align: center;
-             text-transform: uppercase;
-             font-size: 1.2rem;
-             padding: .3em 0;
-            transition: .6s;
-        }
-         &:hover {
-            color:@color1;
-             img {
-                -webkit-filter: grayscale(0);
-                 filter: grayscale(0);
-                 opacity: 1
+        a {
+            display: block;
+            img {
+                -webkit-filter: grayscale(1);
+                filter: grayscale(1);
+                opacity: .1;
+                transition: .6s;
             }
-             p {
+        }
+        figcaption {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            padding: .3em 0;
+            transition: .6s;
+            pointer-events: none;
+        }
+        &:hover {
+            color: @color1;
+            img {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+                opacity: 1
+            }
+            figcaption {
                 background: @color4;
             }
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ##################################################### */
+/* ########### Akkordeon ############################### */
+/* ##################################################### */
+
+
+
+
+.accordion {
+    h3 {
+        cursor: pointer;
+        position: relative;
+        font-weight: 400;
+        border-radius: 6px;
+        border: 2px solid @color1;
+        padding: .5em 2.5em .5em 1.5em;
+        &:after {
+            content: "+";
+            position: absolute;
+            right: .4em;
+            font-size: 2.1rem;
+            top: 0
+        }
+        &.ui-state-active {
+            font-weight: 600;
+            &:after {
+                content: "-";
+                font-weight: 600
+            }
+        }
+    }
+    .ui-accordion-content {
+        padding: .5em 2.5em .5em 1.8em;
     }
 }
