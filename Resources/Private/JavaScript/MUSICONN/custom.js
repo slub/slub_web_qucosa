@@ -123,9 +123,13 @@ $('a[href*="#"]')
 
 // jquery Datepicker aktivieren
 
-
   $( function() {
-    //$( "#startdate" ).datepicker();
-    //$( "#enddate" ).datepicker();
-    $( ".datetimepicker" ).datepicker();
+    $( ".datetimepicker" ).datepicker({dateFormat: "dd.mm.yy",monthNames: [ "Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember" ]});
   } );
+
+
+
+
+// Akkordeon (FAQ)
+
+ $(".accordion").accordion({active: false, collapsible: true, heightStyle: "content"});
