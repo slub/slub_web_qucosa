@@ -13,6 +13,7 @@ TCEFORM {
 		header_layout.altLabels.0 = Standard
 		header_layout.altLabels.1 = H1 Überschrift
 		header_layout.altLabels.2 = H2 Überschrift
-		header_layout.removeItems = 0,3,4,5
+    header_layout.altLabels.3 = H3 Überschrift
+		header_layout.removeItems = 0,4,5
   }
 }
