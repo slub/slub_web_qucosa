@@ -14,6 +14,9 @@ tt_content.stdWrap.innerWrap.cObject {
   25 = TEXT
   25.value = <div class="wrap kontakt">|</div>
 
+  26 = TEXT
+  26.value = <div class="wrap zeitschriften">|</div>
+
 }
 
 tt_content.image.20 {
