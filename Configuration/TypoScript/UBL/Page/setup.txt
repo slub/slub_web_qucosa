@@ -7,6 +7,7 @@ page {
     description.field = description
     keywords.field = description
     robots = all
+    google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
   }
 
   includeCSS {
