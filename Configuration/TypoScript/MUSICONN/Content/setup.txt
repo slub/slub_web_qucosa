@@ -1,6 +1,6 @@
 tt_content.stdWrap.innerWrap.cObject {
 
-  default.20.10.value = wrap grid
+  default.20.10.value = wrap
 
   22 = TEXT
   22.value = <div class="wrap grid-3 smallspace blocks">|</div>
