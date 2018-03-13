@@ -15,7 +15,7 @@ tt_content.stdWrap.innerWrap.cObject {
   25.value = <div class="wrap kontakt">|</div>
 
   26 = TEXT
-  26.value = <div class="wrap zeitschriften">|</div>
+  26.value = <div class="flex">|</div>
 
 }
 
