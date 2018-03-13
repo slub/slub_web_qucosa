@@ -2,12 +2,26 @@
 /* ########### Header Navigation ####################### */
 /* ##################################################### */
 
+
+.home {
+    header {
+        .logo {
+            background-color: @color1;
+        }
+        .trigger {
+            background-color: @color4;
+            color:@color7;
+        }
+    }
+}
+
+
  header {
     display: flex;
      flex-wrap: wrap;
      position: relative;
      .logo {
-        background: @color1;
+        background: @color3;
         display: block;
          flex-grow: 2;
         padding: @gutter/2;
@@ -23,8 +37,8 @@
         }
     }
      .trigger {
-        background: @color3;
-        color:@color2;
+        background: @color1;
+        color:@color4;
         width: 90px;
          font-size: 1.5rem;
          cursor: pointer;
@@ -66,6 +80,12 @@
                          .highlight {
                             color: @color4
                         }
+                    }
+                }
+
+                &.active {
+                    a {
+                        font-weight: 600
                     }
                 }
             }

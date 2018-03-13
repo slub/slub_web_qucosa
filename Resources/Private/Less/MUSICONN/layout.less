@@ -59,7 +59,16 @@
 }
 
 
+.zeitschriften {
+    h3, h2 {color:@color1; font-weight: 400; text-transform: uppercase; letter-spacing: .5px; font-size: 1.3rem; margin: 4em 0 1.5em}
+    h2 {border-top: 3px solid @color7; padding-top: 4em}
+    figure {
+        margin: 7px 0 1em;
+        max-width: 270px;
+        img {}
 
+    }
+}
 
 
 
@@ -89,7 +98,9 @@
             font-size: 2.1rem;
             top: 0
         }
-        &.ui-state-active {
+    }
+    .ui-state-active {
+        h3{
             font-weight: 600;
             &:after {
                 content: "-";

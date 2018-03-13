@@ -133,3 +133,6 @@ $('a[href*="#"]')
 // Akkordeon (FAQ)
 
  $(".accordion").accordion({active: false, collapsible: true, heightStyle: "content"});
+
+
+
