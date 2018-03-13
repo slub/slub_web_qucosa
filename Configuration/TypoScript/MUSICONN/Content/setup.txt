@@ -14,8 +14,8 @@ tt_content.stdWrap.innerWrap.cObject {
   25 = TEXT
   25.value = <div class="wrap kontakt">|</div>
 
-  26 = TEXT
-  26.value = <div class="flex">|</div>
+#  26 = TEXT
+#  26.value = <div class="wrap flex">|</div>
 
 }
 
@@ -32,5 +32,8 @@ tt_content.image.20 {
   rendering.splitCaption.rowStdWrap >
   rendering.splitCaption.columnStdWrap >
   layout.default.value = ###IMAGES######TEXT###
+  layout.26.value = <div class="flex csc-textpic csc-textpic-intext-left-nowrap###CLASSES###">###IMAGES######TEXT###</div>
 
 }
+
+tt_content.textpic.20.text.wrap = <div class="content"> | </div>
