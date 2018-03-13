@@ -76,3 +76,9 @@ page {
     }
   }
 }
+
+[globalVar = TSFE:id = {$plugin.tx_slubwebqucosa.rootPid}]
+page {
+  bodyTag = <body class="home">
+}
+[GLOBAL]
