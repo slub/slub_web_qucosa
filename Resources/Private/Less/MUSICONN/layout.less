@@ -62,13 +62,17 @@
 .zeitschriften {
     h3, h2 {color:@color1; font-weight: 400; text-transform: uppercase; letter-spacing: .5px; font-size: 1.3rem; margin: 4em 0 1.5em}
     h2 {border-top: 3px solid @color7; padding-top: 4em}
-    figure {
-        margin: 7px 0 1em;
-        max-width: 270px;
-        img {}
-
+    .flex {display: flex;flex-wrap: wrap;
+        figure {
+            margin: 7px 0 1em;
+            max-width: 270px;
+            img {}
+        }
     }
 }
+
+
+
 
 
 
@@ -100,7 +104,7 @@
         }
     }
     .ui-state-active {
-        h3{
+        h3 {
             font-weight: 600;
             &:after {
                 content: "-";
@@ -110,5 +114,75 @@
     }
     .ui-accordion-content {
         padding: .5em 2.5em .5em 1.8em;
+    }
+}
+
+
+
+
+
+
+/* ##################################################### */
+/* ########### Landing-Page Metadata ################### */
+/* ##################################################### */
+
+
+
+
+.tx-dlf-metadata {
+    dl {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    dd {
+        &.title {
+            order: -1;
+            color: @color1;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            font-size: 1.3rem;
+            margin: 0 0 1em;
+            line-height: 1.3;
+        }
+    }
+    dt {
+        font-weight: 600;
+        margin-top: 1.5em;
+        &.title {
+            display: none
+        }
+    }
+    pre {
+        background-color: @color3;
+        border-left: 3px solid @color7;
+        padding: 1em;
+        overflow-x: auto;
+        display: inline-block;
+        white-space: pre-wrap;
+    }
+}
+
+.tx-dlf-toolbox {
+    ul {
+        list-style: none;
+        li {
+            margin: 0;
+            a {
+                display: inline-block;
+                transition: .3s;
+                padding: 1.5em 2.5em;
+                font-size: 1.1rem;
+                text-align: center;
+                background-color: @color1;
+                color: @color4;
+                font-weight: 600;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: @color5
+                }
+            }
+        }
     }
 }

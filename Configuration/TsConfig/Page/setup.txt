@@ -9,8 +9,6 @@ TCEFORM {
 			addItems.22 = Musiconn: Startseite Neuerscheinungen
 			addItems.23 = Musiconn: Recherche Plugin
       addItems.24 = Musiconn: FAQ Element
-      addItems.25 = Musiconn: Formular
-      #addItems.26 = Musiconn: Bild/Textelement
 		}
 		header_layout.disabled = 0
 		header_layout.altLabels.0 = Standard

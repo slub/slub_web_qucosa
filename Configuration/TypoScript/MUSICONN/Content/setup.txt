@@ -11,12 +11,6 @@ tt_content.stdWrap.innerWrap.cObject {
   24 = TEXT
   24.value = <div class="accordion">|</div>
 
-  25 = TEXT
-  25.value = <div class="wrap kontakt">|</div>
-
-#  26 = TEXT
-#  26.value = <div class="wrap flex">|</div>
-
 }
 
 tt_content.image.20 {
