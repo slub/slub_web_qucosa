@@ -39,6 +39,8 @@ page {
     content >
   }
 
+  # remove special JS of used extensions dpf, slub_forms
+  includeJSFooter >
   includeJSFooter {
     jquery = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-3.3.1.min.js
     jquery-ui = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-ui.min.js
@@ -86,12 +88,6 @@ page {
     }
     includeJS {
         tx_dpf_jquery >
-    }
-    includeJSFooter {
-        tx_dpf_moment >
-        tx_dpf_bootstrap >
-        tx_dpf_bootstrap_datepicker >
-        tx_dpf_qucosa >
     }
 }
 
