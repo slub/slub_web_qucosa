@@ -164,12 +164,14 @@
     }
 }
 
-.tx-dlf-toolbox {
-    ul {
-        list-style: none;
-        li {
-            margin: 0;
-            a {
+#c238 {
+    &.wrap {padding-bottom: 0}
+    .tx-dlf-toolbox {
+        ul {
+            list-style: none;
+          li {
+             margin: 0; padding:0;
+             a {
                 display: inline-block;
                 transition: .3s;
                 padding: 1.5em 2.5em;
@@ -182,6 +184,7 @@
                 &:hover {
                     background-color: @color5
                 }
+            }
             }
         }
     }
