@@ -77,6 +77,24 @@ page {
   }
 }
 
+# remove special CSS and JS of used extensions dpf, slub_forms
+page {
+    includeCSS {
+        tx_dpf >
+        jquery-ui-theme >
+        slub_forms >
+    }
+    includeJS {
+        tx_dpf_jquery >
+    }
+    includeJSFooter {
+        tx_dpf_moment >
+        tx_dpf_bootstrap >
+        tx_dpf_bootstrap_datepicker >
+        tx_dpf_qucosa >
+    }
+}
+
 [globalVar = TSFE:id = {$plugin.tx_slubwebqucosa.rootPid}]
 page {
   bodyTag = <body class="home">
