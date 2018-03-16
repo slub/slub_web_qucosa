@@ -1,0 +1,28 @@
+{namespace si=Slub\SlubWebQucosa\ViewHelpers}
+<a id="totop" href="#top" role="button"><span class="icon-arrow-up"></span></a>
+
+<f:render section="Header" partial="MUSICONN/Header" arguments="{_all}" />
+
+
+<main id="main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
+
+    <div class="banner">
+        <div class="wrap">
+            <img src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn-publish-button.svg" alt="musiconn.PUBLISH">
+            <h1>{data.title}</h1>
+        </div>
+    </div>
+    <f:if condition="{data.uid} == {pageIdFaq}">
+        <f:then>
+            <f:render section="FAQ" optional="true" arguments="{_all}" />
+        </f:then>
+        <f:else>
+            <f:render section="Content" optional="true" arguments="{_all}" />
+        </f:else>
+    </f:if>
+
+</main>
+
+<f:render section="Footer" partial="MUSICONN/Footer" arguments="{_all}" />
+
+<f:render section="Piwik" />

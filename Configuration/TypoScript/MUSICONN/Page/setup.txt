@@ -1,21 +1,50 @@
 page {
+  shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/MUSICONN/Icons/favicon.ico
 
-  bodyTag = <body>
+  bodyTag = <body id="top" itemscope itemtype="http://schema.org/WebPage">
 
   meta {
+    viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0
     author = SLUB Dresden
     description.field = description
-    keywords.field = description
-    robots = all
+    robots = index,follow
+    apple-mobile-web-app-title = musiconn.publish
+    application-name = musiconn.publish
+    msapplication-TileColor = #ffffff
+    theme-color = #ffffff
     google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
   }
 
+  headerData {
+      100 = TEXT
+      100.value (
+<link rel="apple-touch-icon" sizes="180x180" href="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/Icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/Icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/Icons/favicon-16x16.png">
+<link rel="manifest" href="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/site.webmanifest">
+<link rel="mask-icon" href="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/Icons/safari-pinned-tab.svg" color="#ee7100">
+<!--[if lt IE 9]>
+<script src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Js/MUSICONN/html5shiv-printshiv.min.js"></script>
+<script src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Js/MUSICONN/lt-ie-9.min.js"></script>
+<![endif]-->
+        )
+  }
+  headerData.110 = TEXT
+  headerData.110.value =
+
+
   includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/MUSICONN/client.css
+    client = EXT:slub_web_qucosa/Resources/Public/Css/MUSICONN/main.css
+    layoutx >
+    content >
   }
 
+  # remove special JS of used extensions dpf, slub_forms
+  includeJSFooter >
   includeJSFooter {
-    client = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/client.js
+    jquery = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-3.3.1.min.js
+    jquery-ui = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-ui.min.js
+    custom = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/custom-dist.js
   }
 
   10 = FLUIDTEMPLATE
@@ -34,9 +63,36 @@ page {
       rootPageId = TEXT
       rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
 
-      imprintPageId = TEXT
-      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
+      pageIdContact = TEXT
+      pageIdContact.value = {$plugin.tx_slubwebqucosa.pageIdContact}
+
+      pageIdImprint = TEXT
+      pageIdImprint.value = {$plugin.tx_slubwebqucosa.pageIdImprint}
+
+      pageIdPrivacy = TEXT
+      pageIdPrivacy.value = {$plugin.tx_slubwebqucosa.pageIdPrivacy}
+
+      pageIdFaq = TEXT
+      pageIdFaq.value = {$plugin.tx_slubwebqucosa.pageIdFaq}
 
     }
   }
 }
+
+# remove special CSS and JS of used extensions dpf, slub_forms
+page {
+    includeCSS {
+        tx_dpf >
+        jquery-ui-theme >
+        slub_forms >
+    }
+    includeJS {
+        tx_dpf_jquery >
+    }
+}
+
+[globalVar = TSFE:id = {$plugin.tx_slubwebqucosa.rootPid}]
+page {
+  bodyTag = <body class="home">
+}
+[GLOBAL]

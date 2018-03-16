@@ -16,7 +16,7 @@ lib.mainnav {
 
 lib.navsearch = USER
 lib.navsearch {
-  userFunc = tx_extbase_core_bootstrap->run
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
   vendorName = EWW
   pluginName = Frontendsearch
   extensionName = Dpf

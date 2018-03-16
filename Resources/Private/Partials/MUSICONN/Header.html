@@ -1,0 +1,35 @@
+<f:section name="Header">
+
+    <header itemscope itemtype="http://schema.org/WPHeader">
+
+      <f:link.page pageUid="{rootPageId}" class="logo" title="<f:translate key='tx_slubwebqucosa.musiconn.gotohomepage' extensionName='slub_web_qucosa' />" additionalAttributes="{itemprop:'url'}">
+          <span itemprop="name"><f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' /></span>
+          <f:comment>
+            TYPO3 6.2 image viewhelper does not work with svg :-(
+            width and height will be set to "0"
+            see https://forge.typo3.org/issues/62940
+            <f:image src="EXT:slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn_logo_weiss.svg" alt="musiconn Logo" />
+          </f:comment>
+          <f:if condition="{data.uid} == {rootPageId}">
+              <f:then>
+                  <img src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn_logo_weiss.svg" alt="musiconn Logo">
+              </f:then>
+              <f:else>
+                  <img src="/typo3conf/ext/slub_web_qucosa/Resources/Public/Images/MUSICONN/musiconn_logo_bunt.svg" alt="musiconn Logo">
+              </f:else>
+          </f:if>
+      </f:link.page>
+
+      <a class="trigger"><span class="icon-menu"></span></a>
+
+      <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mainnav">
+          <f:cObject typoscriptObjectPath="lib.mainnav" />
+      </nav>
+
+      <div class="suche">
+          <f:cObject typoscriptObjectPath="lib.navsearch" />
+      </div>
+
+    </header>
+
+</f:section>

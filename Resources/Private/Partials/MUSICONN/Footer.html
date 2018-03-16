@@ -1,0 +1,39 @@
+{namespace si=Slub\SlubWebQucosa\ViewHelpers}
+<f:section name="Footer">
+<footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
+    <div>
+        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <ul>
+                <li>
+                  <f:link.page pageUid="{pageIdContact}" accesskey="1" title="{si:pageInfo(uid:'{pageIdContact}', field:'title')}" additionalAttributes="{itemprop:'url'}">
+                    <span itemprop="name">{si:pageInfo(uid:'{pageIdContact}', field:'title')}</span>
+                  </f:link.page>
+                </li>
+                  <f:cObject typoscriptObjectPath="lib.langnav" />
+                <li>
+                  <f:link.page pageUid="{pageIdImprint}" accesskey="1" title="{si:pageInfo(uid:'{pageIdImprint}', field:'title')}" additionalAttributes="{itemprop:'url'}">
+                    <span itemprop="name">{si:pageInfo(uid:'{pageIdImprint}', field:'title')}</span>
+                  </f:link.page>
+                </li>
+                <li>
+                  <f:link.page pageUid="{pageIdPrivacy}" accesskey="1" title="{si:pageInfo(uid:'{pageIdPrivacy}', field:'title')}" additionalAttributes="{itemprop:'url'}">
+                    <span itemprop="name">{si:pageInfo(uid:'{pageIdPrivacy}', field:'title')}</span>
+                  </f:link.page>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="partner">
+          <div class="slub">
+              <a href="https://www.slub-dresden.de/" title="Sächsische Landesbibliothek – Staats- und Universitätsbibliothek Dresden" itemprop="url">
+                  <span itemprop="name">Ein Projekt der <span> SLUB</span></span>
+              </a>
+          </div>
+          <div class="dfg">
+              <a href="http://www.dfg.de/" title="Deutsche Forschungsgemeinschaft" target="_blank" class="iconlink">
+                  <span itemprop="name">Gefördert von <span> DFG</span></span>
+              </a>
+          </div>
+        </div>
+    </footer>
+</f:section>

@@ -1,0 +1,110 @@
+lib.mainnav = HMENU
+lib.mainnav {
+  special = directory
+  special.value = {$plugin.tx_slubwebqucosa.rootPid}
+  1 = TMENU
+  1 {
+      noBlur = 1
+      #accessKey = 1
+      wrap = <ul>|</ul>
+      NO = 1
+      NO {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+      ACT = 1
+      ACT {
+          ATagTitle.field = description // title
+          allWrap = <li class="active">|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+  }
+}
+
+lib.navsearch = USER
+lib.navsearch {
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  vendorName = EWW
+  pluginName = Frontendsearch
+  extensionName = Dpf
+  controller = SearchFE
+  switchableControllerActions {
+      SearchFE {
+          1 = showSearchForm
+      }
+  }
+
+  settings =< plugin.tx_dpf.settings
+  persistence =< plugin.tx:dpf.persistence
+}
+
+lib.footernav = HMENU
+lib.footernav {
+  special = directory
+  special.value = {$plugin.tx_slubwebqucosa.footerNav}
+  1 = TMENU
+  1 {
+      noBlur = 1
+      #accessKey = 1
+      wrap = <ul>|</ul>
+      NO = 1
+      NO {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+      ACT = 1
+      ACT {
+          ATagTitle.field = description // title
+          allWrap = <li>|</li>
+          ATagParams = itemprop="url"
+          stdWrap.wrap = <span itemprop="name">|</span>
+      }
+  }
+}
+
+lib.langnav = HMENU
+lib.langnav {
+  special = language
+  special.value = 0,1
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 0
+    accessKey = 1
+    NO = 1
+    NO {
+        doNotLinkIt = 1
+        linkWrap = <li class="language">|</li>
+        stdWrap.override = <span class="icon-earth"></span><span itemprop="name">Deutsch</span> || <span class="icon-earth"></span><span itemprop="name">English</span>
+        stdWrap {
+            typolink {
+                parameter.data = page:uid
+                additionalParams = &L=0 || &L=1 || &L=2
+                ATagParams = itemprop="url" hreflang="de" lang="de" || itemprop="url" hreflang="en" lang="en"
+                title = Deutsch || English
+                addQueryString = 1
+                addQueryString.exclude = L,id,no_cache
+                addQueryString.method = GET
+                no_cache = 0
+            }
+        }
+      }
+    # active language should not be shown
+    ACT = 1
+    ACT {
+        doNotLinkIt = 1
+        stdWrap.cObject = TEXT
+        stdWrap.cObject.value =
+    }
+    # NO + Translation doesn't exist
+    USERDEF1 < .NO
+
+    # ACT + Translation doesn't exist
+    USERDEF2 < .ACT
+  }
+}

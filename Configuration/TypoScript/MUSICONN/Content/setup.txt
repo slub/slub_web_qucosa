@@ -1,0 +1,33 @@
+tt_content.stdWrap.innerWrap.cObject {
+
+  default.20.10.value = wrap
+
+  22 = TEXT
+  22.value = <div class="wrap grid-3 smallspace blocks">|</div>
+
+  23 = TEXT
+  23.value = <div class="wrap recherche">|</div>
+
+  24 = TEXT
+  24.value = <div class="accordion">|</div>
+
+}
+
+tt_content.image.20 {
+
+  imageStdWrap >
+  imageColumnStdWrap >
+  imageStdWrapNoWidth >
+  imageStdWrapNoWidth.wrap >
+  rendering.singleNoCaption.allStdWrap >
+  rendering.noCaption.rowStdWrap >
+  rendering.noCaption.columnStdWrap >
+  rendering.noCaption.allStdWrap >
+  rendering.splitCaption.rowStdWrap >
+  rendering.splitCaption.columnStdWrap >
+  layout.default.value = ###IMAGES######TEXT###
+  layout.26.value = <div class="flex csc-textpic csc-textpic-intext-left-nowrap###CLASSES###">###IMAGES######TEXT###</div>
+
+}
+
+tt_content.textpic.20.text.wrap = <div class="content"> | </div>

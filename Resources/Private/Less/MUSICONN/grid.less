@@ -1,0 +1,25 @@
+/* ##################################################### */
+/* ########### Basic Grid and Layout Styles ############ */
+/* ##################################################### */
+
+ .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:@gutter/2
+}
+
+ .grid-3 {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+ .smallspace {
+    grid-gap:@gutter/2
+}
+ .midspace {
+    grid-gap:@gutter
+}
+ .bigspace {
+    grid-gap:@gutter*2
+}
+
+main {padding-bottom: 3em}
