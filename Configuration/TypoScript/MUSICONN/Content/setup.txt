@@ -25,7 +25,10 @@ tt_content.image.20 {
   rendering.noCaption.allStdWrap >
   rendering.splitCaption.rowStdWrap >
   rendering.splitCaption.columnStdWrap >
+
+  # remove not necessary divs
   layout.default.value = ###IMAGES######TEXT###
+  # add flex class
   layout.26.value = <div class="flex csc-textpic csc-textpic-intext-left-nowrap###CLASSES###">###IMAGES######TEXT###</div>
 
 }
