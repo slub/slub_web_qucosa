@@ -29,7 +29,7 @@ tt_content.image.20 {
   # remove not necessary divs
   layout.default.value = ###IMAGES######TEXT###
   # add flex class
-  layout.26.value = <div class="flex csc-textpic csc-textpic-intext-left-nowrap###CLASSES###">###IMAGES######TEXT###</div>
+  #layout.26.value = <div class="flex csc-textpic csc-textpic-intext-left-nowrap###CLASSES###">###IMAGES######TEXT###</div>
 
 }
 
