@@ -19,8 +19,8 @@ TCEFORM {
 
     # image orientation in image gallery
     #imageorient.types.image.removeItems = 0,1,2,7,8,9,10,17,18,25
-    # image orientation in textpic element
-    imageorient.types.textpic.removeItems = 0,1,2,7,8,9,10,17,18,25
+    # image orientation in textpic element --> only allow 18 == "in text, left"
+    imageorient.types.textpic.removeItems = 0,1,2,7,8,9,10,17,25,26
     imagecaption.disabled = 1
     imagecaption_position.disabled = 1
 

@@ -48,16 +48,24 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-.zeitschriften {
-    h2, h3 {font-size: 1.8rem;}
-    figure {max-width: 200px}
+
+.csc-header {
+    h2 {font-size: 1.8rem;}
+}
+
+.csc-textpic-image {
+            max-width: 200px;
+            float: left;
+            margin-right: 2.4em;
+}
+
+.content {
+    &:after {clear: both; content: "";display: table;}
 }
 
 
-.flex {
-    display: flex;
-    .content {max-width: 75%; padding-left: 2.4em}
-}
+
+
     #totop {
         font-size: 1.8rem;
     }
@@ -235,9 +243,9 @@
 
 
 
-.zeitschriften {
-    figure {max-width: 250px}
-}
+    .csc-textpic {
+        figure {max-width: 250px}
+    }
 
     footer {
         padding: 3em 0;

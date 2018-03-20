@@ -59,25 +59,22 @@
 }
 
 
-.zeitschriften {
-    h3, h2 {color:@color1; font-weight: 400; text-transform: uppercase; letter-spacing: .5px; font-size: 1.3rem; margin: 4em 0 1.5em}
-    h2 {border-top: 3px solid @color7; padding-top: 4em}
-    .flex {display: flex;flex-wrap: wrap;
-        figure {
+
+.csc-header {
+    h2 {color:@color1; font-weight: 400; text-transform: uppercase; letter-spacing: .5px; font-size: 1.3rem; margin: 1.5em 0 1.5em}
+}
+
+
+.csc-textpic-image {
             margin: 7px 0 1em;
             max-width: 270px;
             img {}
-        }
-    }
+
 }
 
 .wrap {
-  .divider {border-top: 3px solid @color7;}
+  .divider hr {border-top: 3px solid @color7;}
 }
-
-
-
-
 
 
 
@@ -168,25 +165,25 @@
 
 .tx-dlf-toolbox {
   .tx-dlf-tools-pdf-page {
-    ul {
-        list-style: none;
-      li {
-         margin: 0; padding:0;
-         a {
-            display: inline-block;
-            transition: .3s;
-            padding: 1.5em 2.5em;
-            font-size: 1.1rem;
-            text-align: center;
-            background-color: @color1;
-            color: @color4;
-            font-weight: 600;
-            text-transform: uppercase;
-            &:hover {
-                background-color: @color5
+        ul {
+            list-style: none;
+          li {
+             margin: 0; padding:0;
+             a {
+                display: inline-block;
+                transition: .3s;
+                padding: 1.5em 2.5em;
+                font-size: 1.1rem;
+                text-align: center;
+                background-color: @color1;
+                color: @color4;
+                font-weight: 600;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: @color5
+                }
+            }
             }
         }
-      }
     }
-  }
 }
