@@ -6,23 +6,53 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'slub_web_qucosa',
     'Configuration/TypoScript/SLUB',
-    'Qucosa: SLUB-Mandant'
+    'Qucosa: SLUB Dresden (SLUB)'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'slub_web_qucosa',
     'Configuration/TypoScript/UBL',
-    'Qucosa: UBL-Mandant'
+    'Qucosa: Universität Leipzig (UL)'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'slub_web_qucosa',
     'Configuration/TypoScript/MONARCH',
-    'Qucosa: Chemnitz-Mandant'
+    'Qucosa: Technische Universität Chemnitz (Monarch)'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'slub_web_qucosa',
     'Configuration/TypoScript/MUSICONN',
     'Qucosa: Musiconn'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/DIU',
+    'Qucosa: Dresden Internation University (DIU)'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/HTW',
+    'Qucosa: Hochschule für Technik und Wirtschaft Dresden (HTW)'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/TUBAF',
+    'Qucosa: Technische Universität Bergakademie Freiberg (TUBAF)'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/HZDR',
+    'Qucosa: Helmholtz-Zentrum Dresden-Rossendorf (HZDR)'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/TUD',
+    'Qucosa: Technische Universität Dresden (TUD)'
 );

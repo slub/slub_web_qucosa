@@ -37,7 +37,6 @@ namespace Slub\SlubWebQucosa\ViewHelpers;
  *
  * @package TYPO3
  */
-// class Tx_SlubAddressbooks_ViewHelpers_PageInfoViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractTagBasedViewHelper {
 class PageInfoViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
     /**

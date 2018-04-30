@@ -3,7 +3,7 @@ page {
   bodyTag = <body>
 
   meta {
-    author = SLUB Dresden
+    author = Technische Universität Chemnitz - Qucosa
     description.field = description
     keywords.field = description
     robots = all

@@ -3,7 +3,7 @@ page {
   bodyTag = <body>
 
   meta {
-    author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
+    author = Hochschule für Technik und Wirtschaft Dresden - Qucosa
     description.field = description
     keywords.field = description
     robots = all
@@ -11,12 +11,12 @@ page {
   }
 
   includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/SLUB/client.css
+    client = EXT:slub_web_qucosa/Resources/Public/Css/HTW/client.css
   }
 
   10 = FLUIDTEMPLATE
   10 {
-    file = EXT:slub_web_qucosa/Resources/Private/Templates/SLUB/Start.html
+    file = EXT:slub_web_qucosa/Resources/Private/Templates/HTW/Start.html
     layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/
     partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/
 

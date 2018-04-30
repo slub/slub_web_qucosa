@@ -1,0 +1,12 @@
+# Configuration
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Config/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Config/language.txt">
+
+# Navigation
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Navigation/setup.txt">
+
+# Content
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Content/setup.txt">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Page/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/TUBAF/Page/setup.txt">
