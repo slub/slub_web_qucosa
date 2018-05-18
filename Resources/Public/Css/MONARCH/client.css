@@ -24,7 +24,7 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend .processsteps a.selected:visited { background-color: #487; }
 
 #header { background-image:url(../../Images/MONARCH/header.jpg); }
-#navlogo #homelink { background-image:url(../../Images/MONARCH/logo.jpg); }
+#navlogo #homelink { bottom: 30px; background-image: url(../../Images/MONARCH/logo.png); }
 #ghosticon { background-image: url(../../Images/MONARCH/ghosticon.png); }
 
 #chlinks { position: relative; }
