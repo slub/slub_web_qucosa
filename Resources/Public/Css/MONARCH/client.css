@@ -25,6 +25,7 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 
 #header { background-image:url(../../Images/MONARCH/header.jpg); }
 #navlogo #homelink { bottom: 30px; background-image: url(../../Images/MONARCH/logo.png); }
+#navlogo #homelink:hover {text-decoration: none;}
 #ghosticon { background-image: url(../../Images/MONARCH/ghosticon.png); }
 
 #chlinks { position: relative; }
