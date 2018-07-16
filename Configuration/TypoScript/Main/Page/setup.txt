@@ -3,20 +3,19 @@ page {
   bodyTag = <body>
 
   meta {
-    author = Dresden International University (DIU) - Qucosa
+    author = Sächsische Landesbibliothek- Staats- und Universitätsbibliothek Dresden - Qucosa
     description.field = description
-    keywords.field = keywords
     robots = all
     google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
   }
 
   includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/DIU/client.css
+    client = EXT:slub_web_qucosa/Resources/Public/Css/Main/client.css
   }
 
   10 = FLUIDTEMPLATE
   10 {
-    file = EXT:slub_web_qucosa/Resources/Private/Templates/DIU/Start.html
+    file = EXT:slub_web_qucosa/Resources/Private/Templates/Main/Start.html
     layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/
     partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/
 

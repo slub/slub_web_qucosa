@@ -5,6 +5,12 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'slub_web_qucosa',
+    'Configuration/TypoScript/Main',
+    'Qucosa: Hauptseite'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
     'Configuration/TypoScript/SLUB',
     'Qucosa: SLUB Dresden (SLUB)'
 );

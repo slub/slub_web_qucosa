@@ -1,0 +1,35 @@
+
+
+.tx-dlf-metadata dd.title, ol.prominentlist,
+a, a:visited, h3, ul.errors li, #nav .buttonactive,
+.tx-slubopus4frontend input.addButton:hover,
+.tx-slubopus4frontend input.remButton:hover,
+#tx_slubopus4frontend-form fieldset input:focus,
+.tx-slubopus4frontend fieldset textarea:focus,
+#tx_slubopus4frontend-prevStep:hover,
+#tx_slubopus4frontend-submit:hover,
+#tx_slubopus4frontend-reset:hover { color:#c00; }
+
+#dedscontent .tabbar,
+#dedscontent .tabcontent,
+.tx-slubopus4frontend .processsteps a,
+.tx-slubopus4frontend .processsteps a:visited,
+.tx-slubopus4frontend fieldset textarea:focus,
+.tx-slubopus4frontend fieldset select:focus  { border-color: #c00; }
+
+.tx-dlf-toolbox .tx-dlf-tools-pdf-page a, #smallsearch, #dedscontent .tabbar a.active,
+.tx-slubopus4frontend .processsteps a.selected,
+.tx-slubopus4frontend .processsteps a:visited,
+.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #c00; }
+
+
+#header { background-image:url(../../Images/Main/header.jpg); }
+#navlogo #homelink { background-image:url(../../Images/Main/logo.jpg); }
+#ghosticon, #qucosainstall { display: none; }
+
+#navend a#dini {
+//        background: url('../images/dinismall-2010.gif') no-repeat 0 0;
+}
+#navend #dinibig {
+ //       background: url('../images/dinibig-2010.png') no-repeat 0 0;
+}
