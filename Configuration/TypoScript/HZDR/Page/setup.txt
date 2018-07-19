@@ -6,7 +6,15 @@ page {
     author = Helmholtz-Zentrum Dresden-Rossendorf - Qucosa
     description.field = description
     keywords.field = keywords
-    robots = all
+    # set robots noindex, nofollow if no_search is set
+    robots {
+      cObject = TEXT
+      cObject {
+        value = noindex, nofollow
+        if.isTrue.field = no_search
+      }
+      ifEmpty = index, follow
+    }
     google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
   }
 

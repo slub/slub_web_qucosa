@@ -7,7 +7,15 @@ page {
     viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0
     author = SLUB Dresden - Qucosa
     description.field = description
-    robots = index,follow
+    # set robots noindex, nofollow if no_search is set
+    robots {
+      cObject = TEXT
+      cObject {
+        value = noindex, nofollow
+        if.isTrue.field = no_search
+      }
+      ifEmpty = index, follow
+    }
     apple-mobile-web-app-title = musiconn.publish
     application-name = musiconn.publish
     msapplication-TileColor = #ffffff
