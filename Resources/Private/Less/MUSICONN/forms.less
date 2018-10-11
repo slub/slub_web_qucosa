@@ -232,23 +232,29 @@ select {
                 }
             }
             .container {
-                .form-group {
-                    display: flex;
-                    flex-wrap: wrap;
-                    label[for="from"] {
-                        width: 100%;
-                    }
-                    label[for="till"] {
-                        margin: 0 -2px -2px;
-                        text-align: center;
-                        flex-grow: 1;
-                    }
-                    input {
-                        flex-grow: 1;
-                        margin-bottom: -2px;
-                        max-width: 40%;
+              .row {
+                width: 100%;
+                .col-md-6 {
+                    width: 100%;
+                    .form-group {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        label[for="from"] {
+                            width: 50%;
+                            margin: 0 0.1em 0 0;
+                        }
+                        label[for="till"] {
+                            width: 50%;
+                            flex-grow: 1;
+                            margin: 0 0.1em 0 0;
+                        }
+                        input {
+                            margin-bottom: -2px;
+                            flex-grow: 1;
+                        }
                     }
                 }
+              }
             }
             button[type="submit"] {
                 width: auto;

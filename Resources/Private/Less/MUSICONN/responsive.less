@@ -159,19 +159,26 @@
                     }
                 }
                 .container {
-                    .form-group {
-                        label[for="from"] {
-                            width: 30%;
+                  .row {
+                    width: 100%;
+                    .col-md-6 {
+                        width: 50%;
+                        float: left;
+                        .form-group {
+                            label[for="from"] {
+                                width: 61%;
+                            }
+                            label[for="till"] {
+                                min-width: 10%;
+                                max-width: 30%;
+                                margin: 0 .1em 0 0;
+                            }
+                            input {
+                                width: 40%;
+                                margin: 0 .1em 0 0;
+                            }
                         }
-                        label[for="till"] {
-                            min-width: 5%;
-                            max-width: 15%;
-                            margin-bottom: 0;
-                        }
-                        input {
-                            width: 10%;
-                            margin-bottom: 0;
-                        }
+                      }
                     }
                 }
             }
