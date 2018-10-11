@@ -73,7 +73,7 @@ body {
 
 /* search form */
 div.searchExtForm form.form-inline .form-group {
-	margin:3px 0px;
+  margin: 0px 0px 3px 0px;
 }
 
 div.searchExtForm form.form-inline .form-group label {
