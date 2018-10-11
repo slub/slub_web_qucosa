@@ -39,3 +39,12 @@ a:focus, a:hover { color: #ff9d14; border-color: #ff9d14; }
 #navend #dinibig {
  //       background: url('../images/dinibig.png') no-repeat 0 0;
 }
+
+/* search form */
+div.searchExtForm form.form-inline .form-group {
+	margin:3px 0px;
+}
+
+div.searchExtForm form.form-inline .form-group label {
+	min-width: 150px;
+}

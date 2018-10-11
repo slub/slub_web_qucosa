@@ -33,3 +33,12 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 #navend #dinibig {
  //       background: url('../images/dinibig-2010.png') no-repeat 0 0;
 }
+
+/* search form */
+div.searchExtForm form.form-inline .form-group {
+	margin:3px 0px;
+}
+
+div.searchExtForm form.form-inline .form-group label {
+	min-width: 150px;
+}
