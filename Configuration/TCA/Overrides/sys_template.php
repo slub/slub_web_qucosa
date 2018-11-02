@@ -62,3 +62,9 @@ if (!defined('TYPO3_MODE')) {
     'Configuration/TypoScript/TUD',
     'Qucosa: Technische Universität Dresden (TUD)'
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/FIDMOVE',
+    'Qucosa: FID Move'
+);
