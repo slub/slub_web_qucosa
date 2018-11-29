@@ -44,3 +44,5 @@ page {
     }
   }
 }
+
+plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://tubaf.qucosa.de/sitemap_qucosa.xml
