@@ -24,8 +24,12 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 
 
 #header { background-image:url(../../Images/DIU/header.jpg); }
-#navlogo #homelink { background-image:url(../../Images/DIU/logo.jpg); }
-#ghosticon { background-image: url(../../Images/DIU/ghosticon.png); }
+#navlogo #homelink {
+  background-image:url(../../Images/DIU/logo2019.jpg);
+}
+#ghosticon {
+//  background-image: url(../../Images/DIU/ghosticon.png);
+}
 
 #navend a#dini {
 //        background: url('../images/dinismall.gif') no-repeat 0 0;
