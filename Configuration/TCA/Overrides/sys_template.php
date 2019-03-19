@@ -68,3 +68,15 @@ if (!defined('TYPO3_MODE')) {
     'Configuration/TypoScript/FIDMOVE',
     'Qucosa: FID Move'
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/FHZWICKAU',
+    'Qucosa: FH Zwickau'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/HTWKLEIPZIG',
+    'Qucosa: HTWK Leipzig'
+);

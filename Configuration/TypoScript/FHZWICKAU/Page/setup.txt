@@ -1,0 +1,48 @@
+page {
+
+  bodyTag = <body>
+
+  meta {
+    author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
+    description.field = description
+    keywords.field = keywords
+    # set robots noindex, nofollow if no_search is set
+    robots {
+      cObject = TEXT
+      cObject {
+        value = noindex, nofollow
+        if.isTrue.field = no_search
+      }
+      ifEmpty = index, follow
+    }
+    google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+  }
+
+  includeCSS {
+    client = EXT:slub_web_qucosa/Resources/Public/Css/FHZWICKAU/client.css
+  }
+
+  10 = FLUIDTEMPLATE
+  10 {
+    file = EXT:slub_web_qucosa/Resources/Private/Templates/FHZWICKAU/Start.html
+    layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/
+    partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/
+
+    variables {
+      pageTitle = TEXT
+      pageTitle.data = page:title
+
+      content < styles.content.get
+      contentRight < styles.content.getRight
+
+      rootPageId = TEXT
+      rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
+
+      imprintPageId = TEXT
+      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
+
+    }
+  }
+}
+
+plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://slub.qucosa.de/sitemap_qucosa.xml
