@@ -32,7 +32,9 @@ page {
       pageTitle.data = page:title
 
       content < styles.content.get
-      contentRight < styles.content.getRight
+
+      contentRight < styles.content.get
+      contentRight.select.where = colPos=2
 
       rootPageId = TEXT
       rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
