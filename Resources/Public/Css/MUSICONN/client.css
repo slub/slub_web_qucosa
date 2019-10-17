@@ -1,137 +1,137 @@
 /* hide some elements */
 #qucosainstall, #navend, #byslub, #maintop, #mainbottom {
-	display:none;
+  display:none;
 }
 
 /* no background-images */
 body, #bgtop, #navbar, #main, #navlogo {
-	background-image:none;
+  background-image:none;
 }
 
 body {
-	background-color:#f1f1f1;
+  background-color:#f1f1f1;
 }
 
 #smallsearch {
-	box-shadow:none;
+  box-shadow:none;
 }
 
 #main {
-	background-color:#fff;
-	border: 1px solid #dadada;
-	left:0px;
-	width:100%;
+  background-color:#fff;
+  border: 1px solid #dadada;
+  left:0px;
+  width:100%;
 }
 
 #content {
-	margin-left:105px;
-	margin-bottom:90px;
+  margin-left:105px;
+  margin-bottom:90px;
 }
 
 #header {
-	border-bottom: 1px solid #dadada;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:145px;
-	background-image: url(../../Images/MUSICONN/header.jpg);
-	background-repeat:no-repeat;
-	background-position: center center;
+  border-bottom: 1px solid #dadada;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:145px;
+  background-image: url(../../Images/MUSICONN/header.jpg);
+  background-repeat:no-repeat;
+  background-position: center center;
 }
 
 #navlogo {
-	top:0px;
+  top:0px;
 }
 
 #navlogo #homelink {
-	background-image: url(../../Images/MUSICONN/logo.png);
-	background-size: contain;
+  background-image: url(../../Images/MUSICONN/logo.png);
+  background-size: contain;
 }
 
 div.footer {
-	position:relative;
-	bottom:0px;
-	margin-top:-50px;
+  position:relative;
+  bottom:0px;
+  margin-top:-50px;
 }
 
 #endspacer p {
-	margin-top:50px;
-	color:#666;
+  margin-top:50px;
+  color:#666;
 }
 
 #endspacer p a.iconlink {
-	outline:none;
-	text-decoration:none;
-	border:none;
-	margin:0px 3px;
+  outline:none;
+  text-decoration:none;
+  border:none;
+  margin:0px 3px;
 }
 
 #smallsearch #submit.button.btn.btn-default.glyphicon.glyphicon-search {
-	color:#bbbbbb;
-	height:40px;
+  color:#bbbbbb;
+  height:40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color:#005be3;
+  color:#005be3;
 }
 
 a {
-	color:#005be3;
-	border:none;
+  color:#005be3;
+  border:none;
 }
 
 #nav a:hover
 {
-	background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /* search */
 div.searchForm .form-inline.qucosa-search-form {
-	background:none;
-	border:none;
-	padding:0px;
+  background:none;
+  border:none;
+  padding:0px;
 }
 
 div.searchExtForm form.form-inline .form-group {
-	margin:3px 0px;
+  margin:3px 0px;
 }
 
 div.searchExtForm form.form-inline .form-group label {
-	min-width: 150px;
+  min-width: 150px;
 }
 
 /* delivery form */
 #slubForm h3.formtitle {
-	margin-bottom:20px;
+  margin-bottom:20px;
 }
 
 #slubForm legend {
-	color:inherit;
-	font-size:1em;
-	font-weight:bold;
-	text-decoration:none;
-	border:none;
+  color:inherit;
+  font-size:1em;
+  font-weight:bold;
+  text-decoration:none;
+  border:none;
 }
 
 #slubForm label {
-	color:inherit;
-	font-weight:normal;
+  color:inherit;
+  font-weight:normal;
 }
 
 #slubForm .slub-forms-fieldset:last-of-type legend{
-	display:none;
+  display:none;
 }
 
 .slub-forms-fieldset input.button.submit.form-control {
-	margin-top:10px;
+  margin-top:10px;
 }
 
 ul {
-	list-style-type:disc;
-	margin:10px 20px;
+  list-style-type:disc;
+  margin:10px 20px;
 }
 
 .search-results ul {
-	list-style-type:none;
-	margin:0px;
+  list-style-type:none;
+  margin:0px;
 }

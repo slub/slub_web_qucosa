@@ -31,22 +31,22 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 #ghosticon { background-image: url(../../Images/UBL/ghosticon.png); }
 
 body {
-	background-image: url(../../Images/UBL/ublbg.png);
+  background-image: url(../../Images/UBL/ublbg.png);
 }
 
 #qucosainstall {
-    right: auto;
-    left: 84px;
-    top: 480px;
-    width: 80px;
-    height: 80px;
-    font-size: 10px;
-    background: url(../../Images/UBL/ublinstallicon.png) no-repeat center top;
-    background-size: contain;
-    text-indent: -2000px;
-    overflow: hidden;
-    padding: 0;
-    text-align: left;
+  right: auto;
+  left: 84px;
+  top: 480px;
+  width: 80px;
+  height: 80px;
+  font-size: 10px;
+  background: url(../../Images/UBL/ublinstallicon.png) no-repeat center top;
+  background-size: contain;
+  text-indent: -2000px;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
 }
 
 
@@ -77,5 +77,5 @@ div.searchExtForm form.form-inline .form-group {
 }
 
 div.searchExtForm form.form-inline .form-group label {
-	min-width: 150px;
+  min-width: 150px;
 }

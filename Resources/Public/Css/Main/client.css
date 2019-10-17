@@ -26,10 +26,10 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 #ghosticon, #qucosainstall { display: none; }
 
 #navend a#dini {
-//        background: url('../images/dinismall-2010.gif') no-repeat 0 0;
+/*   background: url('../images/dinismall-2010.gif') no-repeat 0 0; */
 }
 #navend #dinibig {
- //       background: url('../images/dinibig-2010.png') no-repeat 0 0;
+/*   background: url('../images/dinibig-2010.png') no-repeat 0 0; */
 }
 
 /* search form */
@@ -38,5 +38,5 @@ div.searchExtForm form.form-inline .form-group {
 }
 
 div.searchExtForm form.form-inline .form-group label {
-	min-width: 150px;
+  min-width: 150px;
 }

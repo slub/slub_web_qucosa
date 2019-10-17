@@ -1,5 +1,3 @@
-
-
 .tx-dlf-metadata dd.title, ol.prominentlist,
 a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend input.addButton:hover,
@@ -25,19 +23,19 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 
 
 #header { background-image:url(../../Images/HTWKLEIPZIG/header.jpg); }
-//#navlogo #homelink { background-image:url(../../Images/HTWKLEIPZIG/logo.jpg); }
-//#ghosticon { background-image: url(../../Images/HTWKLEIPZIG/ghosticon.png); }
+/* #navlogo #homelink { background-image:url(../../Images/HTWKLEIPZIG/logo.jpg); } */
+/* #ghosticon { background-image: url(../../Images/HTWKLEIPZIG/ghosticon.png); } */
 
 #langnav {
-	padding-right: 20px;
-	padding-top: 5px;
-	font-size:0.8em;
-	text-align: right;
+  padding-right: 20px;
+  padding-top: 5px;
+  font-size:0.8em;
+  text-align: right;
 }
 
 ul#langnav li {
-	display:inline;
-	padding-right: 10px;
+  display:inline;
+  padding-right: 10px;
 }
 
 /* search form */
@@ -46,5 +44,5 @@ div.searchExtForm form.form-inline .form-group {
 }
 
 div.searchExtForm form.form-inline .form-group label {
-	min-width: 150px;
+  min-width: 150px;
 }
