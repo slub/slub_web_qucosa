@@ -79,3 +79,5 @@ div.searchExtForm form.form-inline .form-group {
 div.searchExtForm form.form-inline .form-group label {
   min-width: 150px;
 }
+
+.tx-dlf-metadata .affiliation { background-color: #002f51; }
