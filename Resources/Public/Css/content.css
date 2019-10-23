@@ -259,3 +259,37 @@ ol.tx-dlf-listview-list dd.author { color: #666; font-size: 0.85em; }
 .tx-dlf-tools-pdf-page a:hover { text-decoration: none; opacity: 0.6; }
 .tx-dlf-tools-pdf-page a:visited { color: #fff; }
 .tx-dlf-tools-pdf-page a:active { top: 2px; box-shadow: 0 0 3px rgba(0,0,0,0.2); }
+
+
+.tx-dlf-metadata .affiliation {
+/* Override display: none at the element to opt-in; */
+/* Should be removed when we use this in production */
+  display: block !important;
+
+  position: absolute;
+  top: -3em;
+
+  padding: 5px;
+  margin: 4px 8px 4px 0;
+
+  border: 1px solid #C00;
+  border-radius: 0 7px;
+
+/* Default color should be overwritten by client.css */
+  background-color: #C00;
+  color: #fff;
+
+  white-space: nowrap;
+  text-align: center;
+
+  visibility: hidden;
+}
+
+.tx-dlf-metadata .author {
+	position: relative;
+	cursor: pointer;
+}
+
+.tx-dlf-metadata .author:hover .affiliation {
+	visibility: visible;
+}
