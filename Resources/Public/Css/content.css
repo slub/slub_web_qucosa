@@ -293,3 +293,8 @@ ol.tx-dlf-listview-list dd.author { color: #666; font-size: 0.85em; }
 .tx-dlf-metadata .author:hover .affiliation {
 	visibility: visible;
 }
+
+/* Don't show anything if there's no affiliation present */
+.tx-dlf-metadata .author:hover .affiliation:empty {
+    visibility: hidden;
+}
