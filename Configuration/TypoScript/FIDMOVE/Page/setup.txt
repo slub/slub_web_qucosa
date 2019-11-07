@@ -15,7 +15,7 @@ page {
       }
       ifEmpty = index, follow
     }
-    google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+    google-site-verification = UoPkjgWShTQq7Nne2YguhpZ5rsYBjwnl9YruPLxjaV8
   }
 
   includeCSS {
