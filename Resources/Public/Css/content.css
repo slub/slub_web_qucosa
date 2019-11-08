@@ -24,6 +24,9 @@
 	font-weight:bold;
 }
 
+/* Fix artifact on hover that is introduced by underlining all links */
+#navlogo #homelink:hover { text-decoration: none; }
+
 .trenner {
 	position:relative;
 	top:0;
