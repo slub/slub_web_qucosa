@@ -21,6 +21,15 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend .processsteps a:visited,
 .tx-slubopus4frontend .processsteps a.selected:visited { background-color: #009EE3; }
 
+body {
+  background: #e6e8e9 !important;
+  background-image: none;
+}
+
+#bgtop {
+  background: #e6e8e9;
+  background-image: none;
+}
 
 #header { background-image:url(../../Images/HTWKLEIPZIG/header.png); }
 #navlogo #homelink { background-image:url(../../Images/HTWKLEIPZIG/logo.png); }
