@@ -6,7 +6,7 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend fieldset textarea:focus,
 #tx_slubopus4frontend-prevStep:hover,
 #tx_slubopus4frontend-submit:hover,
-#tx_slubopus4frontend-reset:hover { color:#c00; }
+#tx_slubopus4frontend-reset:hover { color:#009EE3; }
 
 #dedscontent .tabbar,
 #dedscontent .tabcontent,
@@ -14,16 +14,25 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend .processsteps a,
 .tx-slubopus4frontend .processsteps a:visited,
 .tx-slubopus4frontend fieldset textarea:focus,
-.tx-slubopus4frontend fieldset select:focus  { border-color: #c00; }
+.tx-slubopus4frontend fieldset select:focus  { border-color: #009EE3; }
 
 .tx-dlf-tools-pdf-page a, #smallsearch, #dedscontent .tabbar a.active,
 .tx-slubopus4frontend .processsteps a.selected,
 .tx-slubopus4frontend .processsteps a:visited,
-.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #c00; }
+.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #009EE3; }
 
+body {
+  background: #e6e8e9 !important;
+  background-image: none;
+}
 
-#header { background-image:url(../../Images/HTWKLEIPZIG/header.jpg); }
-/* #navlogo #homelink { background-image:url(../../Images/HTWKLEIPZIG/logo.jpg); } */
+#bgtop {
+  background: #e6e8e9;
+  background-image: none;
+}
+
+#header { background-image:url(../../Images/HTWKLEIPZIG/header.png); }
+#navlogo #homelink { background-image:url(../../Images/HTWKLEIPZIG/logo.png); }
 /* #ghosticon { background-image: url(../../Images/HTWKLEIPZIG/ghosticon.png); } */
 
 #langnav {
@@ -47,4 +56,4 @@ div.searchExtForm form.form-inline .form-group label {
   min-width: 150px;
 }
 
-.tx-dlf-metadata .affiliation { background-color: #c00; }
+.tx-dlf-metadata .affiliation { background-color: #009EE3; }
