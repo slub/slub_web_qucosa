@@ -1,5 +1,6 @@
 <?php
 
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache']['banUrlsRegExp'] = '/type=|eID=|tx_dpf_frontendsearch|tx_dlf|(?:^|\?|&)q=/';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'] = array(
 
   'apiConfiguration' => array(
@@ -26,7 +27,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVar
   ),
 
 );
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars']['176'] = 'apiConfiguration';
+
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['qucosa.de'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de'];
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['slub.qucosa.de']['fixedPostVars'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'];
@@ -72,3 +73,5 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['musiconn.qucosa.de']['fixedPo
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.de']['fixedPostVars'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.de']['fixedPostVars']['60'] = 'landingPageConfiguration';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.de']['fixedPostVars']['50'] = 'apiConfiguration';
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars']['176'] = 'apiConfiguration';
