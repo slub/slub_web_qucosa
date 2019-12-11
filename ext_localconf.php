@@ -49,7 +49,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['ul.qucosa.de']['fixedPostVars
 // we need ubl for compatibility reasons; use ul.qucosa.de as default
 //$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['ubl.qucosa.de'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['ul.qucosa.de'];
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['hzdr.qucosa.de'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['hzdr.qucosa.de'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de'];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['hzdr.qucosa.de']['fixedPostVars']['95'] = 'landingPageConfiguration';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['hzdr.qucosa.de']['fixedPostVars']['87'] = 'apiConfiguration';
 //$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['fzd.qucosa.de'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['hzdr.qucosa.de'];
