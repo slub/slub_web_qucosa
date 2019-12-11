@@ -48,6 +48,7 @@ page {
   }
 
   # remove special JS of used extensions dpf, slub_forms
+  includeJS.tx_dpf_jquery_ui >
   includeJSFooter >
   includeJSFooter {
     jquery = EXT:slub_web_qucosa/Resources/Public/Js/MUSICONN/jquery-3.3.1.min.js

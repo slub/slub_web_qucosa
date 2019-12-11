@@ -1,3 +1,4 @@
+# TYPO3 7.6 working with section_frame:
 tt_content.stdWrap.innerWrap.cObject {
 
   default.20.10.value = wrap
@@ -12,6 +13,16 @@ tt_content.stdWrap.innerWrap.cObject {
   24.value = <div class="accordion">|</div>
 
 }
+
+# TYPO3 8.7 working with frame_class:
+tt_content.stdWrap.innerWrap.cObject.smallspace-blocks =< tt_content.stdWrap.innerWrap.cObject.default
+tt_content.stdWrap.innerWrap.cObject.smallspace-blocks.20.10.value = wrap grid-3 smallspace blocks
+
+tt_content.stdWrap.innerWrap.cObject.recherche =< tt_content.stdWrap.innerWrap.cObject.default
+tt_content.stdWrap.innerWrap.cObject.recherche.20.10.value = wrap recherche
+
+tt_content.stdWrap.innerWrap.cObject.accordion =< tt_content.stdWrap.innerWrap.cObject.default
+tt_content.stdWrap.innerWrap.cObject.accordion.20.10.value = accordion
 
 tt_content.image.20 {
 
