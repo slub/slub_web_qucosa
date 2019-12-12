@@ -132,6 +132,9 @@ select {
     &:focus {
         border-color: @color5
     }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 
@@ -435,14 +438,14 @@ select {
 
 
 
-.tx-slub-forms {
+#abgabeformular {
     max-width: 50em;
     .hide,
-    h3 {
-        display: none
-    }
     fieldset {
-        border: none;
+        border-radius: 6px;
+        border: 2px solid @color3;
+        margin-top: 1em;
+        padding: 1em;
         legend {
             display: inline-block;
             font-weight: 400;
@@ -459,7 +462,7 @@ select {
         }
         label {
             border: none;
-            padding: 2em 1em .6em 0;
+            padding: 1em 1em .6em 0;
             &.error {
                 height: 1px;
                 padding: 0
@@ -477,20 +480,11 @@ select {
             }
         }
     }
-}
-
-
-
-.tx-slub-forms {
-    .kontakt {
-        legend {display: none}
-        #slub-forms-fieldset-2-3 {
-            input {
-                display: inline-block;
-                width: auto;
-                border-radius: 0px;
-                margin: 3em 0 6em
-            }
+    table {
+      td {
+        &.summary-table-first-col {
+            width: 35%;
         }
+      }
     }
 }
