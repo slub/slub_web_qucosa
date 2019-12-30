@@ -1,5 +1,9 @@
 <?php
-
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName']['index']['sitemap.xml'] = array (
+    'keyValues' => array(
+        'type' => 20180709,
+    ),
+);
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache']['banUrlsRegExp'] = '/type=|eID=|tx_dpf_frontendsearch|tx_dlf|(?:^|\?|&)q=/';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'] = array(
 
