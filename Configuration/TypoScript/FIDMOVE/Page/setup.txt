@@ -34,10 +34,6 @@ page {
           pagets__default.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Standard.html
           pagets__1spaltig = TEXT
           pagets__1spaltig.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/1-Spalte.html
-          pagets__startseite = TEXT
-          pagets__startseite.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Startseite.html
-          pagets__suche = TEXT
-          pagets__suche.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Suche.html
           default = TEXT
           default.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Standard.html
           default.insertData = 1
