@@ -19,31 +19,66 @@ page {
   }
 
   includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/FIDMOVE/client.css
-  }
+      tib = EXT:slub_web_qucosa/Resources/Public/Css/FIDMOVE/main.css
+      ext = EXT:slub_web_qucosa/Resources/Public/Css/FIDMOVE/extensions.css
+      font_awesome = EXT:slub_web_qucosa/Resources/Public/Css/FIDMOVE/font-awesome.min.css
+   }
 
   10 = FLUIDTEMPLATE
   10 {
-    file = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Start.html
-    layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/
-    partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/
+      file.stdWrap.cObject = CASE
+      file.stdWrap.cObject {
+          key.data = levelfield:-1, backend_layout_next_level, slide
+          key.override.field = backend_layout
+          pagets__default = TEXT
+          pagets__default.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Standard.html
+          pagets__1spaltig = TEXT
+          pagets__1spaltig.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/1-Spalte.html
+          pagets__startseite = TEXT
+          pagets__startseite.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Startseite.html
+          pagets__suche = TEXT
+          pagets__suche.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Suche.html
+          default = TEXT
+          default.value = EXT:slub_web_qucosa/Resources/Private/Templates/FIDMOVE/Standard.html
+          default.insertData = 1
+      }
 
-    variables {
-      pageTitle = TEXT
-      pageTitle.data = page:title
+      layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/FIDMOVE/
+      partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/FIDMOVE/
 
-      content < styles.content.get
+      dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+          special = directory
+          special.value = {$plugin.tx_slubwebqucosa.rootPid}
+          levels = 3
+          includeSpacer = 0
+          as = mainMenu
+        }
+      }
 
-      contentRight < styles.content.get
-      contentRight.select.where = colPos=2
+      variables {
+        pageTitle = TEXT
+        pageTitle.data = page:title
 
-      rootPageId = TEXT
-      rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
+        content < styles.content.get
 
-      imprintPageId = TEXT
-      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
+        contentLeft < styles.content.get
+        contentLeft.select.where = colPos=1
 
-    }
+        contentRight < styles.content.get
+        contentRight.select.where = colPos=2
+
+        rootPageId = TEXT
+        rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
+
+        imprintPageId = TEXT
+        imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
+
+      }
+      # Add an "virtual" extension name to be able to use <f:translate id="close" /> viewhelpers with just with the translation key.
+      # Otherwise you have to use the complete path or add extensionName: 'SlubWebQucosa' to the translation viewhelper.
+      extbase.controllerExtensionName = slub_web_qucosa
   }
 }
 

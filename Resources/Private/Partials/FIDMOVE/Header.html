@@ -1,0 +1,30 @@
+<header class="head">
+  <div class="inner">
+    <nav class="navbar mx-auto navbar-expand-lg navbar-light">
+      <div class="user-interaction-head d-flex align-items-center">
+        <f:comment>
+        <img class="dfg-logo" src="{f:uri.resource(path: 'Images/FIDMOVE/dfg.png')}" />
+        <a class="lang d-inline-flex" href="#"><span><img class="mr-2 d-block h-auto" src="{f:uri.resource(path: 'Images/FIDMOVE/uk.svg')}"/></span>English</a>
+        <a class="user-log d-inline-flex" href="#"><span><img class="mr-2 d-block h-auto" src="{f:uri.resource(path: 'Images/FIDMOVE/login.svg')}"/></span>Anmelden</a>
+        </f:comment>
+      </div>
+      <div class="container-fluid flex-wrap">
+        <a class="navbar-brand tib-logo" href="{f:uri.page(pageUid:'{rootPageId}')}">
+          <img src="{f:uri.resource(path: 'Images/FIDMOVE/logo.svg')}" alt="FID-move" />
+        </a>
+        <button class="navbar-toggler" type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <f:render partial="Menu" section="MainMenu" arguments="{mainMenu: mainMenu}" />
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- inner -->
+</header>

@@ -1,0 +1,20 @@
+<f:layout name="Startseite" />
+
+<f:section name="content">
+  <div class="container-fluid">
+    <div class="row subhead">
+      <div class="col">
+        <div class="img-ratio mx-auto">
+          <img src="{f:uri.resource(path: 'Images/FIDMOVE/hp1.jpg')}" alt="" />
+        </div>
+        <f:format.raw>{contentLeft}</f:format.raw>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid img-text-alternate" id="scroll-to-content">
+      <f:format.raw>{content}</f:format.raw>
+  </div>
+  <div class="container-fluid recent-articles space_before_extra-large space_after_extra-large">
+  <f:format.raw>{contentRight}</f:format.raw>
+  </div>
+</f:section>

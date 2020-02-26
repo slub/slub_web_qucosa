@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="MainMenu">
+
+  <f:if condition="{mainMenu}">
+    <ul class="navbar-nav ml-auto">
+      <f:for each="{mainMenu}" as="page">
+        <li class="nav-item dropdown">
+          <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+            <span>{page.title}</span>
+          </a>
+          <f:if condition="{page.children}">
+              <f:render section="submenu" arguments="{submenu: page.children}"/>
+         </f:if>
+        </li>
+      </f:for>
+    </ul>
+  </f:if>
+</f:section>
+
+<f:section name="submenu">
+  <ul class="dropdown-menu">
+    <f:for each="{submenu}" as="page">
+      <li class="dropdown-item">
+          <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+            <span>{page.title}</span>
+          </a>
+          <f:if condition="{page.children}">
+            <f:render section="submenu" arguments="{submenu: page.children}"/>
+          </f:if>
+      </li>
+    </f:for>
+  </ul>
+</f:section>
+</html>
