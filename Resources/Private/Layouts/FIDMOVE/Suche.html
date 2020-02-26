@@ -1,0 +1,29 @@
+<div class="site mx-auto">
+  <div class="page">  
+    <f:render partial="Header" arguments="{_all}" />
+  <section class="allcont">
+    <div class="container-fluid">
+        <div class="row subhead subhead-search">
+         <div class="col">
+          <f:format.raw>{searchform}</f:format.raw>
+          <f:comment><!-- IS WRITTEN DIRECTLY IN SEARCHFORM SECTION -->
+          <div class="img-ratio mx-auto show">
+            <img class="show" src="{f:uri.resource(path: 'images/search-head.jpg')}" alt="" />
+          </div>
+        </f:comment>
+        </div>
+      </div> 
+    </div>      
+    <div class="container space_after_extra-large">
+    <f:render partial="Breadcrumb" arguments="{_all}" />
+    <f:render partial="Subpagesheading" arguments="{_all}" />
+    <f:render section="content" />
+    </div>
+  </section>
+    <!-- //section -->  
+  <f:render partial="Footer" arguments="{_all}" />
+ </div>
+  <!-- //page -->
+</div>
+<!-- //site -->
+

@@ -1,0 +1,138 @@
+TCEFORM {
+  tt_content {
+    # 0: normal, 1: left, 2: right, 3: border
+    #colPos.removeItems = 1,3
+    #colPos.altLabels.0 = Hauptinhalt
+    #colPos.altLabels.2 = Seitenleiste
+    # frame_class is new in TYPO3 8.7
+    frame_class {
+        removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
+        addItems {
+#            smallspace-blocks = Musiconn: Startseite Neuerscheinungen
+#            recherche = Musiconn: Recherche Plugin
+#            accordion = Musiconn: FAQ Element
+        }
+    }
+    header_layout.disabled = 0
+    header_layout.altLabels.0 = Standard
+    header_layout.altLabels.1 = H1 Überschrift
+    header_layout.altLabels.2 = H2 Überschrift
+    header_layout.altLabels.3 = H3 Überschrift
+    header_layout.removeItems = 0,4,5
+
+    # image orientation in image gallery
+    imageorient.types.textpic.removeItems = 0,1,2,7,8,9,10,17,18,25
+    imagecaption.disabled = 1
+    imagecaption_position.disabled = 1
+  }
+}
+
+mod.web_layout.BackendLayouts {
+    default {
+      title = 2spaltig(9-3)
+      config {
+          backend_layout {
+              colCount = 3
+              rowCount = 2
+              rows {
+                  1 {
+                      columns {
+                          1 {
+                            name = Inhalt
+                            colspan = 2
+                            colPos = 0
+                          }
+                          2 {
+                            name = rechte Spalte
+                            colspan = 1
+                            colPos = 2
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      icon = EXT:slub_web_qucosa/Resources/Public/Images/FIDMOVE/BackendLayouts/2col-9-3.png
+    }
+    1spaltig {
+        title = 1spaltig
+        config {
+            backend_layout {
+                colCount = 3
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Inhalt
+                                colPos = 0
+                                colspan = 3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        icon = EXT:slub_web_qucosa/Resources/Public/Images/FIDMOVE/BackendLayouts/1col.png
+    }
+    startseite {
+        title = Startseite
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Header Content
+                                colspan = 1
+                                colPos = 1
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Inhalt
+                                colspan = 1
+                                colPos = 0
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Aktuelles
+                                colspan = 1
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        icon = EXT:slub_web_qucosa/Resources/Public/Images/FIDMOVE/BackendLayouts/2col-3-9.png
+    }
+    suche {
+        title = Suche
+        config {
+            backend_layout {
+                colCount = 3
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Inhalt
+                                colPos = 0
+                                colspan = 3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        icon = EXT:slub_web_qucosa/Resources/Public/Images/FIDMOVE/BackendLayouts/suche-col.png
+    }
+}
