@@ -18894,7 +18894,6 @@ p {
   font-size: 17px;
 }
 
-.tx-dlf-tools-pdf-page a,
 .subhead .subhead-content .btn {
   width: 230px;
   height: 50px;
@@ -18908,9 +18907,9 @@ p {
   transition: all 0.3s ease-out;
 }
 
-.tx-dlf-tools-pdf-page a,
 .subhead .subhead-content .btn:hover {
   background-color: #fff;
+  color: #fff;
 }
 
 .subhead .subhead-content .btn:hover span {
@@ -20461,6 +20460,15 @@ ol.tx-dlf-listview-list dd.author { color: #666; font-size: 0.85em; }
 
 div.searchExtForm form.form-inline .form-group label {
   min-width: 160px;
+}
+
+.tx-dlf-tools-pdf-page a {
+  text-decoration: none;
+  background-color: #c60804;
+}
+.tx-dlf-tools-pdf-page a:hover {
+  color: #fff;
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=main.css.map */
