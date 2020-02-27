@@ -2985,8 +2985,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
   opacity: 0;
 }
 
-.collapse:not(.show) {
-  display: none;
+.collapse:not(.in) {
+  display: none!important;
 }
 
 .collapsing {
