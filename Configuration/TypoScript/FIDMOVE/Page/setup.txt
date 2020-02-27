@@ -6,6 +6,7 @@ page {
     author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
     description.field = description
     keywords.field = keywords
+    viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0
     # set robots noindex, nofollow if no_search is set
     robots {
       cObject = TEXT
