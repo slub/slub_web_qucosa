@@ -47,8 +47,19 @@ lib.langnav {
     NO {
       linkWrap = <li class="lang_de">|</li> || <li class="lang_en">|</li>
       # wrap the page title! otherways you see the current page title instead of the language.
-      stdWrap.override = Deutsch || English
+      stdWrap{
+          override = Deutsch || English
+          typolink {
+              parameter.data = page:uid
+              additionalParams = &L=0 || &L=1
+              ATagParams = hreflang="de-DE" data-iso-label="DE" || hreflang="en-GB" data-iso-label="EN"
+              addQueryString = 1
+              addQueryString.exclude = L,id,no_cache
+              addQueryString.method = GET
+              no_cache = 0
+          }
       }
+    }
     # active language
     ACT < .NO
     ACT {
