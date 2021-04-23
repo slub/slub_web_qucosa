@@ -1,7 +1,10 @@
 <f:layout name="Standard" />
 
-<f:section name="content">
-<div class="row">
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+   xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Content">
+  <div class="row">
     <div class="col-md-4 order-md-2 mb-4 sidebar">
       <f:format.raw>{content_right}</f:format.raw>
     </div>
@@ -9,5 +12,10 @@
       <f:format.raw>{content}</f:format.raw>
     </div>
   </div>
-
 </f:section>
+
+<f:section name="Piwik">
+  <f:render section="Piwik" partial="Piwik" />
+</f:section>
+
+</div>
