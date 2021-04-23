@@ -17,11 +17,16 @@
   ],
   "license": "GPL-3.0-or-later",
   "require": {
-    "typo3/cms-core": "~7.6.23|^8.7.0"
+    "typo3/cms-core": "^8.7"
   },
   "autoload": {
     "psr-4": {
       "Slub\\SlubWebQucosa\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "slub_web_qucosa"
     }
   }
 }
