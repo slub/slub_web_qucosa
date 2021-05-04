@@ -21,3 +21,5 @@ config {
 
   tx_realurl_enable = 1
 }
+
+page.includeCSS.tx_dpf = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css

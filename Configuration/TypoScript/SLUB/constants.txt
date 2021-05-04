@@ -4,3 +4,17 @@ plugin.tx_slubwebqucosa {
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
 	imprintPid =
 }
+
+# Allgemeine Textbausteine
+text {
+	languageIconDescription = Haken-Symbol um die getätigte Sprachauswahl zu zeigen
+	languageButton = DE
+}
+
+[globalVar = GP:L = 1]
+	# Allgemeine Textbausteine
+	text {
+		languageIconDescription = Check icon to show the language-selection made
+		languageButton = EN
+	}
+[global]

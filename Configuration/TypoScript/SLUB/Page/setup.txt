@@ -1,6 +1,6 @@
 page {
 
-  bodyTag = <body>
+  bodyTag = <body class="mandant-main state--mouse">
 
   meta {
     author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
@@ -18,31 +18,30 @@ page {
     google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
   }
 
-  includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/SLUB/client.css
-  }
-
   10 = FLUIDTEMPLATE
   10 {
     file = EXT:slub_web_qucosa/Resources/Private/Templates/SLUB/Start.html
     layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/
     partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/
 
+    # Hauptnavigation
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      10 {
+        entryLevel = 0
+        levels = 3
+        expandAll = 1
+        includeSpacer = 1
+        as = mainnavigation
+      }
+    }
+
     variables {
       pageTitle = TEXT
       pageTitle.data = page:title
 
-      content < styles.content.get
-
-      contentRight < styles.content.get
-      contentRight.select.where = colPos=2
-
-      rootPageId = TEXT
-      rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
-
-      imprintPageId = TEXT
-      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
-
+      languageButton = TEXT
+      languageButton.value = {$text.languageButton}
     }
   }
 }

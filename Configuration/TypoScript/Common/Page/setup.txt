@@ -3,8 +3,14 @@ page {
   shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/favicon.png
 
   includeCSS {
-    layoutx = EXT:slub_web_qucosa/Resources/Public/Css/layout.css
-    content = EXT:slub_web_qucosa/Resources/Public/Css/content.css
+    client = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
   }
 
+  includeJS {
+    client = EXT:slub_web_qucosa/Resources/Public/JavaScript/js/qsa--head.min.js
+  }
+
+  includeJSFooter {
+    client = EXT:slub_web_qucosa/Resources/Public/JavaScript/js/qsa--body.min.js
+  }
 }

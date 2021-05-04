@@ -25,6 +25,10 @@
 			<source>Skip to Main Navigation</source>
 			<target>Zur Hauptnavigation springen</target>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
+			<source>Publish</source>
+			<target>Publizieren</target>
+		</trans-unit>
 		</body>
 	</file>
 </xliff>
