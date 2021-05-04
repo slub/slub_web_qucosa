@@ -1,5 +1,5 @@
-# Configuration
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/setup.typoscript">
+# Dependencies
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/SLUB/Extensions/lib.logo.typoscript">
 
 page {
 

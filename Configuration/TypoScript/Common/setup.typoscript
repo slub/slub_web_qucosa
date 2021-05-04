@@ -88,6 +88,19 @@ lib.navsearch {
     persistence =< plugin.tx:dpf.persistence
 }
 
+# logo
+lib.logo = COA
+lib.logo {
+    stdWrap.typolink.parameter.data = leveluid:0
+    stdWrap.typolink.ATagParams = class="qsa_logo"
+    stdWrap.typolink.title = Startseite
+    10 = IMAGE
+    10 {
+        file =
+        altText =
+    }
+}
+
 # Sprachmenü
 
 lib.langnav = HMENU

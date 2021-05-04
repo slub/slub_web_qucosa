@@ -1,5 +1,6 @@
 # Configuration
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/MONARCH/Extensions/lib.logo.typoscript">
 
 page {
 
@@ -13,6 +14,7 @@ page {
     }
 }
 
+# HTML Klasse hinzufügen
 config.htmlTag_stdWrap.cObject.value = tu-chemnitz
 
 plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://monarch.qucosa.de/sitemap_qucosa.xml
