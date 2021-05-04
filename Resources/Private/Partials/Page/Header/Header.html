@@ -75,12 +75,12 @@
                 </li>
             </ul>
         </nav>
-        <div class="qsa_header__logo qsa_header__logo--right">
-            <f:link.page pageUid="2" class="qsa_logo" target="_blank">
-                <img alt="Website Logo" src="{f:uri.resource(path:'Images/img/logo/Logo_Qucosa.svg', extensionName: 'slub_web_qucosa')}">
-            </f:link.page>
-        </div>
+        <f:if condition="isMandant == 'true'">
+            <div class="qsa_header__logo qsa_header__logo--right">
+                <f:link.page pageUid="2" class="qsa_logo" target="_blank">
+                    <img alt="Website Logo" src="{f:uri.resource(path:'Images/img/logo/Logo_Qucosa.svg', extensionName: 'slub_web_qucosa')}">
+                </f:link.page>
+            </div>
+        </f:if>
     </div>
 </header>
-
-<footer class="qsa_footer d-none"></footer>

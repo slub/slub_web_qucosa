@@ -1,0 +1,189 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/dpf.setup.typoscript">
+
+############
+### PAGE ###
+############
+
+page = PAGE
+page {
+    bodyTag = <body class="mandant-main state--mouse">
+
+    meta {
+        # set robots noindex, nofollow if no_search is set
+        description.field = description
+        keywords.field = keywords
+        viewport = {$page.meta.viewport}
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+        robots {
+            cObject = TEXT
+            cObject {
+                value = noindex, nofollow
+                if.isTrue.field = no_search
+            }
+            ifEmpty = index, follow
+        }
+    }
+
+    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/favicon.png
+
+    includeCSS {
+        client = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
+    }
+
+    includeJS {
+        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/js/qsa--head.min.js
+    }
+
+    includeJSFooter {
+        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/js/qsa--body.min.js
+    }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        layoutRootPath = {$page.fluidtemplate.layoutRootPath}
+        partialRootPath = {$page.fluidtemplate.partialRootPath}
+
+        # Hauptnavigation
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                entryLevel = 0
+                levels = 3
+                expandAll = 1
+                includeSpacer = 1
+                as = mainnavigation
+            }
+        }
+
+        variables {
+            pageTitle = TEXT
+            pageTitle.data = page:title
+
+            isMandant = TEXT
+            isMandant.value = true
+
+            languageButton = TEXT
+            languageButton.value = {$text.languageButton}
+        }
+    }
+}
+
+lib.navsearch = USER
+lib.navsearch {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    vendorName = EWW
+    pluginName = Frontendsearch
+    extensionName = Dpf
+    controller = SearchFE
+    switchableControllerActions {
+        SearchFE {
+            1 = showSearchForm
+        }
+    }
+
+    settings =< plugin.tx_dpf.settings
+    persistence =< plugin.tx:dpf.persistence
+}
+
+# Sprachmenü
+
+lib.langnav = HMENU
+lib.langnav {
+    special = language
+    special.value = 0,1
+    special.normalWhenNoLanguage = 0
+    1 = TMENU
+    1 {
+        noBlur = 1
+        #expAll = 0
+        accessKey = 1
+        wrap = <ul class="qsa_dropdown__items">|</ul>
+
+        NO = 1
+        NO {
+            doNotLinkIt = 1
+            linkWrap = <li class="qsa_dropdown__item">|</li>
+            # wrap the page title! otherways you see the current page title instead of the language.
+            stdWrap{
+                override = Deutsch || Englisch
+                override.wrap = <svg class="qsa_icon icon--check icon--base" role="img" width="20" height="20" aria-hidden="true"><title class="sr-only">Icon check</title><desc class="sr-only">{$text.languageIconDescription}</desc><use xlink:href="/typo3conf/ext/slub_web_qucosa/Resources/Public/icons/icon.min.svg#icon-check"></use></svg>
+                typolink {
+                    parameter.data = page:uid
+                    additionalParams = &L=0 || &L=1
+                    ATagParams = hreflang="de-DE" data-iso-label="DE" class="qsa_dropdown__link" || hreflang="en-GB" data-iso-label="EN" class="qsa_dropdown__link"
+                    addQueryString = 1
+                    addQueryString.exclude = L,id,no_cache
+                    addQueryString.method = GET
+                    no_cache = 0
+                }
+            }
+        }
+        # active language
+        ACT < .NO
+        ACT {
+            linkWrap = <li class="qsa_dropdown__item">|</li>
+            stdWrap{
+                typolink{
+                    ATagParams = hreflang="de-DE" data-iso-label="DE" class="qsa_dropdown__link qsa_dropdown__link--selected" || hreflang="en-GB" data-iso-label="EN" class="qsa_dropdown__link qsa_dropdown__link--selected"
+                }
+            }
+        }
+
+        # NO + Translation doesn't exist
+        USERDEF1 < .NO
+
+        # ACT + Translation doesn't exist
+        USERDEF2 < .ACT
+    }
+}
+
+##############
+### CONFIG ###
+##############
+config {
+    doctype = html5
+    absRefPrefix = /
+    prefixLocalAnchors = all
+    uniqueLinkVars = 1
+
+    removeDefaultCss = 1
+
+    #Cache
+    cache_clearAtMidnight = 1
+    sendCacheHeaders = 1
+    headerComment = Ein Projekt der Sächsischen Staatsbibliothek - Landes- und Universitätsbibliothek Dresden (SLUB)
+    meaningfulTempFilePrefix = 1
+
+    spamProtectEmailAddresses = 3
+    spamProtectEmailAddresses_atSubst = &#64;
+
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+
+    tx_realurl_enable = 1
+
+    linkVars = L(1)
+    sys_language_uid = 0
+    language = de
+    htmlTag_langKey = de
+    htmlTag_dir = ltr
+    htmlTag_stdWrap.cObject = TEXT
+    htmlTag_stdWrap.cObject.wrap = <html class="|" lang="de" dir="ltr" >
+    locale_all = de_DE.UTF-8
+    sys_language_mode = content_fallback
+    sys_language_overlay = hideNonTranslated
+}
+
+[globalVar = GP:L=1]
+    config {
+        sys_language_uid = 1
+        language = en
+        htmlTag_langKey = en
+        htmlTag_stdWrap.cObject.wrap = <html class="|" lang="en" dir="ltr" >
+        locale_all = en_GB.UTF8
+    }
+[global]

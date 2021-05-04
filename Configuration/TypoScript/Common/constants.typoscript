@@ -1,0 +1,27 @@
+############
+### PAGE ###
+############
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/Page/
+    }
+    meta {
+        viewport = width=device-width, initial-scale=1
+        compatible = IE=edge
+    }
+}
+
+# Allgemeine Textbausteine
+text {
+    languageIconDescription = Haken-Symbol um die getätigte Sprachauswahl zu zeigen
+    languageButton = DE
+}
+
+[globalVar = GP:L = 1]
+    # Allgemeine Textbausteine
+    text {
+        languageIconDescription = Check icon to show the language-selection made
+        languageButton = EN
+    }
+[global]
