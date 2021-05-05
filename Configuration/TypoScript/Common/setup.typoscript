@@ -68,6 +68,10 @@ page {
             languageButton = TEXT
             languageButton.value = {$text.languageButton}
         }
+
+        settings {
+            pageIDmeta = {$pageID.meta}
+        }
     }
 }
 

@@ -5,31 +5,33 @@
             <generator>LFEditor</generator>
         </header>
         <body>
-            <trans-unit id="tx_slubwebqucosa.printthispage" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.printthispage" xml:space="preserve">
 			<source>Print Page</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.jumptotop" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.jumptotop" xml:space="preserve">
 			<source>Jump to top of Page</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.gotohomepage" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.gotohomepage" xml:space="preserve">
 			<source>Goto Homepage</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.musiconn.gotohomepage" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.musiconn.gotohomepage" xml:space="preserve">
 			<source>musiconn - für vernetzte Musikwissenschaft</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.skiptocontent" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.skiptocontent" xml:space="preserve">
 			<source>Skip to Content</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.skiptomainnav" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.skiptomainnav" xml:space="preserve">
 			<source>Skip to Main Navigation</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.gotoimprint" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.gotoimprint" xml:space="preserve">
 			<source>Goto Imprint</source>
 		</trans-unit>
-            <trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
+		<trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
 			<source>Publish</source>
 		</trans-unit>
-
+		<trans-unit id="tx_slubwebqucosa.footer" xml:space="preserve">
+			<source>An offer of the Saxon State Library - Dresden State and University Library </source>
+		</trans-unit>
         </body>
     </file>
 </xliff>

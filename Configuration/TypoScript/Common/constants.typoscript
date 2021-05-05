@@ -12,6 +12,11 @@ page {
     }
 }
 
+pageID {
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Metanavigation
+    meta = 23
+}
+
 # Allgemeine Textbausteine
 text {
     languageIconDescription = Haken-Symbol um die getätigte Sprachauswahl zu zeigen

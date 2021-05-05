@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-26T14:46:22Z">
-		<header>
-			<generator>LFEditor</generator>
-		</header>
-		<body>
-		<trans-unit id="tx_slubwebqucosa.gotohomepage" approved="yes">
-			<source>Goto Homepage</source>
-			<target>zur Startseite</target>
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages"
+          date="2017-12-26T14:46:22Z">
+        <header>
+            <generator>LFEditor</generator>
+        </header>
+        <body>
+            <trans-unit id="tx_slubwebqucosa.gotohomepage" approved="yes">
+                <source>Goto Homepage</source>
+                <target>zur Startseite</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.jumptotop" approved="yes">
+                <source>Jump to top of Page</source>
+                <target>Zum Seitenanfang</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.printthispage" approved="yes">
+                <source>Print Page</source>
+                <target>Seite drucken</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.skiptocontent" approved="yes">
+                <source>Skip to Content</source>
+                <target>Zum Inhalt springen</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.skiptomainnav" approved="yes">
+                <source>Skip to Main Navigation</source>
+                <target>Zur Hauptnavigation springen</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
+			    <source>Publish</source>
+                <target>Publizieren</target>
+		            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.footer" xml:space="preserve">
+			    <source>An offer of the Saxon State Library - Dresden State and University Library</source>
+                <target>Ein Angebot der Sächsischen Landesbibliothek - Staats- und Universitätsbibliothek Dresden</target>
 		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.jumptotop" approved="yes">
-			<source>Jump to top of Page</source>
-			<target>Zum Seitenanfang</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.printthispage" approved="yes">
-			<source>Print Page</source>
-			<target>Seite drucken</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.skiptocontent" approved="yes">
-			<source>Skip to Content</source>
-			<target>Zum Inhalt springen</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.skiptomainnav" approved="yes">
-			<source>Skip to Main Navigation</source>
-			<target>Zur Hauptnavigation springen</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
-			<source>Publish</source>
-			<target>Publizieren</target>
-		</trans-unit>
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>
