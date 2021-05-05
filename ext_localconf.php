@@ -32,6 +32,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVar
 
 );
 
+/***************
+ * TsConfig
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TsConfig/All.tsconfig">');
+
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['qucosa.de'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de'];
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['slub.qucosa.de']['cache'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache'];

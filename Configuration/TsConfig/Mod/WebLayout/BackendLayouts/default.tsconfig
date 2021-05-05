@@ -1,0 +1,39 @@
+### Backendlayouts
+mod {
+    web_layout {
+        allowInconsistentLanguageHandling = 1
+        BackendLayouts {
+            # Volle Breite
+            # ehemals: uid 1
+            beLayoutFullWidth {
+                title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.default
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
+                                        colPos = 1
+                                        colspan = 1
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.content
+                                        colPos = 2
+                                        colspan = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
