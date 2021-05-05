@@ -29,10 +29,26 @@
             <trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
 			    <source>Publish</source>
                 <target>Publizieren</target>
-		            </trans-unit>
+            </trans-unit>
             <trans-unit id="tx_slubwebqucosa.footer" xml:space="preserve">
 			    <source>An offer of the Saxon State Library - Dresden State and University Library</source>
                 <target>Ein Angebot der Sächsischen Landesbibliothek - Staats- und Universitätsbibliothek Dresden</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.placeholder" xml:space="preserve">
+			    <source>Search in a large number of records</source>
+			    <target>Suche in einer großen Anzahl an Datensätzen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.start" xml:space="preserve">
+			    <source>Begin Search</source>
+			    <target>Suche starten</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.remove" xml:space="preserve">
+			    <source>Remove Entry</source>
+			    <target>Sucheintrag löschen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
+			    <source>Expanded Search</source>
+			    <target>Erweiterte Suche</target>
 		</trans-unit>
         </body>
     </file>

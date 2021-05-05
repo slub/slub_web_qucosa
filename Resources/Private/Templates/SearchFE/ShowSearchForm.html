@@ -1,0 +1,36 @@
+<f:comment>
+    <!-- Das Formular kann um das Attribut "data-suggest" erweitert werden, um eine Autovervollständigung zu ermöglichen. Vgl. Prototyp -->
+</f:comment>
+<f:form additionalAttributes="{class: 'qsa_hero__search-wrapper'}" action="search" name="query" pageUid="{settings.searchResultsPid}" id="smallsearch" noCache="1"
+        noCacheHash="1">
+    <div class="qsa_hero__search">
+        <input type="hidden" name="L" value="0">
+        <label class="sr-only" for="tx-dlf-search-query">
+            {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.search.placeholder')}
+        </label>
+
+        <f:form.textfield property="fulltext"
+                          placeholder="{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.search.placeholder')}"
+                          id="tx-dlf-search-query"
+                          additionalAttributes="{aria-autocomplete: 'list', class: 'autocomplete'}"
+                          value="{query.fulltext}"/>
+        <f:form.button id="submit" type="submit" additionalAttributes="{aria-label: 'Suche'}">
+            <span class="sr-only">
+                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.search.begin')}
+            </span>
+            <f:render partial="Icon" arguments="{title:'Icon Search', description:'Eine Lupe zur Verdeutlichung zum Start einer Suche', icon:'search'}" />
+        </f:form.button>
+
+        <f:form.button additionalAttributes="{aria-label: 'Sucheintrag löschen', class:'qsa_hero__search__reset btn-outline__without'}">
+            <span class="sr-only">
+                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.search.remove')}
+            </span>
+            <f:render partial="Icon" arguments="{title:'Icon Cross', description:'Sucheintrag löschen', icon:'close'}" />
+        </f:form.button>
+    </div>
+    <div class="qsa_hero__footer">
+        <a href="#" id="linkToAdvancedSearch" class="qsa_hero__link">
+            {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.search.expanded')}
+        </a>
+    </div>
+</f:form>

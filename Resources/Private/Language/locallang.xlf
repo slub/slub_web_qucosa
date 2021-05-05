@@ -32,6 +32,18 @@
 		<trans-unit id="tx_slubwebqucosa.footer" xml:space="preserve">
 			<source>An offer of the Saxon State Library - Dresden State and University Library </source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.placeholder" xml:space="preserve">
+			<source>Search in a large number of records</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.start" xml:space="preserve">
+			<source>Begin Search</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.remove" xml:space="preserve">
+			<source>Remove Entry</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
+			<source>Expanded Search</source>
+		</trans-unit>
         </body>
     </file>
 </xliff>
