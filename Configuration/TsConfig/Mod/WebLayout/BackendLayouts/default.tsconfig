@@ -5,7 +5,7 @@ mod {
         BackendLayouts {
             # Volle Breite
             # ehemals: uid 1
-            beLayoutFullWidth {
+            default {
                 title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.default
                 config {
                     backend_layout {
