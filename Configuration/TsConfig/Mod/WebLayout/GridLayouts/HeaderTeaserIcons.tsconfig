@@ -1,0 +1,33 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # HeaderTeaserIcons
+        headerTeaserIcons {
+            title = Header Teaser mit Icons
+            description = Rasterelement für bis zu 4 Teaserelemente mit Icons
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Teaserelemente
+                                colPos = 10
+                                minItems = 2
+                                maxitems = 4
+                                allowed {
+                                    CType = tx_slubwebqucosa_headericonteaser
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

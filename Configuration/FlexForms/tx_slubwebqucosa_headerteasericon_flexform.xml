@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <ROOT  type="array">
+        <type>array</type>
+        <el type="array">
+            <teasericon>
+                <TCEforms>
+                    <label>Icon</label>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">Recherche</numIndex>
+                                <numIndex index="1">search</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">Publizieren</numIndex>
+                                <numIndex index="1">publish</numIndex>
+                            </numIndex>
+                            <numIndex index="2" type="array">
+                                <numIndex index="0">Download</numIndex>
+                                <numIndex index="1">download</numIndex>
+                            </numIndex>
+                            <numIndex index="3" type="array">
+                                <numIndex index="0">Allgemeine Information</numIndex>
+                                <numIndex index="1">information</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </teasericon>
+        </el>
+    </ROOT>
+</T3DataStructure>

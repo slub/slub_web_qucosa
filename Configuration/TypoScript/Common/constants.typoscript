@@ -1,0 +1,42 @@
+####################
+#### EXTENSIONS ####
+####################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/gridelements.constants.typoscript">
+
+############
+### PAGE ###
+############
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/Page/
+        templateRootPath = EXT:slub_web_qucosa/Resources/Private/Templates/Page/
+    }
+    meta {
+        viewport = width=device-width, initial-scale=1
+        compatible = IE=edge
+    }
+}
+
+pageID {
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Metanavigation
+    meta = 23
+}
+
+# Allgemeine Textbausteine
+text {
+    languageIconDescription = Haken-Symbol um die getätigte Sprachauswahl zu zeigen
+    languageButton = DE
+    headerHeading = Wissenschaftliche Dokumentensuche
+    headerSubheader = auf dem sächsischen Dokumenten- und Publikationsserver
+}
+
+[globalVar = GP:L = 1]
+    # Allgemeine Textbausteine
+    text {
+        languageIconDescription = Check icon to show the language-selection made
+        languageButton = EN
+        headerHeading = Scientific document search
+        headerSubheader = on the Saxon document and publication server
+    }
+[global]

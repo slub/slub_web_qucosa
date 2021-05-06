@@ -1,0 +1,29 @@
+### custom content elements
+## Tab Allgemein
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        tx_slubwebqucosa_headericonteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Teaserelement mit Icon
+            description = Ein Teaserelement für den Header
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_headericonteaser
+            }
+        }
+    }
+
+    show := addToList(tx_slubwebqucosa_headericonteaser)
+
+    ## Nicht benötigte aus Liste entfernen
+    show := removeFromList(header,textmedia,bullets,table,uploads)
+}
+
+## Tab: Special
+mod.wizards.newContentElement.wizardItems.special {
+    elements {
+
+    }
+    show := addToList()
+}
+
+

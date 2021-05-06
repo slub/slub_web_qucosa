@@ -1,12 +1,19 @@
-# Configuration
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Config/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Config/language.txt">
+# Dependencies
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/SLUB/Extensions/lib.logo.typoscript">
 
-# Navigation
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Navigation/setup.txt">
+page {
 
-# Content
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Content/setup.txt">
+    meta {
+        author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
+        google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+    }
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Page/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/SLUB/Page/setup.txt">
+    10 {
+        file = EXT:slub_web_qucosa/Resources/Private/Templates/SLUB/Start.html
+
+        variables.isMandant.value = false
+    }
+}
+
+plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://slub.qucosa.de/sitemap_qucosa.xml
+

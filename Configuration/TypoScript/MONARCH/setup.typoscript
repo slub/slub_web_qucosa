@@ -1,0 +1,20 @@
+# Configuration
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/MONARCH/Extensions/lib.logo.typoscript">
+
+page {
+
+    meta {
+        author = Technische Universität Chemnitz - Qucosa
+        google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+    }
+
+    10 {
+        file = EXT:slub_web_qucosa/Resources/Private/Templates/MONARCH/Start.html
+    }
+}
+
+# HTML Klasse hinzufügen
+config.htmlTag_stdWrap.cObject.value = tu-chemnitz
+
+plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://monarch.qucosa.de/sitemap_qucosa.xml

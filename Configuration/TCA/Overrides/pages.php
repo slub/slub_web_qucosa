@@ -1,15 +1,30 @@
 <?php
-defined('TYPO3_MODE') or die();
+if (!defined('TYPO3_MODE')) {
+    die('Access denied.');
+}
 
-call_user_func(function()
-{
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile (
-    'slub_web_qucosa',
-    'Configuration/TsConfig/Page/MUSICONN/setup.txt',
-    'EXT:slub_web_qucosa: MUSICONN Page TS');
+/**
+ * Temporary variables
+ */
+$extensionKey = 'slub_web_qucosa';
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile (
-    'slub_web_qucosa',
-    'Configuration/TsConfig/Page/FIDMOVE/setup.txt',
-    'EXT:slub_web_qucosa: FID-Move Page TS');
-});
+/**
+ * Default PageTS for Qucosa
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    $extensionKey,
+    'Configuration/PageTS/All.txt',
+    'Qucosa'
+);
+
+if (TYPO3_MODE === 'BE') {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile (
+        $extensionKey,
+       'Configuration/TsConfig/Page/MUSICONN/setup.txt',
+       'EXT:slub_web_qucosa: MUSICONN Page TS');
+
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile (
+      $extensionKey,
+      'Configuration/TsConfig/Page/FIDMOVE/setup.txt',
+      'EXT:slub_web_qucosa: FID-Move Page TS');
+}
