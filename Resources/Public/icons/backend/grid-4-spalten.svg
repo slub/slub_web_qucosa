@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <rect id="canvas_background" x="-1" y="-1" width="18" height="18" style="fill:none;"/>
+    <g>
+        <rect id="svg_1" x="1" y="1" width="14" height="14" style="fill:white;fill-rule:nonzero;"/>
+        <path id="svg_2" d="M1,1L1,15L15,15L15,1L1,1ZM2,2L14,2L14,14L2,14L2,2Z" style="fill:rgb(153,153,153);fill-rule:nonzero;"/>
+        <g id="svg_5" transform="matrix(0.508218,0,0,1.81832,1.65976,-10.3442)">
+            <rect x="3.375" y="7.569" width="2.46" height="5.072" style="fill:rgb(153,153,153);fill-rule:nonzero;"/>
+        </g>
+        <g id="svg_51" serif:id="svg_5" transform="matrix(0.508218,0,0,1.81832,4.31921,-10.3442)">
+            <rect x="3.375" y="7.569" width="2.46" height="5.072" style="fill:rgb(153,153,153);fill-rule:nonzero;"/>
+        </g>
+        <g id="svg_52" serif:id="svg_5" transform="matrix(0.508218,0,0,1.81832,6.97866,-10.3442)">
+            <rect x="3.375" y="7.569" width="2.46" height="5.072" style="fill:rgb(153,153,153);fill-rule:nonzero;"/>
+        </g>
+        <g id="svg_53" serif:id="svg_5" transform="matrix(0.508218,0,0,1.81832,9.63811,-10.3442)">
+            <rect x="3.375" y="7.569" width="2.46" height="5.072" style="fill:rgb(153,153,153);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
