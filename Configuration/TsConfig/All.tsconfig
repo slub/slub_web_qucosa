@@ -3,3 +3,5 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TsConfig/TCEFORM.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TsConfig/TCEMAIN.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TsConfig/Mod/WebLayout/BackendLayouts.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TsConfig/Mod/WebLayout/GridLayouts.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TsConfig/Mod/Wizards.tsconfig">
