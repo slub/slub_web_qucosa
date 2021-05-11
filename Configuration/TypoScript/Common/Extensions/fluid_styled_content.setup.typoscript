@@ -1,10 +1,15 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
 
 lib.contentElement {
-    # Pfade für fluid_styled_content Elemente überschreiben
-    templateRootPaths.100 = EXT:slub_web_qucosa/Resources/Private/Templates/ContentElements/
-    partialRootPath.100 = EXT:slub_web_qucosa/Resources/Private/Partials/ContentElements/
-    layoutRootPath.100 = EXT:slub_web_qucosa/Resources/Private/Layouts/ContentElements/
+    templateRootPaths {
+        100 = EXT:slub_web_qucosa/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        100 = EXT:slub_web_qucosa/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        100 = EXT:slub_web_qucosa/Resources/Private/Layouts/ContentElements/
+    }
 }
 
 ### custom fluid_styled_content elements ###

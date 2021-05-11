@@ -2,6 +2,7 @@
 #### EXTENSIONS ####
 ####################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/gridelements.constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/fluid_styled_content.constants.typoscript">
 
 ############
 ### PAGE ###

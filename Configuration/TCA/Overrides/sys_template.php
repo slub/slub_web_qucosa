@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 /**
  * Temporary variables
  */
-$extensionKey = 'xm_templates_xima';
+$extensionKey = 'slub_web_qucosa';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $extensionKey,
