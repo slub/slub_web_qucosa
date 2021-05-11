@@ -14,10 +14,19 @@ lib.contentElement {
 
 ### custom fluid_styled_content elements ###
 tt_content {
-    # Text Center
+    # Hero Teaser with Icon
     tx_slubwebqucosa_headericonteaser < lib.contentElement
     tx_slubwebqucosa_headericonteaser {
         templateName = HeaderTeaserIcon
+        dataProcessing {
+            10 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Hero Teaser without Icon
+    tx_slubwebqucosa_headerteaser < lib.contentElement
+    tx_slubwebqucosa_headerteaser {
+        templateName = HeaderTeaserText
         dataProcessing {
             10 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }

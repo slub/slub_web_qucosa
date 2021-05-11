@@ -24,6 +24,13 @@ tt_content {
                             file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/HeaderTeaserIcons.html
                         }
                     }
+                    headerTeaserText < lib.gridelements.defaultGridSetup
+                    headerTeaserText {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/HeaderTeaserText.html
+                        }
+                    }
                 }
             }
         }

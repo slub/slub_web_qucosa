@@ -69,6 +69,11 @@ TCEFORM {
                 }
             }
         }
+
+        tx_slubwebqucosa_pagesaddfield_author {
+            PAGE_TSCONFIG_ID = 29
+        }
+
         sectionIndex.disabled = 1
         linkToTop.disabled = 1
         fe_group.disabled = 1

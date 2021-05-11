@@ -5,14 +5,22 @@ mod.wizards.newContentElement.wizardItems.common {
         tx_slubwebqucosa_headericonteaser {
             iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
             title = Teaserelement mit Icon
-            description = Ein Teaserelement für den Header
+            description = Ein Teaserelement für den Header mit Icon und Beschreibung
             tt_content_defValues {
                 CType = tx_slubwebqucosa_headericonteaser
             }
         }
+        tx_slubwebqucosa_headerteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Teaserelement ohne Icon
+            description = Ein Teaserelement für den Header
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_headerteaser
+            }
+        }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser)
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser)
 
     ## Nicht benötigte aus Liste entfernen
     show := removeFromList(header,textmedia,bullets,table,uploads)
