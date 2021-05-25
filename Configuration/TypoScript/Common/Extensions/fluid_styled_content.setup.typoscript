@@ -46,4 +46,19 @@ tt_content {
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Logo-Teaser Element
+    tx_slubwebqucosa_logoitem < lib.contentElement
+    tx_slubwebqucosa_logoitem {
+        templateName = LogoItem
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references {
+                    fieldName = image
+                }
+            }
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }

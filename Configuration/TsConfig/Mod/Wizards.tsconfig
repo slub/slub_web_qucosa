@@ -26,9 +26,17 @@ mod.wizards.newContentElement.wizardItems.common {
                 CType = tx_slubwebqucosa_carouselitem
             }
         }
+        tx_slubwebqucosa_logoitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_logoitem
+            }
+        }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem)
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem)
 
     ## Nicht benötigte aus Liste entfernen
     show := removeFromList(header,textmedia,bullets,table,uploads)
