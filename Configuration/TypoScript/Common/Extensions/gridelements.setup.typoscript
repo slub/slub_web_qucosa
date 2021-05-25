@@ -11,6 +11,27 @@ tt_content.gridelements_pi1 {
     }
 }
 
+lib.gridelements.defaultGridSetup {
+    columns {
+        default {
+            renderObj = COA
+            renderObj {
+                20 =< tt_content
+            }
+        }
+    }
+    cObject =< lib.contentElement
+    cObject {
+        templateRootPaths {
+            20 = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/
+        }
+        partialRootPaths {
+            20 = EXT:slub_web_qucosa/Resources/Private/Partials/GridElements/
+        }
+    }
+
+}
+
 tt_content {
     gridelements_pi1 = COA
     gridelements_pi1 {
@@ -43,6 +64,20 @@ tt_content {
                         cObject = FLUIDTEMPLATE
                         cObject {
                             file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/LogoTeaser.html
+                        }
+                    }
+                    accordion < lib.gridelements.defaultGridSetup
+                    accordion {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/Accordion.html
+                        }
+                    }
+                    multipleAccordions < lib.gridelements.defaultGridSetup
+                    multipleAccordions {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/MultipleAccordions.html
                         }
                     }
                 }

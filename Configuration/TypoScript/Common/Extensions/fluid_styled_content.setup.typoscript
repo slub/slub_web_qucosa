@@ -61,4 +61,13 @@ tt_content {
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Akkordeon Element
+    tx_slubwebqucosa_accordionitem < lib.contentElement
+    tx_slubwebqucosa_accordionitem {
+        templateName = AccordionItem
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }
