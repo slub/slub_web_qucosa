@@ -49,7 +49,11 @@
             <trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
 			    <source>Expanded Search</source>
 			    <target>Erweiterte Suche</target>
-		</trans-unit>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
+			    <source>Homepage</source>
+			    <target>Startseite</target>
+		    </trans-unit>
         </body>
     </file>
 </xliff>

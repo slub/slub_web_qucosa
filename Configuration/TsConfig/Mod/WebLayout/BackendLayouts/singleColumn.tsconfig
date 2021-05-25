@@ -1,0 +1,30 @@
+### Backendlayouts
+mod {
+    web_layout {
+        allowInconsistentLanguageHandling = 1
+        BackendLayouts {
+            # Volle Breite
+            # ehemals: uid 1
+            singleColumn {
+                title = Eine Inhaltspalte
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Inhalt
+                                        colPos = 1
+                                        colspan = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

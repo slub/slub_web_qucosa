@@ -92,6 +92,13 @@ page {
                 includeSpacer = 1
                 as = mainnavigation
             }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = rootline
+                special.range = 0|-1
+                includeNotInMenu = 1
+                as = menuBreadcrumb
+            }
         }
 
         variables {

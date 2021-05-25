@@ -44,6 +44,9 @@
 		<trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
 			<source>Expanded Search</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
+			<source>Homepage</source>
+		</trans-unit>
         </body>
     </file>
 </xliff>

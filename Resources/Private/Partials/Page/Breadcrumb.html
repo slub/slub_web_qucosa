@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<nav class="qsa_breadcrumb__wrapper" aria-label="breadcrumb-navigation">
+    <ol class="qsa_breadcrumb">
+        <f:for each="{menuBreadcrumb}" as="item">
+            <li>
+                <f:if condition="{item.current}">
+                    <f:then>
+                        {item.title}
+                    </f:then>
+                    <f:else>
+                        <f:link.typolink class="qsa_qsa_breadcrumb__link" parameter="{item.link}">
+                            <f:if condition="{item.data.is_siteroot}">
+                                <f:then>
+                                    {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.breadcrum.homepage')}
+                                </f:then>
+                                <f:else>
+                                    {item.title}
+                                </f:else>
+                            </f:if>
+                        </f:link.typolink>
+                        >
+                    </f:else>
+                </f:if>
+            </li>
+        </f:for>
+    </ol>
+</nav>
+
+</html>
