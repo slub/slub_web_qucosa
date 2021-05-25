@@ -31,4 +31,19 @@ tt_content {
             10 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Karussell-Element
+    tx_slubwebqucosa_carouselitem < lib.contentElement
+    tx_slubwebqucosa_carouselitem {
+        templateName = CarouselItem
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references {
+                    fieldName = image
+                }
+            }
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }

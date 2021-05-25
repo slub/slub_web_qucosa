@@ -1,0 +1,6 @@
+<figure class="qsa_carousel-item_el">
+    {v:iterator.first(haystack: files) -> v:variable.set(name: 'image')}
+    <figcaption class="qsa_hint__text">{data.header}</figcaption>
+    <f:image src="{image.uid}" treatIdAsReference="1" maxWidth="1024" />
+    <a class="qsa_carousel-item_el-link" href="#"><span class="sr-only">Öffnet die Seite eines Mandanten</span></a>
+</figure>

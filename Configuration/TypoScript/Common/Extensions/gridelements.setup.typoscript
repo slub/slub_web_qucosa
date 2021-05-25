@@ -31,6 +31,13 @@ tt_content {
                             file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/HeaderTeaserText.html
                         }
                     }
+                    carousel < lib.gridelements.defaultGridSetup
+                    carousel {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/Carousel.html
+                        }
+                    }
                 }
             }
         }

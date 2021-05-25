@@ -18,9 +18,17 @@ mod.wizards.newContentElement.wizardItems.common {
                 CType = tx_slubwebqucosa_headerteaser
             }
         }
+        tx_slubwebqucosa_carouselitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Karussell-Element
+            description = Ein Element für das Karussell
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_carouselitem
+            }
+        }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser)
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem)
 
     ## Nicht benötigte aus Liste entfernen
     show := removeFromList(header,textmedia,bullets,table,uploads)
