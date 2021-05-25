@@ -18,6 +18,11 @@ mod {
                                         name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
                                         colPos = 1
                                         colspan = 1
+                                        allowed {
+                                            tx_gridelements_backend_layout = headerTeaserText,headerTeaserIcons
+                                            CType = gridelements_pi1
+                                        }
+                                        maxitems = 1
                                     }
                                 }
                             }
