@@ -1,0 +1,47 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<f:comment>
+	Creates a list item for document stored in the document variable.
+
+	It uses the standardFields configured in settings, result highlighting
+	(if configured) and a link to the document’s page.
+</f:comment>
+<li id="c{config.uid}-result-{document.id}">
+	<article>
+		<h1>
+			<f:link.page
+				pageUid="{settings.landingPageUID.value}"
+				additionalParams="{tx_dlf: {id: '{document.id}'}}"
+				class="internal no-change"
+			>
+				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
+					<f:then>
+						<f:render
+								partial="Display/Field/Inline"
+								arguments="{
+								config:config,
+								results:results,
+								document:document,
+								field:settings.standardFields.title,
+								separator:', '
+							}"/>
+					</f:then>
+					<f:else>
+						ID: {document.id}
+					</f:else>
+				</f:if>
+			</f:link.page>
+		</h1>
+		<p>
+			<f:render
+				partial="Display/Field/Inline"
+				arguments="{
+					config:config,
+					results:results,
+					document:document,
+					field:settings.standardFields.snippet,
+					separator:', '
+				}"/>
+			<f:render partial="Display/DetailLink" arguments="{_all}"/>
+		</p>
+	</article>
+</li>
