@@ -66,9 +66,17 @@ mod.wizards.newContentElement.wizardItems.common {
                 CType = tx_slubwebqucosa_sidebarimage
             }
         }
+        tx_slubwebqucosa_sidebarlinks {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Sidebar Linkliste
+            description = Fügt Links als Aufzählung in der Sidebar hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarlinks
+            }
+        }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text,tx_slubwebqucosa_sidebarimage)
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks)
 
     ## Nicht benötigte aus Liste entfernen
     show := removeFromList(header,textmedia,bullets,table,uploads)

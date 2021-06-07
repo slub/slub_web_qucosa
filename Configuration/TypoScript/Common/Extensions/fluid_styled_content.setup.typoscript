@@ -103,4 +103,13 @@ tt_content {
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Sidebar Links
+    tx_slubwebqucosa_sidebarlinks < lib.contentElement
+    tx_slubwebqucosa_sidebarlinks {
+        templateName = SidebarLinks
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }
