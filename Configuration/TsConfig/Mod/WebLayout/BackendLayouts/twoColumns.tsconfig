@@ -7,7 +7,7 @@ mod{
                 config {
                     backend_layout {
                         colCount = 2
-                        rowCount = 2
+                        rowCount = 3
                         rows {
                             1 {
                                 columns {
@@ -28,12 +28,19 @@ mod{
                                     }
                                 }
                             }
-
-
                             2 {
                                 columns {
                                     1 {
                                         name = Sidebar Body
+                                        colPos = 20
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Inhaltsbereich Footer
+                                        colspan = 2
                                         colPos = 20
                                     }
                                 }
