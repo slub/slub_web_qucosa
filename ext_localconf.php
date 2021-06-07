@@ -4,6 +4,14 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName']['
         'type' => 20180709,
     ),
 );
+
+
+/***************
+ * Add default RTE configuration
+ */
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['qucosa'] = 'EXT:slub_web_qucosa/Configuration/RTE/Default.yaml';
+
+
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache']['banUrlsRegExp'] = '/type=|eID=|tx_dpf_frontendsearch|tx_dlf|(?:^|\?|&)q=/';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'] = array(
 

@@ -10,6 +10,36 @@
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Helper/DynamicContent.typoscript">
 
+lib.parseFunc_RTE {
+    externalBlocks {
+        table {
+            stdWrap {
+                wrap = <div class="qsa_content-area__table--responsive">|</div>
+                HTMLparser.tags.table.fixAttrib.class {
+                    default =
+                    always = 1
+                    list >
+                }
+            }
+        }
+        blockquote {
+            stripNL = 1
+            stdWrap {
+                HTMLparser = 1
+                HTMLparser {
+                    tags.blockquote.fixAttrib.class {
+                        default = qsa_content-area__quote
+                        always = 1
+                        list >
+                    }
+                    keepNonMatchedTags = 1
+                }
+            }
+        }
+    }
+}
+
+
 ############
 ### PAGE ###
 ############

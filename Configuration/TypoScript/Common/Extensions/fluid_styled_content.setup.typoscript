@@ -79,4 +79,13 @@ tt_content {
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Text Element
+    tx_slubwebqucosa_text < lib.contentElement
+    tx_slubwebqucosa_text {
+        templateName = Text
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }

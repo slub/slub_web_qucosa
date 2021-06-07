@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Page"/>
+
+<f:section name="Header">
+    <f:render partial="Header/Header" arguments="{_all}" />
+</f:section>
+
+<f:section name="Main">
+    <main>
+        <div class="row qsa_content-area container">
+            <div class="qsa_content-area__sidebar-slider" data-button="sidebarSlider" role="button" aria-label="Öffnet weitere Informationen innerhalb einer Sidebar" tabindex="0">
+                <f:render partial="Icon" arguments="{title:'Informationssymbol', description:'Informationssymbol', icon:'information'}" />
+            </div>
+            <div class="col-12 col-lg-8 qsa_content-area__body">
+                <f:render partial="Breadcrumb" arguments="{_all}" />
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
+            </div>
+            <div class="col-12 col-md-5 col-lg-4 qsa_content-area__sidebar">
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+            </div>
+            <div class="col-12 qsa_content-area__footer">
+                <f:comment>
+                    <!-- @todo Hier die Footer ColPos einfügen -->
+                </f:comment>
+                <div role="button" data-button="sidebarSlider" tabindex="0">
+                    <span  class="qsa_hint__text">Weitere Informationen zu dieser Seite finden Sie unter dem <f:render partial="Icon" arguments="{title:'Informationssymbol', description:'Informationssymbol', icon:'information'}" /> auf der rechten Seite!</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</f:section>
+
+<f:section name="Footer">
+    <f:render partial="Footer/Footer" arguments="{_all}"/>
+</f:section>
+
+</html>

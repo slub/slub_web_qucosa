@@ -50,9 +50,17 @@ mod.wizards.newContentElement.wizardItems.common {
                 CType = tx_slubwebqucosa_flipcarditem
             }
         }
+        tx_slubwebqucosa_text {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Text-Element
+            description = Fügt Text mit Überschrift hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_text
+            }
+        }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem)
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text)
 
     ## Nicht benötigte aus Liste entfernen
     show := removeFromList(header,textmedia,bullets,table,uploads)
