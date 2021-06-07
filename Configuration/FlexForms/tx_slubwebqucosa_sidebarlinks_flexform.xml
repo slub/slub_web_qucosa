@@ -50,7 +50,7 @@
                                             <linkPopup>
                                                 <options>
                                                     <blindLinkFields>class,params</blindLinkFields>
-                                                    <blindLinkOptions>folder,mail</blindLinkOptions>
+                                                    <blindLinkOptions>folder,mail,file</blindLinkOptions>
                                                     <windowOpenParameters>height=800,width=1000,status=1,menubar=1,scrollbars=1</windowOpenParameters>
                                                 </options>
                                             </linkPopup>

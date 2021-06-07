@@ -112,4 +112,13 @@ tt_content {
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Sidebar Teaser
+    tx_slubwebqucosa_sidebarteaser < lib.contentElement
+    tx_slubwebqucosa_sidebarteaser {
+        templateName = SidebarTeaser
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }
