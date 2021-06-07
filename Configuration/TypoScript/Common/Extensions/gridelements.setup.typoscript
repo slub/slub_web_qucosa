@@ -80,6 +80,13 @@ tt_content {
                             file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/MultipleAccordions.html
                         }
                     }
+                    flipCards < lib.gridelements.defaultGridSetup
+                    flipCards {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = EXT:slub_web_qucosa/Resources/Private/Templates/GridElements/FlipCards.html
+                        }
+                    }
                 }
             }
         }

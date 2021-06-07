@@ -32,6 +32,9 @@ mod {
                                         name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.content
                                         colPos = 2
                                         colspan = 1
+                                        disallowed {
+                                            CType = tx_slubwebqucosa_flipcard,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_carouselitem
+                                        }
                                     }
                                 }
                             }

@@ -70,4 +70,13 @@ tt_content {
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
+
+    # Flipcard Element
+    tx_slubwebqucosa_flipcarditem < lib.contentElement
+    tx_slubwebqucosa_flipcarditem {
+        templateName = FlipcardItem
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
 }

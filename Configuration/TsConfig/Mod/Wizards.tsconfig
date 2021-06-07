@@ -42,9 +42,17 @@ mod.wizards.newContentElement.wizardItems.common {
                 CType = tx_slubwebqucosa_accordionitem
             }
         }
+        tx_slubwebqucosa_flipcarditem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Flip Card
+            description = Fügt eine neue Flipcard hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_flipcarditem
+            }
+        }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem)
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem)
 
     ## Nicht benötigte aus Liste entfernen
     show := removeFromList(header,textmedia,bullets,table,uploads)
