@@ -20,7 +20,7 @@ mod {
                                         colspan = 1
                                         allowed {
                                             tx_gridelements_backend_layout = headerTeaserText,headerTeaserIcons
-                                            CType = gridelements_pi1
+                                            CType = gridelements_pi1,list
                                         }
                                         maxitems = 1
                                     }
