@@ -148,7 +148,23 @@
                 </div>
             </f:form>
 
-            <span class="qsa_search-header__results">1445 Dokumente zu „liquid arg“ gefunden</span>
+            <span class="qsa_search-header__results">
+                <f:if condition="{resultList.total} > 1">
+            <f:then>
+                {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+            </f:then>
+            <f:else>
+                <f:if condition="{resultList.total} == 1">
+                    <f:then>
+                        {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+                    </f:then>
+                    <f:else>
+                        <f:translate key="search.resultList.nothingFound"/>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+            </span>
 
             <div class="qsa_search-header__footer">
                 <button class="qsa_search-header__link qsa_btn__link" id="openAdvanced">
@@ -158,3 +174,5 @@
         </div>
     </div>
 </div>
+
+<f:render partial="SearchFE/ResultList" arguments="{results: paginatedResults, currentPage: currentPage, resultList: resultList}"/>

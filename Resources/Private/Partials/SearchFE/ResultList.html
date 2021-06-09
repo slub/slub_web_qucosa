@@ -1,0 +1,172 @@
+<div class="qsa_content-area-default qsa_search-result__container container">
+
+    <div class="qsa_search-result__filter">
+        <h2 class="h5 qsa_search-result__filter__hits">
+            <f:if condition="{resultList.total} > 1">
+                <f:then>
+                    {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+                </f:then>
+                <f:else>
+                    <f:if condition="{resultList.total} == 1">
+                        <f:then>
+                            {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+                        </f:then>
+                        <f:else>
+                            <f:translate key="search.resultList.nothingFound"/>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </h2>
+        <div class="qsa_search-result__filter-selects">
+            <form enctype="multipart/form-data" method="get" name="resultFilter" id="qsa-search-results-filter-form" action="/">
+                <div class="qsa_select ">
+                    <span class="qsa_select__label sr-only" id="documentType">Dokumententyp</span>
+                    <div class="qsa_select__wrapper  " data-required="" data-showinsummary="">
+                        <label class="qsa_select__label  " for="1534356635"> Dokumententyp </label>
+                        <select class="qsa_select__native js-selectNative " aria-labelledby="1534356635" id="1534356635">
+                            <option value="" disabled="" selected="" label="Leere Option"></option>
+                            <option value="all">Keine Auswahl</option>
+                            <option value="ud">Bachelorarbeit</option>
+                            <option value="fe">Masterarbeit</option>
+                            <option value="be">Forschungsprojekt</option>
+                            <option value="qa">Diplomarbeit</option>
+                            <option value="un">Dissertation</option>
+                            <option value="eo">Eine etwas längere Option</option>
+                        </select>
+
+                        <div class="qsa_select__custom js-selectCustom  " aria-hidden="true">
+                            <div class="qsa_select__custom-trigger  ">
+                                <p class="">Dokumententyp </p>
+                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'arrow-down'}" />
+
+                            </div>
+                            <div class="qsa_select__custom-options ">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qsa_select ">
+                    <span class="qsa_select__label sr-only" id="parameterType">Parameter</span>
+                    <div class="qsa_select__wrapper  " data-required="" data-showinsummary="">
+                        <label class="qsa_select__label  " for="2028501464"> Parameter </label>
+                        <select class="qsa_select__native js-selectNative " aria-labelledby="2028501464" id="2028501464">
+                            <option value="" disabled="" selected="" label="Leere Option"></option>
+                            <option value="all">Keine Auswahl</option>
+                            <option value="ud">Bachelorarbeit</option>
+                            <option value="fe">Masterarbeit</option>
+                            <option value="be">Forschungsprojekt</option>
+                            <option value="qa">Diplomarbeit</option>
+                            <option value="un">Dissertation</option>
+                            <option value="eo">Eine etwas längere Option</option>
+                        </select>
+
+                        <div class="qsa_select__custom js-selectCustom  " aria-hidden="true">
+                            <div class="qsa_select__custom-trigger  ">
+                                <p class="">Parameter </p>
+                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'arrow-down'}" />
+                            </div>
+                            <div class="qsa_select__custom-options ">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="qsa_search-result__filter-last">
+                    <div class="qsa_select ">
+                        <span class="qsa_select__label sr-only" id="order">Neuste Zuerst</span>
+                        <div class="qsa_select__wrapper qsa_select__wrapper--transparent " data-required="" data-showinsummary="">
+                            <label class="qsa_select__label  " for="380837882"> Neuste Zuerst </label>
+                            <select class="qsa_select__native js-selectNative " aria-labelledby="380837882" id="380837882">
+                                <option value="" disabled="" selected="" label="Leere Option"></option>
+                                <option value="all">Keine Auswahl</option>
+                                <option value="new">Neuste zuerst</option>
+                                <option value="old">Älteste zuerst</option>
+                                <option value="az">A - Z</option>
+                                <option value="za">Z - A</option>
+                            </select>
+
+                            <div class="qsa_select__custom js-selectCustom  " aria-hidden="true">
+                                <div class="qsa_select__custom-trigger  ">
+                                    <p class="">Neuste Zuerst </p>
+                                    <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'arrow-down'}" />
+                                </div>
+                                <div class="qsa_select__custom-options ">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <f:for each="{results}" as="entry" iteration="eIterator">
+        {v:random.number() -> f:variable(name: 'randomId')}
+        <f:if condition="{entry._source._dissemination}">
+            <div class="qsa_search__wrapper">
+                <div class="qsa_search-result__item">
+                    <h2 class="h6 qsa_search-result__item-title">
+                        <f:link.page pageUid="{settings.landingPage}"
+                                     class="qsa_search-result__item-title-link"
+                                     additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\" {settings.apiPid}\", absolute:1, additionalParams:{tx_dpf: {qid:\"{entry._source.PID}\", action:\"mets\"}})}'}}">
+                        {entry._source._dissemination._content.title.0}
+                        <f:if condition="{entry._source._dissemination._content.issue}">-
+                            {entry._source._dissemination._content.issue}
+                        </f:if>
+                        </f:link.page>
+                    </h2>
+                    <div class="qsa_search-result__item-info">
+                        <f:if condition="{entry._source._dissemination._content.distribution_date.0}">
+                        <p class="qsa_search-result__item-footer__item btn-round">
+                              <f:format.date date="{entry._source._dissemination._content.distribution_date.0}"
+                                             format="d.m.Y"/>
+                        </p>
+                        </f:if>
+                    </div>
+                    <div class="qsa_search-result__item-footer">
+                        <f:if condition="{entry._source._dissemination._content.distribution_date.0}">
+                        <span class="qsa_search-result__item-footer__item btn-round">
+                             {entry._source._dissemination._content.author.0}
+                        </span>
+                        </f:if>
+                    </div>
+                </div>
+                <span class="qsa_search-result__item-right">
+        <button class="qsa_search-result__item-icon" id="c{randomId}" data-id="bookmark" aria-label="bookmark">
+            <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'bookmark-plus'}" />
+        </button>
+    </span>
+            </div>
+        </f:if>
+    </f:for>
+
+    <f:comment>
+        <!--Beispiel eines Suchergebnisses mit statischen Daten-->
+    </f:comment>
+    <div class="qsa_search__wrapper">
+        <div class="qsa_search-result__item">
+            <h2 class="h6 qsa_search-result__item-title">
+                <a class="qsa_search-result__item-title-link" href="#">Publikationstitel</a>
+            </h2>
+            <div class="qsa_search-result__item-info">
+                <p class="qsa_search-result__item-info__typ">Bachelorarbeit</p>
+                <p class="qsa_search-result__item-info__typ">01.01.2020</p>
+            </div>
+            <div class="qsa_search-result__item-footer">
+                <span class="qsa_search-result__item-footer__item btn-round">Max Mustermann</span>
+            </div>
+        </div>
+        <span class="qsa_search-result__item-right">
+        <button class="qsa_search-result__item-icon" id="c09854" data-id="bookmark" aria-label="bookmark">
+            <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'bookmark-plus'}" />
+        </button>
+    </span>
+    </div>
+</div>
