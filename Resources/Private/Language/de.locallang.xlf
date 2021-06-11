@@ -54,6 +54,34 @@
 			    <source>Homepage</source>
 			    <target>Startseite</target>
 		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks" xml:space="preserve">
+                <source>My Bookmarks</source>
+                <target>Meine Merkliste</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.records" xml:space="preserve">
+			    <source>Records</source>
+			    <target>Einträge</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.markall" xml:space="preserve">
+			    <source>Mark all</source>
+			    <target>Alle markieren</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.print" xml:space="preserve">
+			    <source>Print all saved entries or save them as PDF</source>
+			    <target>Alle gespeicherten Einträge drucken oder als PDF speichern</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.removeMarked" xml:space="preserve">
+			    <source>Remove marked records</source>
+			    <target>Markierte Elemente entfernen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.norecords.title" xml:space="preserve">
+                <source>You currently have no items in your watch list.</source>
+                <target>Sie haben aktuell keine Artikel in Ihrer Merkliste.</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.norecords.description" xml:space="preserve">
+                <source>Click on the bookmark icon in a search entry to store it here.</source>
+                <target>Klicken Sie in einem Sucheintrag auf das Lesezeichen-Symbol um ihn hier abzulegen.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
