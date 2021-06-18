@@ -1,0 +1,50 @@
+{namespace eww=EWW\Dpf\ViewHelpers}
+
+<f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
+    <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
+        <f:then>
+            <div class="qsa_wizard__wrapper-content {f:if(condition: '{pageIterator.cycle}==1', then: '', else:'d-none')}" id="tab-{pageIterator.cycle}">
+                <p class="qsa_content-area__warning qsa_content-area__warning--hidden">Das Formular kann noch nicht abgeschickt werden, da es Fehler enthält oder unvollständig ist.
+                    Bitte prüfen Sie Ihre Eingaben und füllen Sie alle Felder, die mit einem '*' gekennzeichnet sind aus!
+                </p>
+                <div class="row qsa_wizard__wrapper-content-block">
+                    <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
+                        <f:for each="{formPage.0.items}" as="formGroup" iteration="groupIterator">
+                            <f:for each="{formGroup}" as="groupItem" iteration="groupItemIterator">
+                                <f:if condition="{eww:IsElementAllowed(condition:'{groupItem.backendOnly}')}">
+                                    <f:then>
+                                        <f:render partial="DocumentForm/Group"
+                                                  arguments="{formPageUid:formPage.0.uid,formGroupUid:groupItem.uid,formGroupDisplayName:groupItem.displayName,groupItem:groupItem,groupIndex:groupItemIterator.index}"/>
+                                        <f:if condition="{groupItem.maxIteration} == 0">
+                                            <f:if condition="{groupItemIterator.isLast}">
+                                                <button class="btn qsa_wizard__wrapper-form-element-add qsa_btn--transparent add_group"
+                                                        name="add-input"
+                                                        data-group="{groupItem.uid}"
+                                                        data-ajax="{f:uri.action(action:'group',controller:'AjaxDocumentForm',pageType:110124,arguments:{pageUid:formPage.0.uid,groupUid:groupItem.uid})}"
+                                                        data-index="{groupItemIterator.index}">+ {f:translate(key: 'form_button.add_item', arguments: {0:
+                                                    groupItem.displayName})}
+                                                </button>
+                                            </f:if>
+                                        </f:if>
+                                    </f:then>
+                                </f:if>
+                            </f:for>
+                        </f:for>
+
+                    </div>
+                    <div class="col-12 col-lg-4 qsa_wizard__wrapper-text">
+                        <div class="qsa_wizard__wrapper-text-default">
+                            <h3 class="h5">Standard Einleitungstext</h3>
+                            <p>
+                                Hier könnte ein Einleitungstext stehen. Dieser gibt grundlegende Informationen zum
+                                Eingabeassistenten. Der Text verschwindet, sobald mit der Maus über eine Publikation
+                                gefahren wird. Der Text kann von Redakteuren gepflegt werden.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">Weiter</button>
+            </div>
+        </f:then>
+    </f:if>
+</f:for>

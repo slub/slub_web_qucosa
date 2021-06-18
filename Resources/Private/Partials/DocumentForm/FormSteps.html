@@ -1,0 +1,31 @@
+{namespace eww=EWW\Dpf\ViewHelpers}
+
+<div class="qsa_progress-bar">
+    <div class="qsa_progress-bar__container">
+        <ol class="qsa_progress-bar__container-list">
+            <f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
+                <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
+                    <f:then>
+                        <li class="qsa_progress-bar__container-item {f:if(condition: '{pageIterator.index}==0', then: 'active', else:'')}" data-id="tab-{pageIterator.cycle}" data-toggle="tab" aria-expanded="false">
+                            <a href="#tab-{pageIterator.cycle}">
+                                <span class="qsa_progress-bar__container-item-counter">{pageIterator.cycle}. </span>
+                                <span class="qsa_progress-bar__container-item-title">{formPage.0.displayName}</span>
+                            </a>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <li class="qsa_progress-bar__container-item" data-id="{pageIterator.cycle}" data-toggle="tab" aria-expanded="false">
+                            <a href="{pageIterator.cycle}">
+                                <span class="qsa_progress-bar__container-item-counter">{pageIterator.cycle}. </span>
+                                <span class="qsa_progress-bar__container-item-title">Dateien</span>
+                            </a>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ol>
+    </div>
+    <button class="btn qsa_btn qsa_btn--round">
+        <f:render partial="Icon" arguments="{title:'Pfeil nach links', description:'Weitere Elemente anzeigen', icon:'arrow-left'}" />
+    </button>
+</div>
