@@ -62,19 +62,26 @@
         </f:if>
     </f:case>
     <f:case value="1">
-        <f:form.textarea id="inp_{fieldItem.uid}"
-                         property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                         value="{fieldItem.value}" class="input-field form-control {fieldItem.fillOutService}"
-                         additionalAttributes="{data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName,data-maxlength:fieldItem.maxInputLength}"/>
-        <f:if condition="{fieldItem.maxInputLength}">
-            <div class="countwrapper"><span class="count">0</span>/<span class="limit">{fieldItem.maxInputLength}</span></div>
-        </f:if>
+        <div class="qsa_text-area" data-showinsummary="false">
+            <f:form.textarea id="inp_{fieldItem.uid}"
+                             property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                             value="{fieldItem.value}" class="qsa_text-area__field"
+                             additionalAttributes="{maxlength:fieldItem.maxInputLength,data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName,data-maxlength:fieldItem.maxInputLength}"/>
+            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> Label? </label>
+            <f:if condition="{fieldItem.maxInputLength}">
+                <div class="qsa_text-area__count-wrapper">
+                    <span class="qsa_text-area__count">0</span>
+                    von
+                    <span class="qsa_text-area__limit">{fieldItem.maxInputLength}</span>
+                </div>
+            </f:if>
+        </div>
 
     </f:case>
     <f:case value="2">
         <div class="qsa_select qsa_select__header">
             <span class="qsa_select__label sr-only">{fieldItem.displayName}</span>
-            <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-showinsummary="false" data-required="false">
+            <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-showinsummary="true" data-required="false">
                 <label class="qsa_select__label qsa_select__label-header" for="inp_{fieldItem.uid}" data-index="{fieldIndex}" data-field="{fieldItem.uid}">
                     {fieldItem.displayName}
                 </label>
