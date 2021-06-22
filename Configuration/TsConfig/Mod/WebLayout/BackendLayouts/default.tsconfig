@@ -4,7 +4,6 @@ mod {
         allowInconsistentLanguageHandling = 1
         BackendLayouts {
             # Volle Breite
-            # ehemals: uid 1
             default {
                 title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.default
                 config {
@@ -33,7 +32,7 @@ mod {
                                         colPos = 0
                                         colspan = 1
                                         disallowed {
-                                            CType = tx_slubwebqucosa_flipcard,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_carouselitem
+                                            CType = tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser,tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_logoitem
                                         }
                                     }
                                 }
