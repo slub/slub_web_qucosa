@@ -12,14 +12,14 @@ mod{
                             1 {
                                 columns {
                                     1 {
-                                        name = Inhaltsbereich
+                                        name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.content
                                         rowspan = 2
                                         colPos = 0
                                     }
 
 
                                     2 {
-                                        name = Sidebar Header
+                                        name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.sidebarheader
                                         colPos = 10
                                         maxItems = 1
                                         allowed {
@@ -31,17 +31,24 @@ mod{
                             2 {
                                 columns {
                                     1 {
-                                        name = Sidebar Body
+                                        name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.sidebarbody
                                         colPos = 20
+                                        allowed {
+                                            CType = tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser
+                                        }
                                     }
                                 }
                             }
                             3 {
                                 columns {
                                     1 {
-                                        name = Inhaltsbereich Footer
+                                        name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.footer
                                         colspan = 2
-                                        colPos = 20
+                                        colPos = 30
+                                        disallowed {
+                                            tx_gridelements_backend_layout = headerTeaserText,headerTeaserIcons
+                                            CType = tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser,tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_logoitem
+                                        }
                                     }
                                 }
                             }

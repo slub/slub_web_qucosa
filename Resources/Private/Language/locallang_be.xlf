@@ -12,8 +12,8 @@
             <trans-unit id="backend_layout.twoColumns">
                 <source>Content with sidebar</source>
             </trans-unit>
-            <trans-unit id="backend_layout.twoColumnsFooter">
-                <source>Content with sidebar and footer</source>
+            <trans-unit id="backend_layout.singleColumn">
+                <source>Only Contentarea</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.header">
                 <source>Header</source>
@@ -26,6 +26,12 @@
             </trans-unit>
             <trans-unit id="backend_layout.column.footer">
                 <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebarheader">
+                <source>Sidebar Header</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebarbody">
+                <source>Sidebar Content</source>
             </trans-unit>
         </body>
     </file>
