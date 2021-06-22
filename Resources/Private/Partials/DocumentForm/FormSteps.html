@@ -14,8 +14,8 @@
                         </li>
                     </f:then>
                     <f:else>
-                        <li class="qsa_progress-bar__container-item" data-id="{pageIterator.cycle}" data-toggle="tab" aria-expanded="false">
-                            <a href="{pageIterator.cycle}">
+                        <li class="qsa_progress-bar__container-item" data-id="tab-fileUpload" data-toggle="tab" aria-expanded="false">
+                            <a href="#tab-fileUpload">
                                 <span class="qsa_progress-bar__container-item-counter">{pageIterator.cycle}. </span>
                                 <span class="qsa_progress-bar__container-item-title">Dateien</span>
                             </a>
@@ -23,6 +23,12 @@
                     </f:else>
                 </f:if>
             </f:for>
+            <li class="qsa_progress-bar__container-item" data-id="tab-checkForm" data-toggle="tab" aria-expanded="false">
+                <a href="#tab-checkForm">
+                    <span class="qsa_progress-bar__container-item-counter">. </span>
+                    <span class="qsa_progress-bar__container-item-title">Überprüfen</span>
+                </a>
+            </li>
         </ol>
     </div>
     <button class="btn qsa_btn qsa_btn--round">
