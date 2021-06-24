@@ -1,0 +1,78 @@
+
+<f:render section="Header" />
+
+<f:render section="Main" />
+
+<f:render section="Footer" />
+
+<div class="qsa_side-slider">
+    <div class="qsa_bookmarks__slider" id="bookmarkSlider" role="button" aria-label="Öffnet die Lesezeichenliste an der Seite" tabindex="0">
+        <div class="qsa_bookmarks__counter">0</div>
+
+        <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'bookmark-plus'}" />
+    </div>
+</div>
+
+<div class="qsa_bookmarks__sidebar">
+    <div class="qsa_bookmarks__sidebar-header">
+        <div class="qsa_bookmarks__sidebar-header-title">
+            <h2 class="h4">
+                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks')}
+            </h2>
+            <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'bookmarks'}" />
+        </div>
+        <p class="qsa_bookmarks__sidebar-header-title-count">
+            <span class="d-none">
+                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.records')}
+            </span>
+        </p>
+        <button id="bookmarksClose" class="qsa_bookmarks__sidebar-header-title-close btn-outline__without">
+            <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'close'}" />
+        </button>
+    </div>
+
+    <div class="qsa_bookmarks__sidebar-operations">
+        <div class="qsa_bookmarks__sidebar-operations--mark">
+            <input type="checkbox" id="markAllBookmarks" value="1">
+            <label for="markAllBookmarks">
+                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.markall')}
+            </label>
+        </div>
+
+        <div class="qsa_bookmarks__sidebar-operations-icons">
+            <div class="qsa_bookmarks__sidebar-operations--print">
+                <button class="btn-outline__without">
+                    <span class="sr-only">
+                        {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.print')}
+                    </span>
+                    <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'print'}" />
+                </button>
+            </div>
+
+            <div class="qsa_bookmarks__sidebar-operations--remove">
+                <button class="btn-outline__without d-none">
+                    <span class="sr-only">
+                        {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.removeMarked')}
+                    </span>
+                    <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'delete-bin'}" />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="qsa_bookmarks__sidebar-list-wrapper">
+        <p class="qsa_bookmarks__sidebar-list--empty">
+            <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'bookmark-plus'}" />
+            <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.norecords.title')}</span>
+            <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.norecords.description')}</span>
+        </p>
+        <ul class="qsa_bookmarks__sidebar-list"
+            data-icontitle="Icon Favorit hinzufügen"
+            data-icondesc="Zu Favoriten hinzufügen"
+            data-iconpath="{f:uri.resource(path:'icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+
+        </ul>
+    </div>
+</div>
+
+

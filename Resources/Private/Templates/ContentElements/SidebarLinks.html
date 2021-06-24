@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="qsa_sidebar__area">
+    <h2 class="h4">{data.header}</h2>
+    <f:for each="{flexform.links}" as="link">
+        <div class="qsa_sidebar__area-item">
+            <span class="qsa_sidebar__area-item__roof">{link.linkelement.linklabel}</span>
+            <f:link.typolink parameter="{link.linkelement.linkurl}" class="qsa_sidebar__area-item__link-extern">
+                {link.linkelement.linktext}
+            </f:link.typolink>
+        </div>
+    </f:for>
+</div>
+
+</html>

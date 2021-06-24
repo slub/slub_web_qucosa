@@ -1,0 +1,31 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # HeaderTeaserText
+        flipCards {
+            title = Flip Cards
+            description = Rasterelement für Flip Cards
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Flip Card
+                                colPos = 10
+                                allowed {
+                                    CType = tx_slubwebqucosa_flipcarditem
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

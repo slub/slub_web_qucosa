@@ -1,0 +1,15 @@
+<div class="qsa_wizard qsa_wizard--open" id="qucosaWizard">
+    <figure class="qsa_wizard__figure">
+        <f:image src="EXT:slub_web_qucosa/Resources/Public/Images/img/hero/hero-bg.png" title="Hintergundbild" alt="Hintergrundbild Eingabeassistent"/>
+    </figure>
+    <div class="qsa_wizard__wrapper qsa_wizard__wrapper-steps container">
+        <h2 class="h1">
+            <f:translate key="documentForm.new.header" arguments="{0: '{documentForm.displayName}'}"/>
+        </h2>
+        <button type="button" class="qsa_wizard__header-btn btn-outline__without" aria-label="Eingabeassistent schließen" tabindex="-1">
+            <span class="sr-only">Eingabeassistent schließen</span>
+            <f:render partial="Icon" arguments="{title:'Schließen Icon', description:'Eingabeassistent schließen', icon:'cancel'}" />
+        </button>
+        <f:render partial="DocumentForm/New" arguments="{documentForm:documentForm}"/>
+    </div>
+</div>

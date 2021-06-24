@@ -1,0 +1,124 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+
+lib.contentElement {
+    templateRootPaths {
+        100 = EXT:slub_web_qucosa/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        100 = EXT:slub_web_qucosa/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        100 = EXT:slub_web_qucosa/Resources/Private/Layouts/ContentElements/
+    }
+}
+
+### custom fluid_styled_content elements ###
+tt_content {
+    # Hero Teaser with Icon
+    tx_slubwebqucosa_headericonteaser < lib.contentElement
+    tx_slubwebqucosa_headericonteaser {
+        templateName = HeaderTeaserIcon
+        dataProcessing {
+            10 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Hero Teaser without Icon
+    tx_slubwebqucosa_headerteaser < lib.contentElement
+    tx_slubwebqucosa_headerteaser {
+        templateName = HeaderTeaserText
+        dataProcessing {
+            10 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Karussell-Element
+    tx_slubwebqucosa_carouselitem < lib.contentElement
+    tx_slubwebqucosa_carouselitem {
+        templateName = CarouselItem
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references {
+                    fieldName = image
+                }
+            }
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Logo-Teaser Element
+    tx_slubwebqucosa_logoitem < lib.contentElement
+    tx_slubwebqucosa_logoitem {
+        templateName = LogoItem
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references {
+                    fieldName = image
+                }
+            }
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Akkordeon Element
+    tx_slubwebqucosa_accordionitem < lib.contentElement
+    tx_slubwebqucosa_accordionitem {
+        templateName = AccordionItem
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Flipcard Element
+    tx_slubwebqucosa_flipcarditem < lib.contentElement
+    tx_slubwebqucosa_flipcarditem {
+        templateName = FlipcardItem
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Text Element
+    tx_slubwebqucosa_text < lib.contentElement
+    tx_slubwebqucosa_text {
+        templateName = Text
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Sidebar Image
+    tx_slubwebqucosa_sidebarimage < lib.contentElement
+    tx_slubwebqucosa_sidebarimage {
+        templateName = SidebarImage
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references {
+                    fieldName = image
+                }
+            }
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Sidebar Links
+    tx_slubwebqucosa_sidebarlinks < lib.contentElement
+    tx_slubwebqucosa_sidebarlinks {
+        templateName = SidebarLinks
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+
+    # Sidebar Teaser
+    tx_slubwebqucosa_sidebarteaser < lib.contentElement
+    tx_slubwebqucosa_sidebarteaser {
+        templateName = SidebarTeaser
+        dataProcessing {
+            100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
+        }
+    }
+}

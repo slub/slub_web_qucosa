@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-03-09UTC13:25:310">
+        <header>
+            <authorName>XIMA MEDIA GmbH</authorName>
+            <authorEmail>opensource@xima.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="tx_slubwebqucosa_logoitem.label">
+                <source>Logo Element</source>
+                <target>Logo-Element</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_logoitem.link">
+                <source>Link URL</source>
+                <target>Link-URL</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_logoitem.description">
+                <source>Element for Logo-Teaser</source>
+                <target>Element für den Logo-Teaser</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

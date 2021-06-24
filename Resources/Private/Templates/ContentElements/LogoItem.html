@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+{v:iterator.first(haystack: files) -> v:variable.set(name: 'image')}
+<div class="qsa_teaser__content--item">
+    <f:link.typolink class="qsa_teaser__content--item-link" parameter="{flexform.linkurl}">
+        <f:image image="{image}" />
+    </f:link.typolink>
+    <p>{data.bodytext}</p>
+</div>
+
+</html>

@@ -1,0 +1,101 @@
+### custom content elements
+## Tab Allgemein
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        tx_slubwebqucosa_headericonteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Teaserelement mit Icon
+            description = Ein Teaserelement für den Header mit Icon und Beschreibung
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_headericonteaser
+            }
+        }
+        tx_slubwebqucosa_headerteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Teaserelement ohne Icon
+            description = Ein Teaserelement für den Header
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_headerteaser
+            }
+        }
+        tx_slubwebqucosa_carouselitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Karussell-Element
+            description = Ein Element für das Karussell
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_carouselitem
+            }
+        }
+        tx_slubwebqucosa_logoitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_logoitem
+            }
+        }
+        tx_slubwebqucosa_accordionitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Akkordeon-Eintrag
+            description = Fügt einen neuen Akkordeon-Eintrag hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_accordionitem
+            }
+        }
+        tx_slubwebqucosa_flipcarditem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Flip Card
+            description = Fügt eine neue Flipcard hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_flipcarditem
+            }
+        }
+        tx_slubwebqucosa_text {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Text-Element
+            description = Fügt Text mit Überschrift hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_text
+            }
+        }
+        tx_slubwebqucosa_sidebarimage {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Sidebar Bild
+            description = Fügt ein Bild für die Sidebar hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarimage
+            }
+        }
+        tx_slubwebqucosa_sidebarlinks {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Sidebar Linkliste
+            description = Fügt Links als Aufzählung in der Sidebar hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarlinks
+            }
+        }
+        tx_slubwebqucosa_sidebarteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = Sidebar Teaser
+            description = Fügt einen Teaser in der Sidebar hinzu
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarteaser
+            }
+        }
+    }
+
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser)
+
+    ## Nicht benötigte aus Liste entfernen
+    show := removeFromList(header,textmedia,bullets,table,uploads)
+}
+
+## Tab: Special
+mod.wizards.newContentElement.wizardItems.special {
+    elements {
+
+    }
+    show := addToList()
+}
+
+

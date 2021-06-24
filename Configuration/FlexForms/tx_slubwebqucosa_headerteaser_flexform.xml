@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <ROOT  type="array">
+        <type>array</type>
+        <el type="array">
+            <teaserdate type="array">
+                <TCEforms type="array">
+                    <label>
+                        Veröffentlichungsdatum
+                    </label>
+                    <config type="array">
+                        <type>input</type>
+                        <eval>date</eval>
+                        <checkbox>1</checkbox>
+                    </config>
+                </TCEforms>
+            </teaserdate>
+            <linkurl type="array">
+                <TCEforms type="array">
+                    <label>
+                        Link-URL
+                    </label>
+                    <config type="array">
+                        <type>input</type>
+                        <renderType>inputLink</renderType>
+                        <size>15</size>
+                        <max>256</max>
+                        <eval>trim,required</eval>
+                        <fieldControl>
+                            <linkPopup>
+                                <options>
+                                    <blindLinkFields>class,params</blindLinkFields>
+                                    <blindLinkOptions>folder,file,mail</blindLinkOptions>
+                                    <windowOpenParameters>height=800,width=1000,status=0,menubar=1,scrollbars=1</windowOpenParameters>
+                                </options>
+                            </linkPopup>
+                        </fieldControl>
+                    </config>
+                </TCEforms>
+            </linkurl>
+        </el>
+    </ROOT>
+</T3DataStructure>

@@ -1,0 +1,12 @@
+<f:link.typolink parameter="{flexform.linkurl}" class="qsa_opening-teaser__card qsa_opening-teaser__card--large">
+    <div class="qsa_opening-teaser__description qsa_opening-teaser__description--large">
+        <span class="qsa_sidebar__area-item__roof">{data.header}</span>
+        <p>{data.bodytext}</p>
+    </div>
+    <div class="qsa_opening-teaser__tags">
+        <span class="qsa_tag"><f:format.date format="d.m.Y">{flexform.teaserdate}</f:format.date></span>
+    </div>
+    <div class="qsa_opening-teaser__button">
+        <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Ein Pfeil nach links zeigend', icon:'arrow-circle'}" />
+    </div>
+</f:link.typolink>

@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Page"/>
+
+<f:section name="Header">
+    <f:render partial="Header/Header" arguments="{_all}" />
+</f:section>
+
+<f:section name="Main">
+    <main>
+        <f:if condition="{data.is_siteroot}">
+            <f:then>
+                <div class="qsa_hero">
+                    <div class="qsa_hero__content">
+                        <div class="qsa_hero__header">
+                            <h1 class="h2 qsa_hero__title">
+                                {settings.headerHeading}
+                            </h1>
+                            <p class="qsa_hero__desc">
+                                {settings.headerSubheader}
+                            </p>
+                        </div>
+                        <f:cObject typoscriptObjectPath="lib.navsearch"/>
+                    </div>
+                    <figure class="qsa_hero__figure">
+                        <img src="{f:uri.resource(path:'Images/img/hero/hero-bg.png', extensionName: 'slub_web_qucosa')}" title="Hintergrundbild" alt="Hintergrundbild der Startseite">
+                    </figure>
+
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+                </div>
+            </f:then>
+            <f:else>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+            </f:else>
+        </f:if>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
+    </main>
+</f:section>
+
+<f:section name="Footer">
+    <f:render partial="Footer/Footer" arguments="{_all}"/>
+</f:section>
+
+</html>

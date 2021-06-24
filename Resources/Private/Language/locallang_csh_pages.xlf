@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-11T17:08:47Z" product-name="slub_web_qucosa">
+		<header/>
+		<body>
+			<trans-unit id="author.description">
+				<source>Select the authors which authored this publication.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
