@@ -9,9 +9,8 @@ plugin.tx_find {
                 }
             }
         }
-        landingPageUID = TEXT
-        landingPageUID.value = {$plugin.tx_slubwebqucosa.landingPageUID}
-
+        landingPageUID = {$plugin.tx_slubwebqucosa.landingPageUID}
+        rootPageId = {$plugin.tx_slubwebqucosa.rootPid}
     }
 	view {
 		templateRootPaths {

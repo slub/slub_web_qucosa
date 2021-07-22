@@ -9,8 +9,8 @@
 	<article>
 		<h1>
 			<f:link.page
-				pageUid="{settings.landingPageUID.value}"
-				additionalParams="{tx_dlf: {id: '{document.id}'}}"
+				pageUid="{settings.landingPageUID}"
+				additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\'{settings.rootPageId}\', absolute:1)}/fileadmin/api/{document.record_id}'}}"
 				class="internal no-change"
 			>
 				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
