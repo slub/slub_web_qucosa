@@ -312,6 +312,18 @@ blockquote {
 }
 
 /* the background image is set in the corresponding client.css */
+#navend a#dini_ready {
+	position: absolute;
+	right: 37px;
+	top: 112px;
+	width: 81px;
+	height: 81px;
+	display: none;
+	overflow: hidden;
+	text-indent: -9000px;
+	border: none;
+}
+
 #navend a#dini {
 	position: absolute;
 	right: 37px;
