@@ -1,12 +1,40 @@
-# Configuration
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Config/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Config/language.txt">
+# Dependencies
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/SLUB/Extensions/lib.logo.typoscript">
 
-# Navigation
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Navigation/setup.txt">
+page {
 
-# Content
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Content/setup.txt">
+    meta {
+        author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
+        google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+    }
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Page/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/SLUB/Page/setup.txt">
+    10 {
+        file = EXT:slub_web_qucosa/Resources/Private/Templates/SLUB/Start.html
+
+        variables.isMandant.value = false
+    }
+
+    headerData {
+
+        # Tracking
+        9999 = TEXT
+        9999.value(
+        <script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.slub-dresden.de/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '124']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+        )
+    }
+}
+
+plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://slub.qucosa.de/sitemap_qucosa.xml
+

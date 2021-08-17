@@ -1,0 +1,31 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # HeaderTeaserText
+        carousel {
+            title = Karussell
+            description = Rasterelement für Karussell-Elemente
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Karussell-Elemente
+                                colPos = 10
+                                allowed {
+                                    CType = tx_slubwebqucosa_carouselitem
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

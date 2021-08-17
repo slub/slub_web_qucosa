@@ -1,0 +1,12 @@
+imports:
+ - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+ - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+ - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+  config:
+    stylesSet:
+      - { name: "Warnung", element: "p", attributes: { 'class': 'qsa_content-area__warning' } }
+      - { name: "Hinweis", element: "p", attributes: { 'class': 'qsa_content-area__hint' } }
+
+    format_tags: "p;h2;h3;h4"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-03-09UTC13:25:310">
+        <header>
+            <authorName>XIMA MEDIA GmbH</authorName>
+            <authorEmail>opensource@xima.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.twoColumns">
+                <source>Content with sidebar</source>
+                <target>Inhalt mit Sidebar</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.singleColumn">
+                <source>Only Contentarea</source>
+                <target>Nur Inhaltsbereich</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.header">
+                <source>Header</source>
+                <target>Kopfbereich</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.content">
+                <source>Content</source>
+                <target>Inhaltsbereich</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebar">
+                <source>Sidebar</source>
+                <target>Sidebar</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer">
+                <source>Footer</source>
+                <target>Fußbereich</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebarheader">
+                <source>Sidebar Header</source>
+                <target>Sidebar Kopfbereich</target>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebarbody">
+                <source>Sidebar Content</source>
+                <target>Sidebar Inhaltsbereich</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

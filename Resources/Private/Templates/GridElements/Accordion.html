@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="qsa_accordion">
+    <div class="qsa_accordion__items">
+        <f:if condition="{data.flexform_accrdiontitle} == 1">
+            <h2>{data.header}</h2>
+            <a class="sr-only" href="#" id="anchor{data.uid}">{data.header}</a>
+
+            <button class="qsa_accordion__trigger qsa_accordion__trigger--upper">
+            <span class="qsa_accordion__trigger--closed">
+                Alle ausklappen
+                <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann das gesamte Accordion geöffnet werden', icon:'plus-circle'}" />
+            </span>
+
+                <span class="qsa_accordion__trigger--active">
+                 Alle einklappen
+                <f:render partial="Icon" arguments="{title:'Close Accordion', description:'Mit diesem Icon kann das gesamte Accordion geschlossen werden', icon:'minus-circle'}" />
+            </span>
+            </button>
+        </f:if>
+
+        <f:format.raw>{data.tx_gridelements_view_column_10}</f:format.raw>
+
+    </div>
+</div>
+
+</html>

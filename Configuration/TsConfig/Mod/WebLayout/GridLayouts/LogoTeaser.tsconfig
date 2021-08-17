@@ -1,0 +1,32 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # HeaderTeaserText
+        logoTeaser {
+            title = Logo Teaser
+            description = Rasterelement für Logos mit Beschreibungen
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Logos
+                                colPos = 10
+                                allowed {
+                                    CType = tx_slubwebqucosa_logoitem
+                                }
+                                maxitems = 3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

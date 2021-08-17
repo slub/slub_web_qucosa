@@ -1,0 +1,17 @@
+page.includeCSS.tx_dpf = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
+
+plugin.tx_dpf {
+    view {
+        templateRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Templates/
+        partialRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Partials/
+        layoutRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Layouts/
+    }
+}
+
+module.tx_dpf {
+    view {
+        templateRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Templates/
+        partialRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Partials/
+        layoutRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Layouts/
+    }
+}

@@ -1,0 +1,61 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # Accordion
+        accordion {
+            title = Akkordeon
+            description = Rasterelement für Akkordeoneinträge
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Akkordeon-Elemente
+                                colPos = 10
+                                allowed {
+                                    CType = tx_slubwebqucosa_accordionitem
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            flexformDS (
+<T3DataStructure>
+    <meta>
+        <langDisable>0</langDisable>
+    </meta>
+    <ROOT type="array">
+        <type>array</type>
+        <el type="array">
+            <accrdiontitle type="array">
+                <TCEforms type="array">
+                    <label>Akkordeon-Titel ausgeben</label>
+                    <config type="array">
+                      <type>select</type>
+                      <items type="array">
+                        <numIndex index="0" type="array">
+                          <numIndex index="0">Ja</numIndex>
+                          <numIndex index="1">1</numIndex>
+                        </numIndex>
+                        <numIndex index="1" type="array">
+                          <numIndex index="0">Nein</numIndex>
+                          <numIndex index="1">0</numIndex>
+                        </numIndex>
+                      </items>
+                    </config>
+                  </TCEforms>
+            </accrdiontitle>
+        </el>
+    </ROOT>
+</T3DataStructure>
+            )
+        }
+    }
+}

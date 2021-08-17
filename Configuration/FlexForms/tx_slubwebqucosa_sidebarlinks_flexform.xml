@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>0</langDisable>
+    </meta>
+    <ROOT type="array">
+        <type>array</type>
+        <el type="array">
+            <links>
+                <title>Links</title>
+                <section>1</section>
+                <type>array</type>
+                <el type="array">
+                    <linkelement>
+                        <title>Link</title>
+                        <type>array</type>
+                        <el>
+                            <linklabel type="array">
+                                <TCEforms type="array">
+                                    <label>Label</label>
+                                    <config type="array">
+                                        <type>input</type>
+                                        <size>80</size>
+                                        <eval>trim</eval>
+                                    </config>
+                                </TCEforms>
+                            </linklabel>
+                            <linktext type="array">
+                                <TCEforms type="array">
+                                    <label>Link-Text</label>
+                                    <config type="array">
+                                        <type>input</type>
+                                        <size>80</size>
+                                        <eval>trim,required</eval>
+                                    </config>
+                                </TCEforms>
+                            </linktext>
+                            <linkurl type="array">
+                                <TCEforms type="array">
+                                    <label>
+                                        Link-URL
+                                    </label>
+                                    <config type="array">
+                                        <type>input</type>
+                                        <renderType>inputLink</renderType>
+                                        <size>15</size>
+                                        <max>256</max>
+                                        <eval>trim,required</eval>
+                                        <fieldControl>
+                                            <linkPopup>
+                                                <options>
+                                                    <blindLinkFields>class,params</blindLinkFields>
+                                                    <blindLinkOptions>folder,mail,file</blindLinkOptions>
+                                                    <windowOpenParameters>height=800,width=1000,status=1,menubar=1,scrollbars=1</windowOpenParameters>
+                                                </options>
+                                            </linkPopup>
+                                        </fieldControl>
+                                    </config>
+                                </TCEforms>
+                            </linkurl>
+                        </el>
+                    </linkelement>
+                </el>
+            </links>
+        </el>
+    </ROOT>
+</T3DataStructure>

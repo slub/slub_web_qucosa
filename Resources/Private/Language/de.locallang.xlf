@@ -1,30 +1,87 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-26T14:46:22Z">
-		<header>
-			<generator>LFEditor</generator>
-		</header>
-		<body>
-		<trans-unit id="tx_slubwebqucosa.gotohomepage" approved="yes">
-			<source>Goto Homepage</source>
-			<target>zur Startseite</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.jumptotop" approved="yes">
-			<source>Jump to top of Page</source>
-			<target>Zum Seitenanfang</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.printthispage" approved="yes">
-			<source>Print Page</source>
-			<target>Seite drucken</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.skiptocontent" approved="yes">
-			<source>Skip to Content</source>
-			<target>Zum Inhalt springen</target>
-		</trans-unit>
-		<trans-unit id="tx_slubwebqucosa.skiptomainnav" approved="yes">
-			<source>Skip to Main Navigation</source>
-			<target>Zur Hauptnavigation springen</target>
-		</trans-unit>
-		</body>
-	</file>
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages"
+          date="2017-12-26T14:46:22Z">
+        <header>
+            <generator>LFEditor</generator>
+        </header>
+        <body>
+            <trans-unit id="tx_slubwebqucosa.gotohomepage" approved="yes">
+                <source>Goto Homepage</source>
+                <target>zur Startseite</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.jumptotop" approved="yes">
+                <source>Jump to top of Page</source>
+                <target>Zum Seitenanfang</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.printthispage" approved="yes">
+                <source>Print Page</source>
+                <target>Seite drucken</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.skiptocontent" approved="yes">
+                <source>Skip to Content</source>
+                <target>Zum Inhalt springen</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.skiptomainnav" approved="yes">
+                <source>Skip to Main Navigation</source>
+                <target>Zur Hauptnavigation springen</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.publish" xml:space="preserve">
+			    <source>Publish</source>
+                <target>Publizieren</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.footer" xml:space="preserve">
+			    <source>An offer of the Saxon State Library - Dresden State and University Library</source>
+                <target>Ein Angebot der Sächsischen Landesbibliothek - Staats- und Universitätsbibliothek Dresden</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.placeholder" xml:space="preserve">
+			    <source>Search in a large number of records</source>
+			    <target>Suche in einer großen Anzahl an Datensätzen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.start" xml:space="preserve">
+			    <source>Begin Search</source>
+			    <target>Suche starten</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.remove" xml:space="preserve">
+			    <source>Remove Entry</source>
+			    <target>Sucheintrag löschen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
+			    <source>Expanded Search</source>
+			    <target>Erweiterte Suche</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
+			    <source>Homepage</source>
+			    <target>Startseite</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks" xml:space="preserve">
+                <source>My Bookmarks</source>
+                <target>Meine Merkliste</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.records" xml:space="preserve">
+			    <source>Records</source>
+			    <target>Einträge</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.markall" xml:space="preserve">
+			    <source>Mark all</source>
+			    <target>Alle markieren</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.print" xml:space="preserve">
+			    <source>Print all saved entries or save them as PDF</source>
+			    <target>Alle gespeicherten Einträge drucken oder als PDF speichern</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.removeMarked" xml:space="preserve">
+			    <source>Remove marked records</source>
+			    <target>Markierte Elemente entfernen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.norecords.title" xml:space="preserve">
+                <source>You currently have no items in your watch list.</source>
+                <target>Sie haben aktuell keine Artikel in Ihrer Merkliste.</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.bookmarks.norecords.description" xml:space="preserve">
+                <source>Click on the bookmark icon in a search entry to store it here.</source>
+                <target>Klicken Sie in einem Sucheintrag auf das Lesezeichen-Symbol um ihn hier abzulegen.</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>
