@@ -9,6 +9,12 @@ plugin.tx_find {
                 }
             }
         }
+        // default search in title_full
+        queryFields {
+            0 {
+                query = title_full:%s
+            }
+        }
         landingPageUID = {$plugin.tx_slubwebqucosa.landingPageUID}
         rootPageId = {$plugin.tx_slubwebqucosa.rootPid}
     }
