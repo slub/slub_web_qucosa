@@ -79,3 +79,10 @@ $extensionKey = 'slub_web_qucosa';
     'Configuration/TypoScript/HTWKLEIPZIG',
     'Qucosa: HTWK Leipzig'
 );
+
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/Find',
+    'Qucosa: Konfiguration Find Recherche'
+);

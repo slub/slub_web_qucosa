@@ -1,0 +1,32 @@
+plugin.tx_find {
+    settings {
+        connections {
+            default {
+                options {
+                    host = solr
+                    port = 8983
+                    path = /solr/qucosa
+                }
+            }
+        }
+        // default search in title_full
+        queryFields {
+            0 {
+                query = title_full:%s
+            }
+        }
+        landingPageUID = {$plugin.tx_slubwebqucosa.landingPageUID}
+        rootPageId = {$plugin.tx_slubwebqucosa.rootPid}
+    }
+	view {
+		templateRootPaths {
+            100 = EXT:slub_web_qucosa/Resources/Private/Find/Templates/
+        }
+		partialRootPaths {
+            100 = EXT:slub_web_qucosa/Resources/Private/Find/Partials/
+        }
+		layoutRootPaths  {
+            100 = EXT:slub_web_qucosa/Resources/Private/Find/Layouts/
+        }
+	}
+}
