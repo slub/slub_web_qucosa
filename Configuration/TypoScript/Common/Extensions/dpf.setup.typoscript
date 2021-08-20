@@ -1,4 +1,6 @@
-page.includeCSS.tx_dpf = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
+page.includeCSS.tx_dpf >
+page.includeCSS.tx_dpf_jquery_ui_css >
+page.includeCSS.tx_dpf_jquery_ui_css_structure >
 
 plugin.tx_dpf {
     view {
