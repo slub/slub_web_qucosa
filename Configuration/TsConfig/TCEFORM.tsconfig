@@ -29,6 +29,8 @@ TCEFORM {
         subheader{
             types{
                 tx_slubwebqucosa_text.disabled = 0
+                tx_slubwebqucosa_carouselitem.disabled = 0
+                tx_slubwebqucosa_carouselitem.label = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_carouselitem.link.label
             }
         }
         header_position.disabled = 1

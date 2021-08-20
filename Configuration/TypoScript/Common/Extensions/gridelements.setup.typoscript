@@ -9,6 +9,19 @@ tt_content.gridelements_pi1 {
     variables {
         content =< tt_content.gridelements_view
     }
+
+    dataProcessing {
+        10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+        10 {
+            default {
+                as = children
+                options {
+                    resolveFlexformData = 0
+                }
+            }
+        }
+    }
+
 }
 
 lib.gridelements.defaultGridSetup {
@@ -30,6 +43,28 @@ lib.gridelements.defaultGridSetup {
         }
     }
 
+}
+lib.gridelementsContentImage = FILES
+lib.gridelementsContentImage {
+    references {
+        table = tt_content
+        uid.data = field:uid
+        fieldName = image
+        #data = levelmedia:-1, slide
+    }
+
+    begin = 0
+    maxItems = 5
+
+    renderObj = IMAGE
+    renderObj {
+        file.import.data = file:current:uid
+        file.treatIdAsReference = 1
+        altText.data = file:current:title
+        params = style="max-width: 1024px;"
+        wrap = |
+    }
+    stdWrap.wrap = |
 }
 
 tt_content {

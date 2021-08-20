@@ -15,6 +15,9 @@
             <trans-unit id="tx_slubwebqucosa_logoitem.description">
                 <source>Element for Logo-Teaser</source>
             </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carouselitem.link.label">
+                <source>Link</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
