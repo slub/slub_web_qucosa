@@ -144,6 +144,8 @@ page {
 
         settings {
             pageIDmeta = {$pageID.meta}
+            pageIDWizard = {$pageID.wizard}
+            pageIDRoot = {$pageID.root}
             headerHeading = {$text.headerHeading}
             headerSubheader = {$text.headerSubheader}
         }

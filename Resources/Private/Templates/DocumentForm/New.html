@@ -13,3 +13,44 @@
         <f:render partial="DocumentForm/New" arguments="{documentForm:documentForm}"/>
     </div>
 </div>
+
+<div class="qsa_modal modal fade" tabindex="-1" role="dialog" id="wizardErrorModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Daten unvollständig!</h5>
+                <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="Close">
+                    <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'close'}" />
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sie haben im letzten Schritt einige Pflichtfelder gar nicht oder Felder fehlerhaft ausgefüllt. Sie können dennoch fortfahren und Ihre Eingaben zu jeder Zeit berichtigen.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn qsa_btn__submit" data-dismiss="modal">Verstanden</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="qsa_modal modal fade" tabindex="-1" role="dialog" id="wizardCloseWarning">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Achtung!</h5>
+                <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="Close">
+                    <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'close'}" />
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Wenn Sie den Eingabeassistenten schließen und die Seite erneut laden, gehen Ihre Eingaben verloren. Wollen Sie den Eingabeassistent schließen?</p>
+            </div>
+            <div class="modal-footer">
+                <f:link.typolink parameter="{settings.pageID.root}" class="btn qsa_btn__submit" additionalAttributes="{id: 'closeWizard'}">
+                    Ja
+                </f:link.typolink>
+                <button type="button" class="btn qsa_btn__submit" data-dismiss="modal">Nein</button>
+            </div>
+        </div>
+    </div>
+</div>

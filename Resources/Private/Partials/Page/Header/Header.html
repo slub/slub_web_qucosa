@@ -13,7 +13,7 @@
             </div>
         </div>
         <nav aria-label="Mainnavigation" class="qsa_header__nav qsa_nav qsa_nav--main">
-            <a href="#qucosaWizard" id="openWizard" class="btn qsa_header__button-main" aria-label="Publizieren">
+            <f:link.typolink parameter="{settings.pageIDWizard}" class="btn qsa_header__button-main" additionalAttributes="{aria-label: 'Publizieren', id: 'openWizard'}">
                 <svg class="qsa_icon icon--publish icon--base" role="img" width="20" height="20" aria-hidden="true">
                     <title class="sr-only">Icon publish</title>
                     <desc class="sr-only">Eine Seite mit Pfeil um das Publizieren einer Arbeit anzudeuten</desc>
@@ -22,7 +22,7 @@
                 <span>
                     {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.publish')}
                 </span>
-            </a>
+            </f:link.typolink>
             <ul class="qsa_nav__items">
                 <f:for each="{mainnavigation}" as="mainnavigationItem">
                     <li class="qsa_nav__item {f:if(condition: '{mainnavigationItem.children}', then: 'qsa_nav__item--has-submenu', else: '')}">

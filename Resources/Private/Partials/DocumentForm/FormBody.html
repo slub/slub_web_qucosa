@@ -21,7 +21,7 @@
                                         <f:if condition="{groupItem.maxIteration} == 0">
                                             <f:if condition="{groupItemIterator.isLast}">
                                                 <button class="btn qsa_wizard__wrapper-form-element-add qsa_btn--transparent add_group"
-                                                        name="add-input"
+                                                        name="add_group"
                                                         data-group="{groupItem.uid}"
                                                         data-ajax="{f:uri.action(action:'group',controller:'AjaxDocumentForm',pageType:110124,arguments:{pageUid:formPage.0.uid,groupUid:groupItem.uid})}"
                                                         data-index="{groupItemIterator.index}">+ {f:translate(key:
@@ -53,7 +53,7 @@
     </f:if>
 </f:for>
 
-<div class="qsa_wizard__wrapper-content" id="tab-fileUpload">
+<div class="qsa_wizard__wrapper-content d-none" id="tab-fileUpload">
     <p class="qsa_content-area__warning qsa_content-area__warning--hidden">Das Formular kann noch nicht abgeschickt
         werden, da es in diesem Schritt Fehler enthält oder unvollständig ist.
         Bitte prüfen Sie Ihre Eingaben und füllen Sie alle Felder, die mit einem '*' gekennzeichnet sind aus!</p>

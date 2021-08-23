@@ -22,6 +22,10 @@ page {
 pageID {
     # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Metanavigation
     meta = 23
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Wizard
+    wizard = 9
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Root Page
+    root = 2
 }
 
 # Allgemeine Textbausteine
