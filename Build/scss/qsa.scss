@@ -1,0 +1,130 @@
+//
+//    @tableOfContent
+//      1. Configuration
+//      2. Bootstrap
+//       2.1 Layout & components
+//       2.2 Helpers
+//       2.3 Utilities
+//      3. Third party
+//      4. Custom styles
+//       4.1 Components
+//
+
+
+// @section 1 Configuration
+// @section 1.1 Configuration
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/utilities';
+
+// @section 1.2 Custom settings
+@import '../settings/variables';
+@import '../settings/mixins';
+@import '../settings/variables--css';
+
+
+//
+//    @section 2. Bootstrap
+//
+
+// 2.1 Layout & components
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+//@import '~bootstrap/scss/type';
+//@import '~bootstrap/scss/images';
+//@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+//@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/forms';
+//@import '~bootstrap/scss/buttons';
+//@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+//@import '~bootstrap/scss/button-group';
+//@import '~bootstrap/scss/nav';
+//@import '~bootstrap/scss/navbar';
+//@import '~bootstrap/scss/card';
+//@import '~bootstrap/scss/accordion';
+//@import '~bootstrap/scss/breadcrumb';
+//@import '~bootstrap/scss/pagination';
+//@import '~bootstrap/scss/badge';
+//@import '~bootstrap/scss/alert';
+//@import '~bootstrap/scss/progress';
+//@import '~bootstrap/scss/list-group';
+//@import '~bootstrap/scss/close';
+//@import '~bootstrap/scss/toasts';
+@import '~bootstrap/scss/modal';
+//@import '~bootstrap/scss/tooltip';
+//@import '~bootstrap/scss/popover';
+@import '~bootstrap/scss/carousel';
+//@import '~bootstrap/scss/spinners';
+
+// 2.2 Helpers
+//@import '~bootstrap/scss/helpers';
+//@import '~bootstrap/scss/helpers/clearfix';
+//@import '~bootstrap/scss/helpers/colored-links';
+//@import '~bootstrap/scss/helpers/ratio';
+//@import '~bootstrap/scss/helpers/position';
+//@import '~bootstrap/scss/helpers/visually-hidden';
+//@import '~bootstrap/scss/helpers/stretched-link';
+//@import '~bootstrap/scss/helpers/text-truncation';
+
+// 2.3 Utilities
+//@import '~bootstrap/scss/utilities/api';
+
+
+//
+//    @section 3. Third Party
+//
+@import '~simplelightbox/src/simple-lightbox';
+@import '~slick-carousel/slick/slick';
+@import '~tippy.js/dist/tippy';
+
+
+//
+//    @section 4.  Custom styles
+//
+
+// 4.1 Components
+@import '../components/prototype/prototype';
+@import '../components/typography/typography';
+@import '../components/header/header';
+@import '../components/dropdown/dropdown';
+@import '../components/headline/headline';
+@import '../components/icon/icon';
+@import '../components/page/page';
+@import '../components/logo/logo';
+@import '../components/hero/hero';
+@import '../components/openingTeaser/openingTeaser';
+@import '../components/carousel/carousel';
+@import '../components/footer/footer';
+@import '../components/accordion/accordion';
+@import '../components/content/content-area';
+@import '../components/content/content-item';
+@import '../components/content/content-sidebar';
+@import '../components/button/button';
+@import '../components/flip-card/flip-card';
+@import '../components/breadcrumb/breadcrumb';
+@import '../components/teaser/teaser';
+@import '../components/select/select';
+@import '../components/search-result/search-result';
+@import '../components/list-author/list-author';
+@import '../components/tags/tags';
+@import '../components/connections/connections';
+@import '../components/abstract/abstract';
+@import '../components/download/download';
+@import '../components/contents-head-area/contents-head-area';
+@import '../components/table-of-contents/table-of-contents';
+@import '../components/search-header/search-header';
+@import '../components/input/input';
+@import '../components/datepicker/datepicker';
+@import '../components/pagination/pagination';
+@import '../components/bookmarks/bookmarks';
+@import '../components/sidebar-links/sidebar-links';
+@import '../components/side-slider/side-slider';
+@import '../components/progress-bar/progress-bar';
+@import '../components/wizard/wizard';
+@import '../components/autocomplete/autocomplete';
+@import '../components/textarea/textarea';
+@import '../components/modal/modal';
+// end of qsa.scss file

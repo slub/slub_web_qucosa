@@ -1,0 +1,313 @@
+//
+//    @tableOfContent
+//      1. Bookmarks
+//
+
+
+//
+//   @section 1. Bookmarks
+//
+
+.qsa_bookmarks {
+    &__slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 5px;
+        background: var(--color-primary);
+        border-top-left-radius: 10px;
+
+        @include media-breakpoint-down(md) {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-bottom-left-radius: 10px;
+        }
+
+        .qsa_icon {
+            width: 25px;
+            height: 25px;
+            color: white;
+        }
+    }
+
+    &__counter {
+        display: inline;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        padding: 0 8px 2px;
+        font-family: $font-family-assistant;
+        font-size: 12px;
+        color: var(--color-text-color);
+        background-color: var(--color-white);
+        border-radius: 100%;
+        box-shadow: 0 0 3px -1px var(--color-opacity-black-7);
+    }
+
+    &__sidebar {
+        overflow: hidden;
+        position: fixed;
+        top: 33vh;
+        right: 0;
+        bottom: 10vh;
+        z-index: 10;
+        width: 700px;
+        max-height: 700px;
+        padding: 32px;
+        font-family: $font-family-assistant;
+        background-color: var(--color-body-bg);
+        border: 8px solid transparent;
+        border-bottom-left-radius: 16px;
+        border-top-left-radius: 16px;
+        box-shadow: 0 -1px 6px 1px var(--color-opacity-black-4);
+        transform: translate(110%, 0);
+        transition: all var(--transition-time) ease;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            transform: translate(0, 120%);
+        }
+
+        &--expanded {
+            margin-left: 32px;
+            transform: translate(0, 0);
+
+            @include media-breakpoint-down(xs) {
+                top: calc(var(--header-height-mobile) + 20px);
+                bottom: 0;
+                max-height: unset;
+                margin-left: 0;
+                padding: 16px 0 16px 16px;
+                border-top-right-radius: 16px;
+                border-bottom-left-radius: unset;
+            }
+        }
+
+        &-header {
+            &-title {
+                display: flex;
+                justify-content: center;
+
+                .h4 {
+                    margin-right: 16px;
+                    margin-bottom: 0;
+                }
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                &-count {
+                    right: 32px;
+                }
+
+                &-close {
+                    position: absolute;
+                    top: 16px;
+                    left: 16px;
+
+                    @include media-breakpoint-down(xs) {
+                        top: 10px;
+                        right: 16px;
+                        left: unset;
+                    }
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+
+            p {
+                position: absolute;
+                top: 32px;
+                font-size: $font-size-captions;
+
+                @include media-breakpoint-down(xs) {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                }
+            }
+
+            a {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+
+                @include media-breakpoint-down(xs) {
+                    top: 10px;
+                    right: 16px;
+                    left: unset;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-operations {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            margin-bottom: 10px;
+
+            &-icons {
+                display: flex;
+                margin-left: auto;
+            }
+
+            &--remove {
+                button {
+                    &:hover {
+                        svg {
+                            fill: var(--color-primary);
+                        }
+                    }
+                }
+            }
+
+            &--print {
+                button {
+                    &:hover {
+                        svg {
+                            fill: var(--color-primary);
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+
+            &-wrapper {
+                overflow: auto;
+                height: 80%;
+
+                &--empty {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .qsa_bookmarks__sidebar-list--empty {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                overflow: auto;
+                max-height: 80%;
+                border-bottom-right-radius: 16px;
+                border-bottom-left-radius: 16px;
+
+                @media print {
+                    font-size: 16px;
+                }
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-bottom: var(--spacing-xs);
+                padding: var(--spacing-s);
+                background-color: var(--color-white);
+                border-bottom-right-radius: 16px;
+                border-top-left-radius: 16px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 24px 32px 0 var(--color-opacity-black-1);
+                }
+
+                &__mark {
+                    margin-right: 16px;
+
+                    @media print {
+                        display: none;
+                    }
+                }
+
+                &__remove {
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+                    padding: calc(var(--spacing-s) / 2);
+                    background: var(--color-secondary-hover);
+                    border: none;
+                    border-bottom-left-radius: 16px;
+                    outline: none;
+
+                    &:hover {
+                        background-color: var(--color-primary);
+
+                        svg {
+                            fill: var(--color-white);
+                        }
+                    }
+
+                    @media print {
+                        display: none;
+                    }
+                }
+
+                &__data {
+                    .h6 {
+                        padding-right: 64px;
+
+                        @include media-breakpoint-down(xs) {
+                            padding-right: 32px;
+                            font-size: 16px;
+                        }
+
+                        a {
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    &-footer {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &--empty {
+                display: none;
+            }
+        }
+    }
+}
+
+.empty {
+    .qsa_bookmarks__sidebar-operations--mark {
+        display: none;
+    }
+}
+
+// end of bookmarks.scss file

@@ -1,0 +1,143 @@
+
+//
+//    @tableOfContent
+//      1. Breadcrumb
+//
+
+
+//
+//   @section 1. Breadcrumb
+//
+
+.qsa_sidebar-links {
+    position: fixed;
+    right: 3.5rem;
+    height: 3.5rem;
+    padding: 5px;
+    background: var(--color-primary);
+
+    &__share {
+        display: flex;
+        top: 612px;
+        right: -100%;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        transition: all var(--transition-time) ease;
+
+        @include media-breakpoint-down(md) {
+            top: unset;
+            right: 0;
+            bottom: -4rem;
+            left: 0;
+            width: 11rem;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 10px;
+        }
+
+        &--expanded {
+            right: 2.5rem;
+            padding-right: 1rem;
+
+            @include media-breakpoint-down(md) {
+                right: 0;
+                bottom: 4rem;
+                padding-right: 5px;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 3.5rem;
+            height: 3.5rem;
+            padding: 5px;
+
+            &:not(:last-child) {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 14px;
+                    right: 0;
+                    height: 50%;
+                    border-right: 1px dashed var(--color-white);
+                }
+            }
+        }
+
+        &__inner {
+            display: flex;
+            align-items: center;
+        }
+
+        &__item {
+            .qsa_icon {
+                width: 25px;
+                height: 25px;
+                color: white;
+            }
+        }
+    }
+
+    &__slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 5px;
+        background: var(--color-primary);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50%;
+            border-bottom: 1px dashed var(--color-white);
+
+            @include media-breakpoint-down(md) {
+                top: unset;
+                left: 0;
+                width: 50%;
+                height: 50%;
+                border-bottom: unset;
+                border-left: 1px dashed var(--color-white);
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        &-share {
+            border-bottom-left-radius: 10px;
+
+            @include media-breakpoint-down(md) {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: unset;
+            }
+
+            &.active {
+                background: var(--color-primary-hover);
+
+                .qsa_icon {
+                    color: var(--color-gray-300);
+                }
+            }
+        }
+
+        .qsa_icon {
+            width: 25px;
+            height: 25px;
+            color: white;
+        }
+    }
+}
+
+// end of breadcrumb.scss file

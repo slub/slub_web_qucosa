@@ -67,18 +67,18 @@ page {
         }
     }
 
-    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/favicon.png
+    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/img/favicon.png
 
     includeCSS {
-        client = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
+        client = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/css/qsa.min.css
     }
 
     includeJS {
-        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/js/qsa--head.min.js
+        client = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/js/qsa--head.min.js
     }
 
     includeJSFooter {
-        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/js/qsa--body.min.js
+        client = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/js/qsa--body.min.js
     }
 
     10 = FLUIDTEMPLATE

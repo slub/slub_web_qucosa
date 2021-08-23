@@ -1,0 +1,60 @@
+//
+//    @tableOfContent
+//      1. text-area
+//
+
+.qsa_text-area {
+    position: relative;
+
+    &:not(:first-child) {
+        margin-top: var(--spacing);
+    }
+
+    &__label {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__field {
+        width: 100%;
+        min-height: 25vh;
+        padding: 16px;
+        font-family: $font-family-base-assistant;
+        color: var(--color-gray-500);
+        background-color: var(--color-input-background);
+        border: 1px solid var(--color-gray-300);
+        border-radius: 8px;
+
+        &:focus {
+            border: 1px solid var(--color-primary);
+            box-shadow: 0 13px 32px 0 rgba(0, 0, 0, .1);
+
+            ~ .qsa_input-group__label {
+                top: -19px;
+                font-family: $font-family-roboto-regular;
+                font-size: 11px;
+                letter-spacing: 1.5px;
+                cursor: pointer;
+            }
+        }
+
+        &:hover {
+            border: 1px solid var(--color-primary);
+        }
+
+        &--not-filled {
+            background-color: #fde2e2;
+        }
+    }
+
+    &__count-wrapper {
+        opacity: .8;
+        position: absolute;
+        right: var(--spacing-s);
+        bottom: var(--spacing-xs);
+        font-family: $font-family-assistant;
+        font-size: var(--font-size-captions);
+    }
+}
+
+// end of textarea.scss

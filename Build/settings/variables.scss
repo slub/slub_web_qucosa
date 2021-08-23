@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+//
+//    @tableOfContent
+//      1. Defaults
+//
+
+//
+//    @section 1. Defaults
+//
+
+// @section 1.1 Prefix
+$prefix: 'qsa_';
+
+// @section 1.2 Animation
+$transition-time: .3s;
+
+// @section 1.3 Dimensions
+
+//
+//    @section 2. Colors
+//
+// @section 2.1 Main colors
+$primary:                       #cc0100;
+$primary-hover:                 #af000e;
+$primary-blue:                  #002256;
+$primary-tu-dresden:            #002256;
+$primary-tu-dresden-hover:      rgb(0, 20, 70);
+$primary-tu-chemnitz:           #458777;
+$primary-tu-chemnitz-hover:     #407a6c;
+$primary-dark-hover:            #920018;
+$secondary:                     #fff;
+$secondary-hover:               #f8f8f8;
+$input-background:              #fafafa;
+$active-border:                 #e6e6e6;
+
+// @section 2.2 Gray colors
+$gray-100: $secondary-hover;
+$gray-200: #e3e3e3;
+$gray-300: #bfbfbf;
+$gray-400: #808080;
+$gray-500: #2c2c2c;
+$gray-600: #979797;
+$gray-700: #242424;
+
+$grays: map-merge(
+    $grays,
+    (
+        100: $gray-100,
+        200: $gray-200,
+        300: $gray-300,
+        400: $gray-400,
+        500: $gray-500,
+        600: $gray-600,
+        700: $gray-700,
+    )
+);
+
+// @section 2.3 Body color
+//$body-color: #fff;
+$body-color: #f7f7f7;
+
+// @section 2.4 Color status
+$color-status-success: #027a48;
+$color-status-info: #1b52d3;
+$color-status-warning: #ce9700;
+$color-status-danger: #ba1e16;
+$color-warning: #c80404;
+
+// @section 2.5 Transparent black
+$color-opacity-black-0: rgba($black, 0);
+$color-opacity-black-1: rgba($black, .1);
+$color-opacity-black-2: rgba($black, .2);
+$color-opacity-black-3: rgba($black, .3);
+$color-opacity-black-4: rgba($black, .4);
+$color-opacity-black-5: rgba($black, .5);
+$color-opacity-black-6: rgba($black, .6);
+$color-opacity-black-7: rgba($black, .7);
+$color-opacity-black-8: rgba($black, .8);
+$color-opacity-black-9: rgba($black, .9);
+
+// @section 2.6 Transparent white
+$color-opacity-white-0: rgba($white, 0);
+$color-opacity-white-1: rgba($white, .1);
+$color-opacity-white-2: rgba($white, .2);
+$color-opacity-white-3: rgba($white, .3);
+$color-opacity-white-4: rgba($white, .4);
+$color-opacity-white-5: rgba($white, .5);
+$color-opacity-white-6: rgba($white, .6);
+$color-opacity-white-7: rgba($white, .7);
+$color-opacity-white-8: rgba($white, .8);
+$color-opacity-white-9: rgba($white, .9);
+
+// @section 2.7 Transparent primary
+$color-opacity-primary-0: rgba($primary, 0);
+$color-opacity-primary-05: rgba($primary, .05);
+$color-opacity-primary-1: rgba($primary, .1);
+$color-opacity-primary-2: rgba($primary, .2);
+$color-opacity-primary-3: rgba($primary, .3);
+$color-opacity-primary-4: rgba($primary, .4);
+$color-opacity-primary-5: rgba($primary, .5);
+$color-opacity-primary-6: rgba($primary, .6);
+$color-opacity-primary-7: rgba($primary, .7);
+$color-opacity-primary-8: rgba($primary, .8);
+$color-opacity-primary-9: rgba($primary, .9);
+
+// @section 2.8 Text colors
+$text-color:             $gray-500;
+$text-color-inverted:    $body-color;
+
+//
+//    @section 3. Typography
+//
+
+// @section 3.1 Font families
+$font-family-roboto-condensed: 'Roboto Condensed', sans-serif;
+$font-family-roboto-regular: 'Roboto Regular', sans-serif;
+$font-family-roboto-bold: 'Roboto', sans-serif;
+$font-family-assistant: 'Assistant', sans-serif;
+
+$font-family-base: $font-family-roboto-condensed;
+$font-family-base-bold: $font-family-roboto-bold;
+$font-family-base-assistant: $font-family-assistant;
+
+
+// @section 3.2 Font sizes
+$font-size-base:   16px;
+
+$h1-font-size:          $font-size-base * 2.875; //52px
+$h2-font-size:          $font-size-base * 2.625; //42px
+$h3-font-size:          $font-size-base * 2.125; //34px
+$h4-font-size:          $font-size-base * 1.5; //24px
+$h5-font-size:          $font-size-base * 1.25; //20px
+
+$font-size-author:      $font-size-base*1.125; //18px
+$font-size-article:     $font-size-base*1.06; //17px
+$font-size-small:       $font-size-base*.875; //14px
+$font-size-captions:    $font-size-base*.75; //12px
+$font-size-tiny:        $font-size-base*.687; //11px
+$font-size-tiny-xs:     $font-size-base*.625; //10px
+
+
+// @section 1.3 Dimensions
+$spacing-xl:               64px;
+$spacing-l:                40px;
+$spacing:                  32px;
+$spacing-s:                24px;
+$spacing-xs:               16px;
+$spacing-nav:              16px;
+$header-height:            96px;
+$header-height-mobile:     64px;
+$spacing-content:          5.875rem;
+$default-select-height:    36px;
+
+$border-radius-default:    16px;
+$border-radius-button:    4px;
+
+$sl-caption-background: #000;
+

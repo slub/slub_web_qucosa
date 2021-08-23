@@ -1,0 +1,196 @@
+
+//
+//    @tableOfContent
+//      1. Content sidebar
+//
+
+
+//
+//   @section 1. Content sidebar
+//
+
+.qsa_sidebar {
+    margin-top: 136px;
+
+    @include media-breakpoint-down(md) {
+        overflow: auto;
+    }
+
+    &--top {
+        margin-top: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 0;
+    }
+
+    .qsa_content-area__sidebar-slider {
+        position: absolute;
+        top: 50px;
+        left: -3rem;
+
+        @include media-breakpoint-down(sm) {
+            left: -2rem;
+            width: 2rem;
+            height: 3rem;
+            padding: 3px;
+
+            svg {
+                width: 15px;
+            }
+        }
+    }
+
+    &__body {
+        padding: 48px 0 48px 48px;
+        background-color: var(--color-body-bg);
+
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+            padding-right: 22px;
+            padding-left: 22px;
+        }
+    }
+
+    &__close {
+        display: none;
+        font-family: Assistant, sans-serif;
+        cursor: pointer;
+
+        @include media-breakpoint-down(md) {
+            display: block;
+            margin: 16px;
+            font-size: var(--font-size-small);
+            line-height: 16px;
+            letter-spacing: .4px;
+            color: var(--color-gray-500);
+            text-decoration: underline;
+        }
+    }
+
+    &__header {
+        padding-left: 48px;
+
+        @include media-breakpoint-down(lg) {
+            padding-left: 22px;
+        }
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            figure {
+                padding: 15px;
+            }
+        }
+    }
+
+    &__image-wrapper {
+        display: flex;
+        position: relative;
+        width: fit-content;
+
+        .qsa_icon {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        &-caption {
+            height: 16px;
+            margin-top: 8px;
+            font-size: var(--font-size-captions);
+            line-height: 16px;
+            letter-spacing: .4px;
+            color: var(--color-gray-500);
+        }
+
+        &-toggle {
+            &:focus,
+            &.tabbed-img {
+                outline: 3px solid #040000;
+            }
+        }
+    }
+
+    &__area {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px dashed var(--color-gray-300);
+        }
+
+        .h4 {
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+        }
+
+        &-item {
+            margin-bottom: var(--spacing-xs);
+
+            &__roof {
+                margin-bottom: 4px;
+                font-size: $font-size-tiny;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+
+            &__link-intern {
+                display: block;
+                font-size: 18px;
+                letter-spacing: .14px;
+            }
+
+            &__link-extern {
+                overflow: hidden;
+                display: block;
+                width: 80%;
+                margin-bottom: 1rem;
+                font-size: 18px;
+                letter-spacing: .14px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            a {
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__teaser {
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing);
+        padding: var(--spacing);
+        color: var(--color-text-color-inverted);
+        background-color: var(--color-primary);
+        border-bottom-right-radius: var(--border-radius-default);
+        border-top-left-radius: var(--border-radius-default);
+
+        .h4 {
+            margin-bottom: var(--spacing);
+        }
+
+        a {
+            margin-top: var(--spacing);
+            letter-spacing: 1.25px;
+        }
+    }
+
+    &--article {
+        .qsa_sidebar__body {
+            padding-top: 13px;
+            padding-left: 31px;
+        }
+    }
+}
+
+// end of content-sidebar.scss file

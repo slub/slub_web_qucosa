@@ -1,0 +1,59 @@
+//
+//    @tableOfContent
+//      1. Abstract
+
+
+// @section 1. abstract
+
+
+.qsa_abstract {
+    .qsa_caption {
+        @include caption;
+
+        .qsa_dropdown {
+            &__button-language {
+                color: var(--color-text-color);
+                border: 1px solid #cbcbcb;
+            }
+        }
+
+        .qsa_dropdown--language {
+            .qsa_dropdown__items {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+        }
+    }
+
+    &__text {
+        overflow: hidden;
+        position: relative;
+        max-height: 461px; // 1500 symbols
+
+        p {
+            font-family: $font-family-base-assistant;
+        }
+
+        &.active {
+            height: auto;
+            max-height: unset;
+        }
+
+        &--shadow {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 25%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
+
+            &.more {
+                display: none;
+            }
+        }
+    }
+}
+
+// end of abstract.scss file

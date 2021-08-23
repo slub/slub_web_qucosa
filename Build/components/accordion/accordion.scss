@@ -1,0 +1,202 @@
+//
+//    @tableOfContent
+//      1. Accordion
+//
+
+.qsa_accordion {
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 5rem;
+    }
+
+    // @todo auslagern
+    [id*='anchor'] {
+        visibility: hidden;
+        display: block;
+        position: relative;
+        top: -200px;
+    }
+
+    &__trigger {
+        position: absolute;
+        right: 0;
+        padding-right: 0;
+        font-size: 24px;
+        background: transparent;
+        border: none;
+
+        &--upper {
+            transform: translateY(-2.5rem);
+
+            @include media-breakpoint-up(md) {
+                transform: translateY(-5rem);
+            }
+        }
+
+        &--lower {
+            transform: translateY(-2.5rem);
+
+            @include media-breakpoint-up(md) {
+                transform: translateY(-3rem);
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: var(--font-size-base);
+        }
+
+        svg {
+            @include size(30px);
+
+            @include media-breakpoint-down(md) {
+                @include size(21px);
+            }
+
+            fill: var(--color-primary-blue);
+        }
+
+        &--active {
+            display: none;
+        }
+
+        &.active {
+            .qsa_accordion__trigger--closed {
+                display: none;
+            }
+
+            .qsa_accordion__trigger--active {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__items {
+        position: relative;
+        padding-top: calc(var(--spacing-l) + 10px);
+
+        h2 {
+            max-width: 70%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: var(--spacing-l);
+        }
+    }
+
+    &__item {
+        border-top: 1px dashed var(--color-gray-300);
+
+        &:last-of-type {
+            border-bottom: 1px dashed var(--color-gray-300);
+        }
+    }
+
+    &__panel {
+        overflow: hidden;
+        max-height: 0;
+        padding: 0 5px;
+        transition: max-height var(--transition-time) ease-out;
+
+        p {
+            margin: 0;
+            letter-spacing: .5px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 29px 0;
+        font-size: 24px;
+        color: var(--color-text-color);
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition: .4s;
+
+        @include media-breakpoint-down(sm) {
+            padding: var(--spacing-xs) 0;
+        }
+
+        svg {
+            @include size(30px);
+
+            @include media-breakpoint-down(md) {
+                @include size(21px);
+            }
+
+            fill: var(--color-primary-blue);
+        }
+
+        &--active {
+            display: none;
+        }
+
+        &.active {
+            .qsa_accordion__btn--closed {
+                display: none;
+            }
+
+            .qsa_accordion__btn--active {
+                display: block;
+            }
+
+            + .qsa_accordion__panel {
+                margin-bottom: var(--spacing-xs);
+            }
+        }
+
+        &:hover {
+            transform: translateX(5px);
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        margin-bottom: 3rem;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: var(--spacing);
+            }
+
+            &:hover {
+                a {
+                    .qsa_icon {
+                        transform: translateY(4px);
+                    }
+                }
+            }
+
+            a {
+                color: inherit;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 16px;
+                }
+
+                .qsa_icon {
+                    padding-left: 4px;
+                    color: var(--color-gray-600);
+                    transition: transform var(--transition-time) ease-in-out;
+
+                    @include media-breakpoint-down(sm) {
+                        @include size(14px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end of accordion.scss

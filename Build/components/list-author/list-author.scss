@@ -1,0 +1,67 @@
+//
+//    @tableOfContent
+//      1. list author
+//
+
+.qsa_list-author {
+    &__subtitle {
+        margin-top: var(--spacing-s);
+        margin-bottom: calc(var(--spacing-xs) / 2);
+        font-family: $font-family-roboto-regular;
+        font-size: $font-size-tiny-xs;
+        line-height: 16px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .qsa_u-list {
+        li {
+            font-size: var(--font-size-author);
+            line-height: 26px;
+            text-align: left;
+
+            a {
+                .qsa_icon {
+                    @include size(16px);
+
+                    fill: var(--color-primary-blue);
+                    transform: rotate(-45deg);
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+
+        &.open {
+            li {
+                &:nth-child(n+4) {
+                    display: list-item;
+                }
+            }
+        }
+    }
+
+    .qsa_btn-list {
+        font-family: $font-family-assistant;
+        font-size: var(--font-size-captions);
+        line-height: 16px;
+        letter-spacing: .4px;
+    }
+
+    .qsa_list-author__authors--hide {
+        display: none;
+    }
+}
+
+
+// end of list-author.scss
