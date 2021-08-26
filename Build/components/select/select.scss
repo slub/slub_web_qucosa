@@ -303,6 +303,8 @@
             .qsa_select__custom-options {
                 display: block;
                 min-width: 200px;
+                max-height: 50vh;
+                overflow: auto;
             }
         }
     }

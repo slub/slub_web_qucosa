@@ -1,0 +1,169 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="qsa_search-header__container">
+	<div class="qsa_search-header container">
+		<div class="qsa_search-header__content">
+			<div class="qsa_search-header__header">
+				<h1 class="h2 qsa_search-header__title">
+					Suche
+				</h1>
+			</div>
+			<f:form class="qsa_search-header__search-wrapper {f:if(condition:config.extendedSearch, then:'search-extended', else:'search-simple')}"
+					name="c{config.uid}-form"
+					method="get"
+					section="{settings.jumpToID}">
+				<f:for each="{formFacets}" as="facet" key="facetID">
+					<f:for each="{facet}" as="unused" key="facetValue">
+						<f:form.hidden name="facet[{facetID}][{facetValue}]" value="1"/>
+					</f:for>
+				</f:for>
+
+
+				<div class="qsa_search-header__search">
+					<input type="hidden" name="L" value="0">
+
+					<f:for each="{settings.queryFields}" as="fieldInfo">
+						<f:if condition="{fieldInfo.type}">
+							<f:then>
+								<f:if condition="{s:logic.or(conditions:'{
+						0:\"{s:logic.not(condition:fieldInfo.hidden)}\",
+								1:\"{s:data.valueForKey(array:arguments.q, key:fieldInfo.id)}\"
+								}')}">
+								<f:if condition="!{fieldInfo.extended} && {fieldInfo.id} != 'extended'">
+									<f:alias map="{queryParameter:'{s:data.valueForKey(array:config.query, key:fieldInfo.id)}'}">
+										<f:render partial="Form/Fields/TextAutocomplete" arguments="{_all}"/>
+									</f:alias>
+								</f:if>
+						</f:if>
+						</f:then>
+						<f:else>
+							<div class="fieldContainer error">
+								<f:translate key="Missing type in configuration for queryField %s." arguments="{0:fieldInfo.id}"/>
+							</div>
+						</f:else>
+						</f:if>
+					</f:for>
+
+					<f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
+						<span class="sr-only">Suche starten</span>
+						<f:render partial="Icon" arguments="{title:'Lupe', description:'Eine Lupe zur Verdeutlichung zum Start einer Suche', icon:'search'}" />
+					</f:form.button>
+					<f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button">
+						<f:render partial="Icon" arguments="{title:'Kreuz', description:'Sucheintrag löschen', icon:'close'}" />
+					</f:form.button>
+				</div>
+			</f:form>
+			<f:render partial="Form/AdvancedForm" arguments="{_all}"/>
+			<f:render partial="Components/ResultCount" arguments="{_all}"/>
+			<div class="qsa_search-header__footer">
+				<button class="qsa_search-header__link qsa_btn__link" id="openAdvanced">
+					Erweiterte Suche
+				</button>
+			</div>
+			<f:if condition="{arguments} ">
+				<div class="qsa_search-header__footer">
+					<button class="qsa_search-header__link qsa_btn__link" id="resetSimpleSearch">
+						Filter zurücksetzen
+					</button>
+				</div>
+			</f:if>
+		</div>
+	</div>
+</div>
+</html>
+<f:render partial="Form/QueryError.html" arguments="{_all}"/>
+
+<f:comment>
+	<!--
+	<f:form name="c{config.uid}-form"
+		method="get"
+		section="{settings.jumpToID}"
+		class="searchForm search-extended {f:if(condition:config.extendedSearch, then:'search-extended', else:'search-simple')} lets test this">
+
+	<f:for each="{formFacets}" as="facet" key="facetID">
+		<f:for each="{facet}" as="unused" key="facetValue">
+			<f:form.hidden name="facet[{facetID}][{facetValue}]" value="1"/>
+		</f:for>
+	</f:for>
+
+	<div class="formFields">
+		<f:for each="{settings.queryFields}" as="fieldInfo">
+			<f:if condition="{fieldInfo.type}">
+				<f:then>
+					<f:if condition="{s:logic.or(conditions:'{
+						0:\"{s:logic.not(condition:fieldInfo.hidden)}\",
+						1:\"{s:data.valueForKey(array:arguments.q, key:fieldInfo.id)}\"
+					}')}">
+						<div class="fieldContainer fieldType-{fieldInfo.type} field-{fieldInfo.id} field-mode-{f:if(condition:'{fieldInfo.extended}', then:'extended', else:'simple')}">
+							<f:alias map="{queryParameter:'{s:data.valueForKey(array:config.query, key:fieldInfo.id)}'}">
+								<f:render partial="Form/Fields/{fieldInfo.type}" arguments="{_all}"/>
+							</f:alias>
+						</div>
+					</f:if>
+				</f:then>
+				<f:else>
+					<div class="fieldContainer error">
+						<f:translate key="Missing type in configuration for queryField %s." arguments="{0:fieldInfo.id}"/>
+					</div>
+				</f:else>
+			</f:if>
+		</f:for>
+	</div>
+
+	<div class="controls">
+		<f:form.submit value="{f:translate(key:'Search')}" class="submit"/>
+
+		<f:groupedFor each="{settings.queryFields}" as="fieldsByType" groupBy="extended" groupKey="extended">
+			<f:if condition="{0:extended} == {0:1}">
+				<f:if condition="{config.extendedSearch}">
+					<f:then>
+						<f:link.action
+							addQueryString="TRUE"
+							argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[extendedSearch]'}"
+							class="extendedSearch internal"
+							additionalAttributes="{
+								simpleString:'{f:translate(key:\"extended Search\")}',
+								extendedString:'{f:translate(key:\"basic Search\")}'
+							}">
+							<f:translate key="basic Search"/>
+						</f:link.action>
+					</f:then>
+					<f:else>
+						<f:link.action
+							addQueryString="TRUE"
+							arguments="{extendedSearch: 1}"
+							class="extendedSearch internal"
+							additionalAttributes="{
+								simplestring:'{f:translate(key:\"extended Search\")}',
+								extendedstring:'{f:translate(key:\"basic Search\")}'
+							}">
+							<f:translate key="extended Search"/>
+						</f:link.action>
+					</f:else>
+				</f:if>
+			</f:if>
+		</f:groupedFor>
+	</div>
+
+	<f:if >
+		<div class="sortOrder">
+			<label for="c{config.uid}-sortSelect">
+				<f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.sort"/>
+			</label>
+			<f:form.select id="c{config.uid}-sortSelect" name="sort" options="{config.sortOptions.menu}" value="{config.sortOptions.selected}"/>
+		</div>
+	</f:if>
+
+	<f:if condition="{f:count(subject:config.resultCountOptions.menu)} > 1">
+		<div class="resultCountPicker">
+			<label for="c{config.uid}-resultCountSelect">
+				<f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.count"/>
+			</label>
+			<f:form.select id="c{config.uid}-resultCountSelect" name="count" options="{config.resultCountOptions.menu}" value="{config.resultCountOptions.selected}"/>
+		</div>
+	</f:if>
+
+	<div class="clear"></div>
+</f:form>
+	-->
+</f:comment>

@@ -1,0 +1,117 @@
+plugin.tx_find {
+    settings {
+        connections {
+            default {
+                options {
+                    host = solr
+                    port = 8983
+                    path = /solr/qucosa
+                }
+            }
+        }
+        // default search in title_full
+        queryFields {
+            0 {
+                query = title_full:%s
+            }
+            10 {
+                extended = 1
+                id = title_full
+                type = Text
+                label = Titel
+            }
+            20 {
+                extended = 1
+                id = author
+                type = Text
+                label = Autor
+            }
+            30 {
+                extended = 1
+                id = description
+                type = Text
+                label = Zusammenfassung
+            }
+            40 {
+                extended = 1
+                id = topic
+                type = Text
+                label = Thema
+            }
+            50 {
+                extended = 1
+                id = institution
+                type = Text
+                label = Institution
+            }
+            60 {
+                extended = 1
+                id = doctype
+                type = Select
+                options {
+                    article = Artikel
+                    bachelor_thesis = Bachelorarbeit
+                    report = Bericht
+                    monograph = Buch
+                    contained_work = Buchbeitrag
+                    diploma_thesis = Diplomarbeit
+                    doctoral_thesis = Dissertation
+                    research_paper = Forschungsbericht
+                    habilitation_thesis = Habilitation
+                    musical_notation = Komposition
+                    proceeding = Konferenzband
+                    in_proceeding = Konferenzbeitrag
+                    magister_thesis = Magisterarbeit
+                    master_thesis = Masterarbeit / Staatsexamensarbeit
+                    multivolume_work = Mehrbändiges Werk
+                    preprint = Preprint
+                    series = Schriftenreihe
+                    text = Sonstige Veröffentlichung
+                    paper = Studienarbeit
+                    lecture = Vorlesung / Vortrag
+                    periodical = Zeitschrift
+                    issue = Zeitschriftenheft
+                }
+                default = blank
+                label = Dokumenttyp
+            }
+            70 {
+                id = year
+                extended = 1
+                type = Range
+                query = from:[* TO %2$s] AND to:[%1$s TO *]
+                default.0 = *
+                default.1 = *
+            }
+        }
+        landingPageUID = {$plugin.tx_slubwebqucosa.landingPageUID}
+        rootPageId = {$plugin.tx_slubwebqucosa.rootPid}
+
+        CSSPaths.10 >
+        CSSPaths.20 >
+        JSPaths.10 >
+    }
+    view {
+        templateRootPaths {
+            100 = EXT:slub_web_qucosa/Resources/Private/Templates/Find/
+        }
+        partialRootPaths {
+            90 = EXT:slub_web_qucosa/Resources/Private/Partials/ContentElements/
+            100 = EXT:slub_web_qucosa/Resources/Private/Partials/Find/
+        }
+        layoutRootPaths  {
+            100 = EXT:slub_web_qucosa/Resources/Private/Layouts/Find/
+        }
+    }
+}
+
+plugin.tx_find.settings.sort {
+    1 {
+        id = default
+        sortCriteria = title_full asc
+    }
+    2 {
+        id = Titel A-Z
+        sortCriteria = title_full desc
+    }
+}

@@ -37,6 +37,7 @@
 
     &__search {
         display: flex;
+        position: relative;
         justify-content: center;
         width: 80%;
 
@@ -50,7 +51,7 @@
             display: none;
             position: absolute;
             top: 50%;
-            right: 50px;
+            right: 60px;
             z-index: 1;
             padding: 0;
             font-size: 1rem;
@@ -107,7 +108,7 @@
             border-top-left-radius: 10px;
         }
 
-        button {
+        button[type=submit] {
             float: left;
             width: 50px;
             padding: var(--spacing-xs);

@@ -129,7 +129,7 @@ class Datepicker {
             mm = '0' + mm
         }
 
-        today = mm + '.' + dd + '.' + yyyy
+        today = dd + '.' + mm + '.' + yyyy
 
         customDatePicker.forEach(datepicker => {
             if (datepicker.getAttribute('id') === 'qsa_date-year') {

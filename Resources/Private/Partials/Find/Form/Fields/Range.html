@@ -1,0 +1,30 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<div class="row qsa_field__datepicker-range">
+	<div class="col-5 col-sm-3">
+		<div class="qsa_field__datepicker-wrap qsa_hike">
+			<label for="qsa_date-start" class="qsa_field__datepicker-label sr-only">
+				Veröffentlichungszeitraum
+			</label>
+			<f:form.textfield
+					id="qsa_date-start"
+					class="qsa_input-group__input qsa_input-group__input-text datepicker"
+					name="q[{fieldInfo.id}][0]"
+					value="{s:data.valueForKey(array:queryParameter, key:'0')}"
+			/>
+		</div>
+	</div>
+	<span class="qsa_field__datepicker-connector">bis</span>
+	<div class="col-5 col-sm-3">
+		<div class="qsa_field__datepicker-wrap qsa_hike">
+			<label for="qsa_date-end" class="qsa_field__datepicker-label sr-only">
+				Enddatum
+			</label>
+			<f:form.textfield
+					id="qsa_date-end"
+					class="qsa_input-group__input qsa_input-group__input-text datepicker"
+					name="q[{fieldInfo.id}][1]"
+					value="{s:data.valueForKey(array:queryParameter, key:'1')}"
+			/>
+		</div>
+	</div>
+</div>

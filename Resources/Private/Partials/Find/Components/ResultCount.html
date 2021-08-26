@@ -1,0 +1,37 @@
+<f:if condition="{results.numfound}==0">
+	<f:then>
+		<f:if condition="{error}">
+			<f:then>
+				<span class="qsa_search-header__results">Ihre Suche beinhaltet ungültige Werte. Bitte prüfen und Suche erneut starten.</span>
+			</f:then>
+			<f:else>
+				<span class="qsa_search-header__results">Es wurden keine Ergebnisse zu "{arguments.q.default}" gefunden</span>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{results.numfound}==1">
+			<f:then>
+				<f:translate key="1 result"/>
+			</f:then>
+			<f:else>
+				<f:if condition="{results.numfound}<{config.count}">
+					<f:then>
+						<f:if condition="{arguments.q.default}">
+							<f:then>
+								<span class="qsa_search-header__results">Es wurden {results.numfound} Ergebnisse zu "{arguments.q.default}" gefunden</span>
+							</f:then>
+							<f:else>
+								<span class="qsa_search-header__results">Es wurden {results.numfound} Ergebnisse zu Ihrer Suche gefunden</span>
+							</f:else>
+						</f:if>
+
+					</f:then>
+					<f:else>
+
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>

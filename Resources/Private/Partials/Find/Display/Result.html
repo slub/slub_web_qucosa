@@ -1,0 +1,122 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+
+<div class="qsa_search__wrapper">
+	<div class="qsa_search-result__item">
+		<h2 class="h6 qsa_search-result__item-title">
+			<f:link.page class="qsa_search-result__item-title-link"
+						 pageUid="{settings.landingPageUID}"
+						 additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\'{settings.rootPageId}\', absolute:1)}/fileadmin/api/{document.record_id}'}}">
+				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
+					<f:then>
+						<f:render
+								partial="Display/Field/Inline"
+								arguments="{
+									config:config,
+									results:results,
+									document:document,
+									field:settings.standardFields.title,
+									separator:', '
+								}"/>
+					</f:then>
+					<f:else>
+						ID: {document.id}
+					</f:else>
+				</f:if>
+			</f:link.page>
+		</h2>
+		<div class="qsa_search-result__item-info">
+			<f:if condition="{document.fields.format_de14}">
+				<f:for each="{document.fields.format_de14}" as="format" iteration="formatIterator">
+					<f:if condition="{formatIterator.index} == 0">
+						<p class="qsa_search-result__item-info__typ">{format}</p>
+					</f:if>
+				</f:for>
+			</f:if>
+
+			<f:if condition="{document.fields.publishDate}">
+				<f:for each="{document.fields.publishDate}" as="date" iteration="dateIterator">
+					<f:if condition="{dateIterator.index} == 0">
+						<p class="qsa_search-result__item-info__date"><f:format.date format="%d.%m.%Y">{date}</f:format.date></p>
+					</f:if>
+				</f:for>
+			</f:if>
+		</div>
+		<p class="qsa_search-result__item-place">Gefunden in
+			<f:if condition="{document.fields.topic}">
+				<f:for each="{document.fields.topic}" as="topic" iteration="topicIterator">
+					<q>{topic}</q><f:if condition="!{topicIterator.isLast}">,</f:if>
+				</f:for>
+			</f:if>
+		</p>
+		<div class="qsa_search-result__item-footer">
+			<f:if condition="{document.fields.author}">
+				<f:then>
+					<f:for each="{document.fields.author}" as="author">
+						<span class="qsa_search-result__item-footer__item btn-round">{author}</span>
+					</f:for>
+				</f:then>
+				<f:else>
+					<f:if condition="{document.fields.publisher}">
+						<f:for each="{document.fields.publisher}" as="publisher">
+							<span class="qsa_search-result__item-footer__item btn-round">{publisher}</span>
+						</f:for>
+					</f:if>
+				</f:else>
+			</f:if>
+			<f:if condition="{document.fields.publishDateSort}">
+				<span class="qsa_search-result__item-footer__item btn-round">{document.fields.publishDateSort}</span>
+			</f:if>
+		</div>
+	</div>
+	<span class="qsa_search-result__item-right">
+        <button class="qsa_search-result__item-icon" id="{document.id}" data-id="bookmark" aria-label="bookmark">
+			<f:render partial="Icon" arguments="{title:'Boomark', description:'Mit diesem Icon kann das gesamte Accordion geöffnet werden', icon:'bookmark-plus'}" />
+        </button>
+    </span>
+</div>
+
+<f:comment>
+	<!--
+	<li id="c{config.uid}-result-{document.id}">
+	<article>
+		<h1>
+			<f:link.page
+				pageUid="{settings.landingPageUID}"
+				additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\'{settings.rootPageId}\', absolute:1)}/fileadmin/api/{document.record_id}'}}"
+				class="internal no-change"
+			>
+				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
+					<f:then>
+						<f:render
+								partial="Display/Field/Inline"
+								arguments="{
+								config:config,
+								results:results,
+								document:document,
+								field:settings.standardFields.title,
+								separator:', '
+							}"/>
+					</f:then>
+					<f:else>
+						ID: {document.id}
+					</f:else>
+				</f:if>
+			</f:link.page>
+		</h1>
+		<p>
+			<f:render
+				partial="Display/Field/Inline"
+				arguments="{
+					config:config,
+					results:results,
+					document:document,
+					field:settings.standardFields.snippet,
+					separator:', '
+				}"/>
+			<f:render partial="Display/DetailLink" arguments="{_all}"/>
+		</p>
+	</article>
+</li>
+
+	-->
+</f:comment>

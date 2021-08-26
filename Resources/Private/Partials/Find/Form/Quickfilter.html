@@ -1,0 +1,37 @@
+<div class="qsa_search-result__filter">
+    <h2 class="h5 qsa_search-result__filter__hits">1445 Treffer</h2>
+    <div class="qsa_search-result__filter-selects">
+        <f:form name="c{config.uid}-form"
+                method="get"
+                section="{settings.jumpToID}" enctype="multipart/form-data"
+                id="qsa-search-results-filter-form"
+              action="/">
+
+            <div class="qsa_search-result__filter-last">
+                <div class="qsa_select qsa_group">
+                    <div class="qsa_select__wrapper qsa_select__wrapper--transparent ">
+                        <label for="c{config.uid}-sortSelect" class="qsa_select__label qsa_select__label--filled">
+                            <f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.sort"/>
+                        </label>
+                        <f:variable name="sortingSelected" value="{config.sortOptions.selected}" />
+                        <p class="qsa_input-group__error qsa_input-group__error--select d-none">Wählen Sie bitte {config.sortOptions.menu.{sortingSelected}}</p>
+                        <f:form.select id="c{config.uid}-sortSelect"
+                                       class="qsa_select__native js-selectNative"
+                                       name="sort"
+                                       options="{config.sortOptions.menu}"
+                                       value="{config.sortOptions.selected}" />
+                        <div class="qsa_select__custom js-selectCustom" aria-hidden="true">
+                            <div class="qsa_select__custom-trigger  ">
+                                <p>{config.sortOptions.menu.{sortingSelected}}</p>
+                                <f:render partial="Icon" arguments="{title:'Pfeil nach unten', description:'Schwarzer Pfeil nach unten um ein Dropdown aufzuklappen', icon:'arrow-down'}" />
+                            </div>
+                            <div class="qsa_select__custom-options" data-iconpath="{f:uri.resource(path: 'qucosa_relaunch/icon/icon.min.svg#')}">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:form>
+    </div>
+</div>

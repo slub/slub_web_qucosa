@@ -29,6 +29,7 @@ class SearchHeader {
     constructor () {
         this.init()
         this.resetSearch()
+        this.resetHeaderForms()
         this.styleOnFocus()
     }
 
@@ -37,7 +38,7 @@ class SearchHeader {
 
         const advancedSearch = document.querySelector('.qsa_search-header__advanced-search')
         const advSearchFooter = document.querySelector('.qsa_search-header__advanced-search .qsa_search-header__advanced-search-footer')
-        const resetBtn = advSearchFooter.querySelector('.qsa_search-header__advanced-search .reset')
+        const resetBtn = advSearchFooter ? advSearchFooter.querySelector('.qsa_search-header__advanced-search .reset') : null
         const inputs = document.querySelectorAll('.qsa_search-header__advanced-search .qsa_search-header__advanced-search-inputs .qsa_input-group__input-text')
         const selects = document.querySelectorAll('.qsa_search-header__advanced-search .qsa_select__native')
         const customSelectsText = document.querySelectorAll('.qsa_search-header__advanced-search .qsa_select__custom-trigger p')
@@ -50,58 +51,64 @@ class SearchHeader {
         const searchContainer = document.querySelector('.qsa_search-header__container')
         const closeAdvancedSearch = document.getElementById('closeAdvanced')
 
-        openAdvancedSearch.addEventListener('click', () => {
-            this.expandSearch(searchBar, advancedSearch, amountResults, searchFooter, advancedSearchContainer, searchContainer)
-        })
+        if(openAdvancedSearch) {
+            openAdvancedSearch.addEventListener('click', () => {
+                this.expandSearch(searchBar, advancedSearch, amountResults, searchFooter, advancedSearchContainer, searchContainer)
+            })
 
-        if (localStorage.getItem('advancedSearch')) {
-            this.expandSearch(searchBar, advancedSearch, amountResults, searchFooter, advancedSearchContainer, searchContainer)
-            localStorage.removeItem('advancedSearch')
+            if (localStorage.getItem('advancedSearch')) {
+                this.expandSearch(searchBar, advancedSearch, amountResults, searchFooter, advancedSearchContainer, searchContainer)
+                localStorage.removeItem('advancedSearch')
+            }
+
+            closeAdvancedSearch.addEventListener('click', () => {
+                window.scrollTo(0, 0)
+                advancedSearch.classList.remove('qsa_search-header__advanced-search--expanded')
+
+                advancedSearchContainer.forEach(container => {
+                    container.classList.remove('qsa_search-header__advanced-search__container--expanded')
+                })
+
+                openAdvancedSearch.focus() // after closing, focus on the button
+
+                setTimeout(() => {
+                    searchBar.classList.remove('qsa_search-header__search-wrapper--hidden')
+                    amountResults.classList.remove('d-none')
+                    searchFooter.classList.remove('d-none')
+                    searchContainer.classList.remove('qsa_search-header__container--expanded')
+                }, 800)
+            })
         }
 
-        closeAdvancedSearch.addEventListener('click', () => {
-            window.scrollTo(0, 0)
-            advancedSearch.classList.remove('qsa_search-header__advanced-search--expanded')
+        if(resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                datepicker.setDatepicker()
 
-            advancedSearchContainer.forEach(container => {
-                container.classList.remove('qsa_search-header__advanced-search__container--expanded')
+                inputs.forEach(input => {
+                    input.setAttribute('data-empty', true)
+                })
+
+                selects.forEach(select => {
+                    select.selectedIndex = 0
+                })
+
+                customSelectsText.forEach(customSelectText => {
+                    customSelectText.textContent = ''
+                })
+
+                customSelectsLabel.forEach(customSelectLabel => {
+                    customSelectLabel.classList.remove('qsa_select__label--filled')
+                })
             })
-
-            openAdvancedSearch.focus() // after closing, focus on the button
-
-            setTimeout(() => {
-                searchBar.classList.remove('qsa_search-header__search-wrapper--hidden')
-                amountResults.classList.remove('d-none')
-                searchFooter.classList.remove('d-none')
-                searchContainer.classList.remove('qsa_search-header__container--expanded')
-            }, 800)
-        })
-
-        resetBtn.addEventListener('click', () => {
-            datepicker.setDatepicker()
-
-            inputs.forEach(input => {
-                input.setAttribute('data-empty', true)
-            })
-
-            selects.forEach(select => {
-                select.selectedIndex = 0
-            })
-
-            customSelectsText.forEach(customSelectText => {
-                customSelectText.textContent = ''
-            })
-
-            customSelectsLabel.forEach(customSelectLabel => {
-                customSelectLabel.classList.remove('qsa_select__label--filled')
-            })
-        })
+        }
     }
 
     expandSearch (searchBar, advancedSearch, amountResults, searchFooter, advancedSearchContainer, searchContainer) {
         searchBar.classList.add('qsa_search-header__search-wrapper--hidden')
         advancedSearch.classList.add('qsa_search-header__advanced-search--expanded')
-        amountResults.classList.add('d-none')
+        if(amountResults) {
+            amountResults.classList.add('d-none')
+        }
         searchFooter.classList.add('d-none')
 
         setTimeout(() => {
@@ -119,7 +126,7 @@ class SearchHeader {
     }
 
     styleOnFocus () {
-        const headerSearch = document.querySelector('#searchHeaderSearch')
+        const headerSearch = document.querySelector('.qsa_search-header__search input[type="text"]')
         const submitButton = document.querySelector('.qsa_search-header__search button[type="submit"]')
 
         headerSearch.addEventListener('focus', e => {
@@ -132,7 +139,7 @@ class SearchHeader {
     }
 
     resetSearch () {
-        const headerSearch = document.querySelector('#searchHeaderSearch')
+        const headerSearch = document.querySelector('.qsa_search-header__search input[type="text"]')
         const headerSearchResetButton = document.querySelector('.qsa_search-header__search__reset')
         headerSearch.addEventListener('input', e => {
             if (e.target.value) {
@@ -146,6 +153,26 @@ class SearchHeader {
             headerSearch.value = ''
             headerSearchResetButton.style.display = 'none'
         })
+    }
+
+    resetHeaderForms () {
+        const sortingSelect = document.querySelector('select[name="tx_find_find[sort]"]')
+
+
+        sortingSelect.onchange = (e) => {
+            console.log('change')
+        }
+        sortingSelect.addEventListener('change',  () => {
+            console.log('select changed')
+            sortingSelect.closest('form').submit()
+        })
+        const headerReset = document.querySelector('#resetSimpleSearch')
+
+        if (headerReset) {
+            headerReset.addEventListener('click', () => {
+                window.location = window.location.href.split('?')[0];
+            })
+        }
     }
 }
 
