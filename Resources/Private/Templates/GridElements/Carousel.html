@@ -4,7 +4,10 @@
         <div id="qsa_carousel-logo" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <f:for each="{data.tx_gridelements_view_children -> v:iterator.chunk(count: 4)}" as="carouselIndicator" iteration="indicator">
-                    <li data-target="#qsa_carousel-logo" data-slide-to="{indicator.index}" class="{f:if(condition: '{indicator.isFirst}', then: 'active', else: '')}"></li>
+                    <li data-target="#qsa_carousel-logo"
+                        data-slide-to="{indicator.index}"
+                        class="{f:if(condition: '{indicator.isFirst}', then: 'active', else: '')}"
+                        aria-label="{f:if(condition: '{indicator.isFirst}', then: 'Erste Seite des Karussells', else: 'Zur nächsten Seite wechseln')}"></li>
                 </f:for>
             </ol>
 
@@ -14,13 +17,13 @@
                 </f:for>
             </div>
 
-            <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Vorheriges Element</span>
-            </a>
             <a class="carousel-control-next" href="#qsa_carousel-logo" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Nächstes Element</span>
+            </a>
+            <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Vorheriges Element</span>
             </a>
         </div>
     </div>

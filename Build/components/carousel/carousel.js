@@ -38,7 +38,32 @@ class Carousel {
             interval: false,
             touch: true
         })
+
+        this.switchFocus()
     };
+
+    switchFocus () {
+        const carouselPrev = document.querySelectorAll('.carousel-control-prev')
+        const carouselNext = document.querySelectorAll('.carousel-control-next')
+
+        carouselPrev.forEach(prev => {
+            this.focusFirstCarouselEl(prev)
+        })
+
+        carouselNext.forEach(next => {
+            this.focusFirstCarouselEl(next)
+        })
+    }
+
+    focusFirstCarouselEl (button) {
+        button.addEventListener('click', () => {
+            const carousel = button.closest('.carousel')
+            const activeSlide = carousel.querySelector('.active .qsa_carousel-item_wrapper')
+            const figures = activeSlide.querySelectorAll('figure')
+
+            figures[0].querySelector('.qsa_carousel-item_el-link').focus()
+        })
+    }
 }
 
 /**

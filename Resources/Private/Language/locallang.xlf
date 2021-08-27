@@ -68,6 +68,12 @@
 		<trans-unit id="tx_slubwebqucosa.bookmarks.norecords.description" xml:space="preserve">
 			<source>Click on the bookmark icon in a search entry to store it here.</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.hero_background.title" xml:space="preserve">
+			<source>Background Image</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.hero_background.alt" xml:space="preserve">
+			<source>Background Image of the Header Area of the website</source>
+		</trans-unit>
         </body>
     </file>
 </xliff>

@@ -51,6 +51,7 @@
     &__sidebar {
         overflow: hidden;
         position: fixed;
+        visibility: hidden;
         top: 33vh;
         right: 0;
         bottom: 10vh;
@@ -75,6 +76,7 @@
         &--expanded {
             margin-left: 32px;
             transform: translate(0, 0);
+            visibility: visible;
 
             @include media-breakpoint-down(xs) {
                 top: calc(var(--header-height-mobile) + 20px);

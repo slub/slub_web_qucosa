@@ -32,13 +32,6 @@ class Breadcrumb {
 
     init () {
         // console.log('Breadcrumb loaded')
-        this.currentItem()
-    }
-
-    currentItem () {
-        const breadcrumbLink = document.querySelector('.qsa_qsa_breadcrumb__link')
-
-        breadcrumbLink.setAttribute('aria-current', 'location')
     }
 }
 

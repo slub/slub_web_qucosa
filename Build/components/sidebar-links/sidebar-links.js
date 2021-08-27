@@ -40,7 +40,7 @@ class SidebarLinks {
         const mailLink = document.querySelector('#mailLink')
         const twitterLink = document.querySelector('#twitterLink')
         const facebookLink = document.querySelector('#facebookLink')
-        const title = document.querySelector('.qsa_contents-head-area__title').innerHTML
+        const title = document.querySelector('.qsa_contents-head-area__title') ? document.querySelector('.qsa_contents-head-area__title').innerHTML : 'Website Qucosa'
 
         // href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkatalog.slub-dresden.de%2Fid%2F0-1098133692%2F%23detail"
 
@@ -51,6 +51,12 @@ class SidebarLinks {
         shareSliderButton.addEventListener('click', () => {
             shareSidebar.classList.toggle('qsa_sidebar-links__share--expanded')
             shareSliderButton.classList.toggle('active')
+
+            if(shareSidebar.classList.contains('qsa_sidebar-links__share--expanded')) {
+                shareSliderButton.setAttribute('aria-expanded', 'true')
+            } else {
+                shareSliderButton.setAttribute('aria-expanded', 'false')
+            }
         })
     }
 }

@@ -60,7 +60,8 @@ lib.gridelementsContentImage {
     renderObj {
         file.import.data = file:current:uid
         file.treatIdAsReference = 1
-        altText.data = file:current:title
+        altText.data = file:current:alternative
+        titleText.data = file:current:title
         params = style="max-width: 1024px;"
         wrap = |
     }

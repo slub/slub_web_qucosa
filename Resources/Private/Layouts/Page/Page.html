@@ -6,28 +6,52 @@
 <f:render section="Footer" />
 
 <div class="qsa_side-slider">
-    <div class="qsa_bookmarks__slider" id="bookmarkSlider" role="button" aria-label="Öffnet die Lesezeichenliste an der Seite" tabindex="0">
+    <button class="qsa_bookmarks__slider"
+            id="bookmarkSlider"
+            type="button"
+            aria-label="Öffnet die Lesezeichenliste an der Seite"
+            aria-expanded="false"
+            tabindex="0">
         <div class="qsa_bookmarks__counter">0</div>
 
-        <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'bookmark-plus'}" />
-    </div>
+        <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
+    </button>
+
+    <f:if condition="{data.sharing_enabled} == 0">
+        <button class="qsa_sidebar-links__slider qsa_sidebar-links__slider-share" id="shareSlider" type="button"
+                aria-label="Öffnet die Links zum teilen dieser Seite" aria-expanded="false" tabindex="0">
+
+            <f:render partial="Icon" arguments="{icon:'mail'}" />
+        </button>
+    </f:if>
+
+    <f:comment>
+        <!--
+       Aktuell wird nur die Merkliste und die Teilen-Funktion eingebunden. Zusätzlich kann noch der Zitat-Button für die Landingpage aktiviert werden
+       <button class="qsa_sidebar-links__slider qsa_sidebar-links__slider-quote" id="citeSlider" type="button"
+                aria-label="Öffnet die Links zum zitieren" tabindex="0">
+
+            <f:render partial="Icon" arguments="{icon:'quote'}" />
+        </button>
+        -->
+    </f:comment>
 </div>
 
-<div class="qsa_bookmarks__sidebar">
+<div class="qsa_bookmarks__sidebar" aria-labelledby="bookmarkSlider" aria-hidden="true">
     <div class="qsa_bookmarks__sidebar-header">
         <div class="qsa_bookmarks__sidebar-header-title">
             <h2 class="h4">
                 {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks')}
             </h2>
-            <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'bookmarks'}" />
+            <f:render partial="Icon" arguments="{icon:'bookmarks'}" />
         </div>
         <p class="qsa_bookmarks__sidebar-header-title-count">
             <span class="d-none">
                 {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.records')}
             </span>
         </p>
-        <button id="bookmarksClose" class="qsa_bookmarks__sidebar-header-title-close btn-outline__without">
-            <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'close'}" />
+        <button id="bookmarksClose" class="qsa_bookmarks__sidebar-header-title-close btn-outline__without" aria-label="Schließen Sie den Bookmarks">
+            <f:render partial="Icon" arguments="{icon:'close'}" />
         </button>
     </div>
 
@@ -45,7 +69,7 @@
                     <span class="sr-only">
                         {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.print')}
                     </span>
-                    <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'print'}" />
+                    <f:render partial="Icon" arguments="{icon:'print'}" />
                 </button>
             </div>
 
@@ -54,7 +78,7 @@
                     <span class="sr-only">
                         {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.removeMarked')}
                     </span>
-                    <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'delete-bin'}" />
+                    <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
                 </button>
             </div>
         </div>
@@ -62,17 +86,42 @@
 
     <div class="qsa_bookmarks__sidebar-list-wrapper">
         <p class="qsa_bookmarks__sidebar-list--empty">
-            <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann ein Akkordeon-Eintrag geöffnet werden', icon:'bookmark-plus'}" />
+            <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
             <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.norecords.title')}</span>
             <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.norecords.description')}</span>
         </p>
         <ul class="qsa_bookmarks__sidebar-list"
             data-icontitle="Icon Favorit hinzufügen"
             data-icondesc="Zu Favoriten hinzufügen"
-            data-iconpath="{f:uri.resource(path:'icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+            data-tippydesc ="Aus Favoriten entfernen"
+            data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
 
         </ul>
     </div>
 </div>
 
+<f:if condition="{data.sharing_enabled} == 0">
+    <div class="qsa_sidebar-links qsa_sidebar-links__share" aria-hidden="true">
+        <div class="qsa_sidebar-links__share__inner">
+            <a id="mailLink" href="#">
+                <div class="qsa_sidebar-links__share__item">
+                    <f:render partial="icon" arguments="{icon:'mail'}" />
+                    <span class="sr-only">Per Email teilen</span>
+                </div>
+            </a>
+            <a id="twitterLink" href="#">
+                <div class="qsa_sidebar-links__share__item">
+                    <f:render partial="icon" arguments="{icon:'twitter'}" />
+                    <span class="sr-only">Per Twitter teilen</span>
+                </div>
+            </a>
+            <a id="facebookLink" href="#">
+                <div class="qsa_sidebar-links__share__item">
+                    <f:render partial="icon" arguments="{icon:'facebook'}" />
+                    <span class="sr-only">Per Facebook teilen</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</f:if>
 

@@ -97,7 +97,8 @@ class Bookmarks {
         const closeBookmarks = document.querySelector('#bookmarksClose')
 
         bookmarkSliderButton.addEventListener('click', () => {
-            bookmarkSidebar.classList.remove('d-none')
+            bookmarkSliderButton.setAttribute('aria-expanded', 'true')
+            bookmarkSidebar.setAttribute('aria-hidden', 'false')
             bookmarkSidebar.classList.add('qsa_bookmarks__sidebar--expanded')
 
             // focus trap
@@ -109,6 +110,8 @@ class Bookmarks {
                     // ESC
                     if (e.keyCode === 27) {
                         bookmarkSidebar.classList.remove('qsa_bookmarks__sidebar--expanded')
+                        bookmarkSliderButton.setAttribute('aria-expanded', 'false')
+                        bookmarkSidebar.setAttribute('aria-hidden', 'true')
                         bookmarkSliderButton.focus() // leave focus on the button
                     }
                 })
@@ -117,16 +120,26 @@ class Bookmarks {
 
         closeBookmarks.addEventListener('click', () => {
             bookmarkSidebar.classList.remove('qsa_bookmarks__sidebar--expanded')
-            bookmarkSidebar.classList.add('d-none')
-            // bookmarkSliderButton.focus() // leave focus on the button
+            bookmarkSliderButton.setAttribute('aria-expanded', 'false')
+            bookmarkSidebar.setAttribute('aria-hidden', 'true')
         })
 
-        window.addEventListener('click', e => {
-            if (e.target !== bookmarkSliderButton) {
-                bookmarkSidebar.classList.remove('qsa_bookmarks__sidebar--expanded')
-                // bookmarkSliderButton.focus() // leave focus on the button
-            }
-        })
+
+        let prevClassState = bookmarkSliderButton.classList.contains('');
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if(mutation.attributeName === 'class'){
+                    let currentClassState = mutation.target.classList.contains('qsa_bookmarks__sidebar--expanded');
+                    if(prevClassState !== currentClassState)    {
+                        prevClassState = currentClassState;
+                        if(!currentClassState) {
+                            bookmarkSliderButton.focus()
+                        }
+                    }
+                }
+            });
+        });
+        observer.observe(bookmarkSidebar, {attributes: true});
 
         bookmarkSidebar.addEventListener('click', e => {
             e.stopPropagation()
@@ -137,7 +150,7 @@ class Bookmarks {
         const list = document.querySelector('.qsa_bookmarks__sidebar-list')
         const printBtn = document.querySelector('.qsa_bookmarks__sidebar-operations--print button')
         const title = 'Favoritenliste'
-        const currentUrl = window.location.origin + '/css/qsa.min.css'
+        const currentUrl = window.location.origin + '/typo3conf/ext/slub_web_qucosa/Resources/Public/qucosa_relaunch/css/qsa.min.css'
 
         printBtn.addEventListener('click', () => {
             const bookmarkWindow = window.open('', 'PRINT', 'height=400,width=600')

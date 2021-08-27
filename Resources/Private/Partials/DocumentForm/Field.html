@@ -45,7 +45,7 @@
                             <f:form.textfield id="inp_{fieldItem.uid}"
                                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                               value="{fieldItem.value}"
-                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light {fieldItem.fillOutService}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation
                                               }"
@@ -71,7 +71,7 @@
                             <f:form.textfield id="inp_{fieldItem.uid}"
                                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                               value="{fieldItem.value}"
-                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light{fieldItem.fillOutService}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation
                                               }"
@@ -147,13 +147,13 @@
                                     datatype:fieldItem.dataType,
                                     label:fieldItem.displayName}"
                                options="{fieldItem.inputOptions}"/>
-                <div class="qsa_select__custom js-selectCustom qsa_select__custom-header qsa_select__language"
+                <div class="qsa_select__custom js-selectCustom qsa_select__custom-header {f:if(condition: '{fieldItem.value} == ger', then: 'qsa_select__language', else: '')}"
                         aria-hidden="true">
                     <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header qsa_select__custom-trigger-light">
                         <p>Sprache</p>
-                        <f:render partial="Icon" arguments="{title:'Pfeil nach links', description:'Weitere Elemente anzeigen', icon:'arrow-down'}" />
+                        <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                     </div>
-                    <div class="qsa_select__custom-options " data-iconpath="/typo3conf/ext/slub_web_qucosa/Resources/Public/icons/icon.min.svg#">
+                    <div class="qsa_select__custom-options " data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
 
                     </div>
                 </div>

@@ -19,12 +19,12 @@
 
                     <f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
                         <span class="sr-only">Suche starten</span>
-                        <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'search'}" />
+                        <f:render partial="Icon" arguments="{icon:'search'}" />
                     </f:form.button>
 
                     <f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: 'Sucheintrag löschen'}">
                         <span class="sr-only">Sucheintrag löschen</span>
-                        <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'close'}" />
+                        <f:render partial="Icon" arguments="{icon:'close'}" />
                     </f:form.button>
                 </div>
             </f:form>
@@ -78,12 +78,12 @@
                                     <div class="qsa_select__custom js-selectCustom qsa_select__custom-header " aria-hidden="true">
                                         <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header ">
                                             <p class="">Dokumententyp </p>
-                                            <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'arrow-down'}" />
+                                            <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                                         </div>
                                         <div class="qsa_select__custom-options ">
                                             <div class="qsa_select__custom-option" data-value="all">
                                                 Keine Auswahl
-                                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'check'}" />
+                                                <f:render partial="Icon" arguments="{icon:'check'}" />
                                             </div>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@
                             Alles Zurücksetzen
                         </f:form.button>
 
-                        <a type="button" id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</a>
+                        <button id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</button>
                     </div>
                 </div>
             </f:form>

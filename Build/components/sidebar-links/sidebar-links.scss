@@ -18,7 +18,8 @@
 
     &__share {
         display: flex;
-        top: 612px;
+        // top: 612px; Verwenden, wenn Zitat-Button eingebunden wird
+        top: 556px;
         right: -100%;
         border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;

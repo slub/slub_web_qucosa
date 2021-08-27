@@ -5,17 +5,16 @@
     <div class="qsa_accordion__items">
         <f:if condition="{data.flexform_accrdiontitle} == 1">
             <h2>{data.header}</h2>
-            <a class="sr-only" href="#" id="anchor{data.uid}">{data.header}</a>
 
             <button class="qsa_accordion__trigger qsa_accordion__trigger--upper">
             <span class="qsa_accordion__trigger--closed">
                 Alle ausklappen
-                <f:render partial="Icon" arguments="{title:'Open Accordion', description:'Mit diesem Icon kann das gesamte Accordion geöffnet werden', icon:'plus-circle'}" />
+                <f:render partial="Icon" arguments="{icon:'plus-circle'}" />
             </span>
 
                 <span class="qsa_accordion__trigger--active">
                  Alle einklappen
-                <f:render partial="Icon" arguments="{title:'Close Accordion', description:'Mit diesem Icon kann das gesamte Accordion geschlossen werden', icon:'minus-circle'}" />
+                <f:render partial="Icon" arguments="{icon:'minus-circle'}" />
             </span>
             </button>
         </f:if>

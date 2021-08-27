@@ -5,9 +5,12 @@
 {v:iterator.first(haystack: files) -> v:variable.set(name: 'image')}
 <figure>
     <div class="lightbox qsa_sidebar__image-wrapper">
-        <f:link.typolink parameter="{f:uri.image(image:image)}" class="qsa_sidebar__image-wrapper-toggle">
+        <h2>Bild ansehen</h2>
+        <f:link.typolink parameter="{f:uri.image(image:image)}"
+                         class="qsa_sidebar__image-wrapper-toggle"
+                         additionalAttributes="{aria-label: 'Biild öffnen'}">
             <f:image class="img-responsive" image="{image}"/>
-            <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'zoom'}" />
+            <f:render partial="Icon" arguments="{icon:'zoom'}" />
         </f:link.typolink>
     </div>
     <p class="qsa_sidebar__image-wrapper-caption">{image.properties.description}</p>

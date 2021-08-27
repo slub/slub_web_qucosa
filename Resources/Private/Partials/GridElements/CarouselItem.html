@@ -2,9 +2,9 @@
     <div class="qsa_carousel-item_wrapper">
         <f:for each="{carouselItem}" as="item">
             <figure class="qsa_carousel-item_el">
-                <figcaption class="qsa_hint__text">Hello</figcaption>
+                <figcaption class="qsa_hint__text">{item.bodytext}</figcaption>
                 <f:cObject typoscriptObjectPath="lib.gridelementsContentImage" data="{item}" />
-                <f:link.typolink parameter="{item.subheader}" class="qsa_carousel-item_el-link">
+                <f:link.typolink parameter="{item.subheader}" class="qsa_carousel-item_el-link" additionalAttributes="{aria-label: 'Öffnet die externe Seite eines Mandnaten'}">
                     <span class="sr-only">Öffnet die Seite eines Mandanten</span>
                 </f:link.typolink>
             </figure>

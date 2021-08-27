@@ -69,13 +69,12 @@ class SearchHeader {
                     container.classList.remove('qsa_search-header__advanced-search__container--expanded')
                 })
 
-                openAdvancedSearch.focus() // after closing, focus on the button
-
                 setTimeout(() => {
                     searchBar.classList.remove('qsa_search-header__search-wrapper--hidden')
                     amountResults.classList.remove('d-none')
                     searchFooter.classList.remove('d-none')
                     searchContainer.classList.remove('qsa_search-header__container--expanded')
+                    openAdvancedSearch.focus() // after closing, focus on the button
                 }, 800)
             })
         }

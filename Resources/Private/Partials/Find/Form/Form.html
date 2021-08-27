@@ -44,12 +44,12 @@
 						</f:if>
 					</f:for>
 
-					<f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
+					<f:form.button type="submit" additionalAttributes="{aria-label: 'Suche starten'}">
 						<span class="sr-only">Suche starten</span>
-						<f:render partial="Icon" arguments="{title:'Lupe', description:'Eine Lupe zur Verdeutlichung zum Start einer Suche', icon:'search'}" />
+						<f:render partial="Icon" arguments="{icon:'search'}" />
 					</f:form.button>
-					<f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button">
-						<f:render partial="Icon" arguments="{title:'Kreuz', description:'Sucheintrag löschen', icon:'close'}" />
+					<f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: 'Sucheintrag löschen'}">
+						<f:render partial="Icon" arguments="{icon:'close'}" />
 					</f:form.button>
 				</div>
 			</f:form>

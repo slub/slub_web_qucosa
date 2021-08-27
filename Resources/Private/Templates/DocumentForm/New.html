@@ -8,7 +8,7 @@
         </h2>
         <button type="button" class="qsa_wizard__header-btn btn-outline__without" aria-label="Eingabeassistent schließen" tabindex="-1">
             <span class="sr-only">Eingabeassistent schließen</span>
-            <f:render partial="Icon" arguments="{title:'Schließen Icon', description:'Eingabeassistent schließen', icon:'cancel'}" />
+            <f:render partial="Icon" arguments="{icon:'cancel'}" />
         </button>
         <f:render partial="DocumentForm/New" arguments="{documentForm:documentForm}"/>
     </div>
@@ -20,7 +20,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">Daten unvollständig!</h5>
                 <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="Close">
-                    <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'close'}" />
+                    <f:render partial="Icon" arguments="{icon:'close'}" />
                 </button>
             </div>
             <div class="modal-body">
@@ -39,7 +39,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">Achtung!</h5>
                 <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="Close">
-                    <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'close'}" />
+                    <f:render partial="Icon" arguments="{icon:'close'}" />
                 </button>
             </div>
             <div class="modal-body">

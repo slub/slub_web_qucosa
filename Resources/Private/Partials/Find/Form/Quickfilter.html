@@ -26,7 +26,7 @@
             <div class="qsa_search-result__filter-last">
                 <div class="qsa_select qsa_group">
                     <div class="qsa_select__wrapper qsa_select__wrapper--transparent ">
-                        <label for="c{config.uid}-sortSelect" class="qsa_select__label qsa_select__label--filled">
+                        <label for="c{config.uid}-sortSelect" class="qsa_select__label qsa_select__label--filled" aria-label="Suchergbenisse sortieren">
                             <f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.sort"/>
                         </label>
                         <f:variable name="sortingSelected" value="{config.sortOptions.selected}" />
@@ -39,7 +39,7 @@
                         <div class="qsa_select__custom js-selectCustom" aria-hidden="true">
                             <div class="qsa_select__custom-trigger  ">
                                 <p>{config.sortOptions.menu.{sortingSelected}}</p>
-                                <f:render partial="Icon" arguments="{title:'Pfeil nach unten', description:'Schwarzer Pfeil nach unten um ein Dropdown aufzuklappen', icon:'arrow-down'}" />
+                                <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                             </div>
                             <div class="qsa_select__custom-options" data-iconpath="{f:uri.resource(path: 'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
 

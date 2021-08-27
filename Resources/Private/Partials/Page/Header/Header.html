@@ -14,7 +14,7 @@
         </div>
         <nav aria-label="Mainnavigation" class="qsa_header__nav qsa_nav qsa_nav--main">
             <f:link.typolink parameter="{settings.pageIDWizard}" class="btn qsa_header__button-main" additionalAttributes="{aria-label: 'Publizieren', id: 'openWizard'}">
-                <f:render partial="Icon" arguments="{title:'Veröffentlichen', description:'Öffnet ein neues Fenster', icon:'publish'}" />
+                <f:render partial="Icon" arguments="{icon:'publish'}" />
                 <span>
                     {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.publish')}
                 </span>
@@ -44,7 +44,7 @@
                                             </ul>
                                             <button type="button" class="qsa_dropdown__button" aria-label="Dropdown aufklappen" tabindex="-1">
                                                 <span class="sr-only">Element aufklappen</span>
-                                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Ein Pfeil nach links zeigend', icon:'arrow-left'}" />
+                                                <f:render partial="Icon" arguments="{icon:'arrow-left'}" />
                                             </button>
                                         </f:if>
                                     </li>
@@ -52,7 +52,7 @@
                             </ul>
                             <button type="button" class="qsa_dropdown__button" aria-label="Dropdown aufklappen" tabindex="-1">
                                 <span class="sr-only">Element aufklappen</span>
-                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Ein Pfeil nach unten zeigend', icon:'arrow-down'}" />
+                                <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                             </button>
                         </f:if>
                     </li>
@@ -61,7 +61,7 @@
                     <div class="qsa_dropdown qsa_dropdown--language">
                         <button class="btn qsa_dropdown__button qsa_dropdown__button-language" type="button">
                             <span class="sr-only">Öffnet ein Dropdown zum wechseln der Sprache der Website</span>
-                            <f:render partial="Icon" arguments="{title:'Icon translate', description:'Eingdgd Übersetzungssymbol', icon:'translate'}" />
+                            <f:render partial="Icon" arguments="{icon:'translate'}" />
                             {languageButton}
                         </button>
                         <f:cObject typoscriptObjectPath="lib.langnav" />
