@@ -35,6 +35,18 @@ class Select {
         this.positionLabel()
         this.changeDefaultLanguage()
         this.createCustomSelects()
+
+        const customOptionsWrapper = document.querySelectorAll('.qsa_select__custom-options')
+        const selectChange = new Event('change');
+        const sortingSelect = document.querySelector('select[name="tx_find_find[sort]"]')
+        const sortingSelectWrapper = sortingSelect.closest('div')
+        const options = sortingSelectWrapper.querySelectorAll('.qsa_select__custom-option')
+
+        options.forEach(option => {
+            option.addEventListener('click', e => {
+                sortingSelect.dispatchEvent(selectChange)
+            })
+        })
     }
 
     createCustomSelects () {
@@ -83,7 +95,7 @@ class Select {
 
             // Toggle custom select visibility when clicking the box
             elSelectCustomBox.addEventListener('click', (e) => {
-                e.stopImmediatePropagation()
+                //e.stopImmediatePropagation()
                 const isClosed = !elSelectCustom.classList.contains('isActive')
                 if (isClosed) {
                     openSelectCustom()
@@ -242,7 +254,7 @@ class Select {
             // Update selectCustom value when an option is clicked or hovered
             customOptsList.forEach(function (elOption, index) {
                 elOption.addEventListener('click', (e) => {
-                    e.stopImmediatePropagation()
+                    // e.stopImmediatePropagation()
                     const value = e.target.getAttribute('data-value')
 
                     elOption.parentElement.parentElement.parentElement.querySelector('label').classList.add('qsa_select__label--filled')

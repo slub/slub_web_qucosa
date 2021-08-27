@@ -158,10 +158,6 @@ class SearchHeader {
     resetHeaderForms () {
         const sortingSelect = document.querySelector('select[name="tx_find_find[sort]"]')
 
-
-        sortingSelect.onchange = (e) => {
-            console.log('change')
-        }
         sortingSelect.addEventListener('change',  () => {
             console.log('select changed')
             sortingSelect.closest('form').submit()
