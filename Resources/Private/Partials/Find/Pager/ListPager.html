@@ -17,6 +17,7 @@
 									arguments="{page:page.number}"
 									addQueryString="TRUE"
 									section="{settings.jumpToID}"
+									additionalAttributes="{aria-label: 'Ergebnisseite {page.text}'}"
 									noCacheHash="1"
 									class="qsa_pagination--active qsa_btn__tag qsa_btn__tag--inverted"
 							>
@@ -24,7 +25,7 @@
 							</f:link.action>
 						</f:then>
 						<f:else>
-							<a class="qsa_pagination--active qsa_btn__tag qsa_btn__tag">{page.text}</a>
+							<a class="qsa_pagination--active qsa_btn__tag qsa_btn__tag" aria-label="Aktive Ergebnisseite">{page.text}</a>
 						</f:else>
 					</f:if>
 				</li>
