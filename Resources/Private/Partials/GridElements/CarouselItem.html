@@ -4,8 +4,8 @@
             <figure class="qsa_carousel-item_el">
                 <figcaption class="qsa_hint__text">{item.bodytext}</figcaption>
                 <f:cObject typoscriptObjectPath="lib.gridelementsContentImage" data="{item}" />
-                <f:link.typolink parameter="{item.subheader}" class="qsa_carousel-item_el-link" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.carousel.link_label\', extensionName: \'slub_web_qucosa\')} {item.subheader}'}">
-                    <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.link_label', extensionName: 'slub_web_qucosa')} {item.subheader}</span>
+                <f:link.typolink parameter="{item.subheader}" class="qsa_carousel-item_el-link" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.carousel.link_label\', extensionName: \'slub_web_qucosa\')} {item.bodytext}'}">
+                    <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.link_label', extensionName: 'slub_web_qucosa')} {item.bodytext}</span>
                 </f:link.typolink>
             </figure>
         </f:for>

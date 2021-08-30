@@ -14,20 +14,20 @@
                 </f:for>
             </ol>
 
+            <a class="carousel-control-next" href="#qsa_carousel-logo" role="button" tabindex="0" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.next_element', extensionName: 'slub_web_qucosa')}</span>
+            </a>
+            <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" tabindex="0" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.previous_element', extensionName: 'slub_web_qucosa')}</span>
+            </a>
             <div class="carousel-inner">
                 <f:for each="{data.tx_gridelements_view_children -> v:iterator.chunk(count: 4)}" as="carouselItem" iteration="cycle">
                             <f:render partial="CarouselItem" arguments="{_all}"/>
                 </f:for>
             </div>
 
-            <a class="carousel-control-next" href="#qsa_carousel-logo" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.next_element', extensionName: 'slub_web_qucosa')}</span>
-            </a>
-            <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.previous_element', extensionName: 'slub_web_qucosa')}</span>
-            </a>
         </div>
     </div>
 </div>

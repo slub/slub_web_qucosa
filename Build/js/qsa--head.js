@@ -13,5 +13,6 @@
  */
 
 import '../settings/closestPolyfill'
+import '@eureka2/ab-datepicker/js/datepicker.min.js'
 
 // end of qsa--head.js file

@@ -290,6 +290,9 @@
 		<trans-unit id="tx_slubwebqucosa.wizard.step.files.add" xml:space="preserve">
 			<source>Add another file</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.current_language" xml:space="preserve">
+			<source>en</source>
+		</trans-unit>
         </body>
     </file>
 </xliff>

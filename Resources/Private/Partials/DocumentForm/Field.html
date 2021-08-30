@@ -8,13 +8,13 @@
                 <div class="row qsa_field__datepicker">
                     <div class="col-5 col-sm-3">
                         <div class="qsa_field__datepicker-wrap qsa_hike" data-showinsummary="true">
-                            <label for="inp_{fieldItem.uid}" class="sr-only" aria-hidden="true">
+                            <label for="inp_{fieldItem.uid}" aria-hidden="true">
                                 {fieldItem.displayName}
                             </label>
                             <f:form.textfield id="inp_{fieldItem.uid}"
                                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                               value="{fieldItem.value}"
-                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light datepicker"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light date"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation
                                               }"
@@ -24,6 +24,7 @@
                                                 date-view-mode: 'years',
                                                 date-min-view-mode: 'years',
                                                 date-orientation: 'top',
+                                                value: fieldItem.value,
                                                 field:fieldItem.uid,
                                                 index:fieldIndex,
                                                 mandatory:fieldItem.mandatory,
@@ -32,7 +33,8 @@
                                                 default:fieldItem.hasDefaultValue,
                                                 regexp:fieldItem.validation,
                                                 label:fieldItem.displayName,
-                                                maxlength:fieldItem.maxInputLength
+                                                maxlength:fieldItem.maxInputLength,
+                                                language: '{f:translate(key: \'tx_slubwebqucosa.current_language\', extensionName: \'slub_web_qucosa\')}'
                     }"/>
                         </div>
                     </div>

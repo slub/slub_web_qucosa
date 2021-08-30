@@ -374,6 +374,10 @@
 				<source>Add another file</source>
 				<target>Eine Weitere Datei hinzufügen</target>
 			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.current_language" xml:space="preserve">
+				<source>en</source>
+				<target>ger</target>
+			</trans-unit>
         </body>
     </file>
 </xliff>

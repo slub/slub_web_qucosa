@@ -39,6 +39,8 @@ import modal from 'bootstrap/js/src/modal'
 window.jQuery = $
 window.$ = $
 
+import * as abDatepicker from '@eureka2/ab-datepicker'
+
 /** @section 1.1 Global variables */
 // import GLOBAL from './settings/variables'
 
@@ -180,7 +182,7 @@ if (document.querySelectorAll('.qsa_input-group').length || document.querySelect
 }
 
 /** @section 2.16 Datepicker */
-if (document.querySelectorAll('.datepicker').length) {
+if (document.querySelectorAll('.date').length) {
     import(/* webpackChunkName: "datepicker" */ '../components/datepicker/datepicker')
 }
 

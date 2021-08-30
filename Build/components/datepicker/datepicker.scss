@@ -1,287 +1,155 @@
-@charset "UTF-8";
-
+//
 //    @tableOfContent
-//      1. Datepicker
-//      2. Inline
-//      3. Drop down
+//      1. Custom datepicker
 //
 
-
 //
-//    @section 1. Datepicker
+//    @section 1.  Custom datepicker
 //
 
-// stylelint-disable
-.datepicker {
+.qsa_field__datepicker-wrap {
+    .input-group {
+        position: relative;
 
-    table {
-        width: 100%;
-        margin: 0;
-        font-size: $font-size-small;
-        user-select: none;
-
-        th {
-            background-color: var(--color-white);
-        }
-    }
-
-    td,
-    th {
-        @include size($grid-gutter-width / 1.5);
-        padding: $grid-gutter-width / 6;
-        font-weight: 400;
-        text-align: center;
-        border: none;
-    }
-
-    thead {
-        th {
-            border: 0;
-        }
-    }
-
-    table tr td {
-        &.day:hover,
-        &.day.focused {
-            color: var(--color-text-color-inverted);
-            background-color: var(--color-gray-300);
-            cursor: pointer;
-        }
-
-        &.old,
-        &.new {
-            color: var(--color-gray-300);
-        }
-
-        &.disabled,
-        &.disabled:hover {
-            color: $gray-300;
-            background: none;
-            cursor: default;
-        }
-
-        &.highlighted {
-            background-color: var(--color-secondary);
-        }
-
-        &.today,
-        &.today:hover,
-        &.today.disabled,
-        &.today.disabled:hover {
-            color: $black;
-            background-color: var(--color-primary);
-        }
-
-        &.today.active:hover {
-            color: $white;
-        }
-
-        &.range,
-        &.range:hover,
-        &.range.disabled,
-        &.range.disabled:hover {
-            background: $gray-300;
-        }
-
-        &.range.today,
-        &.range.today:hover,
-        &.range.today.disabled,
-        &.range.today.disabled:hover {
-            background-color: var(--color-primary);
-        }
-
-        &.selected,
-        &.selected:hover,
-        &.selected.disabled,
-        &.selected.disabled:hover {
-            color: $white;
-            background-color: var(--color-secondary);
-        }
-
-        &.active,
-        &.active:hover,
-        &.active.disabled,
-        &.active.disabled:hover {
-            //color: var(--color-text);
-            color: var(--white);
-            background-color: var(--color-primary);
-        }
-
-        span {
-            display: block;
-            float: left;
-            width: 23%;
-            height: 54px;
-            margin: 1%;
-            line-height: 54px;
-            cursor: pointer;
-
-            &:hover,
-            &.focused {
-                background: $gray-300;
+        .datepicker-button {
+            top: 0;
+            &::after {
+                top: 25%;
             }
-
-            &.disabled,
-            &.disabled:hover {
-                color: $gray-300;
-                background: none;
-                cursor: default;
-            }
-
-            &.active,
-            &.active:hover,
-            &.active.disabled,
-            &.active.disabled:hover {
-                color: var(--color-white);
-                background-color: var(--color-primary);
-            }
-
-            &.old,
-            &.new {
-                color: $gray-300;
-            }
-        }
-    }
-
-    .datepicker-switch {
-        width: 145px;
-        height: 40px;
-    }
-
-    .datepicker-switch,
-    .prev,
-    .next,
-    tfoot tr th {
-        cursor: pointer;
-
-        &:hover {
-            background: $gray-300;
-        }
-    }
-
-    .prev,
-    .next {
-        font-size: 0;
-
-        &.disabled {
-            visibility: hidden;
-        }
-
-        &::before {
-            content: '';
-            display: inline-block;
-            position: relative;
-            width: .5em;
-            height: .5em;
-            font-size: $font-size-base;
-            border-top: .1em solid;
-            border-right: .1em solid;
-        }
-    }
-
-    .prev {
-        &::before {
-            transform: rotate(-135deg);
-        }
-    }
-
-    .next {
-        &::before {
-            transform: rotate(45deg);
-        }
-    }
-
-    // Basic styling for calendar-week cells
-    .cw {
-        vertical-align: middle;
-        width: 12px;
-        padding: 0 2px 0 5px;
-        font-size: 10px;
-    }
-}
-
-.input-append,
-.input-prepend {
-    &.date .add-on {
-        cursor: pointer;
-
-        i {
-            margin-top: 3px;
         }
     }
 }
 
-.input-daterange {
-    .add-on {
-        display: inline-block;
-        vertical-align: middle;
-        width: auto;
-        min-width: 16px;
-        margin-right: -5px;
-        margin-left: -5px;
-        padding: 4px 5px;
-        font-weight: normal;
-        text-align: center;
-        background-color: $gray-300;
-        border: 1px solid $gray-500;
-    }
-}
-
-
-//
-//    @section 2. Inline
-//
-
-// wrap
-.qsa_field__datepicker {
-
-    margin-top: var(--spacing-xs);
-
-    &-range {
-        margin-top: var(--spacing-l);
-    }
-
-    &-wrap {
-        max-width: 20rem;
-    }
-
-    &-connector {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: $font-family-base-assistant;
-    }
-
-    &-label {
-        position: absolute;
-        left: 17px;
-        color: var(--color-gray-500);
-        transition: all .15s ease-in-out 0s;
-        top: -19px;
-        font-family: "Roboto Regular", sans-serif;
-        font-size: 11px;
-        letter-spacing: 1.5px;
-    }
-}
-
-
-//
-//    @section 3. Inline
-//
-
-.datepicker-dropdown {
+a.datepicker-button.qucosa {
     position: absolute;
     z-index: 20;
-    width: 20rem;
-    max-width: 100%;
-    border-radius: 16px 0 16px 0;
-    padding: 0;
-    box-shadow: 0 10px 51px -16px var(--color-opacity-black-6);
-    border: 1px solid var(--color-gray-300);
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 
-    @include media-breakpoint-down(sm) {
-        width: 15rem;
+    &::after {
+        content: '\e97b';
+        font-family: 'qucosa';
+        display: inline-block;
+        vertical-align: bottom;
+        width: 10px;
+        transform: scale(1.3);
+        position: absolute;
+        right: 17px;
+        margin: 0;
     }
 }
+a.datepicker-button.qucosa:hover,
+a.datepicker-button.qucosa:focus {
+    border: 1px solid gray;
+}
+div.datepicker-calendar.qucosa {
+    background-color: white;
+    width: auto;
+    font-size: 12px;
+    line-height: 1.15;
 
-// end of _datepicker.scss file
+    .datepicker-button.datepicker-month {
+        &::after {
+            content: none;
+        }
+    }
+}
+div.datepicker-calendar.qucosa div.datepicker-month-wrap {
+    .datepicker-month-next {
+        &::after {
+            content: '\e972';
+            font-family: 'qucosa';
+            display: inline-block;
+            vertical-align: bottom;
+            width: 10px;
+            transform: scale(1.3);
+        }
+    }
+
+    .datepicker-month-prev {
+        &::after {
+            content: '\e974';
+            font-family: 'qucosa';
+            display: inline-block;
+            vertical-align: bottom;
+            width: 10px;
+            transform: scale(1.3);
+        }
+    }
+}
+div.datepicker-calendar.qucosa div.datepicker-month-fast-prev.disabled,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-next.disabled {
+    display: none;
+}
+
+div.datepicker-calendar.qucosa div.datepicker-month-prev.disabled,
+div.datepicker-calendar.qucosa div.datepicker-month-next.disabled {
+    color: gray;
+}
+div.datepicker-calendar.qucosa div.datepicker-month-fast-prev.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-prev.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-next.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-next.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month-prev.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-prev.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month-next.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-next.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month:hover,
+div.datepicker-calendar.qucosa div.datepicker-month:focus,
+div.datepicker-calendar.qucosa button.datepicker-close:hover,
+div.datepicker-calendar.qucosa button.datepicker-close:focus {
+    background-color: white;
+    border-color:  gray;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid:focus {
+    outline: 1px dotted gray;
+}
+div.datepicker-calendar.qucosa tr.datepicker-weekdays {
+    border: none;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid th {
+    background-color: white;
+    border:  none;
+    padding: 10px;
+    text-align: center;
+
+    abbr {
+        text-decoration: none;
+    }
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td {
+    border:  none;
+    color: $primary;
+    padding: 10px;
+    text-align: center;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.unselectable {
+    color: gray;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.curDay,
+div.datepicker-calendar.qucosa table.datepicker-grid td.curMonth,
+div.datepicker-calendar.qucosa table.datepicker-grid td.curYear {
+    background-color: $primary;
+    color: white;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.empty {
+    background:white;
+    color: white;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.selectable:hover,
+div.datepicker-calendar.qucosa table.datepicker-grid td.selectable.focus {
+    background-color: $primary;
+    color: white;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.empty:hover {
+    background-color: white;
+}
+div.datepicker-calendar.qucosa button.datepicker-close {
+    background-color: #522A3F;
+    color: #FFF;
+    border-color:  #EEE;
+}
+
+// end of datepicker.scss

@@ -39,14 +39,17 @@ class Select {
         const customOptionsWrapper = document.querySelectorAll('.qsa_select__custom-options')
         const selectChange = new Event('change');
         const sortingSelect = document.querySelector('select[name="tx_find_find[sort]"]')
-        const sortingSelectWrapper = sortingSelect.closest('div')
-        const options = sortingSelectWrapper.querySelectorAll('.qsa_select__custom-option')
 
-        options.forEach(option => {
-            option.addEventListener('click', e => {
-                sortingSelect.dispatchEvent(selectChange)
+        if(sortingSelect) {
+            const sortingSelectWrapper = sortingSelect.closest('div')
+            const options = sortingSelectWrapper.querySelectorAll('.qsa_select__custom-option')
+
+            options.forEach(option => {
+                option.addEventListener('click', e => {
+                    sortingSelect.dispatchEvent(selectChange)
+                })
             })
-        })
+        }
     }
 
     createCustomSelects () {

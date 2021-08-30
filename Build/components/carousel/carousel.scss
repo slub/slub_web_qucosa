@@ -42,6 +42,11 @@
                 bottom: 15px;
                 width: 2%;
                 transition: opacity var(--transition-time) ease-in-out;
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
             }
 
             /*
