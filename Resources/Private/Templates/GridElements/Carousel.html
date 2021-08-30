@@ -1,6 +1,6 @@
 <div class="qsa_carousel">
     <div class="qsa_carousel-wrapper container">
-        <h2 class="qsa_carousel__title h4">Diese Einrichtungen nutzen Qucosa </h2>
+        <h2 class="qsa_carousel__title h4">{data.header}</h2>
         <div id="qsa_carousel-logo" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <f:for each="{data.tx_gridelements_view_children -> v:iterator.chunk(count: 4)}" as="carouselIndicator" iteration="indicator">

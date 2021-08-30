@@ -17,7 +17,6 @@
 
     &__title {
         order: 2;
-        margin-bottom: var(--spacing-xl);
 
         @include media-breakpoint-down(sm) {
             margin-top: 0;

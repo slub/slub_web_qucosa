@@ -38,9 +38,28 @@ $tmp_slub_web_qucosa_columns = [
             'default' => '1',
         ],
     ],
+    'publication_date' => [
+        'exclude' => false,
+        'label' => 'Veröffentlichungsdatum',
+        'config' => [
+            'dbType' => 'datetime',
+            'type' => 'input',
+            'renderType' => 'inputDateTime',
+            'size' => 12,
+            'eval' => 'datetime',
+            'default' => null,
+        ],
+    ],
 ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $tmp_slub_web_qucosa_columns);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'pages',
+    'standard',
+    'publication_date',
+    'after:doktype'
+);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
     'pages',

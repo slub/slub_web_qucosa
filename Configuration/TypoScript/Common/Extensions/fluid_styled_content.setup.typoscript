@@ -70,6 +70,12 @@ tt_content {
     tx_slubwebqucosa_text {
         templateName = Text
         dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            10 {
+                table = pages
+                where.dataWrap = uid = {TSFE:id}
+                as = page
+            }
             100 = Xima\XmTools\DataProcessing\ContentElementFlexformProcessor
         }
     }
