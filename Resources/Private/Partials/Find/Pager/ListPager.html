@@ -17,7 +17,7 @@
 									arguments="{page:page.number}"
 									addQueryString="TRUE"
 									section="{settings.jumpToID}"
-									additionalAttributes="{aria-label: 'Ergebnisseite {page.text}'}"
+									additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.find.page_index\',extensionName: \'slub_web_qucosa\')} {page.text}'}"
 									noCacheHash="1"
 									class="qsa_pagination--active qsa_btn__tag qsa_btn__tag--inverted"
 							>
@@ -25,7 +25,7 @@
 							</f:link.action>
 						</f:then>
 						<f:else>
-							<a class="qsa_pagination--active qsa_btn__tag qsa_btn__tag" aria-label="Aktive Ergebnisseite">{page.text}</a>
+							<a class="qsa_pagination--active qsa_btn__tag qsa_btn__tag" aria-label="{f:translate(key: 'tx_slubwebqucosa.find.page_active', extensionName: 'slub_web_qucosa')}">{page.text}</a>
 						</f:else>
 					</f:if>
 				</li>
@@ -33,5 +33,5 @@
 		</ul>
 	</f:alias>
 
-	<a class="qsa_top" href="#top">Nach oben</a>
+	<a class="qsa_top" href="#top">{f:translate(key: 'tx_slubwebqucosa.page.to_top', extensionName: 'slub_web_qucosa')}</a>
 </div>

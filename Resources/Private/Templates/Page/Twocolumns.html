@@ -8,7 +8,11 @@
 <f:section name="Main">
     <main>
         <div class="row qsa_content-area container">
-            <div class="qsa_content-area__sidebar-slider" data-button="sidebarSlider" role="button" aria-label="Öffnet weitere Informationen innerhalb einer Sidebar" tabindex="0">
+            <div class="qsa_content-area__sidebar-slider"
+                 data-button="sidebarSlider"
+                 role="button"
+                 aria-label="{f:translate(key: 'tx_slubwebqucosa.sidebar.slider.aria')}"
+                 tabindex="0">
                 <f:render partial="Icon" arguments="{icon:'information'}" />
             </div>
             <div class="col-12 col-lg-8 qsa_content-area__body">
@@ -18,9 +22,17 @@
             <div class="col-12 col-md-5 col-lg-4 qsa_content-area__sidebar">
                 <div class="qsa_sidebar">
                     <div class="qsa_sidebar__content">
-                        <div class="qsa_content-area__sidebar-slider" data-button="sidebarSlider" role="button" aria-label="Öffnet weitere Informationen innerhalb einer Sidebar" tabindex="0">
+                        <div class="qsa_content-area__sidebar-slider"
+                             data-button="sidebarSlider"
+                             role="button"
+                             aria-label="{f:translate(key: 'tx_slubwebqucosa.sidebar.slider.aria')}"
+                             tabindex="0">
                         </div>
-                        <span class="qsa_sidebar__close" role="button" aria-label="Informationen der Sidebar schließen" tabindex="0">Schließen</span>
+                        <span class="qsa_sidebar__close"
+                              role="button"
+                              aria-label="{f:translate(key: 'tx_slubwebqucosa.sidebar.close.aria')}"
+                              tabindex="0">{f:translate(key: 'tx_slubwebqucosa.sidebar.close.label')}
+                        </span>
                         <div class="qsa_sidebar__header">
                             <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '10'}"/>
                         </div>
@@ -32,11 +44,9 @@
                 </div>
             </div>
             <div class="col-12 qsa_content-area__footer">
-                <f:comment>
-                    <!-- @todo Hier die Footer ColPos einfügen -->
-                </f:comment>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '30'}"/>
                 <div role="button" data-button="sidebarSlider" tabindex="0">
-                    <span  class="qsa_hint__text">Weitere Informationen zu dieser Seite finden Sie unter dem <f:render partial="Icon" arguments="{icon:'information'}" /> auf der rechten Seite!</span>
+                    <span  class="qsa_hint__text">{f:translate(key: 'tx_slubwebqucosa.footer.sidebar_hint')} <f:render partial="Icon" arguments="{icon:'information'}" /> {f:translate(key: 'tx_slubwebqucosa.footer.sidebar_hint.right_side')}</span>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@
                         <f:link.typolink class="qsa_qsa_breadcrumb__link" parameter="{item.link}" additionalAttributes="{aria-current: '{currentBreadCrumb}'}">
                             <f:if condition="{item.data.is_siteroot}">
                                 <f:then>
-                                    {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.breadcrum.homepage')}
+                                    {f:translate(key: 'tx_slubwebqucosa.breadcrum.homepage', extensionName: 'slub_web_qucosa')}
                                 </f:then>
                                 <f:else>
                                     {item.title}

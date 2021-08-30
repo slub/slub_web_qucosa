@@ -74,6 +74,222 @@
 		<trans-unit id="tx_slubwebqucosa.hero_background.alt" xml:space="preserve">
 			<source>Background Image of the Header Area of the website</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.sidebar.slider.aria" xml:space="preserve">
+			<source>Opens more information within a sidebar</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.sidebar.close.label" xml:space="preserve">
+			<source>Close</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.sidebar.close.aria" xml:space="preserve">
+			<source>Close sidebar information</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.footer.sidebar_hint" xml:space="preserve">
+			<source>You can find more information about this page under the</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.footer.sidebar_hint.right_side" xml:space="preserve">
+			<source>on the right side!</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.accordion.expand_all" xml:space="preserve">
+			<source>Expand all</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.accordion.collapse_all" xml:space="preserve">
+			<source>Collapse all</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.carousel.navigation.first_slide" xml:space="preserve">
+			<source>First side of the carousel</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.carousel.navigation.next_slide" xml:space="preserve">
+			<source>Go to next page</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.carousel.next_element" xml:space="preserve">
+			<source>Next Element</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.carousel.previous_element" xml:space="preserve">
+			<source>Previous element</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.header_teaser.more" xml:space="preserve">
+			<source>More recent publications</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.sidebar_image.show" xml:space="preserve">
+			<source>Show image</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.sidebar_teaser.more" xml:space="preserve">
+			<source>More</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.navigation.open" xml:space="preserve">
+			<source>Opens the menu in a sidebar</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.navigation.toggle_item" xml:space="preserve">
+			<source>Expand or collapse navigation item</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.language_switcher" xml:space="preserve">
+			<source>Opens a dropdown to change the language of the website</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.carousel.link_label" xml:space="preserve">
+			<source>Opens</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.error" xml:space="preserve">
+			<source>Your search contains invalid values. Please check and start search again.</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.no_results_general" xml:space="preserve">
+			<source>No results found.</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.results_general_one" xml:space="preserve">
+			<source>Result found</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.results_general_multiple" xml:space="preserve">
+			<source>Results found</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.no_results_one" xml:space="preserve">
+			<source>No results were found for </source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.no_results_two" xml:space="preserve">
+			<source>.</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.results_args_one" xml:space="preserve">
+			<source/>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.results_args_two" xml:space="preserve">
+			<source>results for</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.results_args_three" xml:space="preserve">
+			<source>were found.</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.results_no_args_two" xml:space="preserve">
+			<source>results found for your search</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.result_add" xml:space="preserve">
+			<source>Add or remove to bookmarks</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.result_categorie" xml:space="preserve">
+			<source>Found in</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.result_sort" xml:space="preserve">
+			<source>Sort results</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.result_sort.choose" xml:space="preserve">
+			<source>Please choose</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.search.start" xml:space="preserve">
+			<source>Begin search</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.search.delete" xml:space="preserve">
+			<source>Delete search entry</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.search.advanced" xml:space="preserve">
+			<source>Advanced Search</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.search.reset" xml:space="preserve">
+			<source>Reset filters</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.publication.period" xml:space="preserve">
+			<source>Publication Period</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.find.page_active" xml:space="preserve">
+			<source>Active Search results</source>
+		</trans-unit>
+        <trans-unit id="tx_slubwebqucosa.find.page_index" xml:space="preserve">
+            <source>Results page</source>
+        </trans-unit>
+		<trans-unit id="tx_slubwebqucosa.page.to_top" xml:space="preserve">
+			<source>Jump to top</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.publish_header" xml:space="preserve">
+			<source>What do you want to publish?</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.close" xml:space="preserve">
+			<source>Close Wizard</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.close_warning" xml:space="preserve">
+			<source>Caution!</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.close_confirm" xml:space="preserve">
+			<source>Yes</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.close_deny" xml:space="preserve">
+			<source>No</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.close_warning" xml:space="preserve">
+			<source>If you close the input assistant and reload the page, your entries will be lost. Do you want to close the input assistant?</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.error" xml:space="preserve">
+			<source>In the last step, you have not filled in some mandatory fields at all or have filled in fields incorrectly. You can still continue and correct your entries at any time.</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.error_warning" xml:space="preserve">
+			<source>Data incomplete!</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.error_understood" xml:space="preserve">
+			<source>Understood!</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.background" xml:space="preserve">
+			<source>Wizard Background image</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.field.error_numbers" xml:space="preserve">
+			<source>Only numbers allowed</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.textarea.connector" xml:space="preserve">
+			<source>of</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.select.language" xml:space="preserve">
+			<source>Language</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.missing_fields" xml:space="preserve">
+			<source>The form cannot yet be
+				be submitted because it contains errors or is incomplete.
+				Please check your entries and fill in all fields marked with a '*'!
+				completed!
+			</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.next" xml:space="preserve">
+			<source>Next</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.file_primary_upload" xml:space="preserve">
+			<source>Upload Primary file</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.file_primary" xml:space="preserve">
+			<source>Primary file</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.file_secondary_upload" xml:space="preserve">
+			<source>Upload Secondary files</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.file_secondary" xml:space="preserve">
+			<source>Secondary file</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.check" xml:space="preserve">
+			<source>Check</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.check.description" xml:space="preserve">
+			<source>This is the last step. Here the inputs are checked and listed.
+				The user has here once again an overview of all entries made!
+			</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.send" xml:space="preserve">
+			<source>Send</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.files" xml:space="preserve">
+			<source>Files</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.jump_one" xml:space="preserve">
+			<source>Jump to</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.jump_two" xml:space="preserve">
+			<source/>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.more_steps" xml:space="preserve">
+			<source>Show more steps</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.general_field_hint" xml:space="preserve">
+			<source>* - Please fill in the mandatory fields.</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.files.upload" xml:space="preserve">
+			<source>Upload your own file (PDF)</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.files.remove" xml:space="preserve">
+			<source>Delete selected PDF</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.wizard.step.files.add" xml:space="preserve">
+			<source>Add another file</source>
+		</trans-unit>
         </body>
     </file>
 </xliff>

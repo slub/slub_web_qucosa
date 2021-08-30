@@ -41,7 +41,7 @@
 				</f:for>
 			</f:if>
 		</div>
-		<p class="qsa_search-result__item-place">Gefunden in
+		<p class="qsa_search-result__item-place">{f:translate(key: 'tx_slubwebqucosa.find.result_categorie', extensionName: 'slub_web_qucosa')}
 			<f:if condition="{document.fields.topic}">
 				<f:for each="{document.fields.topic}" as="topic" iteration="topicIterator">
 					<q>{topic}</q><f:if condition="!{topicIterator.isLast}">,</f:if>
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 	<span class="qsa_search-result__item-right">
-        <button class="qsa_search-result__item-icon" id="{document.id}" data-id="bookmark" aria-label="Eintrag zur Merkliste hinzufügen">
+        <button class="qsa_search-result__item-icon" id="{document.id}" data-id="bookmark" aria-label="{f:translate(key: 'tx_slubwebqucosa.find.result_add', extensionName: 'slub_web_qucosa')}">
 			<f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
         </button>
     </span>

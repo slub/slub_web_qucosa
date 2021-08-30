@@ -7,7 +7,10 @@
                     <li data-target="#qsa_carousel-logo"
                         data-slide-to="{indicator.index}"
                         class="{f:if(condition: '{indicator.isFirst}', then: 'active', else: '')}"
-                        aria-label="{f:if(condition: '{indicator.isFirst}', then: 'Erste Seite des Karussells', else: 'Zur nächsten Seite wechseln')}"></li>
+                        aria-label="{f:if(condition: '{indicator.isFirst}',
+                                    then: '{f:translate(key: \'tx_slubwebqucosa.carousel.navigation.first_slide\', extensionName: \'slub_web_qucosa\')}',
+                                    else: '{f:translate(key: \'tx_slubwebqucosa.carousel.navigation.next_slide\', extensionName: \'slub_web_qucosa\')}')}">
+                    </li>
                 </f:for>
             </ol>
 
@@ -19,11 +22,11 @@
 
             <a class="carousel-control-next" href="#qsa_carousel-logo" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Nächstes Element</span>
+                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.next_element', extensionName: 'slub_web_qucosa')}</span>
             </a>
             <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Vorheriges Element</span>
+                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.previous_element', extensionName: 'slub_web_qucosa')}</span>
             </a>
         </div>
     </div>

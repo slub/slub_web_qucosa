@@ -7,7 +7,7 @@
         </f:if>
         {formGroupDisplayName}
     </legend>
-    <p>* - Bitte füllen Sie die Pflichtfelder aus.</p>
+    <p>{f:translate(key: 'tx_slubwebqucosa.wizard.general_field_hint', extensionName: 'slub_web_qucosa')}</p>
     <h3 class="h5">{formGroupDisplayName}</h3>
     <f:for each="{groupItem.items}" as="formField" iteration="fieldIterator">
         <f:for each="{formField}" as="fieldItem" iteration="fieldItemIterator">

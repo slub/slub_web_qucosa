@@ -63,7 +63,7 @@
                                                 label:fieldItem.displayName,
                                                 maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">In diesem Feld sind nur Zahlen zugelassen</p>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_numbers', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:then>
                     <f:else>
@@ -87,7 +87,7 @@
                                                 label:fieldItem.displayName,
                                                 maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">In diesem Feld sind nur Zahlen zugelassen</p>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_numbers', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:else>
                 </f:if>
@@ -114,11 +114,11 @@
                              datatype:fieldItem.dataType,
                              label:fieldItem.displayName,
                              maxlength:fieldItem.maxInputLength}"/>
-            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> Label? </label>
+            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> {fieldItem.value} </label>
             <f:if condition="{fieldItem.maxInputLength}">
                 <div class="qsa_text-area__count-wrapper">
                     <span class="qsa_text-area__count">0</span>
-                    von
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.textarea.connector', extensionName: 'slub_web_qucosa')}
                     <span class="qsa_text-area__limit">{fieldItem.maxInputLength}</span>
                 </div>
             </f:if>
@@ -150,7 +150,7 @@
                 <div class="qsa_select__custom js-selectCustom qsa_select__custom-header {f:if(condition: '{fieldItem.value} == ger', then: 'qsa_select__language', else: '')}"
                         aria-hidden="true">
                     <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header qsa_select__custom-trigger-light">
-                        <p>Sprache</p>
+                        <p>{f:translate(key: 'tx_slubwebqucosa.wizard.select.language', extensionName: 'slub_web_qucosa')}</p>
                         <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                     </div>
                     <div class="qsa_select__custom-options " data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">

@@ -5,7 +5,7 @@
 {v:iterator.first(haystack: files) -> v:variable.set(name: 'image')}
 <figure>
     <div class="lightbox qsa_sidebar__image-wrapper">
-        <h2 class="sr-only">Bild ansehen</h2>
+        <h2 class="sr-only">{f:translate(key: 'tx_slubwebqucosa.sidebar_image.show')}</h2>
         <f:link.typolink parameter="{f:uri.image(image:image)}"
                          class="qsa_sidebar__image-wrapper-toggle"
                          additionalAttributes="{aria-label: 'Biild öffnen'}">

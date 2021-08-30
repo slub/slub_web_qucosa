@@ -3,7 +3,7 @@
 	<div class="col-5 col-sm-3">
 		<div class="qsa_field__datepicker-wrap qsa_hike">
 			<label for="qsa_date-start" class="qsa_field__datepicker-label sr-only">
-				Veröffentlichungszeitraum
+				{f:translate(key: 'tx_slubwebqucosa.find.publication.period', extensionName: 'slub_web_qucosa')}
 			</label>
 			<f:form.textfield
 					id="qsa_date-start"
@@ -13,11 +13,11 @@
 			/>
 		</div>
 	</div>
-	<span class="qsa_field__datepicker-connector">bis</span>
+	<span class="qsa_field__datepicker-connector"> - </span>
 	<div class="col-5 col-sm-3">
 		<div class="qsa_field__datepicker-wrap qsa_hike">
 			<label for="qsa_date-end" class="qsa_field__datepicker-label sr-only">
-				Enddatum
+				{f:translate(key: 'tx_slubwebqucosa.find.publication.period, extensionName: 'slub_web_qucosa'')}
 			</label>
 			<f:form.textfield
 					id="qsa_date-end"

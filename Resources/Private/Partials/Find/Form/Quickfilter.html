@@ -2,15 +2,15 @@
     <h2 class="h5 qsa_search-result__filter__hits">
         <f:if condition="{results.numfound}==0">
             <f:then>
-                Keine Ergebnisse
+                {f:translate(key: 'tx_slubwebqucosa.find.no_results_general', extensionName: 'slub_web_qucosa')}
             </f:then>
             <f:else>
                 <f:if condition="{results.numfound}==1">
                     <f:then>
-                        {results.numfound} Ergebnis gefunden
+                        {results.numfound} {f:translate(key: 'tx_slubwebqucosa.find.results_general_one', extensionName: 'slub_web_qucosa')}
                     </f:then>
                     <f:else>
-                        {results.numfound} Ergebnisse gefunden
+                        {results.numfound} {f:translate(key: 'tx_slubwebqucosa.find.results_general_multiple', extensionName: 'slub_web_qucosa')}
                     </f:else>
                 </f:if>
             </f:else>
@@ -26,11 +26,11 @@
             <div class="qsa_search-result__filter-last">
                 <div class="qsa_select qsa_group">
                     <div class="qsa_select__wrapper qsa_select__wrapper--transparent ">
-                        <label for="c{config.uid}-sortSelect" class="qsa_select__label qsa_select__label--filled" aria-label="Suchergbenisse sortieren">
+                        <label for="c{config.uid}-sortSelect" class="qsa_select__label qsa_select__label--filled" aria-label="{f:translate(key: 'tx_slubwebqucosa.find.result_sort', extensionName: 'slub_web_qucosa')}">
                             <f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.sort"/>
                         </label>
                         <f:variable name="sortingSelected" value="{config.sortOptions.selected}" />
-                        <p class="qsa_input-group__error qsa_input-group__error--select d-none">Wählen Sie bitte {config.sortOptions.menu.{sortingSelected}}</p>
+                        <p class="qsa_input-group__error qsa_input-group__error--select d-none">{f:translate(key: 'tx_slubwebqucosa.find.result_sort.choose', extensionName: 'slub_web_qucosa')} {config.sortOptions.menu.{sortingSelected}}</p>
                         <f:form.select id="c{config.uid}-sortSelect"
                                        class="qsa_select__native js-selectNative"
                                        name="sort"

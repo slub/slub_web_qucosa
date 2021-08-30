@@ -89,6 +89,9 @@ class Header {
         navDropdownButton.forEach(el => {
             el.onclick = function () {
                 this.classList.toggle('qsa_dropdown__button--active')
+                let ariaExpanded = this.getAttribute('aria-expanded')
+                ariaExpanded === 'true' ? ariaExpanded = 'false' : ariaExpanded = 'true'
+                this.setAttribute('aria-expanded', ariaExpanded)
                 if (this.previousElementSibling) {
                     this.previousElementSibling.classList.toggle('qsa_dropdown__items--show')
                 }

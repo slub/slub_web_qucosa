@@ -3,7 +3,7 @@
 <div class="qsa_select qsa_group qsa_select__header" >
 	<div class="qsa_select__wrapper  qsa_select__wrapper-header">
 		<label class="qsa_select__label qsa_select__label-header" id="c{config.uid}-label-{fieldInfo.id}" for="c{config.uid}-field-{fieldInfo.id}" aria-label="{fieldInfo.label}"> {fieldInfo.label}</label>
-		<p class="qsa_input-group__error qsa_input-group__error--select d-none">Wählen Sie bitte {fieldInfo.label}</p>
+		<p class="qsa_input-group__error qsa_input-group__error--select d-none">{f:translate(key: 'tx_slubwebqucosa.find.result_sort.choose', extensionName: 'slub_web_qucosa')} {fieldInfo.label}</p>
 		<f:form.select
 				id="c{config.uid}-field-{fieldInfo.id}"
 				additionalAttributes="{aria-labelledby: 'c{config.uid}-label-{fieldInfo.id}'}"

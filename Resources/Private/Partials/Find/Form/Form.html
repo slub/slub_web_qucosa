@@ -44,11 +44,11 @@
 						</f:if>
 					</f:for>
 
-					<f:form.button type="submit" additionalAttributes="{aria-label: 'Suche starten'}">
-						<span class="sr-only">Suche starten</span>
+					<f:form.button type="submit" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.find.search.start\', extensionName: \'slub_web_qucosa\')}'}">
+						<span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.find.search.start', extensionName: 'slub_web_qucosa')}</span>
 						<f:render partial="Icon" arguments="{icon:'search'}" />
 					</f:form.button>
-					<f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: 'Sucheintrag löschen'}">
+					<f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.find.search.delete\', extensionName: \'slub_web_qucosa\')}'}">
 						<f:render partial="Icon" arguments="{icon:'close'}" />
 					</f:form.button>
 				</div>
@@ -57,13 +57,13 @@
 			<f:render partial="Components/ResultCount" arguments="{_all}"/>
 			<div class="qsa_search-header__footer">
 				<button class="qsa_search-header__link qsa_btn__link" id="openAdvanced">
-					Erweiterte Suche
+					{f:translate(key: 'tx_slubwebqucosa.find.search.advanced', extensionName: 'slub_web_qucosa')}
 				</button>
 			</div>
 			<f:if condition="{arguments} ">
 				<div class="qsa_search-header__footer">
 					<button class="qsa_search-header__link qsa_btn__link" id="resetSimpleSearch">
-						Filter zurücksetzen
+						{f:translate(key: 'tx_slubwebqucosa.find.search.reset', extensionName: 'slub_web_qucosa')}
 					</button>
 				</div>
 			</f:if>

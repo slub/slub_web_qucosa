@@ -40,13 +40,13 @@
     <div class="qsa_bookmarks__sidebar-header">
         <div class="qsa_bookmarks__sidebar-header-title">
             <h2 class="h4">
-                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks')}
+                {f:translate(key: 'tx_slubwebqucosa.bookmarks', extensionName: 'slub_web_qucosa')}
             </h2>
             <f:render partial="Icon" arguments="{icon:'bookmarks'}" />
         </div>
         <p class="qsa_bookmarks__sidebar-header-title-count">
             <span class="d-none">
-                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.records')}
+                {f:translate(key: 'tx_slubwebqucosa.bookmarks.records', extensionName: 'slub_web_qucosa')}
             </span>
         </p>
         <button id="bookmarksClose" class="qsa_bookmarks__sidebar-header-title-close btn-outline__without" aria-label="Schließen Sie den Bookmarks">
@@ -58,7 +58,7 @@
         <div class="qsa_bookmarks__sidebar-operations--mark">
             <input type="checkbox" id="markAllBookmarks" value="1">
             <label for="markAllBookmarks">
-                {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.markall')}
+                {f:translate(key: 'tx_slubwebqucosa.bookmarks.markall', extensionName: 'slub_web_qucosa')}
             </label>
         </div>
 
@@ -66,7 +66,7 @@
             <div class="qsa_bookmarks__sidebar-operations--print">
                 <button class="btn-outline__without">
                     <span class="sr-only">
-                        {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.print')}
+                        {f:translate(key: 'tx_slubwebqucosa.bookmarks.print', extensionName: 'slub_web_qucosa')}
                     </span>
                     <f:render partial="Icon" arguments="{icon:'print'}" />
                 </button>
@@ -75,7 +75,7 @@
             <div class="qsa_bookmarks__sidebar-operations--remove">
                 <button class="btn-outline__without d-none">
                     <span class="sr-only">
-                        {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.removeMarked')}
+                        {f:translate(key: 'tx_slubwebqucosa.bookmarks.removeMarked', extensionName: 'slub_web_qucosa')}
                     </span>
                     <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
                 </button>
@@ -86,8 +86,8 @@
     <div class="qsa_bookmarks__sidebar-list-wrapper">
         <p class="qsa_bookmarks__sidebar-list--empty">
             <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
-            <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.norecords.title')}</span>
-            <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.bookmarks.norecords.description')}</span>
+            <span>{f:translate(key: 'tx_slubwebqucosa.bookmarks.norecords.title',extensionName: 'slub_web_qucosa')}</span>
+            <span>{f:translate(key: 'tx_slubwebqucosa.bookmarks.norecords.description', extensionName: 'slub_web_qucosa')}</span>
         </p>
         <ul class="qsa_bookmarks__sidebar-list"
             data-icontitle="Icon Favorit hinzufügen"
