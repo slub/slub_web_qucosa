@@ -47,13 +47,6 @@ class Header {
                 const panel = this.nextElementSibling
                 const wrapper = findAncestor(self, '.qsa_accordion__items')
                 const accordionItems = wrapper.querySelectorAll('.qsa_accordion__item')
-                const ariaExpanded = self.getAttribute('aria-expanded')
-
-                if (ariaExpanded === 'true') {
-                    self.setAttribute('aria-expanded', false)
-                } else if (ariaExpanded === 'false') {
-                    self.setAttribute('aria-expanded', true)
-                }
 
                 self.classList.toggle('active')
                 panel.style.maxHeight ? panel.style.maxHeight = null : panel.style.maxHeight = panel.scrollHeight + 'px'
@@ -77,6 +70,14 @@ class Header {
             trigger[i].addEventListener('click', function () {
                 const self = this
                 self.classList.toggle('active')
+
+                const ariaExpanded = self.getAttribute('aria-expanded')
+
+                if (ariaExpanded === 'true') {
+                    self.setAttribute('aria-expanded', false)
+                } else if (ariaExpanded === 'false') {
+                    self.setAttribute('aria-expanded', true)
+                }
                 const wrapper = this.parentElement
                 const items = wrapper.getElementsByClassName('qsa_accordion__btn')
 

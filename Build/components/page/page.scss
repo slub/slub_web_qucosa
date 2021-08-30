@@ -108,7 +108,31 @@ body {
     height: auto;
 }
 
+button {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: -15px;
+    }
+}
+
 a {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: -15px;
+    }
+
     &[class] {
         color: inherit;
         text-decoration: none;

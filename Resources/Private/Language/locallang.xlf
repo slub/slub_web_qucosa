@@ -293,6 +293,18 @@
 		<trans-unit id="tx_slubwebqucosa.current_language" xml:space="preserve">
 			<source>en</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.share_twitter" xml:space="preserve">
+			<source>Share on Twitter</source>
+			<target>Auf Twitter teilen</target>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.share_facebook" xml:space="preserve">
+			<source>Share on Facebook</source>
+			<target>Auf Facebook teilen</target>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.share_mail" xml:space="preserve">
+			<source>Share via Mail</source>
+			<target>Per Email teilen</target>
+		</trans-unit>
         </body>
     </file>
 </xliff>

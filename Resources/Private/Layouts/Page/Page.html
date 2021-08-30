@@ -16,12 +16,95 @@
         <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
     </button>
 
+    <div class="qsa_bookmarks__sidebar" aria-labelledby="bookmarkSlider" aria-hidden="true">
+        <div class="qsa_bookmarks__sidebar-header">
+            <div class="qsa_bookmarks__sidebar-header-title">
+                <h2 class="h4">
+                    {f:translate(key: 'tx_slubwebqucosa.bookmarks', extensionName: 'slub_web_qucosa')}
+                </h2>
+                <f:render partial="Icon" arguments="{icon:'bookmarks'}" />
+            </div>
+            <p class="qsa_bookmarks__sidebar-header-title-count">
+            <span class="d-none">
+                {f:translate(key: 'tx_slubwebqucosa.bookmarks.records', extensionName: 'slub_web_qucosa')}
+            </span>
+            </p>
+            <button id="bookmarksClose" class="qsa_bookmarks__sidebar-header-title-close btn-outline__without" aria-label="Schließen Sie den Bookmarks">
+                <f:render partial="Icon" arguments="{icon:'close'}" />
+            </button>
+        </div>
+
+        <div class="qsa_bookmarks__sidebar-operations">
+            <div class="qsa_bookmarks__sidebar-operations--mark">
+                <input type="checkbox" id="markAllBookmarks" value="1">
+                <label for="markAllBookmarks">
+                    {f:translate(key: 'tx_slubwebqucosa.bookmarks.markall', extensionName: 'slub_web_qucosa')}
+                </label>
+            </div>
+
+            <div class="qsa_bookmarks__sidebar-operations-icons">
+                <div class="qsa_bookmarks__sidebar-operations--print">
+                    <button class="btn-outline__without">
+                    <span class="sr-only">
+                        {f:translate(key: 'tx_slubwebqucosa.bookmarks.print', extensionName: 'slub_web_qucosa')}
+                    </span>
+                        <f:render partial="Icon" arguments="{icon:'print'}" />
+                    </button>
+                </div>
+
+                <div class="qsa_bookmarks__sidebar-operations--remove">
+                    <button class="btn-outline__without d-none">
+                    <span class="sr-only">
+                        {f:translate(key: 'tx_slubwebqucosa.bookmarks.removeMarked', extensionName: 'slub_web_qucosa')}
+                    </span>
+                        <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="qsa_bookmarks__sidebar-list-wrapper">
+            <p class="qsa_bookmarks__sidebar-list--empty">
+                <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
+                <span>{f:translate(key: 'tx_slubwebqucosa.bookmarks.norecords.title',extensionName: 'slub_web_qucosa')}</span>
+                <span>{f:translate(key: 'tx_slubwebqucosa.bookmarks.norecords.description', extensionName: 'slub_web_qucosa')}</span>
+            </p>
+            <ul class="qsa_bookmarks__sidebar-list"
+                data-icontitle="Icon Favorit hinzufügen"
+                data-icondesc="Zu Favoriten hinzufügen"
+                data-tippydesc ="Aus Favoriten entfernen"
+                data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+
+            </ul>
+        </div>
+    </div>
+
     <f:if condition="{data.sharing_enabled} == 0">
         <button class="qsa_sidebar-links__slider qsa_sidebar-links__slider-share" id="shareSlider" type="button"
                 aria-label="Öffnet die Links zum teilen dieser Seite" aria-expanded="false" tabindex="0">
 
             <f:render partial="Icon" arguments="{icon:'mail'}" />
         </button>
+
+        <div class="qsa_sidebar-links qsa_sidebar-links__share" aria-hidden="true">
+            <div class="qsa_sidebar-links__share__inner">
+                <a id="mailLink" href="#" aria-label="{f:translate(key: 'tx_slubwebqucosa.share_mail', extensionName: 'slub_web_qucosa')}">
+                    <div class="qsa_sidebar-links__share__item">
+                        <f:render partial="icon" arguments="{icon:'mail'}" />
+                    </div>
+                </a>
+                <a id="twitterLink" href="#" aria-label="{f:translate(key: 'tx_slubwebqucosa.share_twitter', extensionName: 'slub_web_qucosa')}">
+                    <div class="qsa_sidebar-links__share__item">
+                        <f:render partial="icon" arguments="{icon:'twitter'}" />
+                    </div>
+                </a>
+                <a id="facebookLink" href="#" aria-label="{f:translate(key: 'tx_slubwebqucosa.share_facebook', extensionName: 'slub_web_qucosa')}">
+                    <div class="qsa_sidebar-links__share__item">
+                        <f:render partial="icon" arguments="{icon:'facebook'}" />
+                    </div>
+                </a>
+            </div>
+        </div>
     </f:if>
 
     <f:comment>
@@ -35,92 +118,4 @@
         -->
     </f:comment>
 </div>
-
-<div class="qsa_bookmarks__sidebar" aria-labelledby="bookmarkSlider" aria-hidden="true">
-    <div class="qsa_bookmarks__sidebar-header">
-        <div class="qsa_bookmarks__sidebar-header-title">
-            <h2 class="h4">
-                {f:translate(key: 'tx_slubwebqucosa.bookmarks', extensionName: 'slub_web_qucosa')}
-            </h2>
-            <f:render partial="Icon" arguments="{icon:'bookmarks'}" />
-        </div>
-        <p class="qsa_bookmarks__sidebar-header-title-count">
-            <span class="d-none">
-                {f:translate(key: 'tx_slubwebqucosa.bookmarks.records', extensionName: 'slub_web_qucosa')}
-            </span>
-        </p>
-        <button id="bookmarksClose" class="qsa_bookmarks__sidebar-header-title-close btn-outline__without" aria-label="Schließen Sie den Bookmarks">
-            <f:render partial="Icon" arguments="{icon:'close'}" />
-        </button>
-    </div>
-
-    <div class="qsa_bookmarks__sidebar-operations">
-        <div class="qsa_bookmarks__sidebar-operations--mark">
-            <input type="checkbox" id="markAllBookmarks" value="1">
-            <label for="markAllBookmarks">
-                {f:translate(key: 'tx_slubwebqucosa.bookmarks.markall', extensionName: 'slub_web_qucosa')}
-            </label>
-        </div>
-
-        <div class="qsa_bookmarks__sidebar-operations-icons">
-            <div class="qsa_bookmarks__sidebar-operations--print">
-                <button class="btn-outline__without">
-                    <span class="sr-only">
-                        {f:translate(key: 'tx_slubwebqucosa.bookmarks.print', extensionName: 'slub_web_qucosa')}
-                    </span>
-                    <f:render partial="Icon" arguments="{icon:'print'}" />
-                </button>
-            </div>
-
-            <div class="qsa_bookmarks__sidebar-operations--remove">
-                <button class="btn-outline__without d-none">
-                    <span class="sr-only">
-                        {f:translate(key: 'tx_slubwebqucosa.bookmarks.removeMarked', extensionName: 'slub_web_qucosa')}
-                    </span>
-                    <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="qsa_bookmarks__sidebar-list-wrapper">
-        <p class="qsa_bookmarks__sidebar-list--empty">
-            <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
-            <span>{f:translate(key: 'tx_slubwebqucosa.bookmarks.norecords.title',extensionName: 'slub_web_qucosa')}</span>
-            <span>{f:translate(key: 'tx_slubwebqucosa.bookmarks.norecords.description', extensionName: 'slub_web_qucosa')}</span>
-        </p>
-        <ul class="qsa_bookmarks__sidebar-list"
-            data-icontitle="Icon Favorit hinzufügen"
-            data-icondesc="Zu Favoriten hinzufügen"
-            data-tippydesc ="Aus Favoriten entfernen"
-            data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
-
-        </ul>
-    </div>
-</div>
-
-<f:if condition="{data.sharing_enabled} == 0">
-    <div class="qsa_sidebar-links qsa_sidebar-links__share" aria-hidden="true">
-        <div class="qsa_sidebar-links__share__inner">
-            <a id="mailLink" href="#">
-                <div class="qsa_sidebar-links__share__item">
-                    <f:render partial="icon" arguments="{icon:'mail'}" />
-                    <span class="sr-only">Per Email teilen</span>
-                </div>
-            </a>
-            <a id="twitterLink" href="#">
-                <div class="qsa_sidebar-links__share__item">
-                    <f:render partial="icon" arguments="{icon:'twitter'}" />
-                    <span class="sr-only">Per Twitter teilen</span>
-                </div>
-            </a>
-            <a id="facebookLink" href="#">
-                <div class="qsa_sidebar-links__share__item">
-                    <f:render partial="icon" arguments="{icon:'facebook'}" />
-                    <span class="sr-only">Per Facebook teilen</span>
-                </div>
-            </a>
-        </div>
-    </div>
-</f:if>
 

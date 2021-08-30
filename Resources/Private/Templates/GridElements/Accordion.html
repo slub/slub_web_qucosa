@@ -6,7 +6,7 @@
         <f:if condition="{data.flexform_accrdiontitle} == 1">
             <h2>{data.header}</h2>
 
-            <button class="qsa_accordion__trigger qsa_accordion__trigger--upper">
+            <button class="qsa_accordion__trigger qsa_accordion__trigger--upper" aria-expanded="false">
             <span class="qsa_accordion__trigger--closed">
                 {f:translate(key: 'tx_slubwebqucosa.accordion.expand_all', extensionName: 'slub_web_qucosa')}
                 <f:render partial="Icon" arguments="{icon:'plus-circle'}" />
