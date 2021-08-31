@@ -9,10 +9,27 @@
             <f:translate key="documentForm.new.header" arguments="{0: '{documentForm.displayName}'}"/>
         </h2>
         <button type="button" class="qsa_wizard__header-btn btn-outline__without" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}" tabindex="-1">
-            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.close')}</span>
+            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}</span>
             <f:render partial="Icon" arguments="{icon:'cancel'}" />
         </button>
         <f:render partial="DocumentForm/New" arguments="{documentForm:documentForm}"/>
+    </div>
+    <div class="qsa_wizard__wrapper qsa_wizard__wrapper-last d-none container">
+        <h2>{f:translate(key: 'tx_slubwebqucosa.wizard.finish_header', extensionName: 'slub_web_qucosa')}</h2>
+
+        <div class="qsa_wizard__wrapper-content">
+            <div class="row">
+                <div class="col-12 qsa_wizard__wrapper-form">
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.finish_description', extensionName: 'slub_web_qucosa')}
+                    <div class="qsa_wizard__wrapper-last__buttons">
+                        <button class="btn qsa_btn__submit" id="reloadWizard">{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}</button>
+                        <f:link.page pageUid="{settings.pageID.wizardManual}">
+                            {f:translate(key: 'tx_slubwebqucosa.wizard.finish.next_steps', extensionName: 'slub_web_qucosa')}
+                        </f:link.page>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

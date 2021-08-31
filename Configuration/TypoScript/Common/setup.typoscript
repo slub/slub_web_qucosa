@@ -146,6 +146,7 @@ page {
             pageIDmeta = {$pageID.meta}
             pageIDWizard = {$pageID.wizard}
             pageIDRoot = {$pageID.root}
+            wizardManual = {$pageID.wizardManual}
             headerHeading = {$text.headerHeading}
             headerSubheader = {$text.headerSubheader}
         }

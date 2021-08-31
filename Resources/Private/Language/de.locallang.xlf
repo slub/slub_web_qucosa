@@ -390,6 +390,34 @@
 				<source>Share via Mail</source>
 				<target>Per Email teilen</target>
 			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.finish_header" xml:space="preserve">
+				<source>Your publication has been submitted!</source>
+				<target>Ihre Publikation wurde übermittelt!</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.finish_description" xml:space="preserve">
+				 <source>
+                    &lt;p&gt;
+                    Thank you. We have received your publication for review. We will notify you as soon as the review is complete.
+                    &lt;/p&gt;
+
+                    &lt;p&gt;
+                   You can now close the wizard or view more information about the next steps.
+                    &lt;/p&gt;
+                </source>
+				<target>
+                    &lt;p&gt;
+                    Vielen Dank. Ihre Publikation ist zur Prüfung bei uns eingegangen. Sobald die Prüfung abgeschlossen ist, werden Sie von uns informiert.
+					&lt;/p&gt;
+
+                    &lt;p&gt;
+                    Sie können den Eingabeassistenten jetzt schließen oder sich weitere Informationen zu den nächsten Schritten ansehen.
+					&lt;/p&gt;
+                </target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.finish.next_steps" xml:space="preserve">
+				<source>What's the next step?</source>
+				<target>Wie geht es jetzt weiter?</target>
+			</trans-unit>
         </body>
     </file>
 </xliff>
