@@ -571,18 +571,18 @@ class Wizard {
                 const fieldset = field.parentElement
                 const clonedNode = field.cloneNode(true)
                 const groupId = new Date().getTime()
-                const ajaxURL = groupButton.dataset('ajax')
-                const groupIndex = groupButton.dataset('index')
-
-                fetch(ajaxURL, {
-                    method: 'post',
-                    headers: {
-                        Accept: 'application/json, text/plain, */*',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ groupIndex: groupIndex })
-                }).then(res => res.json())
-                    .then(res => console.log(res))
+                // const ajaxURL = groupButton.dataset('ajax')
+                // const groupIndex = groupButton.dataset('index')
+//
+                // fetch(ajaxURL, {
+                //     method: 'post',
+                //     headers: {
+                //         Accept: 'application/json, text/plain, */*',
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({ groupIndex: groupIndex })
+                // }).then(res => res.json())
+                //     .then(res => console.log(res))
 
                 fieldset.insertBefore(clonedNode, groupButton)
                 clonedNode.setAttribute('id', groupId)

@@ -14,7 +14,9 @@
         .datepicker-button {
             top: 0;
             &::after {
-                top: 25%;
+                top: 32%;
+                right: 15%;
+                left: unset;
             }
         }
     }

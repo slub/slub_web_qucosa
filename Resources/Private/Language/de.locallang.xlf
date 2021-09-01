@@ -166,6 +166,10 @@
 			    <source>No results found.</source>
                 <target>Keine Ergebnisse gefunden.</target>
 		    </trans-unit>
+			<trans-unit id="tx_slubwebqucosa.find.no_results_one" xml:space="preserve">
+				<source>No results were found for </source>
+				<target>Es wurden keine Ergebnisse gefunden für </target>
+			</trans-unit>
             <trans-unit id="tx_slubwebqucosa.find.results_general_one" xml:space="preserve">
 			    <source>Result found</source>
                 <target>Ergebnis gefunden</target>
