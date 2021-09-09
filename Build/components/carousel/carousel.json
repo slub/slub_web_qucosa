@@ -1,0 +1,85 @@
+{
+  "carousel": {
+    "links" : [
+      {
+        "href": "index.php?siteguid=startpage--tu-chemnitz",
+        "src": "../../images/carousel/Mandantenlogo_TU-Chemnitz.png",
+        "alt": "TU-Chemnitz",
+        "title": "Logo der TU-Chemnitz"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_TUDresden.png",
+        "alt": "TU Dresden",
+        "title": "Logo der TU-Dresden"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_DIU.png",
+        "alt": "DIU",
+        "title": "Logo der DIU"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_HTW.png",
+        "alt": "HTW",
+        "title": "Logo der HTW Dresden",
+        "caption": "Hochschule für Technik und Wirtschaft Dresden"
+      }
+    ],
+    "blockTwo" : [
+      {
+        "href": "index.php?siteguid=startpage--tu-chemnitz",
+        "src": "../../images/carousel/Mandantenlogo_TU-Chemnitz.png",
+        "alt": "TU-Chemnitz",
+        "title": "Logo der TU-Chemnitz"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_TUDresden.png",
+        "alt": "TU Dresden",
+        "title": "Logo der TU-Dresden"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_DIU.png",
+        "alt": "DIU",
+        "title": "Logo der DIU"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_HTW.png",
+        "alt": "HTW",
+        "title": "Logo der HTW Dresden",
+        "caption": "Hochschule für Technik und Wirtschaft Dresden"
+      }
+    ],
+    "blockThree" : [
+      {
+        "href": "index.php?siteguid=startpage--tu-chemnitz",
+        "src": "../../images/carousel/Mandantenlogo_TU-Chemnitz.png",
+        "alt": "TU-Chemnitz",
+        "title": "Logo der TU-Chemnitz"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_TUDresden.png",
+        "alt": "TU Dresden",
+        "title": "Logo der TU-Dresden"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_DIU.png",
+        "alt": "DIU",
+        "title": "Logo der DIU"
+      },
+      {
+        "href": "index.php?siteguid=startpage--tu-dresden",
+        "src": "../../images/carousel/Mandantenlogo_HTW.png",
+        "alt": "HTW",
+        "title": "Logo der HTW Dresden",
+        "caption": "Hochschule für Technik und Wirtschaft Dresden"
+      }
+    ]
+  }
+}

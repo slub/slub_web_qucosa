@@ -10,9 +10,9 @@
     <main>
         <div class="qsa_content-area-default container">
             <f:render partial="Breadcrumb" arguments="{_all}" />
-            <h1 class="h2">Seitentitel</h1>
+            <h1 class="h2">{page.title}</h1>
 
-            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}"/>
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
         </div>
     </main>
 </f:section>

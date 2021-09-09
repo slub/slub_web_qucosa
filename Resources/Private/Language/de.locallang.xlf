@@ -82,6 +82,346 @@
                 <source>Click on the bookmark icon in a search entry to store it here.</source>
                 <target>Klicken Sie in einem Sucheintrag auf das Lesezeichen-Symbol um ihn hier abzulegen.</target>
             </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.sidebar.slider.aria" xml:space="preserve">
+			    <source>Opens more information within a sidebar</source>
+			    <target>Öffnet weitere Informationen innerhalb einer Sidebar</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.sidebar.close.label" xml:space="preserve">
+			    <source>Close</source>
+                <target>Schließen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.sidebar.close.aria" xml:space="preserve">
+			    <source>Close sidebar information</source>
+                <target>Informationen der Sidebar schließen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.footer.sidebar_hint" xml:space="preserve">
+			    <source>You can find more information about this page under the</source>
+                <target>Weitere Informationen zu dieser Seite finden Sie unter dem</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.footer.sidebar_hint.right_side" xml:space="preserve">
+			    <source>on the right side!</source>
+                <target>auf der rechten Seite!</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.accordion.expand_all" xml:space="preserve">
+			    <source>Expand all</source>
+                <target>Alle ausklappen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.accordion.collapse_all" xml:space="preserve">
+			    <source>Collapse all</source>
+                <target>Alle einklappen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.carousel.navigation.first_slide" xml:space="preserve">
+			    <source>First side of the carousel</source>
+			    <target>Erste Seite des Karussells</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.carousel.navigation.next_slide" xml:space="preserve">
+			    <source>Go to next page</source>
+			    <target>Go to next page</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.carousel.next_element" xml:space="preserve">
+			    <source>Next Element</source>
+			    <target>Nächstes Element</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.carousel.previous_element" xml:space="preserve">
+			    <source>Previous element</source>
+			    <target>Vorheriges element</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.header_teaser.more" xml:space="preserve">
+			    <source>More recent publications</source>
+                <target>Mehr aktuelle Veröffentlichungen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.sidebar_image.show" xml:space="preserve">
+			    <source>Show image</source>
+                <target>Bild ansehen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.sidebar_teaser.more" xml:space="preserve">
+			    <source>More</source>
+                <target>Mehr</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.navigation.open" xml:space="preserve">
+			    <source>Opens the menu in a sidebar</source>
+                <target>Öffnet das Menü in einer Sidebar</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.navigation.toggle_item" xml:space="preserve">
+			    <source>Expand or collapse navigation item</source>
+                <target>Element aufklappen oder zuklappen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.language_switcher" xml:space="preserve">
+			    <source>Opens a dropdown to change the language of the website</source>
+                <target>Öffnet ein Dropdown zum wechseln der Sprache der Website</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.carousel.link_label" xml:space="preserve">
+			    <source>Opens</source>
+                <target>Öffnet</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.error" xml:space="preserve">
+			    <source>Your search contains invalid values. Please check and start search again.</source>
+                <target>Ihre Suche beinhaltet ungültige Werte. Bitte prüfen und Suche erneut starten.</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.no_results_general" xml:space="preserve">
+			    <source>No results found.</source>
+			    <target>Keine Ergebnisse gefunden.</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.no_results_general" xml:space="preserve">
+			    <source>No results found.</source>
+                <target>Keine Ergebnisse gefunden.</target>
+		    </trans-unit>
+			<trans-unit id="tx_slubwebqucosa.find.no_results_one" xml:space="preserve">
+				<source>No results were found for </source>
+				<target>Es wurden keine Ergebnisse gefunden für </target>
+			</trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.results_general_one" xml:space="preserve">
+			    <source>Result found</source>
+                <target>Ergebnis gefunden</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.results_general_multiple" xml:space="preserve">
+			    <source>Results found</source>
+                <target>Ergebnisse gefunden</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.no_results_two" xml:space="preserve">
+			    <source>.</source>
+                <target>gefunden.</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.results_args_one" xml:space="preserve">
+			    <source/>
+                <target>Es wurden</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.results_args_two" xml:space="preserve">
+			    <source>results for</source>
+                <target>Ergebnisse zu</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.results_args_three" xml:space="preserve">
+			    <source>were found.</source>
+                <target>gefunden.</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.results_no_args_two" xml:space="preserve">
+			    <source>results found for your search</source>
+                <target>Ergebnisse zu Ihrer Suche gefunden.</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.result_add" xml:space="preserve">
+			    <source>Add or remove to bookmarks</source>
+			    <target>Zur Merkliste hinzufügen oder entfernen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.result_categorie" xml:space="preserve">
+			    <source>Found in</source>
+			    <target>Gefunden in</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.result_sort" xml:space="preserve">
+			    <source>Sort results</source>
+			    <target>Suchergebnisse sortieren</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.result_sort.choose" xml:space="preserve">
+			    <source>Please choose</source>
+			    <target>Wählen Sie bitte</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.search.start" xml:space="preserve">
+			    <source>Begin search</source>
+			    <target>Suche starten</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.search.delete" xml:space="preserve">
+			    <source>Delete search entry</source>
+                <target>Sucheintrag löschen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.search.advanced" xml:space="preserve">
+			    <source>Advanced Search</source>
+                <target>Erweiterte Suche</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.search.reset" xml:space="preserve">
+			    <source>Reset filters</source>
+                <target>Filter zurücksetzen</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.publication.period" xml:space="preserve">
+			    <source>Publication Period</source>
+			    <target>Veröffentlichungszeitraum</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.page_active" xml:space="preserve">
+			    <source>Active Search results</source>
+			    <target>Aktive Suchergebnisseite</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.find.page_index" xml:space="preserve">
+			    <source>Results page</source>
+                <target>Ergebnisseite</target>
+		    </trans-unit>
+            <trans-unit id="tx_slubwebqucosa.page.to_top" xml:space="preserve">
+			    <source>Jump to top</source>
+			    <target>Nach oben</target>
+		    </trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.publish_header" xml:space="preserve">
+				<source>What do you want to publish?</source>
+				<target>Was möchten Sie publizieren?</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.close" xml:space="preserve">
+				<source>Close Wizard</source>
+				<target>Eingabeassistent schließen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.close_warning" xml:space="preserve">
+				<source>Caution!</source>
+				<target>Achtung!</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.close_confirm" xml:space="preserve">
+				<source>Yes</source>
+				<target>Ja</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.close_deny" xml:space="preserve">
+				<source>No</source>
+				<target>Nein</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.close_warning" xml:space="preserve">
+				<source>If you close the input assistant and reload the page, your entries will be lost. Do you want to close the input assistant?</source>
+				<target>Wenn Sie den Eingabeassistenten schließen und die Seite erneut laden, gehen Ihre Eingaben verloren. Wollen Sie den Eingabeassistent schließen?</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.error" xml:space="preserve">
+				<source>In the last step, you have not filled in some mandatory fields at all or have filled in fields incorrectly. You can still continue and correct your entries at any time.</source>
+				<target>Sie haben im letzten Schritt einige Pflichtfelder gar nicht oder Felder fehlerhaft ausgefüllt. Sie können dennoch fortfahren und Ihre Eingaben zu jeder Zeit berichtigen.</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.error_warning" xml:space="preserve">
+				<source>Data incomplete!</source>
+				<target>Daten unvollständig!</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.error_understood" xml:space="preserve">
+				<source>Understood!</source>
+				<target>Verstanden!</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.background" xml:space="preserve">
+				<source>Wizard Background image</source>
+				<target>Hintergrundbild Eingabeassistent</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.field.error_numbers" xml:space="preserve">
+				<source>Only numbers allowed</source>
+				<target>In diesem Feld sind nur Zahlen erlaubt</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.textarea.connector" xml:space="preserve">
+				<source>of</source>
+				<target>von</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.select.language" xml:space="preserve">
+				<source>Language</source>
+				<target>Sprache</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.missing_fields" xml:space="preserve">
+				<source>The form cannot yet be
+                    be submitted because it contains errors or is incomplete.
+                    Please check your entries and fill in all fields marked with a '*'!
+                    completed!
+				</source>
+				<target>Das Formular kann noch nicht
+                    abgeschickt werden, da es Fehler enthält oder unvollständig ist.
+                    Bitte prüfen Sie Ihre Eingaben und füllen Sie alle Felder, die mit einem '*' gekennzeichnet sind
+                    aus!
+				</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.next" xml:space="preserve">
+				<source>Next</source>
+				<target>Weiter</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.file_primary_upload" xml:space="preserve">
+				<source>Upload Primary file</source>
+				<target>Dateiupload für die Volltextdatei</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.file_primary" xml:space="preserve">
+				<source>Primary file</source>
+				<target>Volltextdatei</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.file_secondary_upload" xml:space="preserve">
+				<source>Upload Secondary files</source>
+				<target>Dateiupload für eine oder mehrere Sekundärdateien</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.file_secondary" xml:space="preserve">
+				<source>Secondary file</source>
+				<target>Sekundärdatei</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.check" xml:space="preserve">
+				<source>Check</source>
+				<target>Überprüfen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.check.description" xml:space="preserve">
+				<source>This is the last step. Here the inputs are checked and listed.
+                    The user has here once again an overview of all entries made!
+				</source>
+				<target>Das ist der letzte Schritt. Hier werden die Eingaben überprüft und aufgelistet.
+                    Der Nutzer hat hier nochmals eine Übersicht aller getätigten Eingaben!
+				</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.send" xml:space="preserve">
+				<source>Send</source>
+				<target>Absenden</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.files" xml:space="preserve">
+				<source>Files</source>
+				<target>Dateien</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.jump_one" xml:space="preserve">
+				<source>Jump to</source>
+				<target>Zum Schritt </target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.jump_two" xml:space="preserve">
+				<source/>
+				<target>springen.</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.more_steps" xml:space="preserve">
+				<source>Show more steps</source>
+				<target>Weitere Schritte anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.general_field_hint" xml:space="preserve">
+				<source>* - Please fill in the mandatory fields.</source>
+				<target>* - Bitte füllen Sie die Pflichtfelder aus.</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.files.upload" xml:space="preserve">
+				<source>Upload your own file (PDF)</source>
+				<target>Eigene Datei hochladen (PDF)</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.files.remove" xml:space="preserve">
+				<source>Delete selected PDF</source>
+				<target>Ausgewählte PDF löschen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.step.files.add" xml:space="preserve">
+				<source>Add another file</source>
+				<target>Eine Weitere Datei hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.current_language" xml:space="preserve">
+				<source>en</source>
+				<target>ger</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.share_twitter" xml:space="preserve">
+				<source>Share on Twitter</source>
+				<target>Auf Twitter teilen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.share_facebook" xml:space="preserve">
+				<source>Share on Facebook</source>
+				<target>Auf Facebook teilen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.share_mail" xml:space="preserve">
+				<source>Share via Mail</source>
+				<target>Per Email teilen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.finish_header" xml:space="preserve">
+				<source>Your publication has been submitted!</source>
+				<target>Ihre Publikation wurde übermittelt!</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.finish_description" xml:space="preserve">
+				 <source>
+                    &lt;p&gt;
+                    Thank you. We have received your publication for review. We will notify you as soon as the review is complete.
+                    &lt;/p&gt;
+
+                    &lt;p&gt;
+                   You can now close the wizard or view more information about the next steps.
+                    &lt;/p&gt;
+                </source>
+				<target>
+                    &lt;p&gt;
+                    Vielen Dank. Ihre Publikation ist zur Prüfung bei uns eingegangen. Sobald die Prüfung abgeschlossen ist, werden Sie von uns informiert.
+					&lt;/p&gt;
+
+                    &lt;p&gt;
+                    Sie können den Eingabeassistenten jetzt schließen oder sich weitere Informationen zu den nächsten Schritten ansehen.
+					&lt;/p&gt;
+                </target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.wizard.finish.next_steps" xml:space="preserve">
+				<source>What's the next step?</source>
+				<target>Wie geht es jetzt weiter?</target>
+			</trans-unit>
         </body>
     </file>
 </xliff>

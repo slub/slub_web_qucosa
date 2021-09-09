@@ -1,0 +1,282 @@
+//
+//    @tableOfContent
+//      1. input
+//
+
+.qsa_input-group {
+    position: relative;
+
+    &:not(:first-child) {
+        margin-top: var(--spacing);
+    }
+
+    svg {
+        visibility: hidden;
+        position: absolute;
+        top: 25%;
+        right: 12px;
+        color: red;
+
+        &.show {
+            visibility: visible;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        top: -25px;
+        right: 19px;
+        font-size: 14px;
+        color: var(--color-warning);
+
+        @include media-breakpoint-down(md) {
+            position: relative;
+            top: unset;
+            right: unset;
+            margin-left: 19px;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 13px;
+        left: 17px;
+        font-family: $font-family-base-assistant;
+        letter-spacing: .15px;
+        color: var(--color-gray-500);
+        cursor: text;
+        transition: all .15s ease-in-out 0s;
+    }
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        padding: 16px;
+        font-family: $font-family-base-assistant;
+        color: var(--color-gray-500);
+        background-color: var(--color-input-background);
+        border: 1px solid var(--color-gray-300);
+        border-radius: 8px;
+
+        &--light {
+            background-color: var(--color-white);
+        }
+
+        &[data-empty='false'] ~ .qsa_input-group__label {
+            top: -19px;
+            font-family: $font-family-roboto-regular;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+        }
+
+        &:required {
+            ~ .qsa_input-group__label {
+                &::after {
+                    content: '*';
+                    position: absolute;
+                }
+            }
+        }
+
+        &:focus {
+            border: 1px solid var(--color-primary);
+            box-shadow: 0 13px 32px 0 rgba(0, 0, 0, .1);
+
+            ~ .qsa_input-group__label {
+                top: -19px;
+                left: 6px;
+                font-family: $font-family-roboto-regular;
+                font-size: 11px;
+                letter-spacing: 1.5px;
+                cursor: pointer;
+            }
+        }
+
+        &--not-filled {
+            background-color: #fde2e2 !important;
+        }
+    }
+
+    &-file {
+        position: relative;
+
+        &:hover {
+            .qsa_input-group-file__text-input {
+                border: 1px solid var(--color-primary);
+            }
+        }
+
+        &-size {
+            display: none;
+        }
+
+        &-remove {
+            display: none;
+        }
+
+        &-add {
+            display: none;
+        }
+
+        &__label {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 0;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+
+                svg {
+                    visibility: visible;
+                    display: block;
+                    margin-right: var(--spacing-xs);
+                    fill: var(--color-opacity-black-6);
+                }
+            }
+        }
+
+        &__input {
+            display: none;
+        }
+
+        &__text {
+            &-label {
+                overflow: hidden;
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                clip: rect(0, 0, 0, 0);
+                border: 0;
+            }
+
+            &-input {
+                width: 100%;
+                height: 50px;
+                padding: 16px;
+                font-family: $font-family-assistant;
+                color: var(--color-gray-500);
+                background-color: var(--color-input-background);
+                border: 1px solid var(--color-gray-300);
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+
+        &--filled {
+            .qsa_input-group-file-size {
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 56px;
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+
+            .qsa_input-group-file-remove {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 72px;
+                bottom: 20px;
+                padding-right: 14px;
+                border-right: 1px dashed var(--color-gray-400);
+
+                &:hover {
+                    svg {
+                        color: var(--color-primary);
+                    }
+                }
+
+                svg {
+                    visibility: visible;
+                    display: block;
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    color: var(--color-gray-400);
+                }
+            }
+
+            .qsa_input-group-file-add {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 25px;
+                bottom: 20px;
+
+                &:hover {
+                    svg {
+                        color: var(--color-primary);
+                    }
+                }
+
+                svg {
+                    visibility: visible;
+                    display: block;
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    color: var(--color-gray-400);
+                }
+            }
+
+            .icon--pdf-file {
+                visibility: visible;
+                display: block;
+                top: 14px;
+                left: 12px;
+                width: 35px;
+                height: 35px;
+                color: var(--color-primary);
+
+                &--absolute {
+                    position: absolute;
+                }
+            }
+
+            .qsa_input-group-file__text-input {
+                height: 70px;
+                padding-bottom: 5px;
+                padding-left: 55px;
+
+                &::placeholder {
+                    font-family: $font-family-roboto-condensed;
+                    font-size: 18px;
+                }
+            }
+
+            .qsa_input-group-file__label {
+                right: 100px;
+
+                span {
+                    svg {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    &__count-wrapper {
+        opacity: .8;
+        position: absolute;
+        right: var(--spacing-s);
+        bottom: var(--spacing-xs);
+        font-family: $font-family-assistant;
+        font-size: var(--font-size-captions);
+    }
+}
+
+// end of input.scss

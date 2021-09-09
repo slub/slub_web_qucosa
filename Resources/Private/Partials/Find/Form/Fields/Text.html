@@ -1,0 +1,28 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<div class="qsa_input-group qsa_group" data-input="text" data-showinsummary="">
+	<f:alias map="{
+	hasAlternate:'{f:if(condition:fieldInfo.queryAlternate, then:1, else:0)}'
+}">
+		<f:form.textfield
+				id="c{config.uid}-field-{fieldInfo.id}"
+				class="qsa_input-group__input qsa_input-group__input-text"
+				name="q[{fieldInfo.id}]{f:if(
+			condition:hasAlternate,
+			then:'[term]'
+		)}"
+				value="{f:if(
+			condition:hasAlternate,
+			then:queryParameter.term,
+			else:queryParameter
+		)}"
+				additionalAttributes="<f:if condition='{fieldInfo.autocomplete}==1'><f:then>{autocompleteURL:\"{f:uri.action(
+				arguments:{dictionary:fieldInfo.autocompleteDictionary, q:'%%%%'},
+		action:'suggest',
+		pageType:'1369315139',
+		format:'data',
+		noCacheHash:'1'
+		)}\"}</f:then><f:else>{a:1}</f:else></f:if>"
+		/>
+	</f:alias>
+	<label class="qsa_input-group__label" for="c{config.uid}-field-{fieldInfo.id}">{fieldInfo.label}</label>
+</div>

@@ -1,0 +1,37 @@
+
+//
+//    @tableOfContent
+//      1. Breadcrumb
+//
+
+
+//
+//   @section 1. Breadcrumb
+//
+
+.qsa_breadcrumb {
+    display: flex;
+    font-size: var(--font-size-small);
+
+    &__wrapper {
+        margin-top: 50px;
+        margin-bottom: var(--spacing-s);
+    }
+
+    li {
+        font-weight: 400;
+
+        &:not(:last-child) {
+            padding-right: 5px;
+        }
+
+        a {
+            opacity: .8;
+            margin-bottom: 1rem;
+            padding-right: 5px;
+            text-decoration: underline;
+        }
+    }
+}
+
+// end of breadcrumb.scss file

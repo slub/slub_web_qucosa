@@ -5,8 +5,11 @@ imports:
 
 editor:
   config:
+    # Include custom CSS
+    contentsCss: "EXT:slub_web_qucosa/Resources/Public/css/qsa.min.css"
     stylesSet:
       - { name: "Warnung", element: "p", attributes: { 'class': 'qsa_content-area__warning' } }
       - { name: "Hinweis", element: "p", attributes: { 'class': 'qsa_content-area__hint' } }
+      - { name: "Zitat", element: "blockquote", attributes: { 'class': 'qsa_content-area__quote' } }
 
     format_tags: "p;h2;h3;h4"

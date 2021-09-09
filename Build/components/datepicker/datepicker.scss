@@ -1,0 +1,157 @@
+//
+//    @tableOfContent
+//      1. Custom datepicker
+//
+
+//
+//    @section 1.  Custom datepicker
+//
+
+.qsa_field__datepicker-wrap {
+    .input-group {
+        position: relative;
+
+        .datepicker-button {
+            top: 0;
+            &::after {
+                top: 32%;
+                right: 15%;
+                left: unset;
+            }
+        }
+    }
+}
+
+a.datepicker-button.qucosa {
+    position: absolute;
+    z-index: 20;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    &::after {
+        content: '\e97b';
+        font-family: 'qucosa';
+        display: inline-block;
+        vertical-align: bottom;
+        width: 10px;
+        transform: scale(1.3);
+        position: absolute;
+        right: 17px;
+        margin: 0;
+    }
+}
+a.datepicker-button.qucosa:hover,
+a.datepicker-button.qucosa:focus {
+    border: 1px solid gray;
+}
+div.datepicker-calendar.qucosa {
+    background-color: white;
+    width: auto;
+    font-size: 12px;
+    line-height: 1.15;
+
+    .datepicker-button.datepicker-month {
+        &::after {
+            content: none;
+        }
+    }
+}
+div.datepicker-calendar.qucosa div.datepicker-month-wrap {
+    .datepicker-month-next {
+        &::after {
+            content: '\e972';
+            font-family: 'qucosa';
+            display: inline-block;
+            vertical-align: bottom;
+            width: 10px;
+            transform: scale(1.3);
+        }
+    }
+
+    .datepicker-month-prev {
+        &::after {
+            content: '\e974';
+            font-family: 'qucosa';
+            display: inline-block;
+            vertical-align: bottom;
+            width: 10px;
+            transform: scale(1.3);
+        }
+    }
+}
+div.datepicker-calendar.qucosa div.datepicker-month-fast-prev.disabled,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-next.disabled {
+    display: none;
+}
+
+div.datepicker-calendar.qucosa div.datepicker-month-prev.disabled,
+div.datepicker-calendar.qucosa div.datepicker-month-next.disabled {
+    color: gray;
+}
+div.datepicker-calendar.qucosa div.datepicker-month-fast-prev.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-prev.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-next.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-fast-next.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month-prev.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-prev.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month-next.enabled:hover,
+div.datepicker-calendar.qucosa div.datepicker-month-next.enabled:focus,
+div.datepicker-calendar.qucosa div.datepicker-month:hover,
+div.datepicker-calendar.qucosa div.datepicker-month:focus,
+div.datepicker-calendar.qucosa button.datepicker-close:hover,
+div.datepicker-calendar.qucosa button.datepicker-close:focus {
+    background-color: white;
+    border-color:  gray;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid:focus {
+    outline: 1px dotted gray;
+}
+div.datepicker-calendar.qucosa tr.datepicker-weekdays {
+    border: none;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid th {
+    background-color: white;
+    border:  none;
+    padding: 10px;
+    text-align: center;
+
+    abbr {
+        text-decoration: none;
+    }
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td {
+    border:  none;
+    color: $primary;
+    padding: 10px;
+    text-align: center;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.unselectable {
+    color: gray;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.curDay,
+div.datepicker-calendar.qucosa table.datepicker-grid td.curMonth,
+div.datepicker-calendar.qucosa table.datepicker-grid td.curYear {
+    background-color: $primary;
+    color: white;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.empty {
+    background:white;
+    color: white;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.selectable:hover,
+div.datepicker-calendar.qucosa table.datepicker-grid td.selectable.focus {
+    background-color: $primary;
+    color: white;
+}
+div.datepicker-calendar.qucosa table.datepicker-grid td.empty:hover {
+    background-color: white;
+}
+div.datepicker-calendar.qucosa button.datepicker-close {
+    background-color: #522A3F;
+    color: #FFF;
+    border-color:  #EEE;
+}
+
+// end of datepicker.scss

@@ -5,10 +5,8 @@
         <f:then>
             <div class="qsa_wizard__wrapper-content {f:if(condition: '{pageIterator.cycle}==1', then: '', else:'d-none')}"
                  id="tab-{pageIterator.cycle}">
-                <p class="qsa_content-area__warning qsa_content-area__warning--hidden">Das Formular kann noch nicht
-                    abgeschickt werden, da es Fehler enthält oder unvollständig ist.
-                    Bitte prüfen Sie Ihre Eingaben und füllen Sie alle Felder, die mit einem '*' gekennzeichnet sind
-                    aus!
+                <p class="qsa_content-area__warning qsa_content-area__warning--hidden">
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.missing_fields', extensionName: 'slub_web_qucosa')}
                 </p>
                 <div class="row qsa_wizard__wrapper-content-block">
                     <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
@@ -21,7 +19,7 @@
                                         <f:if condition="{groupItem.maxIteration} == 0">
                                             <f:if condition="{groupItemIterator.isLast}">
                                                 <button class="btn qsa_wizard__wrapper-form-element-add qsa_btn--transparent add_group"
-                                                        name="add-input"
+                                                        name="add_group"
                                                         data-group="{groupItem.uid}"
                                                         data-ajax="{f:uri.action(action:'group',controller:'AjaxDocumentForm',pageType:110124,arguments:{pageUid:formPage.0.uid,groupUid:groupItem.uid})}"
                                                         data-index="{groupItemIterator.index}">+ {f:translate(key:
@@ -47,22 +45,20 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">Weiter</button>
+                <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">{f:translate(key: 'tx_slubwebqucosa.wizard.next', extensionName: 'slub_web_qucosa')}</button>
             </div>
         </f:then>
     </f:if>
 </f:for>
 
-<div class="qsa_wizard__wrapper-content" id="tab-fileUpload">
-    <p class="qsa_content-area__warning qsa_content-area__warning--hidden">Das Formular kann noch nicht abgeschickt
-        werden, da es in diesem Schritt Fehler enthält oder unvollständig ist.
-        Bitte prüfen Sie Ihre Eingaben und füllen Sie alle Felder, die mit einem '*' gekennzeichnet sind aus!</p>
+<div class="qsa_wizard__wrapper-content d-none" id="tab-fileUpload">
+    <p class="qsa_content-area__warning qsa_content-area__warning--hidden">{f:translate(key: 'tx_slubwebqucosa.wizard.missing_fields', extensionName: 'slub_web_qucosa')}</p>
 
     <fieldset class="row qsa_wizard__wrapper-content-block">
-        <legend class="sr-only">Dateiupload für die Volltextdatei</legend>
+        <legend class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.file_primary_upload', extensionName: 'slub_web_qucosa')}</legend>
         <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
             <div class="qsa_wizard__wrapper-form-element">
-                <h3 class="h5">Volltextdatei</h3>
+                <h3 class="h5">{f:translate(key: 'tx_slubwebqucosa.wizard.file_primary', extensionName: 'slub_web_qucosa')}</h3>
 
                 <f:render partial="DocumentForm/PrimaryFileGroup"
                           arguments="{file:documentForm.primaryFile,virtual:documentForm.virtual}"/>
@@ -82,10 +78,10 @@
     </fieldset>
 
     <fieldset class="row qsa_wizard__wrapper-content-block">
-        <legend class="sr-only">Dateiupload für eine oder mehrere Sekundärdateien</legend>
+        <legend class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.file_secondary_upload', extensionName: 'slub_web_qucosa')}</legend>
         <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
             <div class="qsa_wizard__wrapper-form-element">
-                <h3 class="h5">Sekundärdatei</h3>
+                <h3 class="h5">{f:translate(key: 'tx_slubwebqucosa.wizard.file_secondary', extensionName: 'slub_web_qucosa')}</h3>
 
 
                 <f:render partial="DocumentForm/SecondaryFileGroup" arguments="{files:documentForm.secondaryFiles}"/>
@@ -108,7 +104,7 @@
         </div>
     </fieldset>
 
-    <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">Weiter</button>
+    <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">{f:translate(key: 'tx_slubwebqucosa.wizard.next', extensionName: 'slub_web_qucosa')}</button>
 </div>
 <div class="qsa_wizard__wrapper-content d-none" id="tab-checkForm">
 
@@ -118,15 +114,14 @@
         </div>
         <div class="col-12 col-lg-4 qsa_wizard__wrapper-text">
             <div class="qsa_wizard__wrapper-text-default">
-                <h3 class="h5">Überprüfen</h3>
+                <h3 class="h5">{f:translate(key: 'tx_slubwebqucosa.wizard.step.check', extensionName: 'slub_web_qucosa')}</h3>
                 <p>
-                    Das ist der letzte Schritt. Hier werden die Eingaben überprüft und aufgelistet.
-                    Der Nutzer hat hier nochmals eine Übersicht aller getätigten Eingaben!
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.step.check.description', extensionName: 'slub_web_qucosa')}
                 </p>
             </div>
         </div>
     </div>
     <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button--disabled qsa_wizard__wrapper-button-send qsa_btn__submit">
-        Senden
+        {f:translate(key: 'tx_slubwebqucosa.wizard.send', extensionName: 'slub_web_qucosa')}
     </button>
 </div>

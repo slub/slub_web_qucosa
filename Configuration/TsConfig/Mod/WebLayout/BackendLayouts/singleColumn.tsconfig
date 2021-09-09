@@ -16,7 +16,7 @@ mod {
                                 columns {
                                     1 {
                                         name = Inhalt
-                                        colPos = 1
+                                        colPos = 0
                                         colspan = 1
                                         disallowed {
                                             tx_gridelements_backend_layout = headerTeaserText,headerTeaserIcons

@@ -2,7 +2,7 @@ lib.logo {
     stdWrap.typolink.ATagParams = class="qsa_logo qsa_logo__tu-chemnitz"
     stdWrap.typolink.title = Startseite
     10 {
-        file = EXT:slub_web_qucosa/Resources/Public/Images/img/logo/Logo_TU_Chemnitz.svg
+        file = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/img/logo/Logo_TU_Chemnitz.svg
         altText = Logo der TU Chemnitz
     }
 }

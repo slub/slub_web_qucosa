@@ -1,0 +1,53 @@
+<div class="qsa_search-result__filter">
+    <h2 class="h5 qsa_search-result__filter__hits">
+        <f:if condition="{results.numfound}==0">
+            <f:then>
+                {f:translate(key: 'tx_slubwebqucosa.find.no_results_general', extensionName: 'slub_web_qucosa')}
+            </f:then>
+            <f:else>
+                <f:if condition="{results.numfound}==1">
+                    <f:then>
+                        {results.numfound} {f:translate(key: 'tx_slubwebqucosa.find.results_general_one', extensionName: 'slub_web_qucosa')}
+                    </f:then>
+                    <f:else>
+                        {results.numfound} {f:translate(key: 'tx_slubwebqucosa.find.results_general_multiple', extensionName: 'slub_web_qucosa')}
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </h2>
+    <div class="qsa_search-result__filter-selects">
+        <f:form name="c{config.uid}-form"
+                method="get"
+                section="{settings.jumpToID}" enctype="multipart/form-data"
+                id="qsa-search-results-filter-form"
+              action="/">
+
+            <div class="qsa_search-result__filter-last">
+                <div class="qsa_select qsa_group">
+                    <div class="qsa_select__wrapper qsa_select__wrapper--transparent ">
+                        <label for="c{config.uid}-sortSelect" class="qsa_select__label qsa_select__label--filled" aria-label="{f:translate(key: 'tx_slubwebqucosa.find.result_sort', extensionName: 'slub_web_qucosa')}">
+                            <f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.sort"/>
+                        </label>
+                        <f:variable name="sortingSelected" value="{config.sortOptions.selected}" />
+                        <p class="qsa_input-group__error qsa_input-group__error--select d-none">{f:translate(key: 'tx_slubwebqucosa.find.result_sort.choose', extensionName: 'slub_web_qucosa')} {config.sortOptions.menu.{sortingSelected}}</p>
+                        <f:form.select id="c{config.uid}-sortSelect"
+                                       class="qsa_select__native js-selectNative"
+                                       name="sort"
+                                       options="{config.sortOptions.menu}"
+                                       value="{config.sortOptions.selected}" />
+                        <div class="qsa_select__custom js-selectCustom" aria-hidden="true">
+                            <div class="qsa_select__custom-trigger  ">
+                                <p>{config.sortOptions.menu.{sortingSelected}}</p>
+                                <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
+                            </div>
+                            <div class="qsa_select__custom-options" data-iconpath="{f:uri.resource(path: 'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:form>
+    </div>
+</div>

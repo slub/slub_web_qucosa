@@ -33,4 +33,20 @@ $GLOBALS['TCA']['tt_content']['types']['tx_slubwebqucosa_sidebarimage'] = [
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
         --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements',
+    'columnsOverrides' => [
+        'image' => [
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                [
+                    'maxitems' => 1,
+                    'minitems' => 1,
+                    'appearance' => [
+                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.asset_references.addFileReference',
+                        'fileUploadAllowed' => 0
+                    ],
+                ],
+                'jpeg,jpg,png'
+            ),
+        ],
+    ]
 ];

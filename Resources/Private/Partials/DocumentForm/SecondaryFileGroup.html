@@ -2,26 +2,26 @@
     <div class="qsa_input-group-file" data-showinsummary="false">
         <label class="qsa_input-group-file__label" for="sec-fileupload-{file.uid}" id="buttonlabel{file.uid}">
             <span role="button" aria-controls="sec-fileupload-{file.uid}" tabindex="0">
-                <f:render partial="Icon" arguments="{title:'Upload', description:'Datei (PDF) hochladen', icon:'upload'}" />
+                <f:render partial="Icon" arguments="{icon:'upload'}" />
             </span>
         </label>
         <span class="qsa_input-group-file-size">PDF | <span>23.8 MB</span></span>
-        <f:render partial="Icon" arguments="{title:'PDF-Datei', description:'Icon einer PDF Datei', icon:'pdf-file'}" />
+        <f:render partial="Icon" arguments="{icon:'pdf-file'}" />
 
         <button class="qsa_input-group-file-remove btn-outline__without">
-            <span class="sr-only">Ausgewählte PDF löschen</span>
+            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.remove', extensionName: 'slub_web_qucosa')}</span>
             <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
         </button>
         <button class="qsa_input-group-file-add btn-outline__without">
-            <span class="sr-only">Eine Weitere Datei hinzufügen</span>
+            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.add', extensionName: 'slub_web_qucosa')}</span>
             <f:render partial="Icon" arguments="{icon:'add-btn'}" />
         </button>
 
         <input class="qsa_input-group-file__input" type="file" accept="application/pdf" id="sec-fileupload-{file.uid}">
 
-        <input class="qsa_input-group-file__text-input" type="text" id="sec-{file.uid}--filename" autocomplete="off" readonly placeholder="Eigene Datei hochladen (PDF)">
+        <input class="qsa_input-group-file__text-input" type="text" id="sec-{file.uid}--filename" autocomplete="off" readonly placeholder="{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.upload', extensionName: 'slub_web_qucosa')}">
         <label class="qsa_input-group-file__text-label" for="sec-{file.uid}--filename">
-            Eigene Datei hochladen
+            {f:translate(key: 'tx_slubwebqucosa.wizard.step.files.upload', extensionName: 'slub_web_qucosa')}
         </label>
     </div>
 </div>

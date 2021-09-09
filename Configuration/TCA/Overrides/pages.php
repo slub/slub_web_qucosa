@@ -30,38 +30,43 @@ if (TYPO3_MODE === 'BE') {
 }
 
 $tmp_slub_web_qucosa_columns = [
-    'tx_slubwebqucosa_pagesaddfield_author' => [
-        'exclude' => false,
-        'label' => 'Autoren (Bei mehr als 4 wird et al. ergänzt)',
+    'sharing_enabled' => [
+        'exclude' => 0,
+        'label' => 'Teilenfunktion deaktivieren',
         'config' => [
-            'type' => 'select',
-            'renderType' => 'selectMultipleSideBySide',
-            'foreign_table' => 'tx_slubwebqucosa_domain_model_author',
-            'foreign_table_where' => 'AND tx_slubwebqucosa_domain_model_author.sys_language_uid = 0',
-            'MM' => 'tx_slubwebqucosa_domain_model_author_mm',
-            'size' => 4,
-            'autoSizeMax' => 10,
-            'minitems' => 0,
-            'maxitems' => 4,
-            'multiple' => 0,
-            'enableMultiSelectFilterTextfield' => true,
-            'fieldControl' => [
-                'addRecord' => [
-                    'disabled' => false,
-                    'options' => [
-                        'pid' => '###PAGE_TSCONFIG_ID###',
-                    ],
-                ],
-                'editPopup' => [
-                    'disabled' => false,
-                ]
-            ]
+            'type' => 'check',
+            'default' => '1',
         ],
-
-    ]
+    ],
+    'publication_date' => [
+        'exclude' => false,
+        'label' => 'Veröffentlichungsdatum',
+        'config' => [
+            'dbType' => 'datetime',
+            'type' => 'input',
+            'renderType' => 'inputDateTime',
+            'size' => 12,
+            'eval' => 'datetime',
+            'default' => null,
+        ],
+    ],
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $tmp_slub_web_qucosa_columns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $tmp_slub_web_qucosa_columns);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'pages',
+    'standard',
+    'publication_date',
+    'after:doktype'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'pages',
+    'layout',
+    'sharing_enabled',
+    'before:newUntil'
+);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
     'tt_content',

@@ -19,12 +19,12 @@
 
                     <f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
                         <span class="sr-only">Suche starten</span>
-                        <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Teasericon', icon:'search'}" />
+                        <f:render partial="Icon" arguments="{icon:'search'}" />
                     </f:form.button>
 
                     <f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: 'Sucheintrag löschen'}">
                         <span class="sr-only">Sucheintrag löschen</span>
-                        <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'close'}" />
+                        <f:render partial="Icon" arguments="{icon:'close'}" />
                     </f:form.button>
                 </div>
             </f:form>
@@ -34,31 +34,31 @@
                     <div class="col-12 col-xl-8 qsa_search-header__advanced-search--expanded-fields">
                         <div class="qsa_search-header__advanced-search-inputs">
                             <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="title">{f:translate(key: 'search.form.label.title')}</label>
+                                <label class="qsa_input-group__label" for="title">{f:translate(key: 'search.form.label.title', extensionName: 'slub_web_qucosa')}</label>
                                 <f:form.textfield property="title" class="qsa_input-group__input qsa_input-group__input-text"
                                                   id="title"
                                                   value="{query.title}"/>
                             </div>
                             <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="author">{f:translate(key: 'search.form.label.author')}</label>
+                                <label class="qsa_input-group__label" for="author">{f:translate(key: 'search.form.label.author', extensionName: 'slub_web_qucosa')}</label>
                                 <f:form.textfield property="author" class="qsa_input-group__input qsa_input-group__input-text"
                                                   id="author"
                                                   value="{query.author}"/>
                             </div>
                             <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="abstract">{f:translate(key: 'search.form.label.abstract')}</label>
+                                <label class="qsa_input-group__label" for="abstract">{f:translate(key: 'search.form.label.abstract', extensionName: 'slub_web_qucosa')}</label>
                                 <f:form.textfield property="abstract" class="qsa_input-group__input qsa_input-group__input-text"
                                                   id="abstract"
                                                   value="{query.abstract}"/>
                             </div>
                             <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="tag">{f:translate(key: 'search.form.label.tag')}</label>
+                                <label class="qsa_input-group__label" for="tag">{f:translate(key: 'search.form.label.tag', extensionName: 'slub_web_qucosa')}</label>
                                 <f:form.textfield property="tag" class="qsa_input-group__input qsa_input-group__input-text"
                                                   id="tag"
                                                   value="{query.tag}"/>
                             </div>
                             <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="corporation">{f:translate(key: 'search.form.label.corporation')}</label>
+                                <label class="qsa_input-group__label" for="corporation">{f:translate(key: 'search.form.label.corporation', extensionName: 'slub_web_qucosa')}</label>
                                 <f:form.textfield property="corporation" class="qsa_input-group__input qsa_input-group__input-text"
                                                   id="corporation"
                                                   value="{query.corporation}"/>
@@ -78,12 +78,12 @@
                                     <div class="qsa_select__custom js-selectCustom qsa_select__custom-header " aria-hidden="true">
                                         <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header ">
                                             <p class="">Dokumententyp </p>
-                                            <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'arrow-down'}" />
+                                            <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                                         </div>
                                         <div class="qsa_select__custom-options ">
                                             <div class="qsa_select__custom-option" data-value="all">
                                                 Keine Auswahl
-                                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Sucheintrag löschen', icon:'check'}" />
+                                                <f:render partial="Icon" arguments="{icon:'check'}" />
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
 
                     <div class="col-12 col-xl-4 qsa_search-header__advanced-search__button-container">
                         <f:form.button class="qsa_btn__submit submit" type="submit">
-                            {f:translate(key: 'search.form.button.search')}
+                            {f:translate(key: 'search.form.button.search', extensionName: 'slub_web_qucosa')}
                         </f:form.button>
                     </div>
 
@@ -143,7 +143,7 @@
                             Alles Zurücksetzen
                         </f:form.button>
 
-                        <a type="button" id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</a>
+                        <button id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</button>
                     </div>
                 </div>
             </f:form>

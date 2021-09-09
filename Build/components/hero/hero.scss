@@ -1,0 +1,213 @@
+//
+//    @tableOfContent
+//      1. Hero
+//
+
+.qsa_hero {
+    display: grid;
+    position: relative;
+    z-index: 3;
+    height: 928px;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr .5fr;
+
+    @supports (-moz-appearance:none) {
+        grid-template-rows: 1.5fr .75fr;
+    }
+
+    + div {
+        background-color: var(--color-body-bg);
+    }
+
+    @include media-breakpoint-down(md) {
+        overflow: hidden;
+        height: 100%;
+        grid-template-rows: auto;
+        grid-gap: var(--spacing-xs);
+    }
+
+    &__content {
+        display: grid;
+        position: relative;
+        margin: auto;
+        grid-gap: var(--spacing-xl);
+
+        @include media-breakpoint-down(md) {
+            order: 1;
+            padding-top: var(--spacing-xl);
+        }
+    }
+
+    .qsa_opening-teaser {
+        @include media-breakpoint-down(md) {
+            order: 3;
+        }
+    }
+
+    &__header {
+        color: var(--color-text-color-inverted);
+        text-align: center;
+        text-shadow: 0 10px 20px $color-opacity-black-3;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        font-weight: 300;
+    }
+
+    &__desc {
+        margin: auto;
+        font-size: 20px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 17px;
+        }
+    }
+
+    &__figure {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        min-height: 928px;
+        background: var(--color-gray-700);
+        pointer-events: none;
+
+        @include media-breakpoint-down(md) {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 1406px) {
+            display: flex;
+            justify-content: center;
+            height: auto;
+        }
+
+        img {
+            @media (min-width: 1406px) {
+                width: 100%;
+                height: auto;
+            }
+
+            @include media-breakpoint-down(md) {
+                transform: rotate(9deg);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(to top, var(--color-opacity-black-5), var(--color-primary));
+
+            @include media-breakpoint-down(md) {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__search {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        &:hover,
+        &:focus {
+            button[type='submit'] {
+                background-color: var(--color-gray-200);
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__reset {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            z-index: 1;
+            padding: 0;
+            font-size: 1rem;
+            background-color: transparent;
+            border: none;
+            transform: translateY(-50%);
+
+            svg {
+                width: 15px;
+                height: 15px;
+                color: var(--color-primary);
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        input {
+            float: left;
+            width: 100%;
+            min-width: 20vw;
+            padding: 20px 24px;
+            font-family: Assistant, sans-serif;
+            font-size: 16px;
+            letter-spacing: .15px;
+            background: white;
+            border: 1px solid white;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        button {
+            float: left;
+            width: 50px;
+            padding: var(--spacing-xs);
+            font-size: 17px;
+            color: black;
+            background: white;
+            border: 1px solid transparent;
+            border-left: none;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            transition: all .3s;
+
+            &.isFocus {
+                background-color: var(--color-gray-200);
+            }
+        }
+    }
+
+    &__footer {
+        margin: auto;
+        padding-top: 13px;
+        font-size: 20px;
+        font-weight: 100;
+        color: var(--color-text-color-inverted);
+
+        a {
+            font-family: Assistant, sans-serif;
+            font-size: 16px;
+            color: var(--color-text-color-inverted);
+
+            &:hover {
+                border-bottom: 1px solid var(--color-text-color-inverted);
+            }
+        }
+    }
+}
+
+
+// end of hero.scss

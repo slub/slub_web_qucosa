@@ -1,31 +1,33 @@
 <div class="qsa_carousel">
     <div class="qsa_carousel-wrapper container">
-        <h2 class="qsa_carousel__title h4">Diese Einrichtungen nutzen Qucosa </h2>
+        <h2 class="qsa_carousel__title h4">{data.header}</h2>
         <div id="qsa_carousel-logo" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <f:for each="{data.tx_gridelements_view_children -> v:iterator.chunk(count: 4)}" as="carouselIndicator" iteration="indicator">
-                    <li data-target="#qsa_carousel-logo" data-slide-to="{indicator.index}" class="{f:if(condition: '{indicator.isFirst}', then: 'active', else: '')}"></li>
+                    <li data-target="#qsa_carousel-logo"
+                        data-slide-to="{indicator.index}"
+                        class="{f:if(condition: '{indicator.isFirst}', then: 'active', else: '')}"
+                        aria-label="{f:if(condition: '{indicator.isFirst}',
+                                    then: '{f:translate(key: \'tx_slubwebqucosa.carousel.navigation.first_slide\', extensionName: \'slub_web_qucosa\')}',
+                                    else: '{f:translate(key: \'tx_slubwebqucosa.carousel.navigation.next_slide\', extensionName: \'slub_web_qucosa\')}')}">
+                    </li>
                 </f:for>
             </ol>
 
+            <a class="carousel-control-next" href="#qsa_carousel-logo" role="button" tabindex="0" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.next_element', extensionName: 'slub_web_qucosa')}</span>
+            </a>
+            <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" tabindex="0" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.previous_element', extensionName: 'slub_web_qucosa')}</span>
+            </a>
             <div class="carousel-inner">
                 <f:for each="{data.tx_gridelements_view_children -> v:iterator.chunk(count: 4)}" as="carouselItem" iteration="cycle">
-                    <div class="carousel-item {f:if(condition: '{cycle.isFirst}', then: 'active', else: '')}">
-                        <div class="qsa_carousel-item_wrapper">
-                            <f:format.raw>{data.tx_gridelements_view_column_10}</f:format.raw>
-                        </div>
-                    </div>
+                            <f:render partial="CarouselItem" arguments="{_all}"/>
                 </f:for>
             </div>
 
-            <a class="carousel-control-prev" href="#qsa_carousel-logo" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Vorheriges Element</span>
-            </a>
-            <a class="carousel-control-next" href="#qsa_carousel-logo" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Nächstes Element</span>
-            </a>
         </div>
     </div>
 </div>

@@ -1,0 +1,21 @@
+//
+//    @tableOfContent
+//      1. Content sub item
+//
+
+
+//
+//   @section 1. Content sub item
+//
+
+.content-sub-item {
+    height: var(--app-height);
+    margin-top: var(--spacing-content);
+    margin-bottom: var(--spacing-content);
+
+    &__title {
+        scroll-margin-top: var(--spacing-content);
+    }
+}
+
+// end of content-sub-item.scss file

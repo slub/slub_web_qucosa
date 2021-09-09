@@ -1,0 +1,266 @@
+//
+//    @tableOfContent
+//      1. Bootstrap components
+//      2. Page
+//       2.1 Body style
+//       2.2 Content container
+//      3. Custom scrollbars
+//      4. Disable focus outline globally
+//      5. Text selection
+//      6. Tables
+//
+
+
+//
+//   @section 1. Bootstrap components
+//
+
+// single container class with breakpoint max-widths
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+//
+//   @section 2. Page
+//
+
+// @section 2.1 Body style
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: var(--header-height);
+    color: var(--color-text-color);
+    //background-color: var(--color-white);
+    background-color: var(--color-body-bg);
+
+    @include media-breakpoint-down(md) {
+        padding-top: var(--header-height-mobile);
+    }
+
+    &.no-flex {
+        display: block;
+    }
+}
+
+// disable outline globally
+.state--mouse {
+    .tabbed {
+        box-shadow: none;
+    }
+
+    :focus {
+        // stylelint-disable declaration-no-important
+        outline: 0 !important;
+        // stylelint-enable  declaration-no-important
+    }
+}
+
+.state--focus {
+    .qsa_nav__item--has-submenu,
+    .qsa_dropdown__item--has-submenu {
+        &:focus-within {
+            > .qsa_dropdown__button {
+                .qsa_icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            > .qsa_dropdown__items {
+                max-height: 62rem;
+            }
+        }
+    }
+
+    .qsa_nav__item--has-submenu {
+        &:focus-within {
+            > .qsa_dropdown__items {
+                display: block;
+            }
+        }
+    }
+}
+
+// outline for navigation with Tab
+.tabbed {
+    box-shadow: inset 0 0 0 2px #040000;
+    outline: 0;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+    height: 100vh;
+
+    .qsa_content-area__sidebar--show {
+        overflow: visible;
+    }
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: -15px;
+    }
+}
+
+a {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -15px;
+        right: 0;
+        bottom: -15px;
+    }
+
+    &[class] {
+        color: inherit;
+        text-decoration: none;
+
+        &:visited,
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.qsa_link--styled {
+    text-decoration: underline;
+}
+
+ol,
+ul {
+    list-style: none;
+
+    &[class] {
+        margin: auto;
+        padding: 0;
+    }
+
+    &:not([class]) {
+        padding-left: 14px;
+
+        li {
+            position: relative;
+            font-weight: 300;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 25%;
+                left: -14px;
+                width: 10px;
+                height: 10px;
+                background-color: rgba(0, 0, 0, 0);
+                border-style: solid;
+                border-width: 2px;
+                border-color: var(--color-primary);
+                border-radius: 50%;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+i,
+em {
+    background-color: var(--color-primary-opacity);
+}
+
+strong {
+    font-weight: 800;
+    color: var(--color-black);
+}
+
+p {
+    font-size: var(--font-size-article);
+    line-height: 26px;
+    font-weight: 300;
+    letter-spacing: .53px;
+}
+
+.qsa_hint__text {
+    font-family: Assistant, sans-serif;
+    letter-spacing: .4px;
+    color: var(--color-gray-400);
+}
+
+
+//
+//   @section 5. Text selection
+//
+
+::selection {
+    background: var(--color-primary-opacity);
+}
+
+.qsa_content {
+    flex: 1 0 auto;
+}
+
+.qsa_visibility {
+    visibility: hidden;
+}
+
+//
+//   @section 6. Tables
+//
+
+table {
+    min-width: 100%;
+    font-size: $font-size-article;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td {
+        vertical-align: baseline;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        border: 0;
+    }
+
+    td,
+    th {
+        padding: 6px 10px;
+        line-height: 1.4;
+        text-align: left;
+        border: 2px solid var(--color-gray-600);
+    }
+
+    th {
+        background-color: var(--color-gray-300);
+    }
+}
+
+// end of page.scss file

@@ -1,0 +1,37 @@
+<f:if condition="{results.numfound}==0">
+	<f:then>
+		<f:if condition="{error}">
+			<f:then>
+				<span class="qsa_search-header__results">{f:translate(key: 'tx_slubwebqucosa.find.error', extensionName: 'slub_web_qucosa')}</span>
+			</f:then>
+			<f:else>
+				<span class="qsa_search-header__results">{f:translate(key: 'tx_slubwebqucosa.find.no_results_one', extensionName: 'slub_web_qucosa')} "{arguments.q.default}" {f:translate(key: 'tx_slubwebqucosa.find.no_results_two', extensionName: 'slub_web_qucosa')}</span>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{results.numfound}==1">
+			<f:then>
+				<f:translate key="1 result"/>
+			</f:then>
+			<f:else>
+				<f:if condition="{results.numfound}<{config.count}">
+					<f:then>
+						<f:if condition="{arguments.q.default}">
+							<f:then>
+								<span class="qsa_search-header__results">{f:translate(key: 'tx_slubwebqucosa.find.results_args_one')} {results.numfound} {f:translate(key: 'tx_slubwebqucosa.find.results_args_two')} "{arguments.q.default}" {f:translate(key: 'tx_slubwebqucosa.find.results_args_three')}</span>
+							</f:then>
+							<f:else>
+								<span class="qsa_search-header__results">{f:translate(key: 'tx_slubwebqucosa.find.results_args_one')} {results.numfound} {f:translate(key: 'tx_slubwebqucosa.find.results_no_args_two')}</span>
+							</f:else>
+						</f:if>
+
+					</f:then>
+					<f:else>
+
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>

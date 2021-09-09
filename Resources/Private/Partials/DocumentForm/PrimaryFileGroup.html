@@ -2,16 +2,16 @@
     <div class="qsa_input-group-file" data-showinsummary="false">
         <label class="qsa_input-group-file__label" for="fileupload-{file.uid}" id="buttonlabel{file.uid}">
             <span role="button" aria-controls="fileupload-{file.uid}" tabindex="0">
-                <f:render partial="Icon" arguments="{title:'Upload', description:'Datei (PDF) hochladen', icon:'upload'}" />
+                <f:render partial="Icon" arguments="{icon:'upload'}" />
             </span>
         </label>
         <span class="qsa_input-group-file-size">PDF | <span>23.8 MB</span></span>
-        <f:render partial="Icon" arguments="{title:'PDF-Datei', description:'Icon einer PDF Datei', icon:'pdf-file'}" />
+        <f:render partial="Icon" arguments="{icon:'pdf-file'}" />
         <input class="qsa_input-group-file__input" type="file" accept="application/pdf" id="fileupload-{file.uid}">
 
-        <input class="qsa_input-group-file__text-input" type="text" id="{file.uid}--filename" autocomplete="off" readonly placeholder="Eigene Datei hochladen (PDF)">
+        <input class="qsa_input-group-file__text-input" type="text" id="{file.uid}--filename" autocomplete="off" readonly placeholder="{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.upload', extensionName: 'slub_web_qucosa')}">
         <label class="qsa_input-group-file__text-label" for="{file.uid}--filename">
-            Eigene Datei hochladen
+            {f:translate(key: 'tx_slubwebqucosa.wizard.step.files.upload', extensionName: 'slub_web_qucosa')}
         </label>
     </div>
 </div>

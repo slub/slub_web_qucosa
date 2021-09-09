@@ -1,0 +1,49 @@
+//
+//    @tableOfContent
+//      1. Size
+//      2. Caption
+//      3. Focus color
+//
+
+
+//
+//    @section 1. Size
+//
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin with-count($n) {
+    @if $n == 1 {
+        &:first-child:nth-last-child(1) {
+            @content;
+        }
+    } @else {
+        &:first-child:nth-last-child(#{$n}),
+        &:first-child:nth-last-child(#{$n}) ~ & {
+            @content;
+        }
+    }
+}
+
+//
+//    @section 2. Caption
+//
+
+@mixin caption {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+}
+
+//
+//    @section 3. Focus color
+//
+
+@mixin focusColor {
+    outline: 3px solid #474343;
+}
+
+// end of _mixins.scss file

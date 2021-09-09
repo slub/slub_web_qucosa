@@ -1,0 +1,65 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<f:comment>
+	Creates a human readable string representing the current query.
+
+	Arguments that need to be passed to this partial:
+		* query: array with key: query field ID => value: query string / array
+			We distinguish three cases:
+				1. standard: value is the search term
+				2. alternate query: value.term is the search term
+				3. range query: value.0–value.1 is the range query
+		* facets: array with key: facet ID => value: (array with key: selected item => value: 1)
+</f:comment>
+<s:data.newArray name="queryParts">
+	<f:for each="{query}" as="value" key="key" iteration="iteration">
+		<f:if condition="{s:data.isArray(subject:value)}">
+			<f:then>
+				<f:if condition="{f:count(subject:value)} > 0">
+					<f:if condition="{value.term}">
+						<f:then>
+							<s:data.newArray name="queryParts" array="{queryParts}" keys="{0:key}" values="{0:value.term}" global="1"/>
+						</f:then>
+						<f:else>
+							<s:data.newArray name="queryParts" array="{queryParts}" keys="{0:key}" values="{0:'{value.0}–{value.1}'}" global="1"/>
+						</f:else>
+					</f:if>
+				</f:if>
+			</f:then>
+			<f:else>
+				<s:data.newArray name="queryParts" array="{queryParts}" keys="{0:key}" values="{0:value}" global="1"/>
+			</f:else>
+		</f:if>
+	</f:for>
+
+	<f:if condition="{f:count(subject:queryParts)} > 0">
+		<f:then>
+			<f:translate key="Query"/>
+			<f:for each="{queryParts}" as="queryString" key="key" iteration="iteration">
+				<f:if condition="{0:key} != {0:'default'}">
+					<f:translate key="LLL:{settings.languageRootPath}locallang-form.xml:input.{key}" default="{key}"/>:
+				</f:if>
+				»{queryString}«
+				<f:if condition="{iteration.isLast} == 0">
+					<f:translate key="AND"/>
+				</f:if>
+			</f:for>
+		</f:then>
+		<f:else>
+			<f:translate key="All records"/>
+		</f:else>
+	</f:if>
+</s:data.newArray>
+
+
+<f:if condition="{config.facets}">
+	<f:translate key="restricted to"/>
+	<f:for each="{config.facets}" as="value" key="key" iteration="iteration">
+		<f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{key}" default="{key}"/>:
+		<f:for each="{value}" as="facetValue" key="facetTerm">
+			»<f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{key}.{facetTerm}" default="{facetTerm}"/>«
+		</f:for>
+		<f:if condition="{iteration.isLast} == 0">
+			<f:translate key="and"/>
+		</f:if>
+	</f:for>
+</f:if>

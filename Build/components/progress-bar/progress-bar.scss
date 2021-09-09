@@ -1,0 +1,156 @@
+//
+//    @tableOfContent
+//      1. Progress bar
+
+
+// @section 1. Progress bar
+
+
+.qsa_progress-bar {
+    overflow-x: scroll;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    background: var(--color-white);
+    cursor: grab;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-right: var(--spacing-xs);
+        padding-left: 0;
+    }
+
+    &__container {
+        display: flex;
+
+        ol.qsa_progress-bar__container-list {
+            display: flex;
+            margin-top: 0;
+            margin-bottom: var(--spacing);
+            margin-left: 0;
+            padding: 0;
+            white-space: nowrap;
+            list-style: decimal;
+
+            .qsa_progress-bar__container-item {
+                display: inline-flex;
+                position: relative;
+                height: 48px;
+                padding: 12px 15px;
+                background: var(--gray);
+                border: 1px solid #e6e6e6;
+                transition: scale calc(var(--transition-time) * 2) ease-out;
+
+                &.qsa_progress-bar__container-item--invalid {
+                    background-color: $color-warning;
+
+                    &::after {
+                        border-left-color: $color-warning;
+                    }
+                }
+
+                &.qsa_progress-bar__container-item--valid {
+                    background-color: $color-status-success;
+
+                    &::after {
+                        border-left-color: $color-status-success;
+                    }
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -1.5px;
+                    left: 100%;
+                    z-index: 1;
+                    border: 24.5px solid transparent;
+                    border-left-color: var(--color-white);
+                }
+
+                &::after {
+                    top: 0;
+                    left: 99%;
+                    border: 23px solid transparent;
+                    border-left-color: var(--gray);
+                }
+
+                a {
+                    overflow: hidden;
+                    margin-left: 15px;
+                    font-family: $font-family-roboto-regular;
+                    letter-spacing: .15px;
+                    color: var(--white);
+                    text-decoration: none;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    pointer-events: none;
+
+                    .qsa_progress-bar__container-item-counter {
+                        display: none;
+                    }
+                }
+
+                &:hover,
+                &.active {
+                    overflow: visible;
+                    z-index: 2;
+                    max-width: 100%;
+                    background: var(--color-white);
+                    box-shadow: 12px 10px 29px 0 var(--color-opacity-black-1);
+                    transform: scale(1.1);
+
+                    &::after {
+                        border-left-color: var(--color-white);
+                    }
+
+                    a {
+                        color: var(--color-text-color);
+
+                        .qsa_progress-bar__container-item-counter {
+                            display: inline;
+                        }
+                    }
+
+                    .qsa_progress-bar__circle {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .qsa_btn--round {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 29px;
+        z-index: 10;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%);
+        border: none;
+        border-radius: 0;
+        transform: rotate(180deg);
+
+        svg {
+            transform: rotate(180deg);
+            animation: horizontal-move 1.5s infinite;
+        }
+    }
+}
+
+@keyframes horizontal-move {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(.375rem, 0, 0);
+    }
+}
+
+// end of progress-bar.scss file

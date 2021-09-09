@@ -43,6 +43,20 @@ $GLOBALS['TCA']['tt_content']['types']['tx_slubwebqucosa_logoitem'] = [
                 'rows' => 2,
             ]
         ],
+        'image' => [
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                [
+                    'maxitems' => 1,
+                    'minitems' => 1,
+                    'appearance' => [
+                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.asset_references.addFileReference',
+                        'fileUploadAllowed' => 0
+                    ],
+                ],
+                'jpeg,jpg,png'
+            ),
+        ],
     ]
 ];
 // Add a flexform to the tx_xmtemplatesxima_textvideoteaser CType

@@ -8,28 +8,33 @@
                 <div class="row qsa_field__datepicker">
                     <div class="col-5 col-sm-3">
                         <div class="qsa_field__datepicker-wrap qsa_hike" data-showinsummary="true">
-                            <label for="inp_{fieldItem.uid}" class="sr-only" aria-hidden="true">
+                            <label for="inp_{fieldItem.uid}" aria-hidden="true">
                                 {fieldItem.displayName}
                             </label>
                             <f:form.textfield id="inp_{fieldItem.uid}"
                                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                               value="{fieldItem.value}"
-                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light datepicker"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light date"
                                               additionalAttributes="{
-                                        data-datatype: 'DATE',
-                                        data-date-format='yyyy',
-                                        data-date-view-mode='years',
-                                        data-date-min-view-mode='years',
-                                        data-date-orientation='top',
-                                        data-field:fieldItem.uid,
-                                        data-index:fieldIndex,
-                                        data-mandatory:fieldItem.mandatory,
-                                        data-group:formGroupUid,
-                                        data-groupindex:groupIndex,
-                                        data-default:fieldItem.hasDefaultValue,
-                                        data-regexp:fieldItem.validation,
-                                        data-label:fieldItem.displayName,
-                                        data-maxlength:fieldItem.maxInputLength
+                                                pattern:fieldItem.validation
+                                              }"
+                                              data="{
+                                                datatype: 'DATE',
+                                                date-format: 'yyyy',
+                                                date-view-mode: 'years',
+                                                date-min-view-mode: 'years',
+                                                date-orientation: 'top',
+                                                value: fieldItem.value,
+                                                field:fieldItem.uid,
+                                                index:fieldIndex,
+                                                mandatory:fieldItem.mandatory,
+                                                group:formGroupUid,
+                                                groupindex:groupIndex,
+                                                default:fieldItem.hasDefaultValue,
+                                                regexp:fieldItem.validation,
+                                                label:fieldItem.displayName,
+                                                maxlength:fieldItem.maxInputLength,
+                                                language: '{f:translate(key: \'tx_slubwebqucosa.current_language\', extensionName: \'slub_web_qucosa\')}'
                     }"/>
                         </div>
                     </div>
@@ -41,20 +46,50 @@
                         <div class="qsa_input-group" data-input="text" data-showinsummary="true">
                             <f:form.textfield id="inp_{fieldItem.uid}"
                                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                                              value="{fieldItem.value}" class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light {fieldItem.fillOutService}"
-                                              additionalAttributes="{pattern:'', data-ajax: \"{f:uri.action(action:'search',controller:'Gnd',pageType:427590)}\" data-gndfield: fieldItem.gndFieldUid,data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName,data-maxlength:fieldItem.maxInputLength}"/>
+                                              value="{fieldItem.value}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
+                                              additionalAttributes="{
+                                                pattern:fieldItem.validation
+                                              }"
+                                              data="{
+                                                ajax: '{f:uri.action(action:\'search\',controller:\'Gnd\',pageType:427590)}',
+                                                gndfield: fieldItem.gndFieldUid,
+                                                field:fieldItem.uid,
+                                                index:fieldIndex,
+                                                mandatory:fieldItem.mandatory,
+                                                group:formGroupUid,
+                                                groupindex:groupIndex,
+                                                default:fieldItem.hasDefaultValue,
+                                                regexp:fieldItem.validation,
+                                                datatype:fieldItem.dataType,
+                                                label:fieldItem.displayName,
+                                                maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">In diesem Feld sind nur Zahlen zugelassen</p>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_numbers', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:then>
                     <f:else>
                         <div class="qsa_input-group" data-input="text" data-showinsummary="true">
                             <f:form.textfield id="inp_{fieldItem.uid}"
                                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                                              value="{fieldItem.value}" class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light{fieldItem.fillOutService}"
-                                              additionalAttributes="{pattern:'',data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName,data-maxlength:fieldItem.maxInputLength}"/>
+                                              value="{fieldItem.value}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
+                                              additionalAttributes="{
+                                                pattern:fieldItem.validation
+                                              }"
+                                              data="{
+                                                field:fieldItem.uid,
+                                                index:fieldIndex,
+                                                mandatory:fieldItem.mandatory,
+                                                group:formGroupUid,
+                                                groupindex:groupIndex,
+                                                default:fieldItem.hasDefaultValue,
+                                                regexp:fieldItem.validation,
+                                                datatype:fieldItem.dataType,
+                                                label:fieldItem.displayName,
+                                                maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">In diesem Feld sind nur Zahlen zugelassen</p>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_numbers', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:else>
                 </f:if>
@@ -65,13 +100,27 @@
         <div class="qsa_text-area" data-showinsummary="false">
             <f:form.textarea id="inp_{fieldItem.uid}"
                              property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                             value="{fieldItem.value}" class="qsa_text-area__field"
-                             additionalAttributes="{maxlength:fieldItem.maxInputLength,data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName,data-maxlength:fieldItem.maxInputLength}"/>
-            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> Label? </label>
+                             value="{fieldItem.value}"
+                             class="qsa_text-area__field"
+                             additionalAttributes="{
+                                maxlength: fieldItem.maxInputLength
+                              }"
+                             data="{
+                             field:fieldItem.uid,
+                             index:fieldIndex,
+                             mandatory:fieldItem.mandatory,
+                             group:formGroupUid,
+                             groupindex:groupIndex,
+                             default:fieldItem.hasDefaultValue,
+                             regexp:fieldItem.validation,
+                             datatype:fieldItem.dataType,
+                             label:fieldItem.displayName,
+                             maxlength:fieldItem.maxInputLength}"/>
+            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> {fieldItem.value} </label>
             <f:if condition="{fieldItem.maxInputLength}">
                 <div class="qsa_text-area__count-wrapper">
                     <span class="qsa_text-area__count">0</span>
-                    von
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.textarea.connector', extensionName: 'slub_web_qucosa')}
                     <span class="qsa_text-area__limit">{fieldItem.maxInputLength}</span>
                 </div>
             </f:if>
@@ -89,15 +138,24 @@
                                class="qsa_select__native js-selectNative qsa_select__native-header {fieldItem.fillOutService}"
                                property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                value="{fieldItem.value}"
-                               additionalAttributes="{data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName}"
+                               data="{
+                                    field:fieldItem.uid,
+                                    index:fieldIndex,
+                                    mandatory:fieldItem.mandatory,
+                                    group:formGroupUid,
+                                    groupindex:groupIndex,
+                                    default:fieldItem.hasDefaultValue,
+                                    regexp:fieldItem.validation,
+                                    datatype:fieldItem.dataType,
+                                    label:fieldItem.displayName}"
                                options="{fieldItem.inputOptions}"/>
-                <div class="qsa_select__custom js-selectCustom qsa_select__custom-header qsa_select__language"
+                <div class="qsa_select__custom js-selectCustom qsa_select__custom-header {f:if(condition: '{fieldItem.value} == ger', then: 'qsa_select__language', else: '')}"
                         aria-hidden="true">
                     <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header qsa_select__custom-trigger-light">
-                        <p>Sprache</p>
-                        <f:render partial="Icon" arguments="{title:'Pfeil nach links', description:'Weitere Elemente anzeigen', icon:'arrow-down'}" />
+                        <p>{f:translate(key: 'tx_slubwebqucosa.wizard.select.language', extensionName: 'slub_web_qucosa')}</p>
+                        <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                     </div>
-                    <div class="qsa_select__custom-options " data-iconpath="/typo3conf/ext/slub_web_qucosa/Resources/Public/icons/icon.min.svg#">
+                    <div class="qsa_select__custom-options " data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
 
                     </div>
                 </div>
@@ -109,8 +167,18 @@
             <f:then>
                 <f:form.checkbox id="inp_{fieldItem.uid}"
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                                 value="yes" class="input-field form-control input-field-checkbox"
-                                 additionalAttributes="{data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName}"
+                                 value="yes"
+                                 class="input-field form-control input-field-checkbox"
+                                 data="{
+                                    field:fieldItem.uid,
+                                    index:fieldIndex,
+                                    mandatory:fieldItem.mandatory,
+                                    group:formGroupUid,
+                                    groupindex:groupIndex,
+                                    default:fieldItem.hasDefaultValue,
+                                    regexp:fieldItem.validation,
+                                    datatype:fieldItem.dataType,
+                                    label:fieldItem.displayName}"
                                  checked="{fieldItem.value}" disabled="true"/>
                 <f:form.hidden
                         property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
@@ -119,8 +187,18 @@
             <f:else>
                 <f:form.checkbox id="inp_{fieldItem.uid}"
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                                 value="yes" class="input-field form-control input-field-checkbox"
-                                 additionalAttributes="{data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName}"
+                                 value="yes"
+                                 class="input-field form-control input-field-checkbox"
+                                 data="{
+                                    field:fieldItem.uid,
+                                    index:fieldIndex,
+                                    mandatory:fieldItem.mandatory,
+                                    group:formGroupUid,
+                                    groupindex:groupIndex,
+                                    default:fieldItem.hasDefaultValue,
+                                    regexp:fieldItem.validation,
+                                    datatype:fieldItem.dataType,
+                                    label:fieldItem.displayName}"
                                  checked="{fieldItem.value}"/>
             </f:else>
         </f:if>
@@ -129,8 +207,19 @@
         <div class="dropdown-options input-group">
             <f:form.textfield id="inp_{fieldItem.uid}"
                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                              value="{fieldItem.value}" class="input-field form-control dropdown-options-input {fieldItem.fillOutService}"
-                              additionalAttributes="{data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName,data-maxlength:fieldItem.maxInputLength}"/>
+                              value="{fieldItem.value}"
+                              class="input-field form-control dropdown-options-input {fieldItem.fillOutService}"
+                              data="{
+                                field:fieldItem.uid,
+                                index:fieldIndex,
+                                mandatory:fieldItem.mandatory,
+                                group:formGroupUid,
+                                groupindex:groupIndex,
+                                default:fieldItem.hasDefaultValue,
+                                regexp:fieldItem.validation,
+                                datatype:fieldItem.dataType,
+                                label:fieldItem.displayName,
+                                maxlength:fieldItem.maxInputLength}"/>
 
             <span class="input-group-btn">
                     <button class="btn dropdown-options-toggle" type="button">

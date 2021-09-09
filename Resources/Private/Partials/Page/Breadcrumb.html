@@ -3,16 +3,16 @@
 <nav class="qsa_breadcrumb__wrapper" aria-label="breadcrumb-navigation">
     <ol class="qsa_breadcrumb">
         <f:for each="{menuBreadcrumb}" as="item">
-            <li>
+            <li >
                 <f:if condition="{item.current}">
                     <f:then>
-                        {item.title}
+                        <a href="#" aria-current="page">{item.title}</a>
                     </f:then>
                     <f:else>
-                        <f:link.typolink class="qsa_qsa_breadcrumb__link" parameter="{item.link}">
+                        <f:link.typolink class="qsa_qsa_breadcrumb__link" parameter="{item.link}" additionalAttributes="{aria-current: '{currentBreadCrumb}'}">
                             <f:if condition="{item.data.is_siteroot}">
                                 <f:then>
-                                    {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.breadcrum.homepage')}
+                                    {f:translate(key: 'tx_slubwebqucosa.breadcrum.homepage', extensionName: 'slub_web_qucosa')}
                                 </f:then>
                                 <f:else>
                                     {item.title}
@@ -26,5 +26,10 @@
         </f:for>
     </ol>
 </nav>
+<header class="qsa_content-item__header">
+    <span class="qsa_content-item__meta">{f:if(condition: '{data.publication_date}', then: 'Veröffentlichungsdatum {f:format.date(date: data.publication_date, format: \'d.m.Y\')}', else:'')}</span>
+    <h1 class="h2 qsa_content-item__title">{data.title}</h1>
+    <h2 class="h3 qsa_content-item__subtitle">{data.subtitle}</h2>
+</header>
 
 </html>

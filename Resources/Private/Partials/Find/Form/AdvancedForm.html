@@ -1,0 +1,83 @@
+<f:form class="qsa_search-header__advanced-search"
+        name="c{config.uid}-advanced-form"
+        method="get"
+        section="{settings.jumpToID}">
+    <div class="row qsa_search-header__advanced-search-row qsa_search-header__advanced-search__container">
+        <div class="col-12 col-xl-8 qsa_search-header__advanced-search--expanded-fields">
+            <div class="qsa_search-header__advanced-search-inputs">
+                <f:for each="{settings.queryFields}" as="fieldInfo">
+                    <f:if condition="{fieldInfo.type}">
+                        <f:then>
+                            <f:if condition="{s:logic.or(conditions:'{
+						0:\"{s:logic.not(condition:fieldInfo.hidden)}\",
+                            1:\"{s:data.valueForKey(array:arguments.q, key:fieldInfo.id)}\"
+                            }')}">
+                            <f:if condition="{fieldInfo.extended} && {fieldInfo.type} != 'Range'">
+                                <f:alias map="{queryParameter:'{s:data.valueForKey(array:config.query, key:fieldInfo.id)}'}">
+                                    <f:render partial="Form/Fields/{fieldInfo.type}" arguments="{_all}"/>
+                                </f:alias>
+                            </f:if>
+                    </f:if>
+                    </f:then>
+                    <f:else>
+                        <div class="fieldContainer error">
+                            <f:translate key="Missing type in configuration for queryField %s." arguments="{0:fieldInfo.id}"/>
+                        </div>
+                    </f:else>
+                    </f:if>
+                </f:for>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4 qsa_search-header__advanced-search--expanded-text">
+            <h2 class="h6">Neutrale Info</h2>
+            <p>
+                Neutrale Info Contentsensitiv
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                sit amet.
+            </p>
+        </div>
+    </div>
+
+    <div class="row qsa_search-header__advanced-search__container">
+
+        <div class="col-12 col-xl-8">
+            <f:comment>
+                <!--
+                <f:for each="{settings.queryFields}" as="fieldInfo">
+                <f:if condition="{fieldInfo.type}">
+                    <f:then>
+                        <f:if condition="{s:logic.or(conditions:'{
+						0:\"{s:logic.not(condition:fieldInfo.hidden)}\",
+                        1:\"{s:data.valueForKey(array:arguments.q, key:fieldInfo.id)}\"
+                        }')}">
+                        <f:if condition="{fieldInfo.extended} && {fieldInfo.type} == 'Range'">
+                            <f:alias map="{queryParameter:'{s:data.valueForKey(array:config.query, key:fieldInfo.id)}'}">
+                                <f:render partial="Form/Fields/{fieldInfo.type}" arguments="{_all}"/>
+                            </f:alias>
+                        </f:if>
+                </f:if>
+                </f:then>
+                <f:else>
+                    <div class="fieldContainer error">
+                        <f:translate key="Missing type in configuration for queryField %s." arguments="{0:fieldInfo.id}"/>
+                    </div>
+                </f:else>
+                </f:if>
+            </f:for>
+                -->
+            </f:comment>
+        </div>
+
+        <div class="col-12 col-xl-4 qsa_search-header__advanced-search__button-container">
+            <button type="submit" class="qsa_btn__submit submit">Suchen</button>
+        </div>
+
+        <div class="col-12 qsa_search-header__advanced-search-footer">
+            <button type="reset" class="qsa_btn__link reset">Alles zurücksetzen</button>
+
+            <button id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</button>
+        </div>
+    </div>
+</f:form>

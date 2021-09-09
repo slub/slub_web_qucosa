@@ -1,0 +1,20 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<f:layout name="Default"/>
+<f:section name="main">
+    <f:render partial="Page/Standard" arguments="{_all}"/>
+
+    <div class="qsa_content-area-default qsa_search-result__container container">
+
+        <f:render partial="Facets/Facets" arguments="{_all}"/>
+
+        <f:render partial="Form/Quickfilter" arguments="{_all}" />
+
+        <f:for each="{results.documents}" as="document">
+            <f:render partial="Display/Result" arguments="{_all}"/>
+        </f:for>
+
+        <div class="navigation bottom">
+            <f:render partial="Pager/ListPager" arguments="{_all}"/>
+        </div>
+    </div>
+</f:section>

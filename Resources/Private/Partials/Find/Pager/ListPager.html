@@ -1,0 +1,37 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+
+<div class="qsa_pagination">
+
+	<div class="qsa_pagination__select">
+		<f:comment>
+			<!-- Anzahl der Ergebnisse pro Seite einstellen -->
+		</f:comment>
+	</div>
+	<f:alias map="{pager:'{s:find.pageList(currentPage:arguments.page, perPage:settings.paging.perPage, resultCount:results.numfound)}'}">
+		<ul class="qsa_pagination__list qsa_tags">
+			<f:for each="{pager.pages}" as="page">
+				<li class="{f:if(condition:'{page.current}', then:'current')} {f:if(condition:'{page.gap}', then:'gap')}">
+					<f:if condition="{current:page.current, gap:page.gap} == {current:FALSE , gap:FALSE}">
+						<f:then>
+							<f:link.action
+									arguments="{page:page.number}"
+									addQueryString="TRUE"
+									section="{settings.jumpToID}"
+									additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.find.page_index\',extensionName: \'slub_web_qucosa\')} {page.text}'}"
+									noCacheHash="1"
+									class="qsa_pagination--active qsa_btn__tag qsa_btn__tag--inverted"
+							>
+								{page.text}
+							</f:link.action>
+						</f:then>
+						<f:else>
+							<a class="qsa_pagination--active qsa_btn__tag qsa_btn__tag" aria-label="{f:translate(key: 'tx_slubwebqucosa.find.page_active', extensionName: 'slub_web_qucosa')}">{page.text}</a>
+						</f:else>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</f:alias>
+
+	<a class="qsa_top" href="#top">{f:translate(key: 'tx_slubwebqucosa.page.to_top', extensionName: 'slub_web_qucosa')}</a>
+</div>

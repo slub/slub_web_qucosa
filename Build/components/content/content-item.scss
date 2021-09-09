@@ -1,0 +1,55 @@
+
+//
+//    @tableOfContent
+//      1. Content item
+//
+
+
+//
+//   @section 1. Content item
+//
+
+.qsa_content-item {
+    &__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        order: 2;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+            margin-bottom: var(--spacing-s);
+        }
+    }
+
+    &__meta {
+        opacity: .8;
+        display: block;
+        order: 1;
+        margin-bottom: var(--spacing-xs);
+        font-size: $font-size-tiny;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__subtitle {
+        order: 3;
+        max-width: 80%;
+    }
+
+    &__body {
+        font-family: Assistant, sans-serif;
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
+    }
+}
+
+// end of content-item.scss file

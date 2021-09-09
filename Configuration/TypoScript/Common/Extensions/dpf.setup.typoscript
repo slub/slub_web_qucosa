@@ -1,4 +1,12 @@
-page.includeCSS.tx_dpf = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
+page.includeCSS.tx_dpf >
+page.includeCSS.tx_dpf_jquery_ui_css >
+page.includeCSS.tx_dpf_jquery_ui_css_structure >
+page.includeJS.tx_dpf_jquery >
+page.includeJS.tx_dpf_jquery_ui >
+page.includeJSFooter.tx_dpf_moment >
+page.includeJSFooter.tx_dpf_bootstrap >
+page.includeJSFooter.tx_dpf_bootstrap_datepicker >
+page.includeJSFooter.tx_dpf_qucosa >
 
 plugin.tx_dpf {
     view {
@@ -14,4 +22,10 @@ module.tx_dpf {
         partialRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Partials/
         layoutRootPaths.20 = EXT:slub_web_qucosa/Resources/Private/Layouts/
     }
+
+}
+
+plugin.tx_dpf.settings.pageID {
+    root = {$pageID.root}
+    wizardManual = {$pageID.wizardManual}
 }

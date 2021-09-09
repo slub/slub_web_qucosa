@@ -24,7 +24,7 @@ $GLOBALS['TCA']['tt_content']['types']['tx_slubwebqucosa_carouselitem'] = [
     'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,pi_flexform,
+        --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
         --palette--;;hidden,
@@ -49,11 +49,37 @@ $GLOBALS['TCA']['tt_content']['types']['tx_slubwebqucosa_carouselitem'] = [
                 'max' => 50,
             ]
         ],
+        'subheader' => [
+            'label' => 'LLL:EXT:cms/locallang_ttc.xml:header_link',
+            'exclude' => 1,
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputLink',
+                'eval' => 'trim, required',
+                'fieldControl' => [
+                    'linkPopup' => [
+                        'options' => [
+                            'blindLinkOptions' => 'folder,file,mail',
+                            'blindLinkFields' => 'class,params',
+                            'windowOpenParameters' => 'height=800,width=1000,status=0,menubar=1,scrollbars=1'
+                        ]
+                    ]
+                ]
+            ],
+        ],
+        'image' => [
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                [
+                    'maxitems' => 1,
+                    'minitems' => 1,
+                    'appearance' => [
+                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.asset_references.addFileReference',
+                        'fileUploadAllowed' => 0
+                    ],
+                ],
+                'jpeg,jpg,png'
+            ),
+        ],
     ]
 ];
-// Add a flexform to the tx_xmtemplatesxima_textvideoteaser CType
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-    '',
-    'FILE:EXT:slub_web_qucosa/Configuration/FlexForms/tx_slubwebqucosa_carouselitem_flexform.xml',
-    'tx_slubwebqucosa_carouselitem'
-);

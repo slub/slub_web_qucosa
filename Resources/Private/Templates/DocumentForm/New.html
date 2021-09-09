@@ -1,15 +1,74 @@
 <div class="qsa_wizard qsa_wizard--open" id="qucosaWizard">
     <figure class="qsa_wizard__figure">
-        <f:image src="EXT:slub_web_qucosa/Resources/Public/Images/img/hero/hero-bg.png" title="Hintergundbild" alt="Hintergrundbild Eingabeassistent"/>
+        <f:image src="{f:uri.resource(path:'qucosa_relaunch/img/hero/hero-bg.png', extensionName: 'slub_web_qucosa')}"
+                 title="{f:translate(key: 'tx_slubwebqucosa.wizard.background', extensionName: 'slub_web_qucosa')}"
+                 alt="{f:translate(key: 'tx_slubwebqucosa.wizard.background', extensionName: 'slub_web_qucosa')}"/>
     </figure>
     <div class="qsa_wizard__wrapper qsa_wizard__wrapper-steps container">
         <h2 class="h1">
             <f:translate key="documentForm.new.header" arguments="{0: '{documentForm.displayName}'}"/>
         </h2>
-        <button type="button" class="qsa_wizard__header-btn btn-outline__without" aria-label="Eingabeassistent schließen" tabindex="-1">
-            <span class="sr-only">Eingabeassistent schließen</span>
-            <f:render partial="Icon" arguments="{title:'Schließen Icon', description:'Eingabeassistent schließen', icon:'cancel'}" />
+        <button type="button" class="qsa_wizard__header-btn btn-outline__without" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}" tabindex="-1">
+            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}</span>
+            <f:render partial="Icon" arguments="{icon:'cancel'}" />
         </button>
         <f:render partial="DocumentForm/New" arguments="{documentForm:documentForm}"/>
     </div>
+    <div class="qsa_wizard__wrapper qsa_wizard__wrapper-last d-none container">
+        <h2>{f:translate(key: 'tx_slubwebqucosa.wizard.finish_header', extensionName: 'slub_web_qucosa')}</h2>
+
+        <div class="qsa_wizard__wrapper-content">
+            <div class="row">
+                <div class="col-12 qsa_wizard__wrapper-form">
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.finish_description', extensionName: 'slub_web_qucosa')}
+                    <div class="qsa_wizard__wrapper-last__buttons">
+                        <button class="btn qsa_btn__submit" id="reloadWizard">{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}</button>
+                        <f:link.page pageUid="{settings.pageID.wizardManual}">
+                            {f:translate(key: 'tx_slubwebqucosa.wizard.finish.next_steps', extensionName: 'slub_web_qucosa')}
+                        </f:link.page>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="qsa_modal modal fade" tabindex="-1" role="dialog" id="wizardErrorModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{f:translate(key: 'tx_slubwebqucosa.wizard.error_warning', extensionName: 'slub_web_qucosa')}</h5>
+                <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}">
+                    <f:render partial="Icon" arguments="{icon:'close'}" />
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>{f:translate(key: 'tx_slubwebqucosa.wizard.error', extensionName: 'slub_web_qucosa')}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn qsa_btn__submit" data-dismiss="modal">{f:translate(key: 'tx_slubwebqucosa.wizard.error_understood', extensionName: 'slub_web_qucosa')}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="qsa_modal modal fade" tabindex="-1" role="dialog" id="wizardCloseWarning">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{f:translate(key: 'tx_slubwebqucosa.wizard.close_warning', extensionName: 'slub_web_qucosa')}</h5>
+                <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}">
+                    <f:render partial="Icon" arguments="{icon:'close'}" />
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>{f:translate(key: 'tx_slubwebqucosa.wizard.close_warning', extensionName: 'slub_web_qucosa')}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn qsa_btn__submit" data-dismiss="modal" id="closeWizard">{f:translate(key: 'tx_slubwebqucosa.wizard.close_confirm', extensionName: 'slub_web_qucosa')}</button>
+                <button type="button" class="btn qsa_btn__submit" data-dismiss="modal">{f:translate(key: 'tx_slubwebqucosa.wizard.close_deny', extensionName: 'slub_web_qucosa')}</button>
+            </div>
+        </div>
+    </div>
+</div>
+

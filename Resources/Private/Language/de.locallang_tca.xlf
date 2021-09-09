@@ -18,6 +18,10 @@
                 <source>Element for Logo-Teaser</source>
                 <target>Element für den Logo-Teaser</target>
             </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carouselitem.link.label">
+                <source>Link</source>
+                <target>Link</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

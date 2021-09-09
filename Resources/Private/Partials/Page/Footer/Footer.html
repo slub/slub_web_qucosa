@@ -1,11 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<v:page.menu.directory pages="23">
+<v:page.menu.directory pages="{settings.pageIDmeta}">
     <footer class="qsa_footer">
         <div class="qsa_footer__content container">
             <div class="qsa_footer_info">
-                <span>{f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.footer')}</span>
+                <p>{f:translate(key: 'tx_slubwebqucosa.footer', extensionName: 'slub_web_qucosa')}</p>
             </div>
             <div class="qsa_footer__nav">
                 <ul>

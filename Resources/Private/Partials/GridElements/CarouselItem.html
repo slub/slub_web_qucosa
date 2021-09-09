@@ -1,6 +1,13 @@
-<f:debug>{_all}</f:debug>
-<div class="carousel-item">
+<div class="carousel-item {f:if(condition: '{cycle.cycle} == 1', then: 'active', else: '')}">
     <div class="qsa_carousel-item_wrapper">
-
+        <f:for each="{carouselItem}" as="item">
+            <figure class="qsa_carousel-item_el">
+                <figcaption class="qsa_hint__text">{item.bodytext}</figcaption>
+                <f:cObject typoscriptObjectPath="lib.gridelementsContentImage" data="{item}" />
+                <f:link.typolink parameter="{item.subheader}" class="qsa_carousel-item_el-link" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.carousel.link_label\', extensionName: \'slub_web_qucosa\')} {item.bodytext}'}">
+                    <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.carousel.link_label', extensionName: 'slub_web_qucosa')} {item.bodytext}</span>
+                </f:link.typolink>
+            </figure>
+        </f:for>
     </div>
 </div>

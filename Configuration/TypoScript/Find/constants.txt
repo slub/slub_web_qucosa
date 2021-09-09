@@ -1,4 +1,1 @@
-plugin.tx_slubwebqucosa {
-	# cat=plugin.tx_slubwebqucosa/links/0143; type=int+; label= Landing page Uid
-	landingPageUID =
-}
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/find.constants.typoscript">

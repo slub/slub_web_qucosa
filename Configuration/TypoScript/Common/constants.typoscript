@@ -3,6 +3,7 @@
 ####################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/gridelements.constants.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/fluid_styled_content.constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/Extensions/dpf.constants.typoscript">
 
 ############
 ### PAGE ###
@@ -22,6 +23,12 @@ page {
 pageID {
     # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Metanavigation
     meta = 23
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Wizard
+    wizard = 9
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID Root Page
+    root = 2
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= UID of the manual of the wizard
+    wizardManual = 2
 }
 
 # Allgemeine Textbausteine

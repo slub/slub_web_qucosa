@@ -6,23 +6,19 @@
 
         </div>
         <div class="nav__hamburger">
-            <div class="qsa_menu-button" role="button" aria-label="Öffnet das Menü in einer Sidebar" tabindex="0">
+            <div class="qsa_menu-button" role="button" aria-label="{f:translate(key: 'tx_slubwebqucosa.navigation.open', extensionName: 'slub_web_qucosa')}" tabindex="0">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </div>
         </div>
-        <nav aria-label="Mainnavigation" class="qsa_header__nav qsa_nav qsa_nav--main">
-            <a href="#qucosaWizard" id="openWizard" class="btn qsa_header__button-main" aria-label="Publizieren">
-                <svg class="qsa_icon icon--publish icon--base" role="img" width="20" height="20" aria-hidden="true">
-                    <title class="sr-only">Icon publish</title>
-                    <desc class="sr-only">Eine Seite mit Pfeil um das Publizieren einer Arbeit anzudeuten</desc>
-                    <use xlink:href="{f:uri.resource(path:'icons/icon.min.svg#icon-publish', extensionName: 'slub_web_qucosa')}"></use>
-                </svg>
+        <nav aria-label="Navigation" class="qsa_header__nav qsa_nav qsa_nav--main">
+            <f:link.typolink parameter="{settings.pageIDWizard}" class="btn qsa_header__button-main" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.publish\', extensionName: \'slub_web_qucosa\')}', id: 'openWizard'}">
+                <f:render partial="Icon" arguments="{icon:'publish'}" />
                 <span>
-                    {f:translate(key: 'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang.xlf:tx_slubwebqucosa.publish')}
+                    {f:translate(key: 'tx_slubwebqucosa.publish', extensionName: 'slub_web_qucosa')}
                 </span>
-            </a>
+            </f:link.typolink>
             <ul class="qsa_nav__items">
                 <f:for each="{mainnavigation}" as="mainnavigationItem">
                     <li class="qsa_nav__item {f:if(condition: '{mainnavigationItem.children}', then: 'qsa_nav__item--has-submenu', else: '')}">
@@ -46,17 +42,17 @@
                                                     </li>
                                                 </f:for>
                                             </ul>
-                                            <button type="button" class="qsa_dropdown__button" aria-label="Dropdown aufklappen" tabindex="-1">
-                                                <span class="sr-only">Element aufklappen</span>
-                                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Ein Pfeil nach links zeigend', icon:'arrow-left'}" />
+                                            <button type="button" class="qsa_dropdown__button" aria-label="{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}" aria-expanded="false" tabindex="-1">
+                                                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}</span>
+                                                <f:render partial="Icon" arguments="{icon:'arrow-left'}" />
                                             </button>
                                         </f:if>
                                     </li>
                                 </f:for>
                             </ul>
-                            <button type="button" class="qsa_dropdown__button" aria-label="Dropdown aufklappen" tabindex="-1">
-                                <span class="sr-only">Element aufklappen</span>
-                                <f:render partial="Icon" arguments="{title:'Icon Arrow', description:'Ein Pfeil nach unten zeigend', icon:'arrow-down'}" />
+                            <button type="button" class="qsa_dropdown__button" aria-label="{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}" aria-expanded="false" tabindex="-1">
+                                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}</span>
+                                <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                             </button>
                         </f:if>
                     </li>
@@ -64,8 +60,8 @@
                 <li class="qsa_nav__item">
                     <div class="qsa_dropdown qsa_dropdown--language">
                         <button class="btn qsa_dropdown__button qsa_dropdown__button-language" type="button">
-                            <span class="sr-only">Öffnet ein Dropdown zum wechseln der Sprache der Website</span>
-                            <f:render partial="Icon" arguments="{title:'Icon translate', description:'Eingdgd Übersetzungssymbol', icon:'translate'}" />
+                            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.language_switcher', extensionName: 'slub_web_qucosa')}</span>
+                            <f:render partial="Icon" arguments="{icon:'translate'}" />
                             {languageButton}
                         </button>
                         <f:cObject typoscriptObjectPath="lib.langnav" />
@@ -76,7 +72,7 @@
         <f:if condition="{isMandant} == 'true'">
             <div class="qsa_header__logo qsa_header__logo--right">
                 <a href="http://qucosa.ddev.site" class="qsa_logo" target="_blank">
-                    <img alt="Website Logo" src="{f:uri.resource(path:'Images/img/logo/Logo_Qucosa.svg', extensionName: 'slub_web_qucosa')}">
+                    <img alt="Website Logo" src="{f:uri.resource(path:'qucosa_relaunch/img/logo/Logo_Qucosa.svg', extensionName: 'slub_web_qucosa')}">
                 </a>
             </div>
         </f:if>

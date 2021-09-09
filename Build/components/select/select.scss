@@ -1,0 +1,323 @@
+//
+//    @tableOfContent
+//      1. select
+//
+
+@media (hover: hover) {
+    .qsa_select__custom {
+        // stylelint-disable declaration-no-important
+        display: block !important;
+        // stylelint-enable  declaration-no-important
+    }
+}
+
+.qsa_select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        padding-right: var(--spacing-s);
+
+        @include media-breakpoint-down(sm) {
+            padding-right: 0;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 9px;
+        left: 16px;
+        z-index: 1;
+        font-family: Roboto, sans-serif;
+        font-size: var(--font-size-small);
+        line-height: 16px;
+        letter-spacing: 1.25px;
+        color: inherit;
+        text-transform: uppercase;
+        pointer-events: none;
+        transition: all .15s ease-in-out;
+
+        &-header {
+            position: absolute;
+            top: 13px;
+            left: 16px;
+            font-family: $font-family-base-assistant;
+            font-size: 16px;
+            line-height: unset;
+            letter-spacing: unset;
+            color: #2c2c2c;
+            text-transform: unset;
+
+            &.qsa_select__label--filled,
+            &.qsa_select__label--focused {
+                top: -19px;
+            }
+        }
+
+        &--focused,
+        &--filled {
+            top: -15px;
+            left: 6px;
+            z-index: 0;
+            font-family: $font-family-roboto-regular;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        width: fit-content;
+
+        &[data-required='required'] {
+            label {
+                &::after {
+                    content: '*';
+                    position: absolute;
+                }
+            }
+        }
+
+        &-header {
+            width: 100%;
+            margin-top: var(--spacing);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: auto;
+            padding-bottom: var(--spacing-xs);
+        }
+    }
+
+    &__native {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: none;
+
+        &-header {
+            width: 100%;
+            height: 50px;
+            border: none;
+
+            &:focus {
+                // stylelint-disable declaration-no-important
+                width: 100% !important;
+                height: 50px !important;
+                // stylelint-enable  declaration-no-important
+            }
+        }
+
+        &:focus {
+            display: block;
+            position: relative;
+            width: auto;
+            height: var(--default-select-height);
+
+            + .qsa_select__custom {
+                // stylelint-disable declaration-no-important
+                display: none !important;
+                // stylelint-enable  declaration-no-important
+                position: absolute;
+            }
+        }
+    }
+
+    &__wrapper--transparent {
+        .qsa_select {
+            &__native,
+            &__custom-trigger {
+                padding-right: 0;
+                color: var(--color-gray-500);
+                text-transform: none;
+                background-color: var(--color-body-bg);
+                border: none;
+
+                p {
+                    visibility: visible;
+                    font-family: Assistant, sans-serif;
+                    font-size: var(--font-size-small);
+                    line-height: 18px;
+                    letter-spacing: .25px;
+                }
+            }
+
+            &__label {
+                display: none;
+            }
+
+            &__custom-trigger {
+                .qsa_icon {
+                    fill: var(--color-gray-600);
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &__custom {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 36px;
+
+        &-header {
+            height: 50px;
+        }
+
+        &-trigger {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: .5rem;
+            border: 1px solid var(--color-gray-300);
+            border-radius: 4px;
+            cursor: pointer;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+
+            &--not-filled {
+                // stylelint-disable declaration-no-important
+                background-color: #fde2e2 !important;
+                // stylelint-enable  declaration-no-important
+            }
+
+            &-header {
+                padding: 16px;
+                // stylelint-disable declaration-no-important
+                text-transform: unset !important;
+                background-color: var(--color-input-background);
+                // stylelint-enable  declaration-no-important
+                border-radius: 8px;
+
+                p {
+                    // stylelint-disable declaration-no-important
+                    font-family: $font-family-base-assistant !important;
+                    font-size: 16px !important;
+                    letter-spacing: .25px !important;
+                    // stylelint-enable  declaration-no-important
+                }
+            }
+
+            .qsa_icon {
+                position: relative;
+                width: 13px;
+                margin-left: 20px;
+                fill: var(--color-primary);
+            }
+
+            p {
+                visibility: hidden;
+                flex: 1;
+                font-family: Roboto, sans-serif;
+                font-size: var(--font-size-small);
+                line-height: 16px;
+                letter-spacing: 1.25px;
+                color: inherit;
+
+                &.qsa_select__custom-trigger--show {
+                    visibility: visible;
+                }
+
+                &.active {
+                    visibility: visible;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: 10px;
+                }
+            }
+
+            &:hover {
+                border-color: var(--color-primary);
+            }
+        }
+
+        &-options {
+            display: none;
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-gray-300);
+            box-shadow: 0 0 4px var(--color-gray-600);
+
+            @include media-breakpoint-down(sm) {
+                right: 0;
+                left: unset;
+            }
+
+            &--top {
+                top: -10.7rem;
+            }
+        }
+
+        &-option {
+            position: relative;
+            padding: var(--spacing-xs);
+            padding-left: 2.5rem;
+
+            .qsa_icon {
+                visibility: hidden;
+                position: absolute;
+                left: .8rem;
+                width: 15px;
+                fill: var(--color-primary);
+            }
+
+            &:not(:last-of-type)::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px solid var(--color-gray-300);
+            }
+
+            &:hover,
+            &.isHover {
+                color: black;
+                background-color: var(--color-gray-200);
+                cursor: pointer;
+            }
+
+            &.isActive {
+                .qsa_icon {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &.isActive {
+            .qsa_select__custom-options {
+                display: block;
+                min-width: 200px;
+                max-height: 50vh;
+                overflow: auto;
+            }
+        }
+    }
+
+    &__native,
+    &__custom-trigger {
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: var(--color-body-bg);
+
+        &-light {
+            background-color: var(--color-white);
+        }
+    }
+}
+// end of select.scss
