@@ -20,6 +20,7 @@ tx_gridelements {
                                 colPos = 10
                                 allowed {
                                     tx_gridelements_backend_layout = accordion
+                                    CType = gridelements_pi1
                                 }
                             }
                         }

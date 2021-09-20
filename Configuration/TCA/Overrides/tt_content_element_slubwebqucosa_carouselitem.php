@@ -51,7 +51,7 @@ $GLOBALS['TCA']['tt_content']['types']['tx_slubwebqucosa_carouselitem'] = [
         ],
         'subheader' => [
             'label' => 'LLL:EXT:cms/locallang_ttc.xml:header_link',
-            'exclude' => 1,
+            'exclude' => 0,
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputLink',

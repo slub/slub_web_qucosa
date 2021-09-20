@@ -2,7 +2,7 @@
 lib.logo {
     stdWrap.typolink.title = Startseite
     10 {
-        file = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/img/logo/Logo_Qucosa.svg
+        file = EXT:slub_web_qucosa/Resources/Public/Images/logo/Logo_Qucosa.svg
         altText = Logo des Publikationsservers QUCOSA
     }
 }

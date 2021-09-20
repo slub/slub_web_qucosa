@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Akkordeon Element',
+        'Sidebar - Linksammlung',
         'tx_slubwebqucosa_sidebarlinks',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],

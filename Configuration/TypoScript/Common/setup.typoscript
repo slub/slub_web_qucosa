@@ -67,18 +67,18 @@ page {
         }
     }
 
-    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/img/favicon.png
+    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/favicon.png
 
     includeCSS {
-        client = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/css/qsa.min.css
+        client = EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css
     }
 
     includeJS {
-        client = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/js/qsa--head.min.js
+        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/qsa--head.min.js
     }
 
     includeJSFooter {
-        client = EXT:slub_web_qucosa/Resources/Public/qucosa_relaunch/js/qsa--body.min.js
+        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/qsa--body.min.js
     }
 
     10 = FLUIDTEMPLATE
@@ -204,7 +204,7 @@ lib.langnav {
             # wrap the page title! otherways you see the current page title instead of the language.
             stdWrap{
                 override = Deutsch || Englisch
-                override.wrap = <svg class="qsa_icon icon--check icon--base" role="img" width="20" height="20" aria-hidden="true"><title class="sr-only">Icon check</title><desc class="sr-only">{$text.languageIconDescription}</desc><use xlink:href="/typo3conf/ext/slub_web_qucosa/Resources/Public/qucosa_relaunch/icons/icon.min.svg#icon-check"></use></svg>
+                override.wrap = <svg class="qsa_icon icon--check icon--base" role="img" width="20" height="20" aria-hidden="true"><title class="sr-only">Icon check</title><desc class="sr-only">{$text.languageIconDescription}</desc><use xlink:href="/typo3conf/ext/slub_web_qucosa/Resources/Public/JavaScript/Icons/icon.min.svg#icon-check"></use></svg>
                 typolink {
                     parameter.data = page:uid
                     additionalParams = &L=0 || &L=1

@@ -24,7 +24,7 @@ return [
     ],
     'columns' => [
         'sys_language_uid' => [
-            'exclude' => true,
+            'exclude' => 0,
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
             'config' => [
                 'type' => 'select',
@@ -42,7 +42,7 @@ return [
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => true,
+            'exclude' => 0,
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
@@ -69,7 +69,7 @@ return [
             ],
         ],
         'hidden' => [
-            'exclude' => true,
+            'exclude' => 0,
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
             'config' => [
                 'type' => 'check',
@@ -81,7 +81,7 @@ return [
             ],
         ],
         'authorname' => [
-            'exclude' => false,
+            'exclude' => 0,
             'label' => 'Neuer Autor',
             'config' => [
                 'type' => 'input',

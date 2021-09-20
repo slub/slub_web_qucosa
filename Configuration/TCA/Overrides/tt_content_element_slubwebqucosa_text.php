@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Akkordeon Element',
+        'Text',
         'tx_slubwebqucosa_text',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],

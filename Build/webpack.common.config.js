@@ -13,8 +13,8 @@ module.exports = {
         'qsa--styles': './scss/qsa.scss'
     },
     output: {
-        filename: 'js/[name].min.js',
-        chunkFilename: 'js/[name][chunkhash].bundle.js',
+        filename: 'JavaScript/[name].min.js',
+        chunkFilename: 'JavaScript/[name][chunkhash].bundle.js',
         libraryTarget: 'umd', // var
         library: 'qsa',
         auxiliaryComment: 'Copyright - XIMA media GmbH | Sächsische Landesbibliothek — Staats- und Universitätsbibliothek Dresden (SLUB)'
@@ -40,7 +40,7 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
-                        options: { outputPath: 'css/', name: '[name].min.css'}
+                        options: { outputPath: 'Css/', name: '[name].min.css'}
                     },
                     {
                         loader: 'sass-loader',
@@ -57,7 +57,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[folder]/[name].[ext]',
-                        outputPath: 'fonts/',
+                        outputPath: 'Fonts/',
                         publicPath: '../../'
                     }
                 }],
@@ -96,28 +96,28 @@ module.exports = {
                     from: './components/typography/assets/src/fonts', to: 'fonts'
                 },
                 {
-                    from: './components/favicon/assets', to: 'img/favicon'
+                    from: './components/favicon/assets', to: 'Images/favicon'
                 },
                 {
-                    from: './components/logo/assets', to: 'img/logo'
+                    from: './components/logo/assets', to: 'Images/logo'
                 },
                 {
-                    from: './components/hero/assets', to: 'img/hero'
+                    from: './components/hero/assets', to: 'Images/hero'
                 },
                 {
-                    from: './components/teaser/assets', to: 'img/teaser'
+                    from: './components/teaser/assets', to: 'Images/teaser'
                 },
                 {
-                    from: './components/carousel/assets', to: 'img/carousel'
+                    from: './components/carousel/assets', to: 'Images/carousel'
                 },
                 {
-                    from: './components/content/assets', to: 'img/content'
+                    from: './components/content/assets', to: 'Images/content'
                 },
                 {
-                    from: './components/flip-card/assets', to: 'img/flip-card'
+                    from: './components/flip-card/assets', to: 'Images/flip-card'
                 },
                 {
-                    from: './components/contents-head-area/assets', to: 'img/contents-head-area'
+                    from: './components/contents-head-area/assets', to: 'Images/contents-head-area'
                 }
             ]
         })

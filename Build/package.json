@@ -64,7 +64,7 @@
   "scripts": {
     "build-typo3": "run-s assets-stage prefix-css-stage",
     "assets-stage": "webpack --config webpack.prod.config.js",
-    "prefix-css-stage": "npx postcss ../Resources/Public/qucosa_relaunch/css/qsa.min.css --use autoprefixer -d ../Resources/Public/qucosa_relaunch/css/"
+    "prefix-css-stage": "npx postcss ../Resources/Public/Css/qsa.min.css --use autoprefixer -d ../Resources/Public/Css/"
   },
   "browserslist": [
     "last 1 version",

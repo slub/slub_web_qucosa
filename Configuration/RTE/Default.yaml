@@ -6,7 +6,7 @@ imports:
 editor:
   config:
     # Include custom CSS
-    contentsCss: "EXT:slub_web_qucosa/Resources/Public/css/qsa.min.css"
+    contentsCss: "EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css"
     stylesSet:
       - { name: "Warnung", element: "p", attributes: { 'class': 'qsa_content-area__warning' } }
       - { name: "Hinweis", element: "p", attributes: { 'class': 'qsa_content-area__hint' } }

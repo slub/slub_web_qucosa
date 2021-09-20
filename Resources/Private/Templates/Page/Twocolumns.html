@@ -8,13 +8,13 @@
 <f:section name="Main">
     <main>
         <div class="row qsa_content-area container">
-            <div class="qsa_content-area__sidebar-slider"
+            <button class="qsa_content-area__sidebar-slider btn-outline--none"
                  data-button="sidebarSlider"
-                 role="button"
+                 type="button"
                  aria-label="{f:translate(key: 'tx_slubwebqucosa.sidebar.slider.aria')}"
                  tabindex="0">
                 <f:render partial="Icon" arguments="{icon:'information'}" />
-            </div>
+            </button>
             <div class="col-12 col-lg-8 qsa_content-area__body">
                 <f:render partial="Breadcrumb" arguments="{_all}" />
                 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
@@ -22,12 +22,13 @@
             <div class="col-12 col-md-5 col-lg-4 qsa_content-area__sidebar">
                 <div class="qsa_sidebar">
                     <div class="qsa_sidebar__content">
-                        <div class="qsa_content-area__sidebar-slider"
+                        <button class="qsa_content-area__sidebar-slider btn-outline--none"
+                                type="button"
                              data-button="sidebarSlider"
-                             role="button"
                              aria-label="{f:translate(key: 'tx_slubwebqucosa.sidebar.slider.aria')}"
                              tabindex="0">
-                        </div>
+                            <f:render partial="Icon" arguments="{icon:'close'}" />
+                        </button>
                         <span class="qsa_sidebar__close"
                               role="button"
                               aria-label="{f:translate(key: 'tx_slubwebqucosa.sidebar.close.aria')}"
