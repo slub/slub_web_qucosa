@@ -5,8 +5,8 @@ tx_gridelements {
     setup {
         # HeaderTeaserText
         logoTeaser {
-            title = Logo Teaser
-            description = Rasterelement für Logos mit Beschreibungen
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.logo.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.logo.description
             frame = neutral
 
             config {
@@ -16,7 +16,7 @@ tx_gridelements {
                     1 {
                         columns {
                             1 {
-                                name = Logos
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.logo.element
                                 colPos = 10
                                 allowed {
                                     CType = tx_slubwebqucosa_logoitem

@@ -5,8 +5,8 @@ tx_gridelements {
     setup {
         # HeaderTeaserText
         carousel {
-            title = Karussell
-            description = Rasterelement für Karussell-Elemente
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.carousel.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.carousel.description
             frame = neutral
 
             config {
@@ -16,7 +16,7 @@ tx_gridelements {
                     1 {
                         columns {
                             1 {
-                                name = Karussell-Elemente
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.carousel.element
                                 colPos = 10
                                 allowed {
                                     CType = tx_slubwebqucosa_carouselitem

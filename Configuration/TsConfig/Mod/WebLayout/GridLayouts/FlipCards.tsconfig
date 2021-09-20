@@ -5,8 +5,8 @@ tx_gridelements {
     setup {
         # HeaderTeaserText
         flipCards {
-            title = Flip Cards
-            description = Rasterelement für Flip Cards
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.flipcards.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.flipcards.description
             frame = neutral
 
             config {
@@ -16,7 +16,7 @@ tx_gridelements {
                     1 {
                         columns {
                             1 {
-                                name = Flip Card
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.flipcards.element
                                 colPos = 10
                                 allowed {
                                     CType = tx_slubwebqucosa_flipcarditem
