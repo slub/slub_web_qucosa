@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Sidebar - Linksammlung',
+        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarlinks.label',
         'tx_slubwebqucosa_sidebarlinks',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],

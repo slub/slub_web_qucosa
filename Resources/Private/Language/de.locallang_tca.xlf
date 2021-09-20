@@ -10,6 +10,78 @@
                 <source>Logo Element</source>
                 <target>Logo-Element</target>
             </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_accordion.label">
+                <source>Accordion Element</source>
+                <target>Akkordeon-Element</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_accordion.description">
+                <source>Adds a new accordion entry</source>
+                <target>Fügt einen neuen Akkordeon-Eintrag hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carousel-item.label">
+                <source>Carousel Element</source>
+                <target>Karussell-Element</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carouselitem.description">
+                <source>Adds one Carousel Element inside the Carousel Container</source>
+                <target>Fügt ein Karussell-Element innerhalb eines Karussells-Container hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_flipcard-item.label">
+                <source>Flipcard</source>
+                <target>Flipcard-Element</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_flipcard-item.description">
+                <source>Adds a new flipcard</source>
+                <target>Fügt eine neue Flipcard hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_text.label">
+                <source>Text Element</source>
+                <target>Text-Element</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_text.description">
+                <source>Adds text with caption</source>
+                <target>Fügt Text mit Überschrift hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarimage.label">
+                <source>Sidebar Image</source>
+                <target>Sidebar Bild</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarimage.description">
+                <source>Adds an image for the sidebar</source>
+                <target>Fügt ein Bild für die Sidebar hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarlinks.label">
+                <source>Sidebar Links</source>
+                <target>Sidebar - Linksammlung</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarlinks.description">
+                <source>Adds links as a bulleted list in the sidebar</source>
+                <target>Fügt Links als Aufzählung in der Sidebar hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarteaser.label">
+                <source>Sidebar Teaser</source>
+                <target>Sidebar Teaser</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarteaser.description">
+                <source>Adds a teaser in the sidebar</source>
+                <target>Fügt einen Teaser in der Sidebar hinzu</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headericonteaser.label">
+                <source>Header teaser with Icon</source>
+                <target>Header-Teaser mit Icon</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headericonteaser.description">
+                <source>A teaser element for the header with icon and description</source>
+                <target>Ein Teaserelement für den Header mit Icon und Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headerteaser.label">
+                <source>Header teaser without Icon</source>
+                <target>Header-Teaser ohne Icon</target>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headerteaser.description">
+                <source>A teaser element for the header with description</source>
+                <target>Ein Teaserelement für den Header</target>
+            </trans-unit>
             <trans-unit id="tx_slubwebqucosa_logoitem.link">
                 <source>Link URL</source>
                 <target>Link-URL</target>

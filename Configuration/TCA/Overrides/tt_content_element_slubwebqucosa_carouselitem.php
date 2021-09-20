@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Karussell-Element',
+        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_carouselitem.label',
         'tx_slubwebqucosa_carouselitem',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],
