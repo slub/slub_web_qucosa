@@ -42,7 +42,7 @@ class Wizard {
         this.removeField()
         this.copyGroup()
         this.removeGroup()
-        this.checkInputField()
+        // this.checkInputField()
     }
 
     openWizard () {
@@ -166,12 +166,15 @@ class Wizard {
                 const stepID = step.dataset.id
                 const stepWrapper = document.querySelector('#' + stepID)
                 const stepFormElement = stepWrapper.querySelectorAll('.qsa_wizard__wrapper-form-element')
-                const requiredInputs = stepWrapper.querySelectorAll('input:required')
-                const requiredSelects = stepWrapper.querySelectorAll('.qsa_select__native:required')
-                const requiredTextFields = stepWrapper.querySelectorAll('.qsa_text-area__field:required')
+                const requiredInputs = stepWrapper.querySelectorAll('input[data-mandatory=\'1\']')
+                const requiredSelects = stepWrapper.querySelectorAll('.qsa_select__native[data-mandatory=\'1\']')
+                const requiredTextFields = stepWrapper.querySelectorAll('.qsa_text-area__field[data-mandatory=\'1\']')
+                const requiredCheckBoxes = stepWrapper.querySelectorAll('.input-field-checkbox[data-mandatory=\'1\']')
                 const stepElement = {}
 
                 requiredInputs.forEach(input => {
+                    console.log(input)
+                    console.log(input.dataset.mandatory)
                     if (!input.value) {
                         if (!input.classList.contains('qsa_input-group__input--not-filled')) {
                             input.classList.add('qsa_input-group__input--not-filled')
@@ -184,6 +187,23 @@ class Wizard {
                     } else {
                         if (input.classList.contains('qsa_input-group__input--not-filled')) {
                             input.classList.remove('qsa_input-group__input--not-filled')
+                        }
+                    }
+                })
+
+                requiredCheckBoxes.forEach(checkbox => {
+                    if (!checkbox.value) {
+                        if (!checkbox.closest('.qsa_wizard__wrapper-form-element').classList.contains('qsa_input-group__input--not-filled')) {
+                            checkbox.closest('.qsa_wizard__wrapper-form-element').classList.add('qsa_input-group__input--not-filled')
+
+                            if (!this.errorModalShown) {
+                                $('#wizardErrorModal').modal('show')
+                                this.errorModalShown = true
+                            }
+                        }
+                    } else {
+                        if (checkbox.closest('.qsa_wizard__wrapper-form-element').classList.contains('qsa_input-group__input--not-filled')) {
+                            checkbox.closest('.qsa_wizard__wrapper-form-element').classList.remove('qsa_input-group__input--not-filled')
                         }
                     }
                 })
@@ -225,9 +245,12 @@ class Wizard {
                     const dates = element.querySelectorAll('.qsa_field__datepicker-wrap')
                     const files = element.querySelectorAll('.qsa_input-group-file')
                     const textAreas = element.querySelectorAll('.qsa_text-area')
+                    const checkboxes = element.querySelectorAll('.input-field-checkbox')
                     const stepFormPart = []
 
                     textInputs.forEach(input => {
+                        const inputGroup = input.closest('.qsa_input-group')
+                        const errorMessage = inputGroup.querySelector('.qsa_input-group__error')
                         const inputFilled = {}
                         inputFilled.name = input.querySelector('.qsa_input-group__label').textContent
                         inputFilled.value = input.querySelector('.qsa_input-group__input-text').value
@@ -238,21 +261,24 @@ class Wizard {
                         inputFilled.validPattern = true
 
                         if (inputFilled.pattern) {
-                            if (!inputFilled.value.match(inputFilled.pattern)) {
-                                inputFilled.validPattern = false
-                                if (!input.querySelector('.qsa_input-group__input-text').classList.contains('qsa_input-group__input--not-filled')) {
-                                    input.querySelector('.qsa_input-group__input-text').classList.add('qsa_input-group__input--not-filled')
-                                }
+                            if(inputFilled.value) {
+                                if (!inputFilled.value.match(inputFilled.pattern)) {
+                                    inputFilled.validPattern = false
+                                    if (!input.querySelector('.qsa_input-group__input-text').classList.contains('qsa_input-group__input--not-filled')) {
+                                        input.querySelector('.qsa_input-group__input-text').classList.add('qsa_input-group__input--not-filled')
+                                    }
+                                    if (errorMessage.classList.contains('d-none')) {
+                                        errorMessage.classList.remove('d-none')
+                                    }
+                                } else {
+                                    inputFilled.validPattern = true
+                                    if (!errorMessage.classList.contains('d-none')) {
+                                        errorMessage.classList.add('d-none')
+                                    }
 
-                                if (inputFilled.pattern === '^[0-9]*$') {
-                                    if (input.querySelector('.qsa_input-group__error--number').classList.contains('d-none')) { input.querySelector('.qsa_input-group__error--number').classList.remove('d-none') }
-                                }
-                            } else {
-                                inputFilled.validPattern = true
-                                if (!input.querySelector('.qsa_input-group__error--number').classList.contains('d-none')) { input.querySelector('.qsa_input-group__error--number').classList.add('d-none') }
-
-                                if (input.querySelector('.qsa_input-group__input-text').classList.contains('qsa_input-group__input--not-filled')) {
-                                    input.querySelector('.qsa_input-group__input-text').classList.remove('qsa_input-group__input--not-filled')
+                                    if (input.querySelector('.qsa_input-group__input-text').classList.contains('qsa_input-group__input--not-filled')) {
+                                        input.querySelector('.qsa_input-group__input-text').classList.remove('qsa_input-group__input--not-filled')
+                                    }
                                 }
                             }
                         }
@@ -299,6 +325,20 @@ class Wizard {
                         }
 
                         stepFormPart.push(dateFilled)
+                    })
+
+                    checkboxes.forEach(checkbox => {
+                        const checkboxFilled = {}
+                        checkboxFilled.value = checkbox.value
+                        checkboxFilled.required = checkbox.dataset.mandatory
+
+                        if (!checkboxFilled.value && checkboxFilled.required === '1') {
+                            stepElement.validValues.push('notValid')
+                        } else {
+                            stepElement.validValues.push('valid')
+                        }
+
+                        stepFormPart.push(checkboxFilled)
                     })
 
                     files.forEach(file => {
@@ -490,74 +530,6 @@ class Wizard {
                 }, 1)
             })
         }
-    }
-
-    checkInputField () {
-        const selectsWrapper = document.querySelectorAll('.qsa_select__wrapper')
-        const inputGroup = document.querySelectorAll('.qsa_input-group')
-        const textArea = document.querySelectorAll('.qsa_text-area')
-
-        // check the select Field
-        selectsWrapper.forEach(select => {
-            select.addEventListener('click', (e) => {
-                const selectNative = select.querySelector('.qsa_select__native')
-                const errorMessage = select.querySelector('.qsa_input-group__error--select')
-
-                if (selectNative.value === '') {
-                    if (errorMessage.classList.contains('d-none')) {
-                        errorMessage.classList.remove('d-none')
-                    }
-                } else {
-                    if (!errorMessage.classList.contains('d-none')) {
-                        errorMessage.classList.add('d-none')
-                    }
-                }
-            })
-        })
-
-        // check the input Field
-        inputGroup.forEach(input => {
-            const inputText = input.querySelector('.qsa_input-group__input')
-            const errorMessage = input.querySelector('.qsa_input-group__error--text')
-
-            input.addEventListener('focusin', (e) => {
-                if (inputText.value === '' && inputText.hasAttribute('required')) {
-                    console.log('remove')
-                    if (errorMessage.classList.contains('d-none')) {
-                        errorMessage.classList.remove('d-none')
-                    }
-                }
-            })
-            input.addEventListener('focusout', (e) => {
-                if (inputText.value !== '' && inputText.hasAttribute('required')) {
-                    if (!errorMessage.classList.contains('d-none')) {
-                        errorMessage.classList.add('d-none')
-                    }
-                }
-            })
-        })
-
-        // check the textarea Field
-        textArea.forEach(textArea => {
-            const textAreaField = textArea.querySelector('.qsa_text-area__field')
-            const errorMessage = textArea.querySelector('.qsa_input-group__error--textarea')
-
-            textAreaField.addEventListener('click', (e) => {
-                if (textAreaField.value === '' && textAreaField.hasAttribute('required')) {
-                    console.log('remove')
-                    if (errorMessage.classList.contains('d-none')) {
-                        errorMessage.classList.remove('d-none')
-                    }
-                }
-            })
-            textAreaField.addEventListener('focusout', (e) => {
-                if (textAreaField.value !== '' && textAreaField.hasAttribute('required')) {
-                    if (!errorMessage.classList.contains('d-none')) {
-                        errorMessage.classList.add('d-none')
-                    }
-                }
-            })
-        })
     }
 
     copyField () {

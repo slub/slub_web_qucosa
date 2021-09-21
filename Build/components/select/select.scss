@@ -71,7 +71,7 @@
         position: relative;
         width: fit-content;
 
-        &[data-required='required'] {
+        &[data-mandatory='1'] {
             label {
                 &::after {
                     content: '*';

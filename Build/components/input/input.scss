@@ -70,7 +70,7 @@
             cursor: pointer;
         }
 
-        &:required {
+        &[data-mandatory="1"] {
             ~ .qsa_input-group__label {
                 &::after {
                     content: '*';

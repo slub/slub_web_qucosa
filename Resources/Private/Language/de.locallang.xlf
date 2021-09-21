@@ -286,9 +286,9 @@
 				<source>Wizard Background image</source>
 				<target>Hintergrundbild Eingabeassistent</target>
 			</trans-unit>
-			<trans-unit id="tx_slubwebqucosa.wizard.field.error_numbers" xml:space="preserve">
-				<source>Only numbers allowed</source>
-				<target>In diesem Feld sind nur Zahlen erlaubt</target>
+			<trans-unit id="tx_slubwebqucosa.wizard.field.error_pattern" xml:space="preserve">
+				<source>Please enter a value in the correct format</source>
+				<target>Bitte geben Sie einen Wert im korrekten Format ein</target>
 			</trans-unit>
 			<trans-unit id="tx_slubwebqucosa.wizard.textarea.connector" xml:space="preserve">
 				<source>of</source>
