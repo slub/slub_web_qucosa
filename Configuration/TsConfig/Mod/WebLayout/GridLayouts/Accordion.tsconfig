@@ -5,8 +5,8 @@ tx_gridelements {
     setup {
         # Accordion
         accordion {
-            title = Akkordeon
-            description = Rasterelement für Akkordeoneinträge
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.accordion.label
+            description =LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.accordion.description
             frame = neutral
 
             config {
@@ -16,7 +16,7 @@ tx_gridelements {
                     1 {
                         columns {
                             1 {
-                                name = Akkordeon-Elemente
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.accordion.element
                                 colPos = 10
                                 allowed {
                                     CType = tx_slubwebqucosa_accordionitem

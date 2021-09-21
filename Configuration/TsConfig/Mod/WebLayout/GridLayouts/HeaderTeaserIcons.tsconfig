@@ -5,8 +5,8 @@ tx_gridelements {
     setup {
         # HeaderTeaserIcons
         headerTeaserIcons {
-            title = Header Teaser mit Icons
-            description = Rasterelement für bis zu 4 Teaserelemente mit Icons
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_icons.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_icons.description
             frame = neutral
 
             config {
@@ -16,7 +16,7 @@ tx_gridelements {
                     1 {
                         columns {
                             1 {
-                                name = Teaserelemente
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_icons.element
                                 colPos = 10
                                 minItems = 2
                                 maxitems = 4

@@ -150,7 +150,7 @@ class Bookmarks {
         const list = document.querySelector('.qsa_bookmarks__sidebar-list')
         const printBtn = document.querySelector('.qsa_bookmarks__sidebar-operations--print button')
         const title = 'Favoritenliste'
-        const currentUrl = window.location.origin + '/typo3conf/ext/slub_web_qucosa/Resources/Public/qucosa_relaunch/css/qsa.min.css'
+        const currentUrl = window.location.origin + '/typo3conf/ext/slub_web_qucosa/Resources/Public/Css/qsa.min.css'
 
         printBtn.addEventListener('click', () => {
             const bookmarkWindow = window.open('', 'PRINT', 'height=400,width=600')

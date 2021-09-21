@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.label',
+        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarimage.label',
         'tx_slubwebqucosa_sidebarimage',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],

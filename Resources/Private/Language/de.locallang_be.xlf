@@ -42,6 +42,90 @@
                 <source>Sidebar Content</source>
                 <target>Sidebar Inhaltsbereich</target>
             </trans-unit>
+            <trans-unit id="tx_gridelements.carousel.label">
+                <source>Carousel</source>
+                <target>Karussell</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.carousel.description">
+                <source>Grid element for carousel elements</source>
+                <target>Rasterelement für Karussell-Elemente</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.carousel.element">
+                <source>Carousel Elements</source>
+                <target>Karussell-Elemente</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.accordion.label">
+                <source>Accordion</source>
+                <target>Akkordeon</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.accordion.description">
+                <source>Grid element for accordion elements</source>
+                <target>Rasterelement für Akkordeon-Elemente</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.accordion.element">
+                <source>Accordion Elements</source>
+                <target>Akkordeon-Elemente</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.flipcards.label">
+                <source>Flip Cards</source>
+                <target>Flip Cards</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.flipcards.description">
+                <source>Grid element for Flip Card elements</source>
+                <target>Rasterelement für Flip Card Elemente</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.flipcards.element">
+                <source>Flip Card Elements</source>
+                <target>Flip Card Elemente</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_icons.label">
+                <source>Header teaser with icons</source>
+                <target>Header Teaser mit Icons</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_icons.description">
+                <source>Grid element for Header teaser with icons</source>
+                <target>Rasterelement für Header Teaser mit Icons</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_icons.element">
+                <source>Teaser</source>
+                <target>Teaser</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_text.label">
+                <source>Header teaser without icons</source>
+                <target>Header Teaser ohne Icons</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_text.description">
+                <source>Grid element for Header teaser without icons</source>
+                <target>Rasterelement für Header Teaser ohne Icons</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_text.element">
+                <source>Teaser</source>
+                <target>Teaser</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.logo.label">
+                <source>Logo Teaser</source>
+                <target>Logo Teaser</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.logo.description">
+                <source>Grid element for logos with descriptions</source>
+                <target>Rasterelement für Logos mit Beschreibungen</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.logo.element">
+                <source>Logo</source>
+                <target>Logo</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.multiple_accordions.label">
+                <source>Multiple Accordions</source>
+                <target>Mehrere Akkordeons</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.multiple_accordions.description">
+                <source>Grid element for multiple accordions</source>
+                <target>Rasterelement für mehrere Akkordeons</target>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.multiple_accordions.element">
+                <source>Accordion</source>
+                <target>Akkordeon</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -49,7 +49,8 @@
                                               value="{fieldItem.value}"
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
-                                                pattern:fieldItem.validation
+                                                pattern:fieldItem.validation,
+                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}'
                                               }"
                                               data="{
                                                 ajax: '{f:uri.action(action:\'search\',controller:\'Gnd\',pageType:427590)}',
@@ -65,7 +66,7 @@
                                                 label:fieldItem.displayName,
                                                 maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_numbers', extensionName: 'slub_web_qucosa')}</p>
+                            <p class="qsa_input-group__error d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:then>
                     <f:else>
@@ -75,7 +76,8 @@
                                               value="{fieldItem.value}"
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
-                                                pattern:fieldItem.validation
+                                                pattern:fieldItem.validation,
+                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}'
                                               }"
                                               data="{
                                                 field:fieldItem.uid,
@@ -89,7 +91,7 @@
                                                 label:fieldItem.displayName,
                                                 maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_numbers', extensionName: 'slub_web_qucosa')}</p>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:else>
                 </f:if>
@@ -155,7 +157,7 @@
                         <p>{f:translate(key: 'tx_slubwebqucosa.wizard.select.language', extensionName: 'slub_web_qucosa')}</p>
                         <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
                     </div>
-                    <div class="qsa_select__custom-options " data-iconpath="{f:uri.resource(path:'qucosa_relaunch/icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+                    <div class="qsa_select__custom-options " data-iconpath="{f:uri.resource(path:'Icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
 
                     </div>
                 </div>
@@ -167,11 +169,12 @@
             <f:then>
                 <f:form.checkbox id="inp_{fieldItem.uid}"
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                                 value="yes"
+                                 value=""
                                  class="input-field form-control input-field-checkbox"
                                  data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
+                                    required:fieldItem.mandatory,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
                                     groupindex:groupIndex,
@@ -187,11 +190,12 @@
             <f:else>
                 <f:form.checkbox id="inp_{fieldItem.uid}"
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
-                                 value="yes"
+                                 value=""
                                  class="input-field form-control input-field-checkbox"
                                  data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
+                                    required:fieldItem.mandatory,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
                                     groupindex:groupIndex,

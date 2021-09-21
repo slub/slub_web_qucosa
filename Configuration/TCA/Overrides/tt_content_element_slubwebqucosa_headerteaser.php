@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Teaserelement ohne Icon',
+        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_headerteaser.label',
         'tx_slubwebqucosa_headerteaser',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],

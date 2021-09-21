@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Karussell-Element',
+        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_carouselitem.label',
         'tx_slubwebqucosa_carouselitem',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],
@@ -51,7 +51,7 @@ $GLOBALS['TCA']['tt_content']['types']['tx_slubwebqucosa_carouselitem'] = [
         ],
         'subheader' => [
             'label' => 'LLL:EXT:cms/locallang_ttc.xml:header_link',
-            'exclude' => 1,
+            'exclude' => 0,
             'config' => [
                 'type' => 'input',
                 'renderType' => 'inputLink',

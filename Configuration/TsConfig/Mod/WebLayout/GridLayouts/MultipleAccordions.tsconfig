@@ -5,8 +5,8 @@ tx_gridelements {
     setup {
         # Accordion
         multipleAccordions {
-            title = Mehrere Akkordeons
-            description = Rasterelement für mehrere Akkordeons
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.multiple_accordions.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.multiple_accordions.description
             frame = neutral
 
             config {
@@ -16,10 +16,11 @@ tx_gridelements {
                     1 {
                         columns {
                             1 {
-                                name = Akkordeon-Raster
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.multiple_accordions.element
                                 colPos = 10
                                 allowed {
                                     tx_gridelements_backend_layout = accordion
+                                    CType = gridelements_pi1
                                 }
                             }
                         }

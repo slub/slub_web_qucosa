@@ -7,7 +7,7 @@
     'tt_content',
     'CType',
     [
-        'Flipcard Item',
+        'LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_flipcard-item.label',
         'tx_slubwebqucosa_flipcarditem',
         'tx-slubwebqucosa-content-beside-text-img-left'
     ],

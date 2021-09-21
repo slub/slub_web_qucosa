@@ -39,7 +39,7 @@ $tmp_slub_web_qucosa_columns = [
         ],
     ],
     'publication_date' => [
-        'exclude' => false,
+        'exclude' => 0,
         'label' => 'Veröffentlichungsdatum',
         'config' => [
             'dbType' => 'datetime',
