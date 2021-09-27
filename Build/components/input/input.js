@@ -107,12 +107,9 @@ class Input {
         removeFileButton.forEach(button => {
             button.addEventListener('click', e => {
                 e.stopImmediatePropagation()
-                console.log('click')
                 const fileInput = e.target.parentElement
                 const fileInputParent = fileInput.parentElement.parentElement
                 const addNewButton = fileInputParent.querySelector('.qsa_wizard__wrapper-form-element-add')
-
-                console.log(fileInput)
 
                 fileInput.parentElement.remove()
 
@@ -143,6 +140,9 @@ class Input {
 
     addFileMarkup (formWrapper) {
         const random = Math.random()
+        const iconPath = document.getElementById('iconPath').dataset.iconpath
+
+
         formWrapper.insertAdjacentHTML('beforeend', `<div class="qsa_input-group" data-input="file">
     <div class="qsa_input-group-file" data-showinsummary="true">
         <label class="qsa_input-group-file__label" for="fileupload-${random}" id="buttonlabel-${random}">
@@ -150,22 +150,22 @@ class Input {
                 <svg class="qsa_icon icon--upload icon--base" role="img" width="20" height="20" aria-hidden="true">
                     <title class="sr-only">Icon publish</title>
                     <desc class="sr-only">Icon um Datei hochzuladen</desc>
-                    <use xlink:href="../../icon/icon.min.svg#icon-upload"></use>
+                    <use xlink:href="${iconPath}icon-upload"></use>
                 </svg>
             </span>
         </label>
-        <span class="qsa_input-group-file-size">PDF | <span>23.8 MB</span></span>
+        <span class="qsa_input-group-file-size">PDF</span>
         <svg class="qsa_icon icon--pdf-file icon--base" role="img" width="20" height="20" aria-hidden="true">
             <title class="sr-only">Icon pdf-file</title>
             <desc class="sr-only"></desc>
-            <use xlink:href="../../icon/icon.min.svg#icon-pdf-file"></use>
+            <use xlink:href="${iconPath}icon-pdf-file"></use>
         </svg>
         <button class="qsa_input-group-file-remove btn-outline__without">
             <span class="sr-only">Ausgewählte PDF löschen</span>
             <svg class="qsa_icon icon--delete-bin icon--base" role="img" width="20" height="20" aria-hidden="true">
                 <title class="sr-only">Icon delete-bin</title>
                 <desc class="sr-only"></desc>
-                <use xlink:href="../../icon/icon.min.svg#icon-delete-bin"></use>
+                <use xlink:href="${iconPath}icon-delete-bin"></use>
             </svg>
         </button>
             <button class="qsa_input-group-file-add btn-outline__without">
@@ -173,7 +173,7 @@ class Input {
                 <svg class="qsa_icon icon--add-btn icon--base" role="img" width="20" height="20" aria-hidden="true">
                     <title class="sr-only">Icon add-btn</title>
                     <desc class="sr-only"></desc>
-                    <use xlink:href="../../icon/icon.min.svg#icon-add-btn"></use>
+                    <use xlink:href="${iconPath}icon-add-btn"></use>
                 </svg>
             </button>
                 <input class="qsa_input-group-file__input" type="file" accept="application/pdf" id="fileupload-${random}">

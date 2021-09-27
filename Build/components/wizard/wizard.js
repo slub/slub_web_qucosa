@@ -173,8 +173,6 @@ class Wizard {
                 const stepElement = {}
 
                 requiredInputs.forEach(input => {
-                    console.log(input)
-                    console.log(input.dataset.mandatory)
                     if (!input.value) {
                         if (!input.classList.contains('qsa_input-group__input--not-filled')) {
                             input.classList.add('qsa_input-group__input--not-filled')
@@ -383,6 +381,7 @@ class Wizard {
         })
 
         const finalSummary = summary.reverse()
+        const iconPath = document.getElementById('iconPath').dataset.iconpath
 
         finalSummary.forEach(form => {
             const formElementWrapper = document.createElement('div')
@@ -395,7 +394,7 @@ class Wizard {
                     <svg data-step="${form.id}" class="qsa_icon icon--edit icon--base" role="img" width="18" height="18" aria-hidden="true">
                         <title class="sr-only">Icon edit</title>
                         <desc class="sr-only">Ein Stift</desc>
-                        <use xlink:href="../../icon/icon.min.svg#icon-edit"></use>
+                        <use xlink:href="${iconPath}icon-edit"></use>
                     </svg>
                 </button>
             </div>`
