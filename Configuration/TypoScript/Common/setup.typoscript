@@ -67,6 +67,38 @@ page {
         }
     }
 
+    headerData {
+        # Favicons
+        10 = COA
+        10 {
+            10 = IMG_RESOURCE
+            10 {
+                file = EXT:slub_web_qucosa/Resources/Public/Images/favicon/apple-touch-icon.png
+                stdWrap.wrap = <link rel="apple-touch-icon" sizes="180x180" href="|">
+            }
+            20 = IMG_RESOURCE
+            20 {
+                file = EXT:slub_web_qucosa/Resources/Public/Images/favicon/favicon-32x32.png
+                stdWrap.wrap = <link rel="icon" type="image/png" href="|" sizes="32x32">
+            }
+            30 = IMG_RESOURCE
+            30 {
+                file = EXT:slub_web_qucosap/Resources/Public/Images/favicon/favicon-16x16.png
+                stdWrap.wrap = <link rel="icon" type="image/png" href="|" sizes="16x16">
+            }
+            40 = TEXT
+            40 {
+                data = path:EXT:slub_web_qucosa/Resources/Public/Images/Favicons/site.webmanifest
+                wrap = <link rel="manifest" href="|">
+            }
+            50 = TEXT
+            50.value = <meta name="msapplication-TileColor" content="#ffffff">
+
+            60 = TEXT
+            60.value = <meta name="theme-color" content="#ffffff">
+        }
+    }
+
     shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/favicon.png
 
     includeCSS {
