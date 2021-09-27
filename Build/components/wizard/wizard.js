@@ -419,7 +419,7 @@ class Wizard {
                                 <svg class="qsa_icon icon--pdf-file icon--pdf-file--absolute icon--base" role="img" width="20" height="20" aria-hidden="true">
                                     <title class="sr-only">Icon pdf-file</title>
                                     <desc class="sr-only"></desc>
-                                    <use xlink:href="./assets/icons/icon.min.svg#icon-pdf-file"></use>
+                                    <use xlink:href="${iconPath}icon-pdf-file"></use>
                                 </svg>
                             <input class="qsa_input-group-file__text-input" type="text" id="${random}--filename" autocomplete="off" readonly="" placeholder="${input.value}">
                             <label class="qsa_input-group-file__text-label" for="${random}--filename">
