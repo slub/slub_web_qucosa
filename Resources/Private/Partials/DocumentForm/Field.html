@@ -16,7 +16,8 @@
                                               value="{fieldItem.value}"
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light date"
                                               additionalAttributes="{
-                                                pattern:fieldItem.validation
+                                                pattern:fieldItem.validation,
+                                                aria-labeledby:'inp_{fieldItem.uid}'
                                               }"
                                               data="{
                                                 datatype: 'DATE',
@@ -50,7 +51,8 @@
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation,
-                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}'
+                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}',
+                                                aria-labeledby:'inp_{fieldItem.uid}'
                                               }"
                                               data="{
                                                 ajax: '{f:uri.action(action:\'search\',controller:\'Gnd\',pageType:427590)}',
@@ -77,7 +79,8 @@
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation,
-                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}'
+                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}',
+                                                aria-labeledby:'inp_{fieldItem.uid}'
                                               }"
                                               data="{
                                                 field:fieldItem.uid,
@@ -100,12 +103,14 @@
     </f:case>
     <f:case value="1">
         <div class="qsa_text-area" data-showinsummary="false">
+            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> {fieldItem.value} </label>
             <f:form.textarea id="inp_{fieldItem.uid}"
                              property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                              value="{fieldItem.value}"
                              class="qsa_text-area__field"
                              additionalAttributes="{
-                                maxlength: fieldItem.maxInputLength
+                                maxlength: fieldItem.maxInputLength,
+                                aria-labeledby:'inp_{fieldItem.uid}'
                               }"
                              data="{
                              field:fieldItem.uid,
@@ -118,7 +123,6 @@
                              datatype:fieldItem.dataType,
                              label:fieldItem.displayName,
                              maxlength:fieldItem.maxInputLength}"/>
-            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> {fieldItem.value} </label>
             <f:if condition="{fieldItem.maxInputLength}">
                 <div class="qsa_text-area__count-wrapper">
                     <span class="qsa_text-area__count">0</span>
@@ -140,6 +144,9 @@
                                class="qsa_select__native js-selectNative qsa_select__native-header {fieldItem.fillOutService}"
                                property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                value="{fieldItem.value}"
+                               additionalAttributes="{
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                              }"
                                data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
@@ -171,6 +178,9 @@
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                  value=""
                                  class="input-field form-control input-field-checkbox"
+                                 additionalAttributes="{
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                                }"
                                  data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
@@ -192,6 +202,9 @@
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                                  value=""
                                  class="input-field form-control input-field-checkbox"
+                                 additionalAttributes="{
+                                    aria-labeledby:'inp_{fieldItem.uid}'
+                                }"
                                  data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
@@ -213,6 +226,9 @@
                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
                               value="{fieldItem.value}"
                               class="input-field form-control dropdown-options-input {fieldItem.fillOutService}"
+                              additionalAttributes="{
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                                }"
                               data="{
                                 field:fieldItem.uid,
                                 index:fieldIndex,
