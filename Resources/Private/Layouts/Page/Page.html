@@ -4,14 +4,15 @@
 <f:render section="Main" />
 
 <f:render section="Footer" />
-<div class="qsa_side-slider">
+<div class="d-none" id="iconPath" data-iconpath="{f:uri.resource(path:'Icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}"></div>
+<aside class="qsa_side-slider">
     <button class="qsa_bookmarks__slider"
             id="bookmarkSlider"
             type="button"
             aria-label="Öffnet die Lesezeichenliste an der Seite"
             aria-expanded="false"
             tabindex="0">
-        <div class="qsa_bookmarks__counter">0</div>
+        <span class="qsa_bookmarks__counter">0</span>
 
         <f:render partial="Icon" arguments="{icon:'bookmark-plus'}" />
     </button>
@@ -117,5 +118,5 @@
         </button>
         -->
     </f:comment>
-</div>
+</aside>
 

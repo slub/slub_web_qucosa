@@ -173,8 +173,6 @@ class Wizard {
                 const stepElement = {}
 
                 requiredInputs.forEach(input => {
-                    console.log(input)
-                    console.log(input.dataset.mandatory)
                     if (!input.value) {
                         if (!input.classList.contains('qsa_input-group__input--not-filled')) {
                             input.classList.add('qsa_input-group__input--not-filled')
@@ -255,9 +253,9 @@ class Wizard {
                         inputFilled.name = input.querySelector('.qsa_input-group__label').textContent
                         inputFilled.value = input.querySelector('.qsa_input-group__input-text').value
                         inputFilled.type = 'text'
-                        inputFilled.required = input.querySelector('.qsa_input-group__input-text').hasAttribute('required')
+                        inputFilled.required = input.querySelector('.qsa_input-group__input-text').hasAttribute('data-mandatory')
                         inputFilled.showInSummary = input.dataset.showinsummary
-                        inputFilled.pattern = input.querySelector('.qsa_input-group__input-text').getAttribute('pattern')
+                        inputFilled.pattern = input.querySelector('.qsa_input-group__input-text').getAttribute('data-regexp')
                         inputFilled.validPattern = true
 
                         if (inputFilled.pattern) {
@@ -315,7 +313,7 @@ class Wizard {
                         dateFilled.name = date.querySelector('label').textContent
                         dateFilled.value = date.querySelector('input').value
                         dateFilled.type = 'date'
-                        dateFilled.required = date.querySelector('input').hasAttribute('required')
+                        dateFilled.required = date.querySelector('input').hasAttribute('data-mandatory')
                         dateFilled.showInSummary = date.dataset.showinsummary
 
                         if (!dateFilled.value && dateFilled.required) {
@@ -344,9 +342,8 @@ class Wizard {
                     files.forEach(file => {
                         const fileFilled = {}
                         fileFilled.value = file.querySelector('.qsa_input-group-file__text-input').value
-                        fileFilled.size = file.querySelector('.qsa_input-group-file-size span').textContent
                         fileFilled.type = 'file'
-                        fileFilled.required = file.querySelector('.qsa_input-group-file__text-input').hasAttribute('required')
+                        fileFilled.required = file.querySelector('.qsa_input-group-file__text-input').hasAttribute('data-mandatory')
                         fileFilled.showInSummary = file.dataset.showinsummary
 
                         if (!fileFilled.value && fileFilled.required) {
@@ -362,7 +359,7 @@ class Wizard {
                         const textAreaFilled = {}
                         textAreaFilled.value = textArea.querySelector('.qsa_text-area__field').value
                         textAreaFilled.type = 'textarea'
-                        textAreaFilled.required = textArea.querySelector('.qsa_text-area__field').hasAttribute('required')
+                        textAreaFilled.required = textArea.querySelector('.qsa_text-area__field').hasAttribute('data-mandatory')
                         textAreaFilled.showInSummary = textArea.dataset.showinsummary
 
                         if (!textAreaFilled.value && textAreaFilled.required) {
@@ -383,6 +380,7 @@ class Wizard {
         })
 
         const finalSummary = summary.reverse()
+        const iconPath = document.getElementById('iconPath').dataset.iconpath
 
         finalSummary.forEach(form => {
             const formElementWrapper = document.createElement('div')
@@ -395,7 +393,7 @@ class Wizard {
                     <svg data-step="${form.id}" class="qsa_icon icon--edit icon--base" role="img" width="18" height="18" aria-hidden="true">
                         <title class="sr-only">Icon edit</title>
                         <desc class="sr-only">Ein Stift</desc>
-                        <use xlink:href="../../icon/icon.min.svg#icon-edit"></use>
+                        <use xlink:href="${iconPath}icon-edit"></use>
                     </svg>
                 </button>
             </div>`
@@ -416,11 +414,11 @@ class Wizard {
                             const random = Math.random()
                             fileWrapper.classList.add('qsa_wizard__summary-file')
                             fileWrapper.insertAdjacentHTML('beforeend', `<div class="qsa_input-group-file qsa_input-group-file--filled">
-                            <span class="qsa_input-group-file-size">PDF | <span>${input.size}</span></span>
+                            <span class="qsa_input-group-file-size">PDF</span>
                                 <svg class="qsa_icon icon--pdf-file icon--pdf-file--absolute icon--base" role="img" width="20" height="20" aria-hidden="true">
                                     <title class="sr-only">Icon pdf-file</title>
                                     <desc class="sr-only"></desc>
-                                    <use xlink:href="./assets/icons/icon.min.svg#icon-pdf-file"></use>
+                                    <use xlink:href="${iconPath}icon-pdf-file"></use>
                                 </svg>
                             <input class="qsa_input-group-file__text-input" type="text" id="${random}--filename" autocomplete="off" readonly="" placeholder="${input.value}">
                             <label class="qsa_input-group-file__text-label" for="${random}--filename">
@@ -505,9 +503,9 @@ class Wizard {
         if (document.querySelectorAll('.qsa_progress-bar__container-item--invalid').length === 0) {
             document.querySelector('.qsa_wizard__wrapper-button-send').classList.remove('qsa_wizard__wrapper-button--disabled')
             document.querySelector('.qsa_wizard__wrapper-button-send').addEventListener('click', () => {
-                document.querySelector('.qsa_wizard__wrapper-steps').classList.add('d-none')
-                document.querySelector('.qsa_wizard__wrapper-last').classList.remove('d-none')
-                document.querySelector('.qsa_wizard__wrapper-last .qsa_wizard__wrapper-content').classList.remove('d-none')
+                document.querySelector('.qsa_wizard__wrapper-steps').classList.add('qsa_wizard__wrapper-content--hidden')
+                document.querySelector('.qsa_wizard__wrapper-last').classList.remove('qsa_wizard__wrapper-content--hidden')
+                document.querySelector('.qsa_wizard__wrapper-last .qsa_wizard__wrapper-content').classList.remove('qsa_wizard__wrapper-content--hidden')
 
                 document.querySelector('.qsa_wizard__wrapper-last #reloadWizard').addEventListener('click', () => {
                     window.location.hash = '#'
@@ -532,6 +530,9 @@ class Wizard {
         }
     }
 
+    /*
+    * Here the ajax-logic for adding fields/groups can be placed
+    * */
     copyField () {
         const newFormField = document.querySelectorAll('button[name="add_field"]')
         const self = this

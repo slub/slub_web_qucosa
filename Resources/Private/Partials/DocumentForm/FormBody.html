@@ -3,7 +3,7 @@
 <f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
     <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
         <f:then>
-            <div class="qsa_wizard__wrapper-content {f:if(condition: '{pageIterator.cycle}==1', then: '', else:'d-none')}"
+            <div class="qsa_wizard__wrapper-content {f:if(condition: '{pageIterator.cycle}==1', then: '', else:'qsa_wizard__wrapper-content--hidden')}"
                  id="tab-{pageIterator.cycle}">
                 <p class="qsa_content-area__warning qsa_content-area__warning--hidden">
                     {f:translate(key: 'tx_slubwebqucosa.wizard.missing_fields', extensionName: 'slub_web_qucosa')}
@@ -51,7 +51,7 @@
     </f:if>
 </f:for>
 
-<div class="qsa_wizard__wrapper-content d-none" id="tab-fileUpload">
+<div class="qsa_wizard__wrapper-content qsa_wizard__wrapper-content--hidden" id="tab-fileUpload">
     <p class="qsa_content-area__warning qsa_content-area__warning--hidden">{f:translate(key: 'tx_slubwebqucosa.wizard.missing_fields', extensionName: 'slub_web_qucosa')}</p>
 
     <fieldset class="row qsa_wizard__wrapper-content-block">
@@ -106,7 +106,7 @@
 
     <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">{f:translate(key: 'tx_slubwebqucosa.wizard.next', extensionName: 'slub_web_qucosa')}</button>
 </div>
-<div class="qsa_wizard__wrapper-content d-none" id="tab-checkForm">
+<div class="qsa_wizard__wrapper-content qsa_wizard__wrapper-content--hidden" id="tab-checkForm">
 
     <div class="row">
         <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">

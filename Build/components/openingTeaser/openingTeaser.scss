@@ -4,11 +4,14 @@
 //
 
 .qsa_opening-teaser {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
     height: fit-content;
+
+    @include media-breakpoint-down(md) {
+        overflow: hidden;
+    }
 
     &--bg {
         background-color: var(--color-opacity-white-1);

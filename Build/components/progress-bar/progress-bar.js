@@ -114,7 +114,7 @@ class ProgressBar {
                 })
 
                 wizardTabs.forEach(wizard => {
-                    wizard.classList.add('d-none')
+                    wizard.classList.add('qsa_wizard__wrapper-content--hidden')
                 })
 
                 containerProgress.classList.add('active')
@@ -122,7 +122,7 @@ class ProgressBar {
                 const wizzardTab = wizardWrapper.querySelector('#' + tabId)
                 const firstField = wizzardTab.querySelectorAll('input, select, textarea')[0] // find the first element
 
-                wizzardTab.classList.remove('d-none')
+                wizzardTab.classList.remove('qsa_wizard__wrapper-content--hidden')
                 firstField.focus() // focus the first element
             })
         })
@@ -144,12 +144,12 @@ class ProgressBar {
                 }
 
                 wizardTabs.forEach(wizard => {
-                    wizard.classList.add('d-none')
+                    wizard.classList.add('qsa_wizard__wrapper-content--hidden')
                 })
 
                 console.log(wizardWrapper)
                 console.log(wizardWrapper.querySelector('#' + tabId))
-                wizardWrapper.querySelector('#' + tabId).classList.remove('d-none')
+                wizardWrapper.querySelector('#' + tabId).classList.remove('qsa_wizard__wrapper-content--hidden')
                 wizard.generateSummary()
             })
         })
@@ -170,10 +170,10 @@ class ProgressBar {
                 }
 
                 wizardTabs.forEach(wizard => {
-                    wizard.classList.add('d-none')
+                    wizard.classList.add('qsa_wizard__wrapper-content--hidden')
                 })
 
-                wizardWrapper.querySelector('#' + tabId).classList.remove('d-none')
+                wizardWrapper.querySelector('#' + tabId).classList.remove('qsa_wizard__wrapper-content--hidden')
                 wizard.generateSummary()
             })
         })
@@ -192,11 +192,11 @@ class ProgressBar {
                 })
 
                 wizardTabs.forEach(wizard => {
-                    wizard.classList.add('d-none')
+                    wizard.classList.add('qsa_wizard__wrapper-content--hidden')
                 })
 
                 containerProgress.classList.add('active')
-                container.nextElementSibling.classList.remove('d-none')
+                container.nextElementSibling.classList.remove('qsa_wizard__wrapper-content--hidden')
                 wizard.generateSummary()
             })
         })
