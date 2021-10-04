@@ -342,7 +342,6 @@ class Wizard {
                     files.forEach(file => {
                         const fileFilled = {}
                         fileFilled.value = file.querySelector('.qsa_input-group-file__text-input').value
-                        fileFilled.size = file.querySelector('.qsa_input-group-file-size span').textContent
                         fileFilled.type = 'file'
                         fileFilled.required = file.querySelector('.qsa_input-group-file__text-input').hasAttribute('required')
                         fileFilled.showInSummary = file.dataset.showinsummary
@@ -415,7 +414,7 @@ class Wizard {
                             const random = Math.random()
                             fileWrapper.classList.add('qsa_wizard__summary-file')
                             fileWrapper.insertAdjacentHTML('beforeend', `<div class="qsa_input-group-file qsa_input-group-file--filled">
-                            <span class="qsa_input-group-file-size">PDF | <span>${input.size}</span></span>
+                            <span class="qsa_input-group-file-size">PDF</span>
                                 <svg class="qsa_icon icon--pdf-file icon--pdf-file--absolute icon--base" role="img" width="20" height="20" aria-hidden="true">
                                     <title class="sr-only">Icon pdf-file</title>
                                     <desc class="sr-only"></desc>
