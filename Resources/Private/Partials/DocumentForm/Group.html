@@ -7,6 +7,10 @@
         </f:if>
         {formGroupDisplayName}
     </legend>
+    <button class="qsa_wizard__wrapper-form-element-remove btn-outline__without d-none" name="remove_group">
+        <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.remove', extensionName: 'slub_web_qucosa')}</span>
+        <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
+    </button>
     <p>{f:translate(key: 'tx_slubwebqucosa.wizard.general_field_hint', extensionName: 'slub_web_qucosa')}</p>
     <h3 class="h5">{formGroupDisplayName}</h3>
     <f:for each="{groupItem.items}" as="formField" iteration="fieldIterator">

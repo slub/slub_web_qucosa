@@ -51,7 +51,6 @@
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation,
-                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}',
                                                 aria-labeledby:'inp_{fieldItem.uid}'
                                               }"
                                               data="{
@@ -79,7 +78,6 @@
                                               class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
                                               additionalAttributes="{
                                                 pattern:fieldItem.validation,
-                                                required: '{f:if(condition: fieldItem.mandatory, then: \'required\', else: \'false\')}',
                                                 aria-labeledby:'inp_{fieldItem.uid}'
                                               }"
                                               data="{
@@ -136,7 +134,7 @@
     <f:case value="2">
         <div class="qsa_select qsa_select__header">
             <span class="qsa_select__label sr-only">{fieldItem.displayName}</span>
-            <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-showinsummary="true" data-required="false">
+            <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-showinsummary="true">
                 <label class="qsa_select__label qsa_select__label-header" for="inp_{fieldItem.uid}" data-index="{fieldIndex}" data-field="{fieldItem.uid}">
                     {fieldItem.displayName}
                 </label>
@@ -184,7 +182,6 @@
                                  data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
-                                    required:fieldItem.mandatory,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
                                     groupindex:groupIndex,
@@ -208,7 +205,6 @@
                                  data="{
                                     field:fieldItem.uid,
                                     index:fieldIndex,
-                                    required:fieldItem.mandatory,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
                                     groupindex:groupIndex,
