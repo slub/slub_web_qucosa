@@ -37,6 +37,10 @@
                                                 maxlength:fieldItem.maxInputLength,
                                                 language: '{f:translate(key: \'tx_slubwebqucosa.current_language\', extensionName: \'slub_web_qucosa\')}'
                     }"/>
+                            <f:comment>
+                                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                            </f:comment>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +71,10 @@
                                                 label:fieldItem.displayName,
                                                 maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
-                            <p class="qsa_input-group__error d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
+                            <f:comment>
+                                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                            </f:comment>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:then>
                     <f:else>
@@ -82,6 +89,7 @@
                                               }"
                                               data="{
                                                 field:fieldItem.uid,
+
                                                 index:fieldIndex,
                                                 mandatory:fieldItem.mandatory,
                                                 group:formGroupUid,
@@ -92,6 +100,9 @@
                                                 label:fieldItem.displayName,
                                                 maxlength:fieldItem.maxInputLength}"/>
                             <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
+                            <f:comment>
+                                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                            </f:comment>
                             <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
                         </div>
                     </f:else>
@@ -112,6 +123,7 @@
                               }"
                              data="{
                              field:fieldItem.uid,
+
                              index:fieldIndex,
                              mandatory:fieldItem.mandatory,
                              group:formGroupUid,
@@ -128,6 +140,10 @@
                     <span class="qsa_text-area__limit">{fieldItem.maxInputLength}</span>
                 </div>
             </f:if>
+            <f:comment>
+                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+            </f:comment>
+            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
         </div>
 
     </f:case>
@@ -147,6 +163,7 @@
                               }"
                                data="{
                                     field:fieldItem.uid,
+
                                     index:fieldIndex,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
@@ -166,6 +183,10 @@
 
                     </div>
                 </div>
+                <f:comment>
+                    <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                </f:comment>
+                <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
             </div>
         </div>
     </f:case>
@@ -181,6 +202,7 @@
                                 }"
                                  data="{
                                     field:fieldItem.uid,
+
                                     index:fieldIndex,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
@@ -204,6 +226,7 @@
                                 }"
                                  data="{
                                     field:fieldItem.uid,
+
                                     index:fieldIndex,
                                     mandatory:fieldItem.mandatory,
                                     group:formGroupUid,
@@ -227,6 +250,7 @@
                                 }"
                               data="{
                                 field:fieldItem.uid,
+
                                 index:fieldIndex,
                                 mandatory:fieldItem.mandatory,
                                 group:formGroupUid,

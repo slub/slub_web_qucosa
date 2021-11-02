@@ -81,7 +81,7 @@ module.exports = {
         }),
         new SVGSpritemapPlugin('./components/icon/assets/**/*.svg', {
             output: {
-                filename: 'icons/icon.min.svg'
+                filename: 'Icons/icon.min.svg'
             },
             sprite: {
                 prefix: 'icon-'
@@ -93,7 +93,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: './components/typography/assets/src/fonts', to: 'fonts'
+                    from: './components/typography/assets/src/fonts', to: 'Fonts'
                 },
                 {
                     from: './components/favicon/assets', to: 'Images/favicon'
