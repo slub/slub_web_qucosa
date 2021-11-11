@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+{v:iterator.first(haystack: files) -> v:variable.set(name: 'image')}
+<figure>
+    <div class="lightbox qsa_sidebar__image-wrapper">
+        <h2 class="sr-only">{f:translate(key: 'tx_slubwebqucosa.sidebar_image.show')}</h2>
+        <f:link.typolink parameter="{f:uri.image(image:image)}"
+                         class="qsa_sidebar__image-wrapper-toggle"
+                         additionalAttributes="{aria-label: 'Biild öffnen'}">
+            <f:image class="img-responsive" image="{image}"/>
+            <f:render partial="Icon" arguments="{icon:'zoom'}" />
+        </f:link.typolink>
+    </div>
+    <p class="qsa_sidebar__image-wrapper-caption">{image.properties.description}</p>
+</figure>
+
+</html>

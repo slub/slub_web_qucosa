@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-03-09UTC13:25:310">
+        <header>
+            <authorName>XIMA MEDIA GmbH</authorName>
+            <authorEmail>opensource@xima.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.twoColumns">
+                <source>Content with sidebar</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.singleColumn">
+                <source>Only Contentarea</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebar">
+                <source>Sidebar</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebarheader">
+                <source>Sidebar Header</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.sidebarbody">
+                <source>Sidebar Content</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.carousel.label">
+                <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.carousel.description">
+                <source>Grid element for carousel elements</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.carousel.element">
+                <source>Carousel Elements</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.accordion.label">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.accordion.description">
+                <source>Grid element for accordion elements</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.accordion.element">
+                <source>Accordion Elements</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.flipcards.label">
+                <source>Flip Cards</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.flipcards.description">
+                <source>Grid element for Flip Card elements</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.flipcards.element">
+                <source>Flip Card Elements</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_icons.label">
+                <source>Header teaser with icons</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_icons.description">
+                <source>Grid element for Header teaser with icons</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_icons.element">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_text.label">
+                <source>Header teaser without icons</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_text.description">
+                <source>Grid element for Header teaser without icons</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.header_teaser_text.element">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.logo.label">
+                <source>Logo Teaser</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.logo.description">
+                <source>Grid element for logos with descriptions</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.logo.element">
+                <source>Logo</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.multiple_accordions.label">
+                <source>Multiple Accordions</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.multiple_accordions.description">
+                <source>Grid element for multiple accordions</source>
+            </trans-unit>
+            <trans-unit id="tx_gridelements.multiple_accordions.element">
+                <source>Accordion</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

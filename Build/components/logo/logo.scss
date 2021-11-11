@@ -1,0 +1,37 @@
+//
+//    @tableOfContent
+//      1. Logo
+//
+
+
+//
+//   @section 1. Logo
+//
+
+.qsa_logo {
+    display: flex;
+    width: auto;
+    height: 100%;
+    max-height: var(--header-height);
+    padding: 25px 0;
+
+    &__tu-chemnitz {
+        padding: 13px 0;
+    }
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        max-height: var(--header-height-mobile);
+        padding: 12px 0;
+
+        &__tu-chemnitz {
+            padding: 6px 0;
+        }
+    }
+}
+
+// end of logo.scss file

@@ -1,0 +1,64 @@
+
+//
+//    @tableOfContent
+//      1. SideSlider
+//
+
+
+//
+//   @section 1. SideSlider
+//
+
+
+.scroll-down {
+    @include media-breakpoint-down(md) {
+        .qsa_side-slider {
+            transform: translate(0, 145%);
+        }
+    }
+}
+
+.scroll-up {
+    @include media-breakpoint-down(md) {
+        .qsa_side-slider {
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.qsa_side-slider {
+    position: fixed;
+    top: 500px;
+    right: 0;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: unset;
+        right: 0;
+        bottom: 4px;
+        left: 0;
+        z-index: 9;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 10px;
+        box-shadow: -1px 7px 12px -6px rgba(0, 0, 0, .75);
+    }
+
+    .qsa_bookmarks__slider {
+        border: transparent;
+        &:last-child {
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    .qsa_sidebar-links__slider {
+        border: transparent;
+    }
+}
+
+// end of side.slider.scss file

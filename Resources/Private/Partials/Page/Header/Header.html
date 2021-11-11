@@ -1,0 +1,80 @@
+<header class="qsa_header">
+    <div class="qsa_header__content container">
+        <div class="qsa_header__logo">
+
+            <f:cObject typoscriptObjectPath="lib.logo" />
+
+        </div>
+        <div class="nav__hamburger">
+            <div class="qsa_menu-button" role="button" aria-label="{f:translate(key: 'tx_slubwebqucosa.navigation.open', extensionName: 'slub_web_qucosa')}" tabindex="0">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <nav aria-label="Navigation" class="qsa_header__nav qsa_nav qsa_nav--main">
+            <f:link.typolink parameter="{settings.pageIDWizard}" class="btn qsa_header__button-main" additionalAttributes="{aria-label: '{f:translate(key: \'tx_slubwebqucosa.publish\', extensionName: \'slub_web_qucosa\')}', id: 'openWizard'}">
+                <f:render partial="Icon" arguments="{icon:'publish'}" />
+                <span>
+                    {f:translate(key: 'tx_slubwebqucosa.publish', extensionName: 'slub_web_qucosa')}
+                </span>
+            </f:link.typolink>
+            <ul class="qsa_nav__items">
+                <f:for each="{mainnavigation}" as="mainnavigationItem">
+                    <li class="qsa_nav__item {f:if(condition: '{mainnavigationItem.children}', then: 'qsa_nav__item--has-submenu', else: '')}">
+                        <a class="qsa_nav__link " href="{mainnavigationItem.link}">{mainnavigationItem.title}</a>
+                        <f:if condition="{mainnavigationItem.children}">
+                            <ul class="qsa_dropdown__items">
+                                <f:for each="{mainnavigationItem.children}" as="secondLevel">
+                                    <li class="qsa_dropdown__item {f:if(condition: '{secondLevel.children}', then: 'qsa_dropdown__item--has-submenu', else: '')}">
+                                        <a class="qsa_dropdown__link" href="{secondLevel.link}">
+                                            <span class="sr-only">{secondLevel.title}</span>
+                                            {secondLevel.title}
+                                        </a>
+                                        <f:if condition="{secondLevel.children}">
+                                            <ul class="qsa_dropdown__items">
+                                                <f:for each="{secondLevel.children}" as="thirdLevel">
+                                                    <li class="qsa_dropdown__item">
+                                                        <a class="qsa_dropdown__link" href="{thirdLevel.link}">
+                                                            <span class="sr-only">{thirdLevel.title}</span>
+                                                            {thirdLevel.title}
+                                                        </a>
+                                                    </li>
+                                                </f:for>
+                                            </ul>
+                                            <button type="button" class="qsa_dropdown__button" aria-label="{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}" aria-expanded="false" tabindex="-1">
+                                                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}</span>
+                                                <f:render partial="Icon" arguments="{icon:'arrow-left'}" />
+                                            </button>
+                                        </f:if>
+                                    </li>
+                                </f:for>
+                            </ul>
+                            <button type="button" class="qsa_dropdown__button" aria-label="{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}" aria-expanded="false" tabindex="-1">
+                                <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.navigation.toggle_item', extensionName: 'slub_web_qucosa')}</span>
+                                <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
+                            </button>
+                        </f:if>
+                    </li>
+                </f:for>
+                <li class="qsa_nav__item">
+                    <div class="qsa_dropdown qsa_dropdown--language">
+                        <button class="btn qsa_dropdown__button qsa_dropdown__button-language" type="button">
+                            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.language_switcher', extensionName: 'slub_web_qucosa')}</span>
+                            <f:render partial="Icon" arguments="{icon:'translate'}" />
+                            {languageButton}
+                        </button>
+                        <f:cObject typoscriptObjectPath="lib.langnav" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <f:if condition="{isMandant} == 'true'">
+            <div class="qsa_header__logo qsa_header__logo--right">
+                <a href="http://qucosa.ddev.site" class="qsa_logo" target="_blank">
+                    <img alt="Website Logo" src="{f:uri.resource(path:'Images/logo/Logo_Qucosa.svg', extensionName: 'slub_web_qucosa')}">
+                </a>
+            </div>
+        </f:if>
+    </div>
+</header>

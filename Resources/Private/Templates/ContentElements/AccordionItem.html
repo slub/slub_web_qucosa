@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="qsa_accordion__item">
+    <button class="qsa_accordion__btn"
+            aria-expanded="false"
+            id="accordionItem{data.uid}"
+            data-id="c{data.uid}"
+            data-type="default"
+            aria-label="Akkordeon-Eintrag öffnen"
+            aria-controls="accordionSection{data.uid}">
+        <span class="h4 qsa_accordion__btn-description">
+            {data.header}
+        </span>
+        <span class="qsa_accordion__btn--closed">
+            <f:render partial="Icon" arguments="{icon:'plus-circle'}" />
+        </span>
+        <span class="qsa_accordion__btn--active">
+            <f:render partial="Icon" arguments="{icon:'minus-circle'}" />
+        </span>
+    </button>
+    <div class="qsa_accordion__panel"
+         id="accordionSection{data.uid}"
+         aria-labelledby="accordionItem-{data.uid}">
+        <f:format.raw>{data.bodytext}</f:format.raw>
+    </div>
+</div>
+
+</html>

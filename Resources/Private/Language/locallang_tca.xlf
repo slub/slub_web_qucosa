@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-03-09UTC13:25:310">
+        <header>
+            <authorName>XIMA MEDIA GmbH</authorName>
+            <authorEmail>opensource@xima.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="tx_slubwebqucosa_logoitem.label">
+                <source>Logo Element</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_accordion.label">
+                <source>Accordion Element</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_accordion.description">
+                <source>Adds a new accordion entry</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carouselitem.label">
+                <source>Carousel Element</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carouselitem.description">
+                <source>Adds one Carousel Element inside the Carousel Container</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_flipcard-item.label">
+                <source>Flipcard Element</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_flipcard-item.description">
+                <source>Adds a new flipcard</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headericonteaser.label">
+                <source>Header teaser with Icon</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headericonteaser.description">
+                <source>A teaser element for the header with icon and description</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headerteaser.label">
+                <source>Header teaser without Icon</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_headerteaser.description">
+                <source>A teaser element for the header with description</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_text.label">
+                <source>Text Element</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_text.description">
+                <source>Adds text with caption</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarimage.label">
+                <source>Sidebar Image</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarimage.description">
+                <source>Adds an image for the sidebar</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarlinks.label">
+                <source>Sidebar Links</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarlinks.description">
+                <source>Adds links as a bulleted list in the sidebar</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarteaser.label">
+                <source>Sidebar Teaser</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_sidebarteaser.description">
+                <source>AAdds a teaser in the sidebar</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_logoitem.link">
+                <source>Link URL</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_logoitem.description">
+                <source>Element for Logo-Teaser</source>
+            </trans-unit>
+            <trans-unit id="tx_slubwebqucosa_carouselitem.link.label">
+                <source>Link</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,30 @@
+//
+//    @tableOfContent
+//      1. Prototype
+//
+
+
+//
+//   @section 1. Prototype
+//
+
+.prototype {
+    &__entry {
+        .logo {
+            max-width: 300px;
+            margin: 60px;
+        }
+    }
+
+    &__items {
+        margin: 0 60px;
+        padding: 0;
+        list-style: none;
+
+        a {
+            color: var(--color-text-color);
+        }
+    }
+}
+
+// end of prototype.scss file

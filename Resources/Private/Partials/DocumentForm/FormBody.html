@@ -1,0 +1,127 @@
+{namespace eww=EWW\Dpf\ViewHelpers}
+
+<f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
+    <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
+        <f:then>
+            <div class="qsa_wizard__wrapper-content {f:if(condition: '{pageIterator.cycle}==1', then: '', else:'qsa_wizard__wrapper-content--hidden')}"
+                 id="tab-{pageIterator.cycle}">
+                <p class="qsa_content-area__warning qsa_content-area__warning--hidden">
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.missing_fields', extensionName: 'slub_web_qucosa')}
+                </p>
+                <div class="row qsa_wizard__wrapper-content-block">
+                    <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
+                        <f:for each="{formPage.0.items}" as="formGroup" iteration="groupIterator">
+                            <f:for each="{formGroup}" as="groupItem" iteration="groupItemIterator">
+                                <f:if condition="{eww:IsElementAllowed(condition:'{groupItem.backendOnly}')}">
+                                    <f:then>
+                                        <f:render partial="DocumentForm/Group"
+                                                  arguments="{formPageUid:formPage.0.uid,formGroupUid:groupItem.uid,formGroupDisplayName:groupItem.displayName,groupItem:groupItem,groupIndex:groupItemIterator.index}"/>
+                                        <f:if condition="{groupItem.maxIteration} == 0">
+                                            <f:if condition="{groupItemIterator.isLast}">
+                                                <button class="btn qsa_wizard__wrapper-form-element-add qsa_btn--transparent add_group"
+                                                        name="add_group"
+                                                        data-group="{groupItem.uid}"
+                                                        data-ajax="{f:uri.action(action:'group',controller:'AjaxDocumentForm',pageType:110124,arguments:{pageUid:formPage.0.uid,groupUid:groupItem.uid})}"
+                                                        data-index="{groupItemIterator.index}">+ {f:translate(key:
+                                                    'form_button.add_item', arguments: {0:
+                                                    groupItem.displayName})}
+                                                </button>
+                                            </f:if>
+                                        </f:if>
+                                    </f:then>
+                                </f:if>
+                            </f:for>
+                        </f:for>
+
+                    </div>
+                    <div class="col-12 col-lg-4 qsa_wizard__wrapper-text">
+                        <div class="qsa_wizard__wrapper-text-default d-none">
+                            <h3 class="h5">Standard Einleitungstext</h3>
+                            <p>
+                                Hier könnte ein Einleitungstext stehen. Dieser gibt grundlegende Informationen zum
+                                Eingabeassistenten. Der Text verschwindet, sobald mit der Maus über eine Publikation
+                                gefahren wird. Der Text kann von Redakteuren gepflegt werden.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">{f:translate(key: 'tx_slubwebqucosa.wizard.next', extensionName: 'slub_web_qucosa')}</button>
+            </div>
+        </f:then>
+    </f:if>
+</f:for>
+
+<div class="qsa_wizard__wrapper-content qsa_wizard__wrapper-content--hidden" id="tab-fileUpload">
+    <p class="qsa_content-area__warning qsa_content-area__warning--hidden">{f:translate(key: 'tx_slubwebqucosa.wizard.missing_fields', extensionName: 'slub_web_qucosa')}</p>
+
+    <fieldset class="row qsa_wizard__wrapper-content-block">
+        <legend class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.file_primary_upload', extensionName: 'slub_web_qucosa')}</legend>
+        <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
+            <div class="qsa_wizard__wrapper-form-element">
+                <h3 class="h5">{f:translate(key: 'tx_slubwebqucosa.wizard.file_primary', extensionName: 'slub_web_qucosa')}</h3>
+
+                <f:render partial="DocumentForm/PrimaryFileGroup"
+                          arguments="{file:documentForm.primaryFile,virtual:documentForm.virtual}"/>
+
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 qsa_wizard__wrapper-text">
+            <div class="qsa_wizard__wrapper-text-default d-none">
+                <h3 class="h5">Standard Einleitungstext</h3>
+                <p>
+                    Hier könnte ein Einleitungstext stehen. Dieser gibt grundlegende Informationen zum
+                    Eingabeassistenten. Der Text verschwindet, sobald mit der Maus über eine Publikation
+                    gefahren wird. Der Text kann von Redakteuren gepflegt werden.
+                </p>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="row qsa_wizard__wrapper-content-block">
+        <legend class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.file_secondary_upload', extensionName: 'slub_web_qucosa')}</legend>
+        <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
+            <div class="qsa_wizard__wrapper-form-element">
+                <h3 class="h5">{f:translate(key: 'tx_slubwebqucosa.wizard.file_secondary', extensionName: 'slub_web_qucosa')}</h3>
+
+
+                <f:render partial="DocumentForm/SecondaryFileGroup" arguments="{files:documentForm.secondaryFiles}"/>
+
+                <button class="btn qsa_wizard__wrapper-form-element-add qsa_wizard__wrapper-form-element-add--centered qsa_btn--transparent d-none">
+                    +  {f:translate(key: 'form_button.addFile')}
+                </button>
+
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 qsa_wizard__wrapper-text">
+            <div class="qsa_wizard__wrapper-text-default d-none">
+                <h3 class="h5">Standard Einleitungstext</h3>
+                <p>
+                    Hier könnte ein Einleitungstext stehen. Dieser gibt grundlegende Informationen zum
+                    Eingabeassistenten. Der Text verschwindet, sobald mit der Maus über eine Publikation
+                    gefahren wird. Der Text kann von Redakteuren gepflegt werden.
+                </p>
+            </div>
+        </div>
+    </fieldset>
+
+    <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button-next">{f:translate(key: 'tx_slubwebqucosa.wizard.next', extensionName: 'slub_web_qucosa')}</button>
+</div>
+<div class="qsa_wizard__wrapper-content qsa_wizard__wrapper-content--hidden" id="tab-checkForm">
+
+    <div class="row">
+        <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
+
+        </div>
+        <div class="col-12 col-lg-4 qsa_wizard__wrapper-text">
+            <div class="qsa_wizard__wrapper-text-default">
+                <h3 class="h5">{f:translate(key: 'tx_slubwebqucosa.wizard.step.check', extensionName: 'slub_web_qucosa')}</h3>
+                <p>
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.step.check.description', extensionName: 'slub_web_qucosa')}
+                </p>
+            </div>
+        </div>
+    </div>
+    <button class="btn qsa_wizard__wrapper-button qsa_wizard__wrapper-button--disabled qsa_wizard__wrapper-button-send qsa_btn__submit">
+        {f:translate(key: 'tx_slubwebqucosa.wizard.send', extensionName: 'slub_web_qucosa')}
+    </button>
+</div>

@@ -1,0 +1,32 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # Accordion
+        multipleAccordions {
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.multiple_accordions.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.multiple_accordions.description
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.multiple_accordions.element
+                                colPos = 10
+                                allowed {
+                                    tx_gridelements_backend_layout = accordion
+                                    CType = gridelements_pi1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

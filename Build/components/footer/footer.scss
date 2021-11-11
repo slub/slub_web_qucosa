@@ -1,0 +1,112 @@
+//
+//    @tableOfContent
+//      1. Footer
+//
+
+
+//
+//   @section 1. Footer
+//
+
+.qsa_footer {
+    flex-shrink: 0;
+    padding: var(--spacing-s) var(--spacing);
+    font-family: $font-family-assistant;
+    font-size: $font-size-small;
+    line-height: 20px;
+    color: var(--color-text-color-inverted);
+    background-color: var(--color-primary);
+
+    @include media-breakpoint-down(xs) {
+        padding: unset;
+        padding-top: var(--spacing);
+        padding-bottom: var(--spacing);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 1136px) {
+            display: block;
+        }
+
+        .qsa_footer_info {
+            text-align: center;
+
+            p {
+                margin-bottom: 0;
+                font-size: inherit;
+                line-height: inherit;
+                font-weight: inherit;
+                letter-spacing: inherit;
+            }
+
+            @media only screen and (max-width: 1136px) {
+                margin-bottom: calc(var(--spacing) / 2);
+            }
+        }
+
+        .qsa_footer__nav {
+            ul {
+                margin-bottom: 0;
+                padding-left: 0;
+
+                @media only screen and (max-width: 1136px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                li {
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+
+            &__item {
+                display: inline-block;
+                margin-right: var(--spacing-s);
+
+                @media only screen and (max-width: 1136px) {
+                    margin-right: 0;
+                    margin-bottom: 5px;
+                }
+
+                &:not(:last-child) {
+                    @media only screen and (max-width: 1136px) {
+                        margin-right: 10px;
+                    }
+
+                    @include media-breakpoint-down(xs) {
+                        display: block;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &::before {
+                    content: none;
+                }
+            }
+
+
+            &__link {
+                color: var(--color-text-color-inverted);
+
+                &:hover {
+                    border-bottom: 1px solid var(--color-text-color-inverted);
+                }
+
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+// end of footer.scss file

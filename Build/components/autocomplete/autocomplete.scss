@@ -1,0 +1,68 @@
+//
+//    @tableOfContent
+//      1. Auto complete
+//
+
+@charset "UTF-8";
+
+
+//
+//    @section 1. Auto complete
+//
+
+// https://github.com/bassjobsen/typeahead.js-bootstrap4-css
+.awesomplete {
+    flex: 1 1 auto;
+    position: relative;
+    width: 1%;
+
+    [hidden] {
+        display: none;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    > ul {
+        overflow-y: auto;
+        position: absolute;
+        top: 89%;
+        z-index: 2;
+        width: calc(100% + 50px);
+        min-width: 100%;
+        height: auto;
+        max-height: 250px;
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-400);
+        border: 0;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+
+        &:empty {
+            display: none;
+        }
+
+        li {
+            padding: 8px;
+            color: var(--color-text-color);
+            cursor: pointer;
+
+            &[aria-selected='true'],
+            &:hover {
+                background-color: var(--color-secondary-hover);
+            }
+
+            mark {
+                padding: 0;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+// end of autocomplete.scss file

@@ -1,0 +1,33 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # HeaderTeaserIcons
+        headerTeaserIcons {
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_icons.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_icons.description
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_icons.element
+                                colPos = 10
+                                minItems = 2
+                                maxitems = 4
+                                allowed {
+                                    CType = tx_slubwebqucosa_headericonteaser
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+### Gridelements CE Backend Layout
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        # HeaderTeaserText
+        headerTeaserText {
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_text.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_text.description
+            frame = neutral
+
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:tx_gridelements.header_teaser_text.element
+                                colPos = 10
+                                minItems = 2
+                                maxitems = 4
+                                allowed {
+                                    CType = tx_slubwebqucosa_headerteaser
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            flexformDS (
+<T3DataStructure>
+    <meta>
+        <langDisable>0</langDisable>
+    </meta>
+    <ROOT type="array">
+        <type>array</type>
+        <el type="array">
+            <publishurl type="array">
+                <TCEforms type="array">
+                    <label>
+                        Seite aller Veröffentlichungen
+                    </label>
+                    <config type="array">
+                        <type>input</type>
+                        <renderType>inputLink</renderType>
+                        <size>15</size>
+                        <max>256</max>
+                        <eval>trim,required</eval>
+                        <fieldControl>
+                            <linkPopup>
+                                <options>
+                                    <blindLinkFields>class,params</blindLinkFields>
+                                    <blindLinkOptions>folder,file,mail,url</blindLinkOptions>
+                                    <windowOpenParameters>height=800,width=1000,status=0,menubar=1,scrollbars=1</windowOpenParameters>
+                                </options>
+                            </linkPopup>
+                        </fieldControl>
+                    </config>
+                </TCEforms>
+            </publishurl>
+        </el>
+    </ROOT>
+</T3DataStructure>
+            )
+        }
+    }
+}

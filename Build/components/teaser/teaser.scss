@@ -1,0 +1,89 @@
+//
+//    @tableOfContent
+//      1. Teaser
+//
+
+
+//
+//   @section 1. Teaser
+//
+
+.qsa_teaser {
+    background: var(--color-white);
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--spacing) var(--spacing-s);
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+
+        &--item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                margin-right: var(--spacing-xl);
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-right: unset;
+                margin-bottom: var(--spacing);
+
+                p {
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include media-breakpoint-down(xs) {
+                flex-direction: column;
+            }
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                max-width: 106px;
+                max-height: 71px;
+            }
+
+            p {
+                margin-bottom: 0;
+                margin-left: var(--spacing-s);
+                font-family: $font-family-assistant;
+                font-size: $font-size-small;
+                line-height: 1.4; // 20px / 14(font-size-small)
+                color: var(--color-text-color);
+
+                @include media-breakpoint-down(xs) {
+                    margin: 0;
+                    margin-top: 1rem;
+                }
+            }
+
+            &-link {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                width: 100%;
+                height: auto;
+
+                @include media-breakpoint-down(md) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+// end of teaser.scss file

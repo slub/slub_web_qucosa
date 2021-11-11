@@ -1,0 +1,284 @@
+//
+//    @tableOfContent
+//      1. OpeningTeaser
+//
+
+.qsa_opening-teaser {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+
+    @include media-breakpoint-down(md) {
+        overflow: hidden;
+    }
+
+    &--bg {
+        background-color: var(--color-opacity-white-1);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    &__card {
+        flex: 1;
+        position: relative;
+        color: var(--color-text-color);
+        background-color: var(--color-white);
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        @include media-breakpoint-down(md) {
+            flex: 100%;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            height: 100%;
+            padding: var(--spacing);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            gap: 0 24px;
+
+            @include media-breakpoint-down(md) {
+                padding: 10px;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, .5fr);
+                gap: 10px 0;
+            }
+        }
+
+        &--grid {
+            /*
+           * Overwrite default Slick-Slider display attribute
+           */
+            // stylelint-disable declaration-no-important
+            display: grid !important;
+            // stylelint-enable  declaration-no-important
+            grid-template-columns: .6fr 1.4fr;
+
+            @include media-breakpoint-down(md) {
+                /*
+          * Overwrite default Slick-Slider display attribute
+          */
+                // stylelint-disable declaration-no-important
+                display: flex !important;
+                flex-direction: column;
+                height: fit-content !important;
+                // stylelint-enable  declaration-no-important
+            }
+        }
+
+        &--large {
+            // stylelint-disable declaration-no-important
+            display: flex !important;
+            // stylelint-enable  declaration-no-important
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &:hover {
+            background-color: var(--color-gray-200);
+
+            .qsa_opening-teaser__button {
+                color: var(--color-primary-hover);
+            }
+
+            .qsa_opening-teaser__icon {
+                background-color: var(--color-gray-200);
+            }
+        }
+    }
+
+    &__description {
+        float: left;
+        padding: 24px;
+        color: var(--color-gray-500);
+
+        .h6 {
+            padding-bottom: 4px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 8px;
+            }
+        }
+
+        p {
+            margin-bottom: var(--spacing);
+            font-family: $font-family-assistant;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: .5px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0;
+            }
+        }
+
+        &--large {
+            p {
+                overflow: hidden;
+                display: box;
+                -webkit-box-orient: vertical;
+                margin-top: 20px;
+                margin-bottom: 0;
+                font-size: 20px;
+                letter-spacing: .14px;
+                -webkit-line-clamp: 5;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 12px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-gray-100);
+        border-top-left-radius: 10px;
+
+        @include media-breakpoint-down(md) {
+            order: 3;
+            border-bottom-right-radius: 10px;
+        }
+
+        svg {
+            @include size(50px);
+
+            @include media-breakpoint-down(md) {
+                @include size(40px);
+
+                padding: 5px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__tags {
+        padding: 24px;
+        padding-right: 50px;
+
+        @include media-breakpoint-down(md) {
+            padding-right: 24px;
+        }
+
+        .qsa_tag {
+            display: inline;
+            vertical-align: baseline;
+            padding: 4px 8px;
+            font-size: 12px;
+            line-height: 1;
+            font-weight: 100;
+            color: white;
+            text-align: center;
+            white-space: nowrap;
+            background-color: var(--color-primary);
+            border-radius: 12px;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        color: var(--color-primary);
+        transform: rotate(-90deg);
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        svg {
+            @include size(30px);
+        }
+    }
+
+    &__link {
+        margin: 32px auto;
+        padding-bottom: 1px;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1.15px;
+        color: var(--color-white) !important;
+        text-transform: uppercase;
+
+        &:hover {
+            padding-bottom: 0;
+            color: var(--color-white);
+            border-bottom: 1px solid var(--color-text-color-inverted);
+        }
+
+        @include media-breakpoint-up(lg) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+}
+
+.qsa_prev,
+.qsa_next {
+    display: none;
+    top: 50%;
+    width: auto;
+
+    &--large {
+        top: 40%;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: block;
+    }
+}
+
+.qsa_prev {
+    left: 20px;
+
+    @include media-breakpoint-down(md) {
+        left: 2px;
+    }
+}
+
+.qsa_next {
+    right: 20px;
+
+    @include media-breakpoint-down(md) {
+        right: 2px;
+    }
+}
+
+.slick-track {
+    display: flex;
+    height: 100%;
+}
+
+.slick-slide {
+    height: auto;
+    margin-right: 10px;
+
+    @include media-breakpoint-down(sm) {
+        height: 100%;
+    }
+
+    &:focus-within,
+    &:focus {
+        box-shadow: inset 0 0 0 1px var(--color-white), inset 0 0 0 3px var(--color-gray-500), inset 0 0 0 4px var(--color-white);
+        .qsa_opening-teaser__icon {
+            background-color: transparent;
+        }
+    }
+}
+
+// end of openingTeaser.scss

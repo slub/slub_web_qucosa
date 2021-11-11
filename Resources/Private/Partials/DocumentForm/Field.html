@@ -1,0 +1,276 @@
+{namespace s=SJBR\StaticInfoTables\ViewHelpers}
+{namespace eww=EWW\Dpf\ViewHelpers}
+
+<f:switch expression="{fieldItem.inputField}">
+    <f:case value="0">
+        <f:if condition="{fieldItem.dataType}=='DATE'">
+            <f:then>
+                <div class="row qsa_field__datepicker">
+                    <div class="col-5 col-sm-3">
+                        <div class="qsa_field__datepicker-wrap qsa_hike" data-showinsummary="true">
+                            <label for="inp_{fieldItem.uid}" aria-hidden="true">
+                                {fieldItem.displayName}
+                            </label>
+                            <f:form.textfield id="inp_{fieldItem.uid}"
+                                              property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                                              value="{fieldItem.value}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light date"
+                                              additionalAttributes="{
+                                                pattern:fieldItem.validation,
+                                                aria-labeledby:'inp_{fieldItem.uid}'
+                                              }"
+                                              data="{
+                                                datatype: 'DATE',
+                                                date-format: 'yyyy',
+                                                date-view-mode: 'years',
+                                                date-min-view-mode: 'years',
+                                                date-orientation: 'top',
+                                                value: fieldItem.value,
+                                                field:fieldItem.uid,
+                                                index:fieldIndex,
+                                                mandatory:fieldItem.mandatory,
+                                                group:formGroupUid,
+                                                groupindex:groupIndex,
+                                                default:fieldItem.hasDefaultValue,
+                                                regexp:fieldItem.validation,
+                                                label:fieldItem.displayName,
+                                                maxlength:fieldItem.maxInputLength,
+                                                language: '{f:translate(key: \'tx_slubwebqucosa.current_language\', extensionName: \'slub_web_qucosa\')}'
+                    }"/>
+                            <f:comment>
+                                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                            </f:comment>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
+                        </div>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <f:if condition="{fieldItem.fillOutService} == 'gnd'">
+                    <f:then>
+                        <div class="qsa_input-group" data-input="text" data-showinsummary="true">
+                            <f:form.textfield id="inp_{fieldItem.uid}"
+                                              property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                                              value="{fieldItem.value}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
+                                              additionalAttributes="{
+                                                pattern:fieldItem.validation,
+                                                aria-labeledby:'inp_{fieldItem.uid}'
+                                              }"
+                                              data="{
+                                                ajax: '{f:uri.action(action:\'search\',controller:\'Gnd\',pageType:427590)}',
+                                                gndfield: fieldItem.gndFieldUid,
+                                                field:fieldItem.uid,
+                                                index:fieldIndex,
+                                                mandatory:fieldItem.mandatory,
+                                                group:formGroupUid,
+                                                groupindex:groupIndex,
+                                                default:fieldItem.hasDefaultValue,
+                                                regexp:fieldItem.validation,
+                                                datatype:fieldItem.dataType,
+                                                label:fieldItem.displayName,
+                                                maxlength:fieldItem.maxInputLength}"/>
+                            <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
+                            <f:comment>
+                                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                            </f:comment>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="qsa_input-group" data-input="text" data-showinsummary="true">
+                            <f:form.textfield id="inp_{fieldItem.uid}"
+                                              property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                                              value="{fieldItem.value}"
+                                              class="qsa_input-group__input qsa_input-group__input-text qsa_input-group__input--light"
+                                              additionalAttributes="{
+                                                pattern:fieldItem.validation,
+                                                aria-labeledby:'inp_{fieldItem.uid}'
+                                              }"
+                                              data="{
+                                                field:fieldItem.uid,
+
+                                                index:fieldIndex,
+                                                mandatory:fieldItem.mandatory,
+                                                group:formGroupUid,
+                                                groupindex:groupIndex,
+                                                default:fieldItem.hasDefaultValue,
+                                                regexp:fieldItem.validation,
+                                                datatype:fieldItem.dataType,
+                                                label:fieldItem.displayName,
+                                                maxlength:fieldItem.maxInputLength}"/>
+                            <label class="qsa_input-group__label" for="inp_{fieldItem.uid}"> {fieldItem.displayName} </label>
+                            <f:comment>
+                                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                            </f:comment>
+                            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
+                        </div>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:case>
+    <f:case value="1">
+        <div class="qsa_text-area" data-showinsummary="false">
+            <label class="qsa_text-area__label" for="inp_{fieldItem.uid}"> {fieldItem.value} </label>
+            <f:form.textarea id="inp_{fieldItem.uid}"
+                             property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                             value="{fieldItem.value}"
+                             class="qsa_text-area__field"
+                             additionalAttributes="{
+                                maxlength: fieldItem.maxInputLength,
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                              }"
+                             data="{
+                             field:fieldItem.uid,
+
+                             index:fieldIndex,
+                             mandatory:fieldItem.mandatory,
+                             group:formGroupUid,
+                             groupindex:groupIndex,
+                             default:fieldItem.hasDefaultValue,
+                             regexp:fieldItem.validation,
+                             datatype:fieldItem.dataType,
+                             label:fieldItem.displayName,
+                             maxlength:fieldItem.maxInputLength}"/>
+            <f:if condition="{fieldItem.maxInputLength}">
+                <div class="qsa_text-area__count-wrapper">
+                    <span class="qsa_text-area__count">0</span>
+                    {f:translate(key: 'tx_slubwebqucosa.wizard.textarea.connector', extensionName: 'slub_web_qucosa')}
+                    <span class="qsa_text-area__limit">{fieldItem.maxInputLength}</span>
+                </div>
+            </f:if>
+            <f:comment>
+                <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+            </f:comment>
+            <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
+        </div>
+
+    </f:case>
+    <f:case value="2">
+        <div class="qsa_select qsa_select__header">
+            <span class="qsa_select__label sr-only">{fieldItem.displayName}</span>
+            <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-showinsummary="true">
+                <label class="qsa_select__label qsa_select__label-header" for="inp_{fieldItem.uid}" data-index="{fieldIndex}" data-field="{fieldItem.uid}">
+                    {fieldItem.displayName}
+                </label>
+                <f:form.select id="inp_{fieldItem.uid}"
+                               class="qsa_select__native js-selectNative qsa_select__native-header {fieldItem.fillOutService}"
+                               property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                               value="{fieldItem.value}"
+                               additionalAttributes="{
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                              }"
+                               data="{
+                                    field:fieldItem.uid,
+
+                                    index:fieldIndex,
+                                    mandatory:fieldItem.mandatory,
+                                    group:formGroupUid,
+                                    groupindex:groupIndex,
+                                    default:fieldItem.hasDefaultValue,
+                                    regexp:fieldItem.validation,
+                                    datatype:fieldItem.dataType,
+                                    label:fieldItem.displayName}"
+                               options="{fieldItem.inputOptions}"/>
+                <div class="qsa_select__custom js-selectCustom qsa_select__custom-header {f:if(condition: '{fieldItem.value} == ger', then: 'qsa_select__language', else: '')}"
+                        aria-hidden="true">
+                    <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header qsa_select__custom-trigger-light">
+                        <p>{f:translate(key: 'tx_slubwebqucosa.wizard.select.language', extensionName: 'slub_web_qucosa')}</p>
+                        <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
+                    </div>
+                    <div class="qsa_select__custom-options " data-iconpath="{f:uri.resource(path:'Icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+
+                    </div>
+                </div>
+                <f:comment>
+                    <!--###Individuelle Error-Message aus der Extension kann im <p> Tag eingefügt werden. Aktuell handelt es sich um eine generische Fehlermeldung###-->
+                </f:comment>
+                <p class="qsa_input-group__error qsa_input-group__error--number d-none">{f:translate(key: 'tx_slubwebqucosa.wizard.field.error_pattern', extensionName: 'slub_web_qucosa')}</p>
+            </div>
+        </div>
+    </f:case>
+    <f:case value="3">
+        <f:if condition="{eww:IsConsentField(condition:'{fieldItem.consent}')}">
+            <f:then>
+                <f:form.checkbox id="inp_{fieldItem.uid}"
+                                 property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                                 value=""
+                                 class="input-field form-control input-field-checkbox"
+                                 additionalAttributes="{
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                                }"
+                                 data="{
+                                    field:fieldItem.uid,
+
+                                    index:fieldIndex,
+                                    mandatory:fieldItem.mandatory,
+                                    group:formGroupUid,
+                                    groupindex:groupIndex,
+                                    default:fieldItem.hasDefaultValue,
+                                    regexp:fieldItem.validation,
+                                    datatype:fieldItem.dataType,
+                                    label:fieldItem.displayName}"
+                                 checked="{fieldItem.value}" disabled="true"/>
+                <f:form.hidden
+                        property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                        value="{fieldItem.value}"/>
+            </f:then>
+            <f:else>
+                <f:form.checkbox id="inp_{fieldItem.uid}"
+                                 property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                                 value=""
+                                 class="input-field form-control input-field-checkbox"
+                                 additionalAttributes="{
+                                    aria-labeledby:'inp_{fieldItem.uid}'
+                                }"
+                                 data="{
+                                    field:fieldItem.uid,
+
+                                    index:fieldIndex,
+                                    mandatory:fieldItem.mandatory,
+                                    group:formGroupUid,
+                                    groupindex:groupIndex,
+                                    default:fieldItem.hasDefaultValue,
+                                    regexp:fieldItem.validation,
+                                    datatype:fieldItem.dataType,
+                                    label:fieldItem.displayName}"
+                                 checked="{fieldItem.value}"/>
+            </f:else>
+        </f:if>
+    </f:case>
+    <f:case value="100">
+        <div class="dropdown-options input-group">
+            <f:form.textfield id="inp_{fieldItem.uid}"
+                              property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"
+                              value="{fieldItem.value}"
+                              class="input-field form-control dropdown-options-input {fieldItem.fillOutService}"
+                              additionalAttributes="{
+                                aria-labeledby:'inp_{fieldItem.uid}'
+                                }"
+                              data="{
+                                field:fieldItem.uid,
+
+                                index:fieldIndex,
+                                mandatory:fieldItem.mandatory,
+                                group:formGroupUid,
+                                groupindex:groupIndex,
+                                default:fieldItem.hasDefaultValue,
+                                regexp:fieldItem.validation,
+                                datatype:fieldItem.dataType,
+                                label:fieldItem.displayName,
+                                maxlength:fieldItem.maxInputLength}"/>
+
+            <span class="input-group-btn">
+                    <button class="btn dropdown-options-toggle" type="button">
+                        <span class="caret"></span>
+                    </button>
+                </span>
+            <ul class="dropdown-options-values" style="display:none;">
+                <f:for each="{fieldItem.inputOptions}" as="inputOptionLabel" key="inputOptionValue" iteration="pageIterator">
+                    <li>{inputOptionValue}</li>
+                </f:for>
+            </ul>
+        </div>
+    </f:case>
+</f:switch>

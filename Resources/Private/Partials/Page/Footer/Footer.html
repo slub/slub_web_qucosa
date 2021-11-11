@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<v:page.menu.directory pages="{settings.pageIDmeta}">
+    <footer class="qsa_footer">
+        <div class="qsa_footer__content container">
+            <div class="qsa_footer_info">
+                <p>{f:translate(key: 'tx_slubwebqucosa.footer', extensionName: 'slub_web_qucosa')}</p>
+            </div>
+            <div class="qsa_footer__nav">
+                <ul>
+                    <f:for each="{menu}" as="menuPage" iteration="iteration">
+                        <li class="qsa_footer__nav__item">
+                            <a class="qsa_footer__nav__link" href="{menuPage.link}">
+                                <f:if condition="{menuPage.nav_title}">
+                                    <f:then>{menuPage.nav_title}</f:then>
+                                    <f:else> {menuPage.title}</f:else>
+                                </f:if>
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</v:page.menu.directory>
+
+</html>

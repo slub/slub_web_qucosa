@@ -1,0 +1,102 @@
+### custom content elements
+## Tab Allgemein
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        tx_slubwebqucosa_headericonteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_headericonteaser.label
+            description = Ein Teaserelement für den Header mit Icon und Beschreibung
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_headericonteaser.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_headericonteaser
+            }
+        }
+        tx_slubwebqucosa_headerteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_headerteaser.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_headerteaser.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_headerteaser
+            }
+        }
+        tx_slubwebqucosa_carouselitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_carouselitem.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_carouselitem.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_carouselitem
+            }
+        }
+        tx_slubwebqucosa_logoitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_logoitem.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_logoitem
+            }
+        }
+        tx_slubwebqucosa_accordionitem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_accordion.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_accordion.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_accordionitem
+            }
+        }
+        tx_slubwebqucosa_flipcarditem {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_flipcard-item.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_flipcard-item.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_flipcarditem
+            }
+        }
+        tx_slubwebqucosa_text {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_text.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_text.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_text
+            }
+        }
+        tx_slubwebqucosa_sidebarimage {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarimage.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarimage.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarimage
+            }
+        }
+        tx_slubwebqucosa_sidebarlinks {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarlinks.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarlinks.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarlinks
+            }
+        }
+        tx_slubwebqucosa_sidebarteaser {
+            iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
+            title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarteaser.label
+            description = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_sidebarteaser.description
+            tt_content_defValues {
+                CType = tx_slubwebqucosa_sidebarteaser
+            }
+        }
+    }
+
+    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser)
+
+    ## Nicht benötigte aus Liste entfernen
+    show := removeFromList(header,textmedia,bullets,table,uploads)
+}
+
+## Tab: Special
+mod.wizards.newContentElement.wizardItems.special {
+    elements {
+
+    }
+    show := addToList()
+}
+
+

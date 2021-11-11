@@ -1,0 +1,178 @@
+<div class="qsa_search-header__container">
+    <div class="qsa_search-header container">
+        <div class="qsa_search-header__content">
+            <div class="qsa_search-header__header">
+                <h1 class="h2 qsa_search-header__title">
+                    Suche
+                </h1>
+            </div>
+
+            <f:form action="search" name="query" class="qsa_search-header__search-wrapper" noCache="1" noCacheHash="1">
+                <div class="qsa_search-header__search">
+                    <label class="sr-only" for="searchHeaderSearch">Suche in 320 Millionen Datensätzen</label>
+                    <f:form.textfield property="fulltext"
+                                      class="autocomplete"
+                                      name="search"
+                                      additionalAttributes="{aria-autocomplete: 'list'}"
+                                      placeholder="Suche in 320 Millionen Datensätzen" id="searchHeaderSearch"
+                                      value="{query.fulltext}"/>
+
+                    <f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
+                        <span class="sr-only">Suche starten</span>
+                        <f:render partial="Icon" arguments="{icon:'search'}" />
+                    </f:form.button>
+
+                    <f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: 'Sucheintrag löschen'}">
+                        <span class="sr-only">Sucheintrag löschen</span>
+                        <f:render partial="Icon" arguments="{icon:'close'}" />
+                    </f:form.button>
+                </div>
+            </f:form>
+
+            <f:form action="extendedSearch" name="query" class="qsa_search-header__advanced-search">
+                <div class="row qsa_search-header__advanced-search-row qsa_search-header__advanced-search__container">
+                    <div class="col-12 col-xl-8 qsa_search-header__advanced-search--expanded-fields">
+                        <div class="qsa_search-header__advanced-search-inputs">
+                            <div class="qsa_input-group" data-input="text">
+                                <label class="qsa_input-group__label" for="title">{f:translate(key: 'search.form.label.title', extensionName: 'slub_web_qucosa')}</label>
+                                <f:form.textfield property="title" class="qsa_input-group__input qsa_input-group__input-text"
+                                                  id="title"
+                                                  value="{query.title}"/>
+                            </div>
+                            <div class="qsa_input-group" data-input="text">
+                                <label class="qsa_input-group__label" for="author">{f:translate(key: 'search.form.label.author', extensionName: 'slub_web_qucosa')}</label>
+                                <f:form.textfield property="author" class="qsa_input-group__input qsa_input-group__input-text"
+                                                  id="author"
+                                                  value="{query.author}"/>
+                            </div>
+                            <div class="qsa_input-group" data-input="text">
+                                <label class="qsa_input-group__label" for="abstract">{f:translate(key: 'search.form.label.abstract', extensionName: 'slub_web_qucosa')}</label>
+                                <f:form.textfield property="abstract" class="qsa_input-group__input qsa_input-group__input-text"
+                                                  id="abstract"
+                                                  value="{query.abstract}"/>
+                            </div>
+                            <div class="qsa_input-group" data-input="text">
+                                <label class="qsa_input-group__label" for="tag">{f:translate(key: 'search.form.label.tag', extensionName: 'slub_web_qucosa')}</label>
+                                <f:form.textfield property="tag" class="qsa_input-group__input qsa_input-group__input-text"
+                                                  id="tag"
+                                                  value="{query.tag}"/>
+                            </div>
+                            <div class="qsa_input-group" data-input="text">
+                                <label class="qsa_input-group__label" for="corporation">{f:translate(key: 'search.form.label.corporation', extensionName: 'slub_web_qucosa')}</label>
+                                <f:form.textfield property="corporation" class="qsa_input-group__input qsa_input-group__input-text"
+                                                  id="corporation"
+                                                  value="{query.corporation}"/>
+                            </div>
+                            <div class="qsa_select qsa_select__header">
+                                <span class="qsa_select__label sr-only" id="documentType">Dokumententyp</span>
+                                <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-required="" data-showinsummary="">
+                                    <label class="qsa_select__label qsa_select__label-header" for="768999703"> Dokumententyp </label>
+
+
+                                    <f:form.select property="doctype" class="qsa_select__native js-selectNative qsa_select__native-header"
+                                                   options="{docTypes}" id="doctype" value="{query.doctype}"
+                                                   optionValueField="name" optionLabelField="displayName">
+                                        <f:form.select.option additionalAttributes="{disabled: '', label:'Leere Option'}" value="" selected="">Leere Option</f:form.select.option>
+                                    </f:form.select>
+
+                                    <div class="qsa_select__custom js-selectCustom qsa_select__custom-header " aria-hidden="true">
+                                        <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header ">
+                                            <p class="">Dokumententyp </p>
+                                            <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
+                                        </div>
+                                        <div class="qsa_select__custom-options ">
+                                            <div class="qsa_select__custom-option" data-value="all">
+                                                Keine Auswahl
+                                                <f:render partial="Icon" arguments="{icon:'check'}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4 qsa_search-header__advanced-search--expanded-text">
+                        <h2 class="h6">Neutrale Info</h2>
+                        <p>
+                            Neutrale Info Contentsensitiv
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                            sit amet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row qsa_search-header__advanced-search__container">
+
+                    <div class="col-12 col-xl-8">
+                        <div class="row qsa_field__datepicker-range">
+                            <div class="col-5 col-sm-3">
+                                <div class="qsa_field__datepicker-wrap qsa_hike">
+                                    <label for="qsa_date-start" class="qsa_field__datepicker-label sr-only">
+                                        Veröffentlichungszeitraum
+                                    </label>
+                                    <f:form.textfield property="qsa_date-start" type="text" class="qsa_input-group__input qsa_input-group__input-text datepicker"
+                                                      id="qsa_date-start"
+                                                      value="{query.from}"/>
+                                </div>
+                            </div>
+                            <span class="qsa_field__datepicker-connector">bis</span>
+                            <div class="col-5 col-sm-3">
+                                <div class="qsa_field__datepicker-wrap qsa_hike">
+                                    <label for="qsa_date-end" class="qsa_field__datepicker-label sr-only">
+                                        Enddatum
+                                    </label>
+                                    <f:form.textfield property="qsa_date-end" type="text" class="qsa_input-group__input qsa_input-group__input-text datepicker"
+                                                      id="qsa_date-end"
+                                                      value="{query.till}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-4 qsa_search-header__advanced-search__button-container">
+                        <f:form.button class="qsa_btn__submit submit" type="submit">
+                            {f:translate(key: 'search.form.button.search', extensionName: 'slub_web_qucosa')}
+                        </f:form.button>
+                    </div>
+
+                    <div class="col-12 qsa_search-header__advanced-search-footer">
+
+                        <f:form.button class="qsa_btn__link reset" type="class">
+                            Alles Zurücksetzen
+                        </f:form.button>
+
+                        <button id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</button>
+                    </div>
+                </div>
+            </f:form>
+
+            <span class="qsa_search-header__results">
+                <f:if condition="{resultList.total} > 1">
+            <f:then>
+                {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+            </f:then>
+            <f:else>
+                <f:if condition="{resultList.total} == 1">
+                    <f:then>
+                        {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+                    </f:then>
+                    <f:else>
+                        <f:translate key="search.resultList.nothingFound"/>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+            </span>
+
+            <div class="qsa_search-header__footer">
+                <button class="qsa_search-header__link qsa_btn__link" id="openAdvanced">
+                    <f:translate key="search.control.extendedSearch"/>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<f:render partial="SearchFE/ResultList" arguments="{results: paginatedResults, currentPage: currentPage, resultList: resultList}"/>

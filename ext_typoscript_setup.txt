@@ -1,0 +1,14 @@
+config.tx_extbase {
+    persistence {
+        classes {
+            Slub\SlubWebQucosa\Domain\Model\Author {
+                mapping {
+                    tableName = tt_content
+                    columns {
+                        tx_slubwebqucosa_pagesaddfield_author.mapOnProperty = author
+                    }
+                }
+            }
+        }
+    }
+}

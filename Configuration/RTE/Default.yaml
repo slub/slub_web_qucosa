@@ -1,0 +1,73 @@
+imports:
+ - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+ - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+ - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+buttons:
+    link:
+        relAttribute:
+            enabled: true
+        page:
+            properties:
+                class:
+                    default: qsa_text__link
+        url:
+            properties:
+                class:
+                    default: qsa_text__link
+        folder:
+            properties:
+                class:
+                    default: qsa_text__link
+        file:
+            properties:
+                class:
+                    default: qsa_text__link
+        mail:
+            properties:
+                class:
+                    default: qsa_text__link
+        properties:
+            class:
+                allowedClasses: 'qsa_text__link'
+
+#Classes config
+classesAnchor:
+    internalLink:
+        class: 'qsa_text__link'
+        type: 'page'
+        titleText: 'Opens internal link in this window'
+    internalLinkNewWindow:
+        class: 'qsa_text__link'
+        type: 'page'
+        target: '_blank'
+        titleText: 'Opens internal link in new window'
+    download:
+        class: 'qsa_text__link'
+        type: 'file'
+        target: '_blank'
+        titleText: 'Download file'
+    externalLink:
+        class: 'qsa_text__link'
+        type: 'url'
+        titleText: 'Opens External link in this window'
+    externalLinkNewWindow:
+        class: 'qsa_text__link'
+        type: 'url'
+        target: '_blank'
+        titleText: 'Opens External link in new window'
+    linkMail:
+        class: 'qsa_text__link'
+        type: 'mail'
+        titleText: 'Email Address'
+
+editor:
+  config:
+    # Include custom CSS
+    contentsCss: "EXT:slub_web_qucosa/Resources/Public/Css/qsa.min.css"
+    stylesSet:
+      - { name: "Warnung", element: "p", attributes: { 'class': 'qsa_content-area__warning' } }
+      - { name: "Hinweis", element: "p", attributes: { 'class': 'qsa_content-area__hint' } }
+      - { name: "Zitat", element: "blockquote", attributes: { 'class': 'qsa_content-area__quote' } }
+
+    format_tags: "p;h2;h3;h4"

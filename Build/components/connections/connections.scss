@@ -1,0 +1,77 @@
+//
+//    @tableOfContent
+//      1. Connections tags
+
+
+// @section 1. Connections tags
+@mixin info {
+    font-family: $font-family-roboto-regular;
+    font-size: $font-size-tiny-xs;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+}
+
+.qsa_connections__publications {
+    &-caption {
+        @include caption;
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        .qsa_search-result__filter-last {
+            .qsa_select__custom-trigger {
+                background-color: transparent;
+            }
+
+            .qsa_select__custom-options {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--spacing-s);
+
+        &-title {
+            order: 2;
+
+            a {
+                font-size: $font-size-author;
+                line-height: 26px;
+                letter-spacing: .14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-info {
+            display: inline-flex;
+            order: 1;
+
+            &__typ {
+                @include info;
+
+                text-transform: uppercase;
+
+                &::after {
+                    content: '|';
+                    margin-right: calc(var(--spacing-xs) / 2);
+                    margin-left: calc(var(--spacing-xs) / 2);
+                    color: var(--color-gray-600);
+                }
+            }
+
+            &__year {
+                @include info;
+            }
+        }
+    }
+}
+
+// end of connections.scss file

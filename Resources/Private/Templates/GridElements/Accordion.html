@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="qsa_accordion">
+    <div class="qsa_accordion__items">
+        <f:if condition="{data.flexform_accrdiontitle} == 1">
+            <h2>{data.header}</h2>
+
+            <button class="qsa_accordion__trigger qsa_accordion__trigger--upper" aria-expanded="false">
+            <span class="qsa_accordion__trigger--closed">
+                {f:translate(key: 'tx_slubwebqucosa.accordion.expand_all', extensionName: 'slub_web_qucosa')}
+                <f:render partial="Icon" arguments="{icon:'plus-circle'}" />
+            </span>
+
+                <span class="qsa_accordion__trigger--active">
+                 {f:translate(key: 'tx_slubwebqucosa.accordion.collapse_all', extensionName: 'slub_web_qucosa')}
+                <f:render partial="Icon" arguments="{icon:'minus-circle'}" />
+            </span>
+            </button>
+        </f:if>
+
+        <f:format.raw>{data.tx_gridelements_view_column_10}</f:format.raw>
+
+    </div>
+</div>
+
+</html>

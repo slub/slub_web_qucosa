@@ -1,0 +1,36 @@
+<f:comment>
+    <!-- Das Formular kann um das Attribut "data-suggest" erweitert werden, um eine Autovervollständigung zu ermöglichen. Vgl. Prototyp -->
+</f:comment>
+<f:form class="qsa_hero__search-wrapper" action="search" name="query" pageUid="{settings.searchResultsPid}" id="smallsearch" noCache="1"
+        noCacheHash="1">
+    <div class="qsa_hero__search">
+        <input type="hidden" name="L" value="0">
+        <label class="sr-only" for="tx-dlf-search-query">
+            {f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}
+        </label>
+
+        <f:form.textfield property="fulltext"
+                          placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}"
+                          id="tx-dlf-search-query"
+                          class="autocomplete"
+                          value="{query.fulltext}"/>
+        <f:form.button id="submit" type="submit" additionalAttributes="{aria-label: 'Suche'}">
+            <span class="sr-only">
+                {f:translate(key: 'tx_slubwebqucosa.search.begin', extensionName: 'slub_web_qucosa')}
+            </span>
+            <f:render partial="Icon" arguments="{icon:'search'}" />
+        </f:form.button>
+
+        <f:form.button additionalAttributes="{aria-label: 'Sucheintrag löschen', class:'qsa_hero__search__reset btn-outline__without'}">
+            <span class="sr-only">
+                {f:translate(key: 'tx_slubwebqucosa.search.remove', extensionName: 'slub_web_qucosa')}
+            </span>
+            <f:render partial="Icon" arguments="{icon:'close'}" />
+        </f:form.button>
+    </div>
+    <div class="qsa_hero__footer">
+        <a href="#" id="linkToAdvancedSearch" class="qsa_hero__link">
+            {f:translate(key: 'tx_slubwebqucosa.search.expanded', extensionName: 'slub_web_qucosa')}
+        </a>
+    </div>
+</f:form>

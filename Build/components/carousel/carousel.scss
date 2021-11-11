@@ -1,0 +1,151 @@
+//
+//    @tableOfContent
+//      1. Header
+//      2. Main navigation
+//      3. Disable overflow
+//
+
+
+//
+//   @section 1. Carousel
+//
+
+.qsa_carousel {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+
+    &__title {
+        margin-bottom: var(--spacing);
+        color: var(--color-text-color);
+        text-align: center;
+    }
+
+    .carousel {
+        &:hover {
+            .carousel-control {
+                &-prev,
+                &-next {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-inner {
+            padding-bottom: var(--spacing);
+            overflow: visible; // to select through the Tab item completely
+        }
+
+        &-control {
+            &-prev,
+            &-next {
+                opacity: 0;
+                bottom: 15px;
+                width: 2%;
+                transition: opacity var(--transition-time) ease-in-out;
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
+            }
+
+            /*
+            * Overwrite default Bootstrap icon color for carousel arrows
+            */
+            // stylelint-disable declaration-no-important
+            &-prev-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+            }
+
+            &-next-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+            }
+            // stylelint-enable  declaration-no-important
+        }
+    }
+
+    .qsa_carousel-item_wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px 20px;
+
+        @include media-breakpoint-down(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
+    .qsa_carousel-item_el {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        padding: var(--spacing);
+        background: var(--color-secondary);
+        border-radius: 16px;
+
+        img {
+            @include size(70%, auto);
+
+            order: 1;
+            padding-bottom: 10px;
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                padding: unset;
+            }
+        }
+
+        .qsa_hint__text {
+            display: block;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+            img {
+                transform: scale(1.1);
+                transition: transform .5s ease-in-out;
+            }
+
+            .qsa_hint__text {
+                opacity: 1;
+                transition: opacity .2s ease-in-out;
+            }
+        }
+
+        figcaption {
+            opacity: 0;
+            order: 2;
+            position: absolute;
+            bottom: 0;
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+        }
+    }
+
+    .carousel-indicators {
+        z-index: 1;
+
+        li {
+            // stylelint-disable declaration-no-important
+            background-color: var(--color-gray-700) !important;
+            // stylelint-enable  declaration-no-important
+        }
+    }
+}
+
+// end of carousel.scss file

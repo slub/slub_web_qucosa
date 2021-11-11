@@ -1,0 +1,57 @@
+//
+//    @tableOfContent
+//      1. Button tags
+
+
+// @section 1. Button tags
+
+.qsa_tags {
+    padding-bottom: var(--spacing-xs);
+
+    h4 {
+        margin-bottom: var(--spacing-nav);
+    }
+
+    &_v-slash {
+        margin-right: calc(var(--spacing-xs) / 2);
+        border-right: 1px dotted var(--color-gray-300);
+    }
+
+    .qsa_btn__tag {
+        display: inline-block;
+        vertical-align: baseline;
+        margin-bottom: var(--spacing-xs);
+        padding: 4px 8px;
+        font-family: $font-family-base-assistant;
+        font-size: $font-size-captions;
+        line-height: 1;
+        font-weight: 100;
+        letter-spacing: .4px;
+        color: var(--color-white);
+        text-align: center;
+        white-space: nowrap;
+        background-color: var(--color-primary);
+        border: none;
+        border-radius: 12px;
+
+        &:hover {
+            color: var(--color-black);
+        }
+
+        &--inverted {
+            color: var(--color-text-color);
+            background-color: var(--color-white);
+
+            &:hover {
+                color: var(--color-text-color-inverted);
+                background-color: var(--color-primary);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}
+
+// end of tags.scss file

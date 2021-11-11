@@ -1,0 +1,47 @@
+{namespace eww=EWW\Dpf\ViewHelpers}
+
+<fieldset class="qsa_wizard__wrapper-form-element" data-group="{formGroupUid}" data-mandatory="{groupItem.mandatory}">
+    <legend>
+        <f:if condition="{groupIndex}">
+            +{groupIndex}:
+        </f:if>
+        {formGroupDisplayName}
+    </legend>
+    <button class="qsa_wizard__wrapper-form-element-remove btn-outline__without d-none" name="remove_group">
+        <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.remove', extensionName: 'slub_web_qucosa')}</span>
+        <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
+    </button>
+    <p>{f:translate(key: 'tx_slubwebqucosa.wizard.general_field_hint', extensionName: 'slub_web_qucosa')}</p>
+    <h3 class="h5">{formGroupDisplayName}</h3>
+    <f:for each="{groupItem.items}" as="formField" iteration="fieldIterator">
+        <f:for each="{formField}" as="fieldItem" iteration="fieldItemIterator">
+            <f:if condition="{fieldItem.inputField}!=4">
+                <f:then>
+                    <f:if condition="{eww:IsElementAllowed(condition:'{fieldItem.backendOnly}')}">
+                        <f:then>
+                            <f:render partial="DocumentForm/Field"
+                                      arguments="{formPageUid: formPageUid,formGroupUid: formGroupUid,groupIndex: groupIndex,formField: formField,fieldIndex: fieldItemIterator.index,fieldItem: fieldItem,countries: countries}"/>
+                            <f:if condition="{fieldItem.maxIteration} == 0">
+                                <f:if condition="{fieldItemIterator.isLast}">
+                                    <button type="submit"
+                                            title="{f:translate(key: 'form_button.add_item', arguments: {0: fieldItem.displayName})}"
+                                            name="add_field" class="btn qsa_wizard__wrapper-form-element-add qsa_btn--transparent" data-field="{fieldItem.uid}"
+                                            data-ajax="{f:uri.action(action:'field',controller:'AjaxDocumentForm',pageType:110124,arguments:{pageUid: formPageUid,groupUid: formGroupUid,groupIndex: groupIndex,fieldUid: fieldItem.uid})}"
+                                            data-index="{fieldItemIterator.index}">
+                                        + {f:translate(key: 'form_button.add_item', arguments: {0: fieldItem.displayName})}
+                                    </button>
+                                </f:if>
+                            </f:if>
+                        </f:then>
+                    </f:if>
+                </f:then>
+                <f:else>
+                    <f:form.hidden id="inp_{fieldItem.uid}"
+                                   property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldItemIterator.index}"
+                                   value="{fieldItem.value}" class="input-field form-control {fieldItem.fillOutService}"
+                                   additionalAttributes="{data-field:fieldItem.uid,data-index:fieldIndex,data-mandatory:fieldItem.mandatory,data-group:formGroupUid,data-groupindex:groupIndex,data-default:fieldItem.hasDefaultValue,data-regexp:fieldItem.validation,data-datatype:fieldItem.dataType,data-label:fieldItem.displayName}"/>
+                </f:else>
+            </f:if>
+        </f:for>
+    </f:for>
+</fieldset>

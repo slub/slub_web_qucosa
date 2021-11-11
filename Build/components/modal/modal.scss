@@ -1,0 +1,39 @@
+//
+//    @tableOfContent
+//      1. Modal
+
+
+// @section 1. Modal
+
+
+.qsa_modal {
+    .modal-dialog {
+        top: 25%;
+
+        .modal {
+            &-content {
+                border-radius: 16px;
+            }
+
+            &-title {
+                width: 100%;
+                text-align: center;
+            }
+
+            &-footer {
+                justify-content: center;
+                border-top: none;
+
+                .qsa_btn__submit {
+                    color: var(--color-text-color-inverted);
+                }
+            }
+        }
+    }
+
+    .qsa_button__submit {
+        margin-top: 0;
+    }
+}
+
+// end of modal.scss file

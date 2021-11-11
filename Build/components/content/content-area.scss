@@ -1,0 +1,171 @@
+//
+//    @tableOfContent
+//      1. content area
+//      2. Wrapper with indent to the right
+//
+
+
+//
+//   @section 1. Content area
+//
+
+.qsa_content-area {
+    justify-content: space-between;
+    width: unset;
+    //margin-top: var(--spacing-s);
+    margin-bottom: var(--spacing);
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        position: relative;
+    }
+
+    &__body {
+        padding-right: var(--spacing-xs);
+        padding-left: 0;
+
+        @include media-breakpoint-down(md) {
+            padding-right: 0;
+        }
+    }
+
+    &-default {
+        margin-top: var(--spacing-s);
+    }
+
+    &__footer {
+        margin-top: var(--spacing);
+    }
+
+    &__bottom {
+        h6 {
+            font-size: $font-size-author;
+            line-height: 26px;
+            letter-spacing: .14px;
+        }
+    }
+
+    &__hint {
+        padding: 16px;
+        color: var(--success);
+        border: 1px solid rgba(78, 177, 81, 1);
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 16px;
+    }
+
+    &__warning {
+        padding: 16px;
+        color: var(--color-warning);
+        border: 1px solid var(--color-warning);
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 16px;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__quote {
+        position: relative;
+        margin-top: var(--spacing);
+        padding: 16px;
+        font-style: italic;
+        letter-spacing: 14px;
+
+        p {
+            position: relative;
+
+            &:first-child {
+                &::before {
+                    content: '\201D';
+                    opacity: .3;
+                    position: absolute;
+                    bottom: -18px;
+                    left: 0;
+                    font-size: 200px;
+                    line-height: 0;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+
+    &__table--responsive {
+        overflow: auto;
+    }
+
+    &__sidebar {
+        padding-right: 0;
+        padding-left: var(--spacing-xs);
+
+        &-slider {
+            display: none;
+
+            @include media-breakpoint-down(md) {
+                overflow: visible;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                top: calc(var(--header-height-mobile) + 50px);
+                right: 0;
+                z-index: 1;
+                width: 3rem;
+                height: 3rem;
+                padding: 5px;
+                background: var(--color-primary);
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+
+                .qsa_icon {
+                    color: white;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: var(--header-height-mobile);
+            right: 0;
+            bottom: 0;
+            z-index: 99;
+            width: 90%;
+            margin-top: 0;
+            padding-right: 0;
+            padding-left: 0;
+            background-color: white;
+            box-shadow: -3px 0 9px 2px rgba(0, 0, 0, .42);
+            pointer-events: all;
+            transform: translateX(200%);
+            transition: transform var(--transition-time) ease-in-out;
+        }
+
+        &--show {
+            transform: translateX(0);
+        }
+    }
+}
+
+//
+//   @section 2. Wrapper with indent to the right
+//
+
+.qsa_content--page {
+    padding-top: 20px;
+    padding-right: 67px;
+    padding-left: 55px;
+    background: var(--color-white);
+
+    @include media-breakpoint-down(md) {
+        padding-right: var(--spacing-xs);
+        padding-left: var(--spacing-xs);
+    }
+}
+
+// end of content-area.scss file

@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="qsa_flip-card">
+    <div class="qsa_flip-card__inner">
+        <div class="qsa_flip-card__front">
+            <div class="qsa_flip-card__front-content">
+                <h2 class="h4">{data.header}</h2>
+                <div class="qsa_flip-card__icon">
+                    <f:render partial="Icon" arguments="{icon:'{flexform.flipcardicon}'}" />
+                </div>
+            </div>
+        </div>
+        <div class="qsa_flip-card__back">
+            <div class="qsa_flip-card__back-content">
+                {data.bodytext}
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

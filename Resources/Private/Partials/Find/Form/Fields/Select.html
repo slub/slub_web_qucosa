@@ -1,0 +1,27 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+
+<div class="qsa_select qsa_group qsa_select__header" >
+	<div class="qsa_select__wrapper  qsa_select__wrapper-header">
+		<label class="qsa_select__label qsa_select__label-header" id="c{config.uid}-label-{fieldInfo.id}" for="c{config.uid}-field-{fieldInfo.id}" aria-label="{fieldInfo.label}"> {fieldInfo.label}</label>
+		<p class="qsa_input-group__error qsa_input-group__error--select d-none">{f:translate(key: 'tx_slubwebqucosa.find.result_sort.choose', extensionName: 'slub_web_qucosa')} {fieldInfo.label}</p>
+		<f:form.select
+				id="c{config.uid}-field-{fieldInfo.id}"
+				additionalAttributes="{aria-labelledby: 'c{config.uid}-label-{fieldInfo.id}'}"
+				class="qsa_select__native js-selectNative qsa_select__native-header"
+				name="q[{fieldInfo.id}]"
+				options="{fieldInfo.options}"
+				value="{queryParameter}"
+		>
+			<option value="" disabled label="Leere Option" selected="selected"></option>
+		</f:form.select>
+		<div class="qsa_select__custom js-selectCustom qsa_select__custom-header" aria-hidden="true">
+			<div class="qsa_select__custom-trigger qsa_select__custom-trigger-header ">
+				<p>{fieldInfo.id}</p>
+				<f:render partial="Icon" arguments="{icon:'arrow-down'}" />
+			</div>
+			<div class="qsa_select__custom-options" data-iconpath="{f:uri.resource(path: 'Icons/icon.min.svg#', extensionName: 'slub_web_qucosa')}">
+
+			</div>
+		</div>
+	</div>
+</div>

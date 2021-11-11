@@ -1,0 +1,11 @@
+plugin.tx_dpf {
+
+    settings {
+        pageID {
+            # cat=module.tx_dpf/link; type=int+; label== UID of the root page
+            root = 2
+            # cat=module.tx_dpf/link; type=int+; label== UID of the manual of the wizard
+            wizardManual = 2
+        }
+    }
+}

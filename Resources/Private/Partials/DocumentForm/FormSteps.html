@@ -1,0 +1,36 @@
+{namespace eww=EWW\Dpf\ViewHelpers}
+
+<div class="qsa_progress-bar">
+    <div class="qsa_progress-bar__container">
+        <ol class="qsa_progress-bar__container-list">
+            <f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
+                <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
+                    <f:then>
+                        <li class="qsa_progress-bar__container-item {f:if(condition: '{pageIterator.index}==0', then: 'active', else:'')}" data-id="tab-{pageIterator.cycle}" data-toggle="tab" aria-expanded="false">
+                            <a href="#tab-{pageIterator.cycle}" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_one', extensionName: 'slub_web_qucosa')} {formPage.0.displayName} {f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_two', extensionName: 'slub_web_qucosa')}">
+                                <span class="qsa_progress-bar__container-item-counter">{pageIterator.cycle}. </span>
+                                <span class="qsa_progress-bar__container-item-title">{formPage.0.displayName}</span>
+                            </a>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <li class="qsa_progress-bar__container-item" data-id="tab-fileUpload" data-toggle="tab" aria-expanded="false">
+                            <a href="#tab-fileUpload" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_one', extensionName: 'slub_web_qucosa')} {f:translate(key: 'tx_slubwebqucosa.wizard.step.files', extensionName: 'slub_web_qucosa')} {f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_two', extensionName: 'slub_web_qucosa')}">
+                                <span class="qsa_progress-bar__container-item-counter">{pageIterator.cycle}. </span>
+                                <span class="qsa_progress-bar__container-item-title">{f:translate(key: 'tx_slubwebqucosa.wizard.step.files', extensionName: 'slub_web_qucosa')}</span>
+                            </a>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+            <li class="qsa_progress-bar__container-item" data-id="tab-checkForm" data-toggle="tab" aria-expanded="false">
+                <a href="#tab-checkForm" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_one', extensionName: 'slub_web_qucosa')} {f:translate(key: 'tx_slubwebqucosa.wizard.step.check', extensionName: 'slub_web_qucosa')} {f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_two', extensionName: 'slub_web_qucosa')}">
+                    <span class="qsa_progress-bar__container-item-title">{f:translate(key: 'tx_slubwebqucosa.wizard.step.check', extensionName: 'slub_web_qucosa')}</span>
+                </a>
+            </li>
+        </ol>
+    </div>
+    <button class="btn qsa_btn qsa_btn--round" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.step.more_steps', extensionName: 'slub_web_qucosa')}">
+        <f:render partial="Icon" arguments="{icon:'arrow-left'}" />
+    </button>
+</div>
