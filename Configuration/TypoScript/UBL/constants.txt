@@ -1,6 +1,22 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/constants.typoscript">
+
 plugin.tx_slubwebqucosa {
 	# cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= Rootpage Uid
 	rootPid =
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
 	imprintPid =
 }
+
+# Allgemeine Textbausteine
+text {
+	headerHeading = Wissenschaftliche Dokumentensuche
+	headerSubheader = auf dem Dokumentenserver der Universitätsbibliothek Leipzig
+}
+
+[globalVar = GP:L = 1]
+	# Allgemeine Textbausteine
+	text {
+		headerHeading = Scientific document search
+		headerSubheader = on the Universitätsbibliothek Leipzig document server
+	}
+[global]

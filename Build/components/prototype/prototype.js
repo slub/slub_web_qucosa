@@ -50,6 +50,8 @@ class Prototype {
             localStorage.setItem('theme', 'tu-dresden')
         } else if (window.location.href.indexOf('mandant-tu-chemnitz') > -1) {
             localStorage.setItem('theme', 'tu-chemnitz')
+        } else if (window.location.href.indexOf('mandant-ub-leipzig') > -1) {
+            localStorage.setItem('theme', 'ub-leipzig')
         }
 
         if (localStorage.getItem('theme') === 'default') {
@@ -64,6 +66,11 @@ class Prototype {
             root.classList.add('tu-chemnitz')
             logoWrapper.classList.add('qsa_logo__tu-chemnitz')
             logo.setAttribute('src', '../../images/logo/Logo_TU_Chemnitz.svg')
+        } else if (localStorage.getItem('theme') === 'ub-leipzig') {
+            root.classList.remove('default')
+            root.classList.add('ub-leipzig')
+            logoWrapper.classList.add('qsa_logo__ub-leipzig')
+            logo.setAttribute('src', '../../images/logo/Logo_UB_Leipzig.svg')
         }
 
         body.classList.remove('qsa_visibility')
