@@ -1,7 +1,7 @@
-{namespace eww=EWW\Dpf\ViewHelpers}
+{namespace dpf=EWW\Dpf\ViewHelpers}
 
 <f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
-    <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
+    <f:if condition="{dpf:IsElementAllowed(condition:'{formPage.0.accessRestrictionRoles}')}">
         <f:then>
             <div class="qsa_wizard__wrapper-content {f:if(condition: '{pageIterator.cycle}==1', then: '', else:'qsa_wizard__wrapper-content--hidden')}"
                  id="tab-{pageIterator.cycle}">
@@ -12,7 +12,7 @@
                     <div class="col-12 col-lg-8 qsa_wizard__wrapper-form">
                         <f:for each="{formPage.0.items}" as="formGroup" iteration="groupIterator">
                             <f:for each="{formGroup}" as="groupItem" iteration="groupItemIterator">
-                                <f:if condition="{eww:IsElementAllowed(condition:'{groupItem.backendOnly}')}">
+                                <f:if condition="{dpf:IsElementAllowed(condition:'{groupItem.accessRestrictionRoles}')}">
                                     <f:then>
                                         <f:render partial="DocumentForm/Group"
                                                   arguments="{formPageUid:formPage.0.uid,formGroupUid:groupItem.uid,formGroupDisplayName:groupItem.displayName,groupItem:groupItem,groupIndex:groupItemIterator.index}"/>

@@ -191,7 +191,7 @@
         </div>
     </f:case>
     <f:case value="3">
-        <f:if condition="{eww:IsConsentField(condition:'{fieldItem.consent}')}">
+        <f:if condition="{fieldItem.consent}">
             <f:then>
                 <f:form.checkbox id="inp_{fieldItem.uid}"
                                  property="metadata.{formPageUid}-{formGroupUid}-{groupIndex}-{fieldItem.uid}-{fieldIndex}"

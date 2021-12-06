@@ -1,4 +1,4 @@
-{namespace eww=EWW\Dpf\ViewHelpers}
+{namespace dpf=EWW\Dpf\ViewHelpers}
 
 <fieldset class="qsa_wizard__wrapper-form-element" data-group="{formGroupUid}" data-mandatory="{groupItem.mandatory}">
     <legend>
@@ -17,7 +17,7 @@
         <f:for each="{formField}" as="fieldItem" iteration="fieldItemIterator">
             <f:if condition="{fieldItem.inputField}!=4">
                 <f:then>
-                    <f:if condition="{eww:IsElementAllowed(condition:'{fieldItem.backendOnly}')}">
+                    <f:if condition="{dpf:IsElementAllowed(condition:'{fieldItem.accessRestrictionRoles}')}">
                         <f:then>
                             <f:render partial="DocumentForm/Field"
                                       arguments="{formPageUid: formPageUid,formGroupUid: formGroupUid,groupIndex: groupIndex,formField: formField,fieldIndex: fieldItemIterator.index,fieldItem: fieldItem,countries: countries}"/>
