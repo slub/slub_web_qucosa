@@ -4,8 +4,9 @@
 	<div class="qsa_search-result__item">
 		<h2 class="h6 qsa_search-result__item-title">
 			<f:link.page class="qsa_search-result__item-title-link"
-						 pageUid="{settings.landingPageUID}"
-						 additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\'{settings.rootPageId}\', absolute:1)}/fileadmin/api/{document.record_id}'}}">
+						noCacheHash="1"
+						pageUid="{settings.landingPageUID}"
+						additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\'{settings.rootPageId}\', absolute:1)}api/qucosa%3A{document.record_id}/mets/'}}">
 				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
 					<f:then>
 						<f:render
