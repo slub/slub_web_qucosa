@@ -44,6 +44,15 @@
 		<trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
 			<source>Expanded Search</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.action" xml:space="preserve">
+			<source>Search</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.reset" xml:space="preserve">
+			<source>Reset all</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.closeExtendedSearch" xml:space="preserve">
+			<source>Close extended search</source>
+		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.search.infoHeading" xml:space="preserve">
 			<source>Extended Search (Help)</source>
 		</trans-unit>
