@@ -50,6 +50,18 @@
 			    <source>Expanded Search</source>
 			    <target>Erweiterte Suche</target>
 		    </trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.action" xml:space="preserve">
+				<source>Search</source>
+				<target>Suchen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.reset" xml:space="preserve">
+				<source>Reset all</source>
+				<target>Alles zurücksetzen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.closeExtendedSearch" xml:space="preserve">
+				<source>Close extended search</source>
+				<target>Erweiterte Suche schließen</target>
+			</trans-unit>
 			<trans-unit id="tx_slubwebqucosa.search.infoHeading" xml:space="preserve">
 				<source>Extended Search (Help)</source>
 				<target>Erweiterte Suche (Hilfe)</target>
