@@ -7,7 +7,7 @@
 <f:alias map="{
 	hasAlternate:'{f:if(condition:fieldInfo.queryAlternate, then:1, else:0)}'
 }">
-	<label class="sr-only" for="c{config.uid}-field-{fieldInfo.id}">Suche in 320 Millionen Datensätzen</label>
+	<label class="sr-only" for="c{config.uid}-field-{fieldInfo.id}">{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}</label>
 	<f:form.textfield
 		id="c{config.uid}-field-{fieldInfo.id}"
 		class="inputType-text autocomplete"
@@ -20,7 +20,7 @@
 			then:queryParameter.term,
 			else:queryParameter
 		)}"
-		placeholder="Suche in 320 Millionen Datensätzen"
+		placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}"
 		additionalAttributes="<f:if condition='{fieldInfo.autocomplete}==1'><f:then>{autocompleteURL:\"{f:uri.action(
 			arguments:{dictionary:fieldInfo.autocompleteDictionary, q:'%%%%'},
 			action:'suggest',

@@ -9,12 +9,12 @@
 
             <f:form action="search" name="query" class="qsa_search-header__search-wrapper" noCache="1" noCacheHash="1">
                 <div class="qsa_search-header__search">
-                    <label class="sr-only" for="searchHeaderSearch">Suche in 320 Millionen Datensätzen</label>
+                    <label class="sr-only" for="searchHeaderSearch">{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}</label>
                     <f:form.textfield property="fulltext"
                                       class="autocomplete"
                                       name="search"
                                       additionalAttributes="{aria-autocomplete: 'list'}"
-                                      placeholder="Suche in 320 Millionen Datensätzen" id="searchHeaderSearch"
+                                      placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}" id="searchHeaderSearch"
                                       value="{query.fulltext}"/>
 
                     <f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
