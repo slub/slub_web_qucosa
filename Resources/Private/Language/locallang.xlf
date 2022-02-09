@@ -44,6 +44,12 @@
 		<trans-unit id="tx_slubwebqucosa.search.expanded" xml:space="preserve">
 			<source>Expanded Search</source>
 		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.infoHeading" xml:space="preserve">
+			<source>Extended Search (Help)</source>
+		</trans-unit>
+		<trans-unit id="tx_slubwebqucosa.search.info" xml:space="preserve">
+			<source>You can search in more detail by restricting your query to specific search fields from the outset. This is particularly useful if you already know which publication you are looking for. Select the appropriate field (e.g. title) and then enter your search term. You can search for groups of words (phrases) by using quotation marks.</source>
+		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
 			<source>Homepage</source>
 		</trans-unit>
