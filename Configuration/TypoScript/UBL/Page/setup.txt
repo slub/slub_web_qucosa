@@ -19,7 +19,7 @@ page {
   }
 
   includeCSS {
-    client = EXT:slub_web_qucosa/Resources/Public/Css/UBL/client.css
+    ublCss = EXT:slub_web_qucosa/Resources/Public/Css/UBL/client.css
   }
 
   10 = FLUIDTEMPLATE
