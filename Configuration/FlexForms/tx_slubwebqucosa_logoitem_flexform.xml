@@ -16,7 +16,7 @@
                         <renderType>inputLink</renderType>
                         <size>15</size>
                         <max>256</max>
-                        <eval>trim,required</eval>
+                        <eval>trim</eval>
                         <fieldControl>
                             <linkPopup>
                                 <options>
