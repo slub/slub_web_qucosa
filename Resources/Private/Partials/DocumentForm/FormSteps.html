@@ -1,10 +1,10 @@
-{namespace eww=EWW\Dpf\ViewHelpers}
+{namespace dpf=EWW\Dpf\ViewHelpers}
 
 <div class="qsa_progress-bar">
     <div class="qsa_progress-bar__container">
         <ol class="qsa_progress-bar__container-list">
             <f:for each="{documentForm.items}" as="formPage" iteration="pageIterator">
-                <f:if condition="{eww:IsElementAllowed(condition:'{formPage.0.backendOnly}')}">
+                <f:if condition="{dpf:IsElementAllowed(condition:'{formPage.0.accessRestrictionRoles}')}">
                     <f:then>
                         <li class="qsa_progress-bar__container-item {f:if(condition: '{pageIterator.index}==0', then: 'active', else:'')}" data-id="tab-{pageIterator.cycle}" data-toggle="tab" aria-expanded="false">
                             <a href="#tab-{pageIterator.cycle}" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_one', extensionName: 'slub_web_qucosa')} {formPage.0.displayName} {f:translate(key: 'tx_slubwebqucosa.wizard.step.jump_two', extensionName: 'slub_web_qucosa')}">

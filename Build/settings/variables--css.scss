@@ -135,6 +135,23 @@
             }
         }
     }
+
+    &.ub-leipzig {
+        --color-primary: #{$primary-ub-leipzig};
+        --color-primary-hover: #{$primary-ub-leipzig-hover};
+        --color-primary-opacity: #{rgba($primary-ub-leipzig, .2)};
+
+        .#{$prefix}header__logo {
+            &--right {
+                display: flex;
+            }
+
+            &-ub-leipzig {
+                display: flex;
+                padding-top: 10px;
+            }
+        }
+    }
 }
 
 // end of variables--css.scss file

@@ -108,11 +108,11 @@ plugin.tx_find {
 plugin.tx_find.settings.sort {
     10 {
         id = default
-        sortCriteria = title_full asc
+        sortCriteria = title_sort asc
     }
     20 {
         id = Titel A-Z
-        sortCriteria = title_full desc
+        sortCriteria = title_sort desc
     }
     30 {
         id = Neuste zuerst (Jahr)

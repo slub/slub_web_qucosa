@@ -13,7 +13,7 @@ TCEFORM {
     }
     tt_content {
         CType{
-            removeItems = header,text,textpic,image,bullets,table,uploads,menu_abstract,menu_categorized_pages,menu_pages,menu_categorized_content,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,menu_subpages,login,div
+            removeItems = header,text,textpic,image,bullets,table,uploads,menu_abstract,menu_categorized_pages,menu_pages,menu_categorized_content,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,menu_subpages,div
         }
         header_layout {
             removeItems = 1,2,3,4,5

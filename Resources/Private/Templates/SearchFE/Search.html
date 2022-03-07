@@ -9,12 +9,12 @@
 
             <f:form action="search" name="query" class="qsa_search-header__search-wrapper" noCache="1" noCacheHash="1">
                 <div class="qsa_search-header__search">
-                    <label class="sr-only" for="searchHeaderSearch">Suche in 320 Millionen Datensätzen</label>
+                    <label class="sr-only" for="searchHeaderSearch">{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}</label>
                     <f:form.textfield property="fulltext"
                                       class="autocomplete"
                                       name="search"
                                       additionalAttributes="{aria-autocomplete: 'list'}"
-                                      placeholder="Suche in 320 Millionen Datensätzen" id="searchHeaderSearch"
+                                      placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}" id="searchHeaderSearch"
                                       value="{query.fulltext}"/>
 
                     <f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
@@ -92,13 +92,9 @@
                         </div>
                     </div>
                     <div class="col-12 col-xl-4 qsa_search-header__advanced-search--expanded-text">
-                        <h2 class="h6">Neutrale Info</h2>
+                        <h2 class="h6">{f:translate(key: 'tx_slubwebqucosa.search.infoHeading', extensionName: 'slub_web_qucosa')}</h2>
                         <p>
-                            Neutrale Info Contentsensitiv
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                            sit amet.
+                            {f:translate(key: 'tx_slubwebqucosa.search.info', extensionName: 'slub_web_qucosa')}
                         </p>
                     </div>
                 </div>
@@ -133,17 +129,17 @@
 
                     <div class="col-12 col-xl-4 qsa_search-header__advanced-search__button-container">
                         <f:form.button class="qsa_btn__submit submit" type="submit">
-                            {f:translate(key: 'search.form.button.search', extensionName: 'slub_web_qucosa')}
+                            {f:translate(key: 'tx_slubwebqucosa.search.action', extensionName: 'slub_web_qucosa')}
                         </f:form.button>
                     </div>
 
                     <div class="col-12 qsa_search-header__advanced-search-footer">
 
                         <f:form.button class="qsa_btn__link reset" type="class">
-                            Alles Zurücksetzen
+                           {f:translate(key: 'tx_slubwebqucosa.search.reset', extensionName: 'slub_web_qucosa')}
                         </f:form.button>
 
-                        <button id="closeAdvanced" class="qsa_btn__link">Erweiterte Suche schließen</button>
+                        <button id="closeAdvanced" class="qsa_btn__link">{f:translate(key: 'tx_slubwebqucosa.search.closeExtendedSearch', extensionName: 'slub_web_qucosa')}</button>
                     </div>
                 </div>
             </f:form>

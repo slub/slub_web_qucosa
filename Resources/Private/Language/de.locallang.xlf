@@ -50,6 +50,26 @@
 			    <source>Expanded Search</source>
 			    <target>Erweiterte Suche</target>
 		    </trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.action" xml:space="preserve">
+				<source>Search</source>
+				<target>Suchen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.reset" xml:space="preserve">
+				<source>Reset all</source>
+				<target>Alles zurücksetzen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.closeExtendedSearch" xml:space="preserve">
+				<source>Close extended search</source>
+				<target>Erweiterte Suche schließen</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.infoHeading" xml:space="preserve">
+				<source>Extended Search (Help)</source>
+				<target>Erweiterte Suche (Hilfe)</target>
+			</trans-unit>
+			<trans-unit id="tx_slubwebqucosa.search.info" xml:space="preserve">
+				<source>You can search in more detail by restricting your query to specific search fields from the outset. This is particularly useful if you already know which publication you are looking for. Select the appropriate field (e.g. title) and then enter your search term. You can search for groups of words (phrases) by using quotation marks.</source>
+				<target>Detaillierter suchen Sie, in dem Sie Ihre Anfrage von vornherein auf bestimmte Suchfelder gezielt einschränken. Das ist insbesondere dann sinnvoll, wenn Sie bereits wissen, welche Publikation Sie suchen. Wählen Sie das entsprechende Feld (z.B. Titel) aus und geben Sie danach Ihren Suchterm ein. Nach Wortgruppen (Phrasen) suchen Sie indem Sie Anführungszeichen verwenden.</target>
+			</trans-unit>
             <trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
 			    <source>Homepage</source>
 			    <target>Startseite</target>

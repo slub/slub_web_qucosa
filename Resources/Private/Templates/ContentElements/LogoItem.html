@@ -3,9 +3,16 @@
       data-namespace-typo3-fluid="true">
 {v:iterator.first(haystack: files) -> v:variable.set(name: 'image')}
 <div class="qsa_teaser__content--item">
-    <f:link.typolink class="qsa_teaser__content--item-link" parameter="{flexform.linkurl}">
-        <f:image image="{image}" />
-    </f:link.typolink>
+    <f:if condition="{flexform.linkurl}">
+        <f:then>
+            <f:link.typolink class="qsa_teaser__content--item-link" parameter="{flexform.linkurl}">
+                <f:image image="{image}" />
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:image image="{image}" />
+        </f:else>
+    </f:if>
     <p>{data.bodytext}</p>
 </div>
 
