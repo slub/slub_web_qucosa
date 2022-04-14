@@ -21,7 +21,7 @@
     "gridelementsteam/gridelements": "8.7.0",
     "ichhabrecht/content-defender": "^3.1",
     "typo3/cms": "^9.5",
-    "xima-media/xm_tools": "2.8.5"
+    "xima-media/xm_tools": "^9.5"
   },
   "autoload": {
     "psr-4": {
