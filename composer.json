@@ -20,7 +20,7 @@
     "fluidtypo3/vhs": "^6.0",
     "gridelementsteam/gridelements": "^9.5",
     "ichhabrecht/content-defender": "^3.1",
-    "typo3/cms": "^9.5",
+    "typo3/cms-core": "^9.5",
     "xima-media/xm_tools": "^9.5"
   },
   "autoload": {
