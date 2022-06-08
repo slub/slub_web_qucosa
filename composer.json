@@ -17,12 +17,11 @@
   ],
   "license": "GPL-3.0-or-later",
   "require": {
-    "typo3/cms-core": "^8.7",
     "fluidtypo3/vhs": "^6.0",
-    "gridelementsteam/gridelements": "8.7.0",
+    "gridelementsteam/gridelements": "^9.5",
     "ichhabrecht/content-defender": "^3.1",
-    "typo3/cms": "^8.7.10",
-    "xima-media/xm_tools": "2.8.5"
+    "typo3/cms-core": "^9.5",
+    "xima-media/xm_tools": "^9.5"
   },
   "autoload": {
     "psr-4": {
