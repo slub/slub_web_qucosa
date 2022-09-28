@@ -1,6 +1,6 @@
 /* Additional CSS styles specifically for the UBL client */
 
-// There's no translation necessary so we hide this option
+/*  There's no translation necessary so we hide this option */
 .qsa_dropdown--language {
 	display: none;
 }
