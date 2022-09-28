@@ -1,7 +1,14 @@
-# Structure of the Assets
+# Asset Structure
 
-The assets of the project are divided into general assets and assets of the components. The Components folder contains Javascript and Scss files for specific functions. Under /js/ there are two JavaScript files which contain only imports. The same principle applies to the qsa.scss file in the /scss/ folder.
-With the command` npm run build-typo3`, the assets are built into the directory /Resources/Public/.
+The assets of the project are divided into general assets and assets of the components.
+
+* `/components` contains both `js` and `scss` files for specific functionalities
+* `/js/`  contains a `head` and `body` JavaScript file to import the used components **(make sure to add new JavaScript components there)**
+*  `/scss/` imports all the styles needed from each individual component into a single `scss` file **(make sure to import styles of new components there)**
+
+# Build Process
+
+The build pipeline uses the files contained in `js` and `scss` to bundle and minimize the respective files into `/Resources/Public/JavaScript/` and  `/Resources/Public/Css/`.
 
 ## Build commands
 
