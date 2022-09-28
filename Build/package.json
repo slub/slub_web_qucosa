@@ -30,6 +30,7 @@
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.3.8",
     "node-sass": "^7.0.0",
+    "nodemon": "^2.0.20",
     "postcss": "^8.2.4",
     "postcss-loader": "^4.1.0",
     "sass-loader": "^10.1.1",
@@ -63,6 +64,8 @@
   },
   "scripts": {
     "build-typo3": "run-s assets-stage prefix-css-stage",
+    "build": "run-s assets-stage prefix-css-stage",
+    "watch": "nodemon -e js,scss,svg -x npm run build",
     "assets-stage": "webpack --config webpack.prod.config.js",
     "prefix-css-stage": "npx postcss ../Resources/Public/Css/qsa.min.css --use autoprefixer -d ../Resources/Public/Css/"
   },
