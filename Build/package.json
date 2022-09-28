@@ -52,7 +52,6 @@
     "@eureka2/ab-datepicker": "github:eureka2/ab-datepicker",
     "awesomplete": "^1.1.5",
     "bootstrap": "^4.5.3",
-    "create-pattern-lab": "^5.14.2",
     "jquery": "^3.5.1",
     "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
