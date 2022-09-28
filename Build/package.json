@@ -63,7 +63,6 @@
     "tippy.js": "^6.3.1"
   },
   "scripts": {
-    "build-typo3": "run-s assets-stage prefix-css-stage",
     "build": "run-s assets-stage prefix-css-stage",
     "watch": "nodemon -e js,scss,svg -x npm run build",
     "assets-stage": "webpack --config webpack.prod.config.js",
