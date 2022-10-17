@@ -4,3 +4,15 @@
 .qsa_dropdown--language {
 	display: none;
 }
+
+/* TODO: move into the common styles and remove specific workaround for hyper link styles */
+
+p a {
+	font-weight: 500;
+	text-decoration: underline !important;
+	color: #02133D;
+}
+p a:hover {
+	color: #404D6D;
+	cursor: pointer;
+}
