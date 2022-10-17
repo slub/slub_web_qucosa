@@ -3,12 +3,13 @@
 //      1. input
 //
 
+legend {
+    padding-bottom: var(--spacing-xs);
+}
+
 .qsa_input-group {
     position: relative;
-
-    &:not(:first-child) {
-        margin-top: var(--spacing);
-    }
+    margin-bottom: var(--spacing);
 
     svg {
         visibility: hidden;
@@ -76,6 +77,7 @@
                     content: '*';
                     position: absolute;
                 }
+                width: 100%;
             }
         }
 

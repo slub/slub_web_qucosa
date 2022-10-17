@@ -15,6 +15,10 @@
     z-index: 20;
     height: 100vh;
 
+    legend {
+        padding-bottom: var(--spacing-xs);
+    }
+
     &--open {
         display: flex;
     }
@@ -157,7 +161,7 @@
                 }
 
                 &:not(:first-of-type) {
-                    margin-top: var(--spacing);
+
                 }
 
                 h5 {
@@ -189,11 +193,12 @@
             &-element {
                 &:not(:last-child) {
                     padding-bottom: 24px;
+                    margin-bottom: 12px;
                     border-bottom: 1px dashed var(--color-opacity-black-3);
                 }
 
                 &:not(:first-child) {
-                    padding-top: 24px;
+
                 }
 
                 .qsa_select {
@@ -218,7 +223,7 @@
                 }
 
                 &-add {
-                    margin-top: var(--spacing-xs);
+                    margin-bottom: var(--spacing);
                 }
 
                 &-remove {
