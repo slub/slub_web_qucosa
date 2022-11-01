@@ -6,3 +6,17 @@ plugin.tx_slubwebqucosa {
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
 	imprintPid =
 }
+
+# Allgemeine Textbausteine
+text {
+	headerHeading = Wissenschaftliche Dokumentensuche
+	headerSubheader = auf dem Dokumentenserver der SLUB Dresden
+}
+
+[globalVar = GP:L = 1]
+	# Allgemeine Textbausteine
+	text {
+		headerHeading = Scientific document search
+		headerSubheader = on the SLUB Dresden document server
+	}
+[global]
