@@ -26,8 +26,6 @@
     font-size: 1rem;
 }
 
-
-
 /* ##################################################### */
 /* ############## Turn off native styling ############## */
 /* ##################################################### */
@@ -40,20 +38,12 @@ input[type="password"],
 input[type="search"],
 input[type="submit"],
 button[type="submit"] {
-    -webkit-appearance: none;
+    appearance: none;
 }
-
-
-
-
 
 /* ##################################################### */
 /* ############## Core styling ######################### */
 /* ##################################################### */
-
-
-
-
 
 textarea,
 input,
@@ -71,6 +61,7 @@ input[type="search"] {
     font-family: fira_sans, sans-serif;
     border-radius: 6px;
     border: 2px solid @color1;
+
     &:focus {
         border-color: @color5
     }
@@ -92,15 +83,15 @@ button[type="submit"],
     color: @color4;
     font-weight: 600;
     text-transform: uppercase;
+
     &:hover {
         background-color: @color5
     }
+
     &:focus {
         border-color: @color5
     }
 }
-
-input[type="file"] {}
 
 label {
     display: block;
@@ -129,15 +120,15 @@ select {
     border-radius: 6px;
     display: block;
     width: 100%;
+
     &:focus {
         border-color: @color5
     }
+
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-
-
 
 /* ##################################################### */
 /* ############## Suchfeld ############################# */
@@ -147,19 +138,22 @@ select {
     position: absolute;
     left: 0;
     top: 100%;
+
     .tx-dpf {
         .searchbox {
             form {
                 display: flex;
-                margin: @gutter/2;
+                margin: (@gutter/2);
                 border-radius: 6px;
                 border: 2px solid @color1;
                 position: relative;
+
                 input[type="text"] {
                     flex-grow: 2;
                     border: none;
                     border-radius: 6px 0 0 6px;
                 }
+
                 button[type="submit"] {
                     width: 70px;
                     color: @color2;
@@ -169,9 +163,9 @@ select {
                     background-color: @color4;
                     border-radius: 0 6px 6px 0;
                 }
+
                 &:after {
                     font-family: 'icomoon' !important;
-                    speak: none;
                     font-style: normal;
                     font-weight: normal;
                     font-variant: normal;
@@ -201,6 +195,7 @@ select {
     .tx-dpf {
         display: flex;
         flex-wrap: wrap;
+
         .btn {
             display: block;
             text-align: left;
@@ -209,56 +204,70 @@ select {
             background-color: @color3;
             width: 49%;
             max-width: 12em;
+
             &.active,
             &:hover {
                 color: @color4;
                 background-color: @color1;
             }
+
             &:first-child {
                 margin-right: 6px
             }
         }
+
         h5 {
             display: none
         }
+
         .searchExtForm,
         .searchForm {
             width: 100%;
             margin-bottom: 5em;
+
             .form-group {
                 margin-bottom: 1em;
+
                 input {
                     flex-grow: 2;
+
                     &:focus {
                         border-color: @color5
                     }
                 }
             }
+
             .container {
-              .row {
-                width: 100%;
-                .col-md-6 {
+                .row {
                     width: 100%;
-                    .form-group {
-                        display: flex;
-                        flex-wrap: nowrap;
-                        label[for="from"] {
-                            width: 50%;
-                            margin: 0 0.1em 0 0;
-                        }
-                        label[for="till"] {
-                            width: 50%;
-                            flex-grow: 1;
-                            margin: 0 0.1em 0 0;
-                        }
-                        input {
-                            margin-bottom: -2px;
-                            flex-grow: 1;
+
+                    .col-md-6 {
+                        width: 100%;
+
+                        .form-group {
+                            display: flex;
+                            flex-wrap: nowrap;
+
+                            label[for="from"] {
+                                width: 50%;
+                                margin: 0 0.1em 0 0;
+                            }
+
+                            label[for="till"] {
+                                width: 50%;
+                                flex-grow: 1;
+                                margin: 0 0.1em 0 0;
+                            }
+
+                            input {
+                                margin-bottom: -2px;
+                                flex-grow: 1;
+                            }
                         }
                     }
                 }
-              }
             }
+
             button[type="submit"] {
                 width: auto;
                 text-align: center;
@@ -267,20 +276,25 @@ select {
                 margin-left: auto;
             }
         }
+
         .searchForm {
             position: relative;
+
             .qucosa-search-form {
                 display: flex;
                 color: @color2;
                 border-radius: 6px;
                 border: 2px solid @color1;
+
                 .form-group {
                     margin: 0;
                     flex-grow: 1;
+
                     input {
                         border: none;
                     }
                 }
+
                 button {
                     margin: 0;
                     background-color: @color4;
@@ -293,9 +307,9 @@ select {
                     cursor: pointer;
                 }
             }
+
             &:after {
                 font-family: 'icomoon' !important;
-                speak: none;
                 font-style: normal;
                 font-weight: normal;
                 font-variant: normal;
@@ -314,9 +328,6 @@ select {
     }
 }
 
-
-
-
 /* ##################################################### */
 /* ############## Recherche DPF Ergebnisse ############# */
 /* ##################################################### */
@@ -328,9 +339,11 @@ select {
         margin: 2em 0;
         display: flex;
         flex-wrap: wrap;
+
         li {
             padding: 0;
             margin: 0 6px 6px 0;
+
             button.btn {
                 margin: 0 !important;
                 padding: .7em 1em;
@@ -338,90 +351,106 @@ select {
             }
         }
     }
+
     .tx-dlf-listview-list {
         list-style: none;
         padding: 0;
         margin: 3em 0 6em;
+
         li {
             padding: 0;
             margin: 0 0 2.5em 0;
+
             dl {
                 margin-left: 2em;
+
                 dd {
                     line-height: 1.4;
                     display: inline-block;
+
                     a {
                         text-transform: uppercase;
                         letter-spacing: .5px
                     }
+
                     &:first-of-type {
                         font-size: 1.3rem;
                         line-height: 1.2;
                         text-indent: -1.35em;
-                        a {}
                     }
-                    &.date {display: block}
+
+                    &.date {
+                        display: block
+                    }
                 }
             }
         }
     }
 }
 
-
-
 /* ##################################################### */
 /* ############## jQuery Datepicker #################### */
 /* ##################################################### */
 
-
-
 .ui-datepicker {
     background: @color1;
     color: @color4;
+
     .ui-datepicker-header {
         display: flex;
+
         a {
             padding: .5em 1em;
             color: @color4;
             cursor: pointer;
+
             span {
                 display: none
             }
+
             &[title="Next"] {
                 order: 2;
+
                 &:before {
                     content: ">"
                 }
             }
+
             &[title="Prev"] {
                 &:before {
                     content: "<"
                 }
             }
+
             &:hover {
                 background: @color5
             }
         }
-        >div {
+
+        > div {
             flex-grow: 2;
             text-align: center;
             padding: .5em 1em;
         }
     }
+
     table {
         width: 100%;
         margin: 0;
+
         th {
             font-weight: 400;
             padding: .5em;
             line-height: 1.8;
             background-color: lighten(@color1, 5%)
         }
+
         td {
             a {
                 color: @color4;
                 padding: .5em;
                 line-height: 1.8;
+
                 &:hover {
                     background: @color5
                 }
@@ -430,23 +459,20 @@ select {
     }
 }
 
-
-
-
 /* ##################################################### */
 /* ############## Abgabe - und Kontaktformular ######### */
 /* ##################################################### */
 
-
-
 #abgabeformular {
     max-width: 50em;
+
     .hide,
     fieldset {
         border-radius: 6px;
         border: 2px solid @color3;
         margin-top: 1em;
         padding: 1em;
+
         legend {
             display: inline-block;
             font-weight: 400;
@@ -458,21 +484,26 @@ select {
             text-align: center;
             min-width: 12em
         }
+
         br {
             display: none
         }
+
         label {
             border: none;
             padding: 1em 1em .6em 0;
+
             &.error {
                 height: 1px;
                 padding: 0
             }
         }
+
         &.submit {
             legend {
                 display: none
             }
+
             input {
                 display: inline-block;
                 width: auto;
@@ -481,11 +512,12 @@ select {
             }
         }
     }
+
     table {
-      td {
-        &.summary-table-first-col {
-            width: 35%;
+        td {
+            &.summary-table-first-col {
+                width: 35%;
+            }
         }
-      }
     }
 }
