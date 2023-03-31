@@ -1,209 +1,235 @@
-
-
 .ie {
-	.grid-3 {
-		display: block;
-		>div {
-			width: 33%;
-			display: inline-block;
-		}
-	}
-	header {
-		.logo {
-			border-right: none
-		}
-		#mainnav {
-			ul {
-				display: block;
-				li {}
-			}
-		}
-	}
-	.tx-dpf {
-		.form-group {
-			&:nth-of-type(6) {
-				&:after {
-					display: none;
-				}
-			}
-		}
-	}
+    .grid-3 {
+        display: block;
+
+        > div {
+            width: 33%;
+            display: inline-block;
+        }
+    }
+
+    header {
+        .logo {
+            border-right: none
+        }
+
+        #mainnav {
+            ul {
+                display: block;
+            }
+        }
+    }
+
+    .tx-dpf {
+        .form-group {
+            &:nth-of-type(6) {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
 }
-
-
-
 
 /* ##################################################### */
 /* ######## Breakpoint Tablett & Landscape ############# */
 /* ##################################################### */
 
-
-
-
 @media only screen and (min-width: 40em) {
-	.ie {
-		header {
-			#mainnav {
-				ul {
-					display: flex;
-					li {
-						flex-grow: 1;
-						border-left: 4px solid #fff;
-						&:first-child {
-							border-left: none
-						}
-					}
-				}
-			}
-		}
-	}
-	.ie10,
-	.ie9 {
-		header {
-			display: block;
-			a.logo {
-				width: 15%;
-				float: left;
-				border-right: 4px solid #fff;
-				height: 124px
-			}
-			#mainnav {
-				display: inline-block;
-				width: 85%;
-				float: right;
-				ul {
-					li {
-						a {
-							height: 120px
-						}
-					}
-				}
-			}
-			.suche {
-				top: 120px;
-				left: 0;
-				form {
-					border: none
-				}
-				form input {
-					border-left: 2px solid @color1;
-					border-top: 2px solid @color1;
-					border-bottom: 2px solid @color1;
-				}
-				form button[type=submit] {
-					border-right: 2px solid @color1;
-					border-top: 2px solid @color1;
-					border-bottom: 2px solid @color1;
-				}
-			}
-		}
-		.tx-dpf {
-			.form-group {
-				display: block;
-				clear: both;
-				margin-bottom: 1em;
-				label {
-					float: left;
-					margin: 0 .5% 0 0
-				}
-				input {
-					width: 69.5%;
-					padding: .95em 1em;
-				}
-				select {
-					width: 69.5%;
-					padding: .90em 1em;
-				}
-			}
-		}
-	}
-	.lte-ie10 {
-		header {
-			a.logo {
-				border: none;
-				height: 120px
-			}
-			#mainnav {
-				width: 80%;
-				background: none;
-				border: none;
-				ul {
-					display: block;
-					li {
-						float: left;
-						border: none;
-						margin-right: 6px;
-						a {}
-					}
-				}
-			}
-			.suche {
-				form {
-					border: none;
-					position: relative;
-				}
-				form input {
-					height: 45px
-				}
-				form button[type=submit] {
-					position: absolute;
-					right: 0;
-					height: 45px
-				}
-			}
-		}
-		.tx-dpf {
-			a.btn,
-			span.btn {
-				display: inline-block;
-			}
-			.container {
-				.form-group {
-					display: block;
-					>* {
-						float: left
-					}
-				}
-			}
-			button {
-				clear: both
-			}
-			.searchForm {
-				form {
-					position: relative;
-					input {
-						height: 45px
-					}
-					button {
-						position: absolute;
-						right: 0;
-						height: 45px;
-						top: 0
-					}
-				}
-			}
-		}
-		footer {
-			>div {
-				.partner {
-					float: left;
-					div {
-						float: left
-					}
-				}
-				nav {
-					ul {
-						li {
-							float: left;
-						}
-					}
-				}
-				&:after {
-					clear: both;
-					content: " ";
-					display: table;
-				}
-			}
-		}
-	}
+    .ie {
+        header {
+            #mainnav {
+                ul {
+                    display: flex;
+
+                    li {
+                        flex-grow: 1;
+                        border-left: 4px solid #fff;
+
+                        &:first-child {
+                            border-left: none
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ie10,
+    .ie9 {
+        header {
+            display: block;
+
+            a.logo {
+                width: 15%;
+                float: left;
+                border-right: 4px solid #fff;
+                height: 124px
+            }
+
+            #mainnav {
+                display: inline-block;
+                width: 85%;
+
+                ul {
+                    li {
+                        a {
+                            height: 120px
+                        }
+                    }
+                }
+            }
+
+            .suche {
+                top: 120px;
+                left: 0;
+
+                form {
+                    border: none
+                }
+
+                form input {
+                    border-left: 2px solid @color1;
+                    border-top: 2px solid @color1;
+                    border-bottom: 2px solid @color1;
+                }
+
+                form button[type=submit] {
+                    border-right: 2px solid @color1;
+                    border-top: 2px solid @color1;
+                    border-bottom: 2px solid @color1;
+                }
+            }
+        }
+
+        .tx-dpf {
+            .form-group {
+                display: block;
+                clear: both;
+                margin-bottom: 1em;
+
+                label {
+                    float: left;
+                    margin: 0 .5% 0 0
+                }
+
+                input {
+                    width: 69.5%;
+                    padding: .95em 1em;
+                }
+
+                select {
+                    width: 69.5%;
+                    padding: .90em 1em;
+                }
+            }
+        }
+    }
+
+    .lte-ie10 {
+        header {
+            a.logo {
+                border: none;
+                height: 120px
+            }
+
+            #mainnav {
+                width: 80%;
+                background: none;
+                border: none;
+
+                ul {
+                    display: block;
+
+                    li {
+                        float: left;
+                        border: none;
+                        margin-right: 6px;
+                    }
+                }
+            }
+
+            .suche {
+                form {
+                    border: none;
+                    position: relative;
+                }
+
+                form input {
+                    height: 45px
+                }
+
+                form button[type=submit] {
+                    position: absolute;
+                    right: 0;
+                    height: 45px
+                }
+            }
+        }
+
+        .tx-dpf {
+
+            a.btn,
+            span.btn {
+                display: inline-block;
+            }
+
+            .container {
+                .form-group {
+                    display: block;
+
+                    > * {
+                        float: left
+                    }
+                }
+            }
+
+            button {
+                clear: both
+            }
+
+            .searchForm {
+                form {
+                    position: relative;
+
+                    input {
+                        height: 45px
+                    }
+
+                    button {
+                        position: absolute;
+                        right: 0;
+                        height: 45px;
+                        top: 0
+                    }
+                }
+            }
+        }
+
+        footer {
+            > div {
+                .partner {
+                    float: left;
+
+                    div {
+                        float: left
+                    }
+                }
+
+                nav {
+                    ul {
+                        li {
+                            float: left;
+                        }
+                    }
+                }
+
+                &:after {
+                    clear: both;
+                    content: " ";
+                    display: table;
+                }
+            }
+        }
+    }
 }

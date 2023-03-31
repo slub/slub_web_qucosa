@@ -9,7 +9,7 @@
             align-items: flex-end;
             flex-wrap: wrap;
             justify-content: space-between;
-            h1 {}
+
             img {
                 order: 2;
                 max-width: 8em;
@@ -17,16 +17,13 @@
             }
         }
     }
+
     .blocks {
-        figure figcaption {font-size: 1.6rem;
+        figure figcaption {
+            font-size: 1.6rem;
         }
     }
 }
-
-
-
-
-
 
 /* ##################################################### */
 /* ######## Breakpoint Tablett & Landscape ############# */
@@ -36,6 +33,7 @@
     html {
         font-size: 90%;
     }
+
     ul,
     ol {
         li {
@@ -43,28 +41,36 @@
             padding-left: 2em;
         }
     }
+
     .grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
         .csc-textpic-image {
             max-width: 330px;
         }
     }
 
 
-.csc-header {
-    h2 {font-size: 1.8rem;}
-}
+    .csc-header {
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
 
-.csc-textpic-image {
-            max-width: 200px;
-            float: left;
-            margin-right: 2.4em;
-}
+    .csc-textpic-image {
+        max-width: 200px;
+        float: left;
+        margin-right: 2.4em;
+    }
 
-.content {
-    &:after {clear: both; content: "";display: table;}
-}
+    .content {
+        &:after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+    }
 
 
 
@@ -72,40 +78,44 @@
     #totop {
         font-size: 1.8rem;
     }
+
     header {
         position: static;
         align-items: flex-end;
+
         .logo {
             flex-grow: 1;
             width: 40%;
             border-right: 2px solid #fff;
             border-bottom: 4px solid #fff;
-            img {}
-            span {}
         }
+
         .trigger {
             display: none;
         }
+
         nav {
             display: block;
             order: 3;
             background: @color4;
             border-bottom: 4px solid #fff;
+
             ul {
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 grid-gap: 4px;
                 align-items: stretch;
+
                 li {
                     background: @color3;
+
                     a {
                         line-height: 1.3;
                         text-align: left;
                         hyphens: none;
                         font-size: .90rem;
-                        padding: @gutter/3;
-                        &:hover,
-                        &.active {}
+                        padding: (@gutter/3);
+
                         .highlight {
                             display: block;
                         }
@@ -113,83 +123,100 @@
                 }
             }
         }
+
         .suche {
             order: 2;
             width: 60%;
             position: static;
         }
     }
+
     .banner {
         background: url(../../../Public/Images/MUSICONN/header-big.jpg);
         background-size: cover;
+
         .wrap {
             h1 {
                 font-size: 1.8rem;
+
                 span {
                     display: inline;
                 }
             }
         }
     }
+
     .blocks {
-        figure figcaption {font-size: 1.2rem;
+        figure figcaption {
+            font-size: 1.2rem;
         }
     }
+
     footer {
         nav {
             ul {
                 justify-content: center;
             }
         }
+
         .partner {
             display: flex;
             justify-content: space-between;
         }
     }
+
     .recherche {
         .tx-dpf {
+
             .searchExtForm,
             .searchForm {
                 .form-group {
                     margin-bottom: .3em;
                     display: flex;
+
                     label {
                         min-width: 30%;
                         margin: 0 .3em 0 0;
                     }
                 }
+
                 .container {
-                  .row {
-                    width: 100%;
-                    .col-md-6 {
-                        width: 50%;
-                        float: left;
-                        .form-group {
-                            label[for="from"] {
-                                width: 61%;
-                            }
-                            label[for="till"] {
-                                min-width: 10%;
-                                max-width: 30%;
-                                margin: 0 .1em 0 0;
-                            }
-                            input {
-                                width: 40%;
-                                margin: 0 .1em 0 0;
+                    .row {
+                        width: 100%;
+
+                        .col-md-6 {
+                            width: 50%;
+                            float: left;
+
+                            .form-group {
+                                label[for="from"] {
+                                    width: 61%;
+                                }
+
+                                label[for="till"] {
+                                    min-width: 10%;
+                                    max-width: 30%;
+                                    margin: 0 .1em 0 0;
+                                }
+
+                                input {
+                                    width: 40%;
+                                    margin: 0 .1em 0 0;
+                                }
                             }
                         }
-                      }
                     }
                 }
             }
         }
     }
 
-.tx-dlf-toolbox {
-  .tx-dlf-tools-pdf-page {
-    float:right; margin: 4em @gutter/2 2em 5em;
+    .tx-dlf-toolbox {
+        .tx-dlf-tools-pdf-page {
+            float: right;
+            margin: 4em (@gutter/2) 2em 5em;
+        }
     }
-}
 
 
 
@@ -208,19 +235,20 @@
     html {
         font-size: 100%;
     }
+
     header {
         flex-wrap: nowrap;
         align-items: stretch;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 @gutter/2;
+        padding: 0 (@gutter/2);
         position: relative;
+
         .logo {
             width: 280px;
             border-right: 4px solid #fff;
-            img {}
-            span {}
         }
+
         nav {
             ul {
                 li {
@@ -229,11 +257,11 @@
                         font-size: .95rem;
                         text-align: center;
                         line-height: 1.2;
-                        &.active {}
                     }
                 }
             }
         }
+
         .suche {
             max-width: 30em;
             position: absolute;
@@ -241,34 +269,43 @@
             right: 0;
         }
     }
+
     .banner {
         .wrap {
             padding-top: 28em;
         }
     }
+
     .blocks {
-        figure figcaption {font-size: 1.6rem;
+        figure figcaption {
+            font-size: 1.6rem;
         }
     }
 
 
 
     .csc-textpic {
-        figure {max-width: 250px}
+        figure {
+            max-width: 250px
+        }
     }
 
     footer {
         padding: 3em 0;
-        >div {
+
+        > div {
             display: flex;
             justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 @gutter/2;
+            padding: 0 (@gutter/2);
+
             nav {
                 flex-grow: 2;
+
                 ul {
                     justify-content: space-between;
+
                     li {
                         a {
                             padding-left: 0;
@@ -276,19 +313,15 @@
                     }
                 }
             }
+
             .partner {
                 border: none;
                 flex-grow: .5;
                 justify-content: flex-end;
-                .slub {
-                    a {}
-                }
-                .dfg {
-                    a {}
-                }
             }
         }
     }
+
     input[type="submit"],
     button[type="submit"],
     .btn {
