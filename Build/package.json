@@ -1,0 +1,90 @@
+{
+  "name": "qucosa-slub",
+  "description": "Prototyp den sächsischen Dokumenten- und Publikationsserver Qucosa",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://git.xima.de/ema/webs-qucoa-prototyp-2021"
+  },
+  "author": "XIMA MEDIA GmbH",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.17.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-only-warn": "^1.0.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-webpack-plugin": "^2.4.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.3.8",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.4",
+    "postcss-loader": "^4.1.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-selector-bem-pattern": "^2.1.0",
+    "stylelint-webpack-plugin": "^2.1.1",
+    "svg-spritemap-webpack-plugin": "^4.5.0",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.12.11",
+    "@eureka2/ab-datepicker": "github:eureka2/ab-datepicker",
+    "awesomplete": "^1.1.5",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "npm-run-all": "^4.1.5",
+    "popper.js": "^1.16.1",
+    "postcss-cli": "^9.1.0",
+    "sass-resources-loader": "^2.1.1",
+    "simplelightbox": "^2.7.0",
+    "slick-carousel": "^1.8.1",
+    "tippy.js": "^6.3.1",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.1.14",
+    "less": "^4.1.0",
+    "npm-watch": "^0.11.0"
+  },
+  "scripts": {
+    "build": "run-s assets-stage prefix-css-stage",
+    "watch": "nodemon -e js,scss,svg -x npm run build",
+    "assets-stage": "webpack --config webpack.prod.config.js",
+    "prefix-css-stage": "npx postcss ../Resources/Public/Css/qsa.min.css --use autoprefixer -d ../Resources/Public/Css/",
+    "musiconn-watch": "npm-watch",
+    "musiconn-less": "lessc ../Resources/Private/Less/MUSICONN/main.less ../Resources/Public/Css/MUSICONN/main.css && postcss ../Resources/Public/Css/MUSICONN/main.css --no-map --replace --use autoprefixer --use cssnano"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "watch": {
+    "musiconn-less": {
+      "patterns": [
+        "../Resources/Private/Less/MUSICONN/"
+      ],
+      "extensions": "less",
+      "runOnChangeOnly": true
+    }
+  }
+}
