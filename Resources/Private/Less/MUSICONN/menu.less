@@ -13,6 +13,8 @@ header {
         position: relative;
         width: 100%;
         padding: 0 20px;
+        max-width: 1100px;
+        margin: 0 auto;
 
         &:before {
             position: absolute;
@@ -30,6 +32,7 @@ header {
         background: url(../../Images/MUSICONN/musiconn-logo-publish-rgb.svg) no-repeat left center;
         background-size: auto 100%;
         display: block;
+        width: 260px;
         height: 90px;
         margin: 0 0 30px -15px;
         flex-grow: 2;
@@ -100,6 +103,7 @@ header {
         width: 100%;
 
         ul {
+            position: relative;
             height: 100%;
             border: solid @color7;
             border-width: 1px 0;
@@ -107,7 +111,8 @@ header {
             margin-bottom: 30px;
 
             li {
-                transition: .3s;
+                position: relative;
+                transition: all .3s ease-in-out;
 
                 a {
                     display: block;
@@ -125,21 +130,26 @@ header {
                     }
                 }
 
-                &:hover, &.active {
-                    background-color: @color1;
-
-                    a {
-                        color: @color4;
-
-                        .highlight {
-                            color: @color4
-                        }
-                    }
-                }
-
                 &.active {
                     a {
-                        font-weight: 600
+                        font-weight: 700;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        width: 20px;
+                        height: 20px;
+                        margin-left: -10px;
+                        color: @color-secondary;
+                        font-weight: 700;
+                        font-size: 30px;
+                        text-align: center;
+                        background: url(../../Images/MUSICONN/navigation-tilde.svg) no-repeat center center;
+                        background-size: 12px auto;
+                        display: block;
+                        content: " ";
                     }
                 }
             }
@@ -148,6 +158,88 @@ header {
 
     .suche {
         width: 100%;
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        .container {
+            padding: 0 50px;
+
+            &:before {
+                left: -965px,
+            }
+        }
+
+        .trigger {
+            right: 45px;
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        padding-top: 50px;
+
+        .trigger {
+            display: none;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            display: block;
+            width: auto;
+
+            ul {
+                position: relative;
+                padding: 0;
+                border: none;
+                display: flex;
+
+                li {
+                    a {
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: none;
+                        letter-spacing: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        .container {
+            padding: 0;
+
+            &:before {
+                left: -1515px;
+                width: 1500px;
+                height: 90px;
+            }
+        }
+
+        .logo {
+            height: 100px;
+            width: 290px;
+        }
+
+        nav {
+            right: -20px;
+
+            ul {
+                li {
+                    a {
+                        font-size: 16px;
+                        padding: 5px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        .container {
+            max-width: 1300px;
+        }
     }
 }
 

@@ -2,34 +2,62 @@
 /* ########### Custom Layout Styles #################### */
 /* ##################################################### */
 
+body:before {
+    position: fixed;
+    inset: 0;
+    background: url(../../Images/MUSICONN/background-wave.svg) fixed no-repeat top center;
+    background-size: 200% auto;
+    content: " ";
+    opacity: .6;
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        background-size: 100% auto;
+    }
+}
+
 .banner {
     position: relative;
     margin: 0 0 32px 0;
 
-    &:before {
-        position: absolute;
-        inset: 0 50px 0 0;
-        background: @color3;
-        content: " ";
-    }
-
-    &:after {
-        position: absolute;
-        inset: 0 50px 0 0;
-        background: url(../../../Public/Images/MUSICONN/header-small.jpg) no-repeat center center;
-        background-size: cover;
-        content: " ";
-        opacity: .3;
-    }
-
     .wrap {
         padding-top: 6em;
+
+        &:before {
+            position: absolute;
+            inset: 0 50px 0 0;
+            background: @color3;
+            opacity: .7;
+            content: " ";
+        }
 
         h1 {
             position: relative;
             margin: 0 0 -35px 0;
             z-index: 11;
             color: @color-secondary-dark;
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        .wrap {
+            &:before {
+                right: 70px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin: 32px 0 64px 0;
+
+        .wrap {
+            &:before {
+                left: -2500px;
+                right: 250px;
+            }
+
+            h1 {
+                margin: 0 200px -35px 0;
+            }
         }
     }
 }
@@ -70,19 +98,36 @@
             pointer-events: none;
             box-shadow: 2px 0 10px rgba(black, .15);
         }
+    }
 
-        &:hover {
-            color: @color1;
+    @media screen and (min-width: @tabletViewportWidth) {
+        display: flex;
 
-            img {
-                -webkit-filter: grayscale(0);
-                filter: grayscale(0);
-                opacity: 1
+        figure {
+            margin: 0;
+            max-width: none;
+
+            a {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                line-height: 0;
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
+        }
+    }
 
-            figcaption {
-                background: @color4;
-            }
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        justify-content: center;
+
+        > figure, > div > figure {
+            max-width: 220px;
         }
     }
 }
@@ -284,7 +329,7 @@ footer {
     .partner {
         position: relative;
         margin-top: 2em;
-        padding: 20px 20px 40px 20px;
+        padding: 20px;
         background: @color3;
         display: flex;
         flex-wrap: wrap;
@@ -294,7 +339,7 @@ footer {
             a {
                 display: inline-block;
                 position: relative;
-                margin: 1em 0;
+                margin: 1em 2em;
                 color: @color2;
                 font-weight: 500;
                 font-size: .75em;
@@ -343,6 +388,33 @@ footer {
                         position: absolute;
                         right: 0;
                         top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        nav {
+            margin-bottom: 60px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    padding: 0 20px;
+
+                    &:after {
+                        inset: 0 0 0 auto;
+                        width: 1px;
+                        height: auto;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
             }

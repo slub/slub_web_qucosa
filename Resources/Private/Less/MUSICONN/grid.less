@@ -3,9 +3,23 @@
 /* ##################################################### */
 
 .wrap {
-    max-width: 1200px;
+    position: relative;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        padding: 20px 0;
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        max-width: 1300px;
+    }
 }
 
 .grid-3 {
