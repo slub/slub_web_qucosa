@@ -3,22 +3,33 @@
 /* ##################################################### */
 
 .banner {
-    background: url(../../../Public/Images/MUSICONN/header-small.jpg);
-    background-size: cover;
+    position: relative;
+    margin: 0 0 32px 0;
+
+    &:before {
+        position: absolute;
+        inset: 0 50px 0 0;
+        background: @color3;
+        content: " ";
+    }
+
+    &:after {
+        position: absolute;
+        inset: 0 50px 0 0;
+        background: url(../../../Public/Images/MUSICONN/header-small.jpg) no-repeat center center;
+        background-size: cover;
+        content: " ";
+        opacity: .3;
+    }
 
     .wrap {
-        padding-top: 8em;
+        padding-top: 6em;
 
         h1 {
-            margin: 0;
-
-            span {
-                display: block;
-            }
-        }
-
-        img {
-            max-width: 6em;
+            position: relative;
+            margin: 0 0 -35px 0;
+            z-index: 11;
+            color: @color-secondary-dark;
         }
     }
 }
