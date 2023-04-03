@@ -1,19 +1,26 @@
+// Media queries
+@phoneLandscapeViewportWidth: 480px;
+@tabletViewportWidth: 768px;
+@tabletLandscapeViewportWidth: 1024px;
+@desktopViewportWidth: 1200px;
+@largerViewportWidth: 1400px;
+
+// Base calculation value
 @gutter: 45px;
 
+// Colors
 @color-primary: #005ade; // Blue
 @color-secondary: #FF6600; // Orange
 @color-secondary-dark: rgb(191, 76, 0); // A accessibility-friendly orange
-
 @color1: @color-secondary; // Just a override
 @color2: #333333; // Text Color
 @color3: #f2f2f2; //Background Grey
-
-
 @color4: #fff;
 @color5: darken(@color1, 20%); // Hover 1 
 @color6: darken(@color2, 20%); // Hover 2
 @color7: #c5c5c5;
 
+// Components
 @import "reset";
 @import "fonts";
 @import "icons";
@@ -22,5 +29,4 @@
 @import "forms";
 @import "menu";
 @import "layout";
-@import "responsive";
 @import "browser";
