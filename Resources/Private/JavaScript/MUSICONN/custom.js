@@ -2,13 +2,14 @@
 // Mobile Menü Trigger
 
 
-$( ".trigger" ).click(function() {
-  $( this ).toggleClass( "open" ); 
+$(".trigger").click(function () {
+    $(this).toggleClass("open");
     $('#mainnav').animate({
-    height: 'toggle'});
+        height: 'toggle'
+    });
 
-  $('.logo').toggleClass( "open" );
-	
+    $('.logo').toggleClass("open");
+
 });
 
 
@@ -33,9 +34,9 @@ $(document).ready(function(){
 
 // Scroll to top Funktion
 
-$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {$('#totop').fadeIn();}
-		else {$('#totop').fadeOut();}
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 100) { $('#totop').fadeIn(); }
+    else { $('#totop').fadeOut(); }
 });
 
 
@@ -43,40 +44,40 @@ $(window).scroll(function(){
 
 // Select all links with hashes
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000, function () {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    };
+                });
+            }
+        }
+    });
 
 
 
@@ -93,22 +94,22 @@ $('a[href*="#"]')
         browser,
         isIE;
 
-    while ( div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->', all[0]);
+    while (div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->', all[0]);
     v = v > 4 ? v : document.documentMode;
     if (v) {
         browser = " ie"
-        for(var i = 5; i<12; i++){
-            if(v < i) {
+        for (var i = 5; i < 12; i++) {
+            if (v < i) {
                 browser += ' lte-ie' + i;
-            }else if (v > i) {
+            } else if (v > i) {
                 browser += ' gte-ie' + i;
-            }else if (v == i) {
+            } else if (v == i) {
                 browser += ' ie' + i;
             }
         }
 
         isIE = {
-            "version" : v
+            "version": v
         }
 
     } else {
@@ -123,16 +124,25 @@ $('a[href*="#"]')
 
 // jquery Datepicker aktivieren
 
-  $( function() {
-    $( ".datetimepicker" ).datepicker({dateFormat: "dd.mm.yy",monthNames: [ "Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember" ]});
-  } );
+$(function () {
+    $(".datetimepicker").datepicker({ dateFormat: "dd.mm.yy", monthNames: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] });
+});
 
 
 
 
 // Akkordeon (FAQ)
 
- $(".accordion").accordion({active: false, collapsible: true, heightStyle: "content"});
+$(".accordion").accordion({ active: false, collapsible: true, heightStyle: "content" });
 
 
 
+// Check form inputs for value or live input and toggle parent class 
+$(function () {
+    $('.form-group input[type="text"], .form-group textarea').each(function () {
+        ($(this).val() !== '') && $(this).parent().addClass('got-input')
+    }).on('focusout', function () {
+        $(this).parent().toggleClass('got-input', $(this).val() !== '')
+
+    })
+})
