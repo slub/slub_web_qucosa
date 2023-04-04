@@ -156,4 +156,15 @@ $(function () {
     // Disable basic header search form on pages with an additional search form in the content section
     ($('.searchForm, .searchExtForm')[0]) && $('body').addClass('searchpage');
 
+    // Reduction of the stupidly large pagination
+    $('ul.f3-widget-paginator').each(function () {
+        if ($(this).find('>li').length > 9) {
+            $(this).addClass('trimmed')
+            $(this).find('li.current').prevAll(':not(.previous)').slice(3).addClass('hidden');
+            $(this).find('li.current').nextAll(':not(.next)').slice(3).addClass('hidden');
+        };
+
+    })
+
+
 })
