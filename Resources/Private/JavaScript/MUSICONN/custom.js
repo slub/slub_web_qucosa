@@ -144,13 +144,16 @@ $(function () {
         ($(this).val() !== '') && $(this).parent().addClass('got-input')
     }).on('focusout', function () {
         $(this).parent().toggleClass('got-input', $(this).val() !== '')
-
     });
 
+    // Hide way to long intro texts on search pages to improve usability 
     if ($('div.search-results')[0]) {
         $('.banner h1').append('<span class="search-info-toggle"/>')
         $('main div[id^="c"] .content').addClass('search-infos search-infos-minimized')
-    }
-    $('.search-info-toggle').click(() => { $('main div[id^="c"] .content').toggleClass('search-infos-minimized') })
+    };
+    $('.search-info-toggle').click(() => { $('main div[id^="c"] .content').toggleClass('search-infos-minimized') });
+
+    // Disable basic header search form on pages with an additional search form in the content section
+    ($('.searchForm, .searchExtForm')[0]) && $('body').addClass('searchpage');
 
 })
