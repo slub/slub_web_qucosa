@@ -128,20 +128,23 @@ body:before {
 
         > figure, > div > figure {
             max-width: 220px;
+            margin: 0 30px;
         }
     }
 }
 
-
+main .wrap > .wrap {
+    padding: 0;
+}
 
 .csc-header {
     h2 {
-        color: @color1;
+        color: @color-primary;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: .5px;
-        font-size: 1.3rem;
-        margin: 1.5em 0 1.5em
+        font-size: 1.375em;
+        margin: 3.5em 0 1em 0;
     }
 }
 
@@ -164,33 +167,41 @@ body:before {
     h3 {
         cursor: pointer;
         position: relative;
-        font-weight: 400;
-        border-radius: 6px;
-        border: 2px solid @color1;
-        padding: .5em 2.5em .5em 1.5em;
+        font-weight: 700;
+        border-bottom: 1px solid @color7;
+        padding: 15px 60px 15px 0;
+        color: @color-secondary-dark;
 
         &:after {
-            content: "+";
             position: absolute;
-            right: .4em;
-            font-size: 2.1rem;
-            top: 0
+            top: 50%;
+            right: 0;
+            height: 30px;
+            width: 30px;
+            margin-top: -15px;
+            border-radius: 15px;
+            font-size: 2em;
+            font-weight: 400;
+            background-color: @color-primary;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            content: "+";
         }
     }
 
     .ui-state-active {
         h3 {
-            font-weight: 600;
 
             &:after {
-                content: "-";
-                font-weight: 600
+                content: "–";
+                line-height: 25px;
             }
         }
     }
 
     .ui-accordion-content {
-        padding: .5em 2.5em .5em 1.8em;
+        padding: 2em 0;
     }
 }
 
@@ -395,6 +406,8 @@ footer {
     }
 
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin-top: 100px;
+
         nav {
             margin-bottom: 60px;
 
@@ -418,6 +431,10 @@ footer {
                     }
                 }
             }
+        }
+
+        .partner {
+            padding: 10px;
         }
     }
 }
