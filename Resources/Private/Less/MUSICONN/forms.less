@@ -266,6 +266,80 @@ select {
             }
         }
     }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        .tx-dpf {
+
+            > .btn {
+                flex: 0 1 25%;
+                border-top: 3px solid white;
+                margin-left: 15px;
+
+                &.active {
+                    z-index: 55;
+                    border-top-color: @color-primary;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            .searchExtForm,
+            .searchForm {
+                border: solid @color-primary;
+                border-width: 1px 0;
+                background-color: white;
+                box-shadow: 5px 0 20px rgba(0, 0, 0, .2);
+                margin-top: 0;
+                padding: 20px;
+
+                .btn {
+                    margin-top: 1em;
+                    font-size: 16px;
+                }
+
+                &:after {
+                    display: none;
+                }
+
+            }
+
+            .searchForm {
+                input[type="text"] {
+                    height: 40px;
+                }
+
+                .btn {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    height: 40px;
+                    padding: 10px;
+                    line-height: 1;
+                    margin: 0;
+                }
+            }
+
+            .searchExtForm {
+                .container {
+                    .row {
+                        width: 100%;
+                        display: flex;
+
+                        > div {
+                            flex: 1 1 auto;
+                            margin-right: 16px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* ##################################################### */
