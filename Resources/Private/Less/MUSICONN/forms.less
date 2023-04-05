@@ -13,13 +13,7 @@
 /* ##################################################### */
 
 textarea,
-input,
-input[type="text"],
-input[type="button"],
-input[type="password"],
-input[type="search"],
-input[type="submit"],
-button[type="submit"] {
+input {
     appearance: none;
 }
 
@@ -28,13 +22,7 @@ button[type="submit"] {
 /* ##################################################### */
 
 textarea,
-input,
-input[type="text"],
-input[type="button"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-input[type="search"] {
+input {
     position: relative;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     border: 1px solid @color7;
@@ -43,6 +31,11 @@ input[type="search"] {
 
     &:focus {
         border-color: @color-primary;
+    }
+
+    &[type="file"] {
+        padding: 20px;
+        background: white;
     }
 }
 
@@ -110,13 +103,17 @@ select {
     }
 }
 
-.form-group {
+div.form-group {
     position: relative;
 
     &.got-input, &:focus-within {
         label {
             top: -10px;
         }
+    }
+
+    label[for*="file"] {
+        top: -10px;
     }
 
 }
@@ -633,59 +630,57 @@ select {
 /* ##################################################### */
 
 #abgabeformular {
-    max-width: 50em;
-
-    .hide,
     fieldset {
-        border-radius: 6px;
-        border: 2px solid @color3;
-        margin-top: 1em;
-        padding: 1em;
+        border: solid @color7;
+        border-width: 1px 0;
+        padding: 15px 0;
+        margin: 35px 0;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
 
         legend {
-            display: inline-block;
-            font-weight: 400;
+            background: white;
             text-transform: uppercase;
-            letter-spacing: .5px;
-            background-color: @color3;
-            padding: 2em;
-            margin: 4em 0 2em;
-            text-align: center;
-            min-width: 12em
+            font-weight: 600;
+            letter-spacing: .1ex;
+            padding: 0 5px;
+            color: @color-primary;
+            font-size: 12px;
+            margin-left: 15px;
         }
 
-        br {
-            display: none
+        div.form-group {
+            margin-bottom: 1em;
         }
 
-        label {
-            border: none;
-            padding: 1em 1em .6em 0;
-
-            &.error {
-                height: 1px;
-                padding: 0
-            }
+        .help-block {
+            display: none;
         }
 
-        &.submit {
-            legend {
-                display: none
-            }
-
-            input {
-                display: inline-block;
-                width: auto;
-                border-radius: 0px;
-                margin: 3em 0 6em
-            }
+        textarea {
+            min-height: 100px;
         }
     }
 
-    table {
-        td {
-            &.summary-table-first-col {
-                width: 35%;
+    div.btn-group {
+        text-align: center;
+
+        button[type="submit"].btn {
+            font-size: 16px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background: @color-primary;
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        fieldset {
+            margin: 50px 0;
+
+            &:first-of-type {
+                margin-top: 0;
             }
         }
     }

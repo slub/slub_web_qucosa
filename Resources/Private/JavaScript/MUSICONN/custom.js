@@ -140,10 +140,10 @@ $(".accordion").accordion({ active: false, collapsible: true, heightStyle: "cont
 $(function () {
 
     // Check form inputs for value or live input and toggle parent class 
-    $('.form-group input[type="text"], .form-group textarea').each(function () {
-        ($(this).val() !== '') && $(this).parent().addClass('got-input')
-    }).on('focusout', function () {
-        $(this).parent().toggleClass('got-input', $(this).val() !== '')
+    $('div.form-group input[type="text"], div.form-group textarea, div.form-group select').each(function () {
+        ($(this).val() !== '') && $(this).parents('div.form-group').addClass('got-input')
+    }).on('change', function () {
+        $(this).parents('div.form-group').toggleClass('got-input', $(this).val() !== '')
     });
 
     // Hide way to long intro texts on search pages to improve usability 
