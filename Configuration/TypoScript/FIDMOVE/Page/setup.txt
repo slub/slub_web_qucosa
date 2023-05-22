@@ -16,7 +16,6 @@ page {
       }
       ifEmpty = index, follow
     }
-    google-site-verification = UoPkjgWShTQq7Nne2YguhpZ5rsYBjwnl9YruPLxjaV8
   }
 
   includeCSS {
