@@ -5,7 +5,6 @@ page {
 
     meta {
         author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
-        google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
     }
 
     10 {
