@@ -1,5 +1,5 @@
 # Dependencies
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/MUSICONN/Extensions/lib.logo.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/MusiconnPublish/Extensions/lib.logo.typoscript">
 
 page {
 
@@ -9,7 +9,7 @@ page {
     }
 
     10 {
-        file = EXT:slub_web_qucosa/Resources/Private/Templates/MUSICONN/Start.html
+        file = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/Start.html
 
         variables.isMandant.value = false
     }

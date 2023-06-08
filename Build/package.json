@@ -72,8 +72,8 @@
     "assets-stage": "webpack --config webpack.prod.config.js",
     "prefix-css-stage": "npx postcss ../Resources/Public/Css/qsa.min.css --use autoprefixer -d ../Resources/Public/Css/",
     "musiconn-watch": "npm-watch",
-    "musiconn-less": "lessc ../Resources/Private/Less/MUSICONN/main.less ../Resources/Public/Css/MUSICONN/main.css && postcss ../Resources/Public/Css/MUSICONN/main.css --no-map --replace --use autoprefixer --use cssnano",
-    "musiconn-js": "terser ../Resources/Private/JavaScript/MUSICONN/custom.js --compress --mangle -o ../Resources/Public/JavaScript/MUSICONN/custom-dist.js"
+    "musiconn-less": "lessc ../Resources/Private/Less/MusiconnPublish/main.less ../Resources/Public/Css/MusiconnPublish/main.css && postcss ../Resources/Public/Css/MusiconnPublish/main.css --no-map --replace --use autoprefixer --use cssnano",
+    "musiconn-js": "terser ../Resources/Private/JavaScript/MusiconnPublish/custom.js --compress --mangle -o ../Resources/Public/JavaScript/MusiconnPublish/custom-dist.js"
   },
   "browserslist": [
     "last 1 version",
@@ -83,14 +83,14 @@
   "watch": {
     "musiconn-less": {
       "patterns": [
-        "../Resources/Private/Less/MUSICONN/"
+        "../Resources/Private/Less/MusiconnPublish/"
       ],
       "extensions": "less",
       "runOnChangeOnly": true
     },
     "musiconn-js": {
       "patterns": [
-        "../Resources/Private/JavaScript/MUSICONN/"
+        "../Resources/Private/JavaScript/MusiconnPublish/"
       ],
       "extensions": "js",
       "quiet": true,

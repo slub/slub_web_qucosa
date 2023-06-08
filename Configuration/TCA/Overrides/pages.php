@@ -20,8 +20,8 @@ $extensionKey = 'slub_web_qucosa';
 if (TYPO3_MODE === 'BE') {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile (
         $extensionKey,
-       'Configuration/TsConfig/Page/MUSICONN/setup.txt',
-       'EXT:slub_web_qucosa: MUSICONN Page TS');
+       'Configuration/TsConfig/Page/MusiconnPublish/setup.tsconfig',
+       'EXT:slub_web_qucosa: MusiconnPublish Page TS');
 
        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile (
       $extensionKey,

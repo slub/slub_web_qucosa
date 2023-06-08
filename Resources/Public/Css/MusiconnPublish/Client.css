@@ -34,7 +34,7 @@ body {
   left:0px;
   width:100%;
   height:145px;
-  background-image: url(../../Images/MUSICONN/header.jpg);
+  background-image: url(../../Images/MusiconnPublish/header.jpg);
   background-repeat:no-repeat;
   background-position: center center;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 #navlogo #homelink {
-  background-image: url(../../Images/MUSICONN/logo.png);
+  background-image: url(../../Images/MusiconnPublish/logo.png);
   background-size: contain;
 }
 
