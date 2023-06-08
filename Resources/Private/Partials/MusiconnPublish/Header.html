@@ -1,28 +1,7 @@
-<f:section name="Header">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-    <header itemscope itemtype="http://schema.org/WPHeader">
-        <div class="container">
-            <f:link.page pageUid="{rootPageId}" class="logo" title="<f:translate key='tx_slubwebqucosa.musiconn.gotohomepage' extensionName='slub_web_qucosa' />" additionalAttributes="{itemprop:'url'}">
-                <span itemprop="name">
-                    <f:translate key='tx_slubwebqucosa.gotohomepage' extensionName='slub_web_qucosa' />
-                </span>
-            </f:link.page>
+<header>
+    <f:comment><!-- TBD --></f:comment>
+</header>
 
-            <a class="trigger">
-                <span class="menu-label sr-only">Menu</span>
-                <span class="trigger-bar"></span>
-                <span class="trigger-bar"></span>
-                <span class="trigger-bar"></span>
-            </a>
-
-            <nav itemscope itemtype="http://schema.org/SiteNavigationElement" id="mainnav">
-                <f:cObject typoscriptObjectPath="lib.mainnav" />
-            </nav>
-
-            <div class="suche">
-                <f:cObject typoscriptObjectPath="lib.navsearch" />
-            </div>
-        </div>
-    </header>
-
-</f:section>
+</html>
