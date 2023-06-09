@@ -1,7 +1,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <header>
-    <f:comment><!-- TBD --></f:comment>
+    <div class="container">
+        <div class="header-brand">
+            <f:link.page pageUid="{rootPageUid}" class="logo" title="musiconn - für vernetzte Musikwissenschaft">
+                <span class="visually-hidden">musiconn - für vernetzte Musikwissenschaft</span>
+            </f:link.page>
+        </div>
+        <button type="button" class="main-navigation-toggle" aria-haspopup="true" aria-controls="main-navigation" aria-expanded="false">
+            <span class="visually-hidden">Menü</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <f:render section="Main" partial="Navigation" arguments="{_all}" />
+        <f:render section="Language" partial="Navigation" arguments="{_all}" />
+        <f:link.external uri="https://www.qucosa.de" title="QUCOSA Website besuchen" target="_blank">QUCOSA</f:link.external>
+    </div>
 </header>
 
 </html>

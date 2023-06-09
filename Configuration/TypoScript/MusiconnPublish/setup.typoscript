@@ -15,10 +15,45 @@ page {
         layoutRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Layouts/MusiconnPublish/
         partialRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Partials/MusiconnPublish/
         templateRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/
-        variables.isMandant.value = true
+        variables {
+            isMandant.value = true
+            rootPageUid = TEXT
+            rootPageUid.data = leveluid:0
+        }
+        dataProcessing {
+
+            # ----- main navigation -----
+            # Is taken from the common setup at ./Configuration/TypoScript/Common/setup.typoscript
+
+            # ----- language navigation -----
+            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            30 {
+                languages = auto
+                as = languagenavigation
+            }
+
+            # ----- footer navigation -----
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                special = directory
+                special.value = {$plugin.tx_slubwebqucosa.metaPid}
+                levels = 1
+                includeNotInMenu = 1
+                as = footernavigation
+            }
+            
+            # ----- rootline navigation -----
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = rootline
+                special.range = 0|-1
+                as = rootline
+            }
+        }
     }
     includeCSS.client >
     includeCSS.musiconn = EXT:slub_web_qucosa/Resources/Public/Css/MusiconnPublish/Main.css
+    
 }
 
 # Template Configuration
