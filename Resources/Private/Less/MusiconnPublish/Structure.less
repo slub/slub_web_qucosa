@@ -7,15 +7,59 @@
  *
  */
 
-body:before {
-    position: fixed;
-    inset: 0;
-    background: url(../../Images/MusiconnPublish/background-wave.svg) fixed no-repeat top center;
-    background-size: 200% auto;
-    content: " ";
-    opacity: .6;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+
+    &.open-main-navigation {
+        overflow: hidden;
+    }
+
+    &:before {
+        position: fixed;
+        inset: 0;
+        background: url(../../Images/MusiconnPublish/background-wave.svg) fixed no-repeat top center;
+        background-size: 200% auto;
+        content: " ";
+        opacity: .6;
+    }
 
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
-        background-size: 100% auto;
+        &:before {
+            background-size: 100% auto;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    padding: 0 20px;
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        padding: 0 50px;
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        width: 970px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        width: 1170px;
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        width: 1300px;
     }
 }
