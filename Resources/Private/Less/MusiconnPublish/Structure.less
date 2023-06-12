@@ -1,0 +1,21 @@
+/*
+ *
+ * Structure
+ * ================================================
+ * Basic definitions of body, containers
+ * and other structural elements
+ *
+ */
+
+body:before {
+    position: fixed;
+    inset: 0;
+    background: url(../../Images/MusiconnPublish/background-wave.svg) fixed no-repeat top center;
+    background-size: 200% auto;
+    content: " ";
+    opacity: .6;
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        background-size: 100% auto;
+    }
+}

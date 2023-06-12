@@ -1,0 +1,147 @@
+/*
+ *
+ * Header
+ * =========================================================
+ * All the styles related to the header with
+ * the logo and menu toggle
+ *
+ */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 30px;
+
+    .container {
+        position: relative;
+        width: 100%;
+        padding: 0 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -995px;
+            width: 1000px;
+            height: 76px;
+            content: " ";
+            background: url(../../Images/MusiconnPublish/repeatable-wave.svg) repeat-x right center;
+            background-size: auto 100%;
+        }
+    }
+
+    .logo {
+        background: url(../../Images/MusiconnPublish/musiconn-logo-publish-rgb.svg) no-repeat left center;
+        background-size: auto 100%;
+        display: block;
+        width: 260px;
+        height: 90px;
+        margin: 0 0 30px -15px;
+        flex-grow: 2;
+
+        span {
+            display: none
+        }
+    }
+
+    .main-navigation-toggle {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        width: 60px;
+        height: 40px;
+        border: 0 none;
+        padding: 1px 6px;
+        background: rgba(0, 0, 0, 0);
+        z-index: 101;
+        transition: all .25s ease-in-out;
+
+        .menu-label {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .icon-bar {
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: 0;
+            border-bottom: 3px solid @color-primary;
+            margin: 8px 0;
+            display: block;
+            transition: all .3s ease-in-out;
+        }
+
+        &.open {
+            transform: rotate(-90deg);
+
+            .icon-bar {
+                &:nth-child(2) {
+                    top: 11px;
+                    transform: rotate(45deg)
+                }
+
+                &:nth-child(3) {
+                    opacity: 0;
+                    transform: scale(0)
+                }
+
+                &:nth-child(4) {
+                    top: -11px;
+                    transform: rotate(-45deg)
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        .container {
+            padding: 0 50px;
+
+            &:before {
+                left: -965px,
+            }
+        }
+
+        .main-navigation-toggle {
+            right: 45px;
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        .main-navigation-toggle {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        .container {
+            padding: 0;
+
+            &:before {
+                left: -1515px;
+                width: 1500px;
+                height: 90px;
+            }
+        }
+
+        .logo {
+            height: 100px;
+            width: 290px;
+        }
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        .container {
+            max-width: 1300px;
+        }
+    }
+}

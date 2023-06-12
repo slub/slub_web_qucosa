@@ -72,7 +72,7 @@
     "assets-stage": "webpack --config webpack.prod.config.js",
     "prefix-css-stage": "npx postcss ../Resources/Public/Css/qsa.min.css --use autoprefixer -d ../Resources/Public/Css/",
     "musiconn-watch": "npm-watch",
-    "musiconn-less": "lessc ../Resources/Private/Less/MusiconnPublish/main.less ../Resources/Public/Css/MusiconnPublish/Main.css && postcss ../Resources/Public/Css/MusiconnPublish/Main.css --no-map --replace --use autoprefixer --use cssnano",
+    "musiconn-less": "lessc ../Resources/Private/Less/MusiconnPublish/Main.less ../Resources/Public/Css/MusiconnPublish/Main.css && postcss ../Resources/Public/Css/MusiconnPublish/Main.css --no-map --replace --use autoprefixer --use cssnano",
     "musiconn-js": "terser ../Resources/Private/JavaScript/MusiconnPublish/Custom.js --compress --mangle -o ../Resources/Public/JavaScript/MusiconnPublish/custom-dist.js"
   },
   "browserslist": [

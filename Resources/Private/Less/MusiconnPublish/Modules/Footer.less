@@ -1,0 +1,192 @@
+/*
+ *
+ * Footer
+ * =========================================================
+ * All styles for the footer element of the page
+ * with the wavy line and the logo
+ *
+ */
+
+ footer {
+    position: relative;
+    margin-top: 60px;
+    padding: 120px 0 0 0;
+    background: url(../../Images/MusiconnPublish/footerwave.svg) repeat-x center top;
+    background-size: auto 60px;
+
+    nav {
+        ul {
+            position: relative;
+            text-align: center;
+
+            li {
+                position: relative;
+                padding-bottom: 20px;
+
+                &:after {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    width: 50px;
+                    margin-left: -25px;
+                    height: 1px;
+                    background-color: @color7;
+                    content: " ";
+                }
+
+                a {
+                    position: relative;
+                    color: @color-primary;
+                    text-transform: uppercase;
+                    letter-spacing: .1ex;
+                    font-weight: 400;
+                    font-size: 14px;
+                    display: inline-block;
+
+
+                    &:hover, &.active {
+                        color: @color6;
+                    }
+                }
+
+                &.language {
+                    a span.icon-earth {
+                        opacity: .8;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .partner {
+        position: relative;
+        margin-top: 2em;
+        padding: 20px;
+        background: @color3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div {
+            a {
+                display: inline-block;
+                position: relative;
+                margin: 1em 2em;
+                color: @color2;
+                font-weight: 500;
+                font-size: .75em;
+                height: 35px;
+                text-transform: uppercase;
+                letter-spacing: .1ex;
+                filter: grayscale(100%);
+                opacity: .6;
+
+                span {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            &.slub {
+                a {
+                    padding-right: 120px;
+                    line-height: 23px;
+
+                    &:after {
+                        content: "";
+                        background: url(../../../Public/Images/MusiconnPublish/SLUB_Logo.svg) no-repeat right center;
+                        display: block;
+                        width: 110px;
+                        height: 35px;
+                        position: absolute;
+                        right: 0;
+                        top: -2px;
+                    }
+                }
+            }
+
+            &.dfg {
+                a {
+                    padding-right: 190px;
+                    line-height: 35px;
+
+                    &:after {
+                        content: "";
+                        background: url(../../../Public/Images/MusiconnPublish/DFG_Logo.svg) no-repeat right center;
+                        display: block;
+                        width: 180px;
+                        height: 35px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin-top: 100px;
+
+        nav {
+            margin-bottom: 60px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    padding: 0 20px;
+
+                    &:after {
+                        inset: 0 0 0 auto;
+                        width: 1px;
+                        height: auto;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .partner {
+            padding: 10px;
+        }
+    }
+}
+
+#totop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    transition: all .3s ease-in-out;
+    font-size: 1.4rem;
+    background-color: @color-primary;
+    color: @color4;
+    text-decoration: none;
+    line-height: 1;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 10;
+    display: none;
+
+    .icon-arrow-up {
+        display: none;
+    }
+
+    &:before {
+        position: relative;
+        content: "\2191";
+        font-size: 2em;
+        line-height: 30px;
+        pointer-events: none;
+    }
+}

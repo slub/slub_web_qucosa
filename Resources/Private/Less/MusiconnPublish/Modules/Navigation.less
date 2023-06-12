@@ -1,0 +1,105 @@
+/*
+ *
+ * Navigation
+ * =========================================================
+ * Styling for all navigation elements like
+ * root, main navigation, footer links aso.
+ *
+ */
+
+nav.main-navigation {
+    display: none;
+    width: 100%;
+
+    ul {
+        position: relative;
+        height: 100%;
+        border: solid @color7;
+        border-width: 1px 0;
+        padding: 5px 0;
+        margin-bottom: 30px;
+
+        li {
+            position: relative;
+            transition: all .3s ease-in-out;
+
+            a {
+                display: block;
+                padding: 5px 15px;
+                text-transform: uppercase;
+                letter-spacing: .1ex;
+                color: @color-primary;
+                font-weight: 400;
+                font-size: 18px;
+                height: 100%;
+
+                .highlight {
+                    text-transform: lowercase;
+                    color: @color1
+                }
+            }
+
+            &.active {
+                a {
+                    font-weight: 700;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    width: 20px;
+                    height: 20px;
+                    margin-left: -10px;
+                    color: @color-secondary;
+                    font-weight: 700;
+                    font-size: 30px;
+                    text-align: center;
+                    background: url(../../Images/MusiconnPublish/navigation-tilde.svg) no-repeat center center;
+                    background-size: 12px auto;
+                    display: block;
+                    content: " ";
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {}
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        display: block;
+        width: auto;
+
+        ul {
+            position: relative;
+            padding: 0;
+            border: none;
+            display: flex;
+
+            li {
+                a {
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: none;
+                    letter-spacing: normal;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        right: -20px;
+
+        ul {
+            li {
+                a {
+                    font-size: 16px;
+                    padding: 5px 20px;
+                }
+            }
+        }
+    }
+}

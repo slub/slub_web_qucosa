@@ -1,0 +1,18 @@
+/*
+ *
+ * Mixins
+ * =========================================================
+ * Some often used styling replacements
+ * and helper functions
+ *
+ */
+
+ .clearfix() {
+    &:after {
+        position: relative;
+        display: table;
+        width: 100%;
+        content: " ";
+        clear: both;
+    }
+}
