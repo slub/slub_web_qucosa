@@ -10,6 +10,7 @@ page {
     meta {
         author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
         google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+        viewport = width=device-width, initial-scale=1, maximum-scale=1    
     }
     10 {
         layoutRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Layouts/MusiconnPublish/
@@ -19,6 +20,12 @@ page {
             isMandant.value = true
             rootPageUid = TEXT
             rootPageUid.data = leveluid:0
+            matomo_hostname = TEXT
+            matomo_hostname.value = {$plugin.tx_slubwebqucosa.matomo_hostname}
+            matomo_idsite = TEXT
+            matomo_idsite.value = {$plugin.tx_slubwebqucosa.matomo_idsite}
+            matomo_domains = TEXT
+            matomo_domains.value = {$plugin.tx_slubwebqucosa.matomo_domains}
         }
         dataProcessing {
 

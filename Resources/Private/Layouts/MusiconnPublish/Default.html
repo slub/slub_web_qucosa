@@ -3,10 +3,13 @@
 <f:render partial="Header" arguments="{_all}" />
 
 <main id="main">
-    <f:render section="Main"/>
+    <f:render section="Main" />
 </main>
 
 <f:render partial="Footer" arguments="{_all}" />
-<f:render partial="Piwik" arguments="{_all}" />
+
+<f:if condition="{matomo_idsite}">
+    <f:render partial="Matomo" arguments="{_all}" />
+</f:if>
 
 </html>
