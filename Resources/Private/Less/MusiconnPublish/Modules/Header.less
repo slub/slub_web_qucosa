@@ -7,19 +7,11 @@
  *
  */
 
-header {
-    display: flex;
-    flex-wrap: wrap;
+header.page-header {
     position: relative;
     padding-top: 30px;
 
     .container {
-        position: relative;
-        width: 100%;
-        padding: 0 20px;
-        max-width: 1100px;
-        margin: 0 auto;
-
         &:before {
             position: absolute;
             top: 0;
@@ -32,23 +24,25 @@ header {
         }
     }
 
-    .logo {
-        background: url(../../Images/MusiconnPublish/musiconn-logo-publish-rgb.svg) no-repeat left center;
-        background-size: auto 100%;
-        display: block;
-        width: 260px;
-        height: 90px;
-        margin: 0 0 30px -15px;
-        flex-grow: 2;
+    .header-brand {
+        .logo {
+            background: url(../../Images/MusiconnPublish/musiconn-logo-publish-rgb.svg) no-repeat left center;
+            background-size: auto 100%;
+            display: block;
+            width: 260px;
+            height: 90px;
+            margin: 0 0 30px -15px;
+            flex-grow: 2;
 
-        span {
-            display: none
+            span {
+                display: none
+            }
         }
     }
 
     .main-navigation-toggle {
-        position: absolute;
-        top: 20px;
+        position: fixed;
+        top: 50px;
         right: 15px;
         width: 60px;
         height: 40px;
@@ -80,7 +74,7 @@ header {
             transition: all .3s ease-in-out;
         }
 
-        &.open {
+        .open-main-navigation & {
             transform: rotate(-90deg);
 
             .icon-bar {
@@ -102,12 +96,14 @@ header {
         }
     }
 
+    .qucosa-provider-link {
+        display: none;
+    }
+
     @media screen and (min-width: @tabletViewportWidth) {
         .container {
-            padding: 0 50px;
-
             &:before {
-                left: -965px,
+                left: -965px;
             }
         }
 
@@ -117,15 +113,27 @@ header {
     }
 
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
-        .main-navigation-toggle {
-            display: none;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            &:before {
+                left: -1015px;
+            }
+        }
+
+        .header-brand {
+            margin-right: auto;
+
+            .logo {
+                margin-bottom: 0;
+            }
         }
     }
 
     @media screen and (min-width: @desktopViewportWidth) {
         .container {
-            padding: 0;
-
             &:before {
                 left: -1515px;
                 width: 1500px;
@@ -136,12 +144,6 @@ header {
         .logo {
             height: 100px;
             width: 290px;
-        }
-    }
-
-    @media screen and (min-width: @largerViewportWidth) {
-        .container {
-            max-width: 1300px;
         }
     }
 }

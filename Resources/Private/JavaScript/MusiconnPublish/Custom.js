@@ -20,4 +20,17 @@ $(function () {
         }
     });
 
+    // Open submenus and push navigation forward on mobile devices
+    $('button.submenu-toggle').on('click', function () {
+        if ($(this).closest('li').hasClass('submenu-open')) {
+            $(this).attr('aria-expanded', 'false').closest('li').removeClass('submenu-open').find('.submenu-container').attr('aria-expanded', 'false');
+        } else {
+            $('nav.main-navigation').attr('aria-expanded', 'true');
+            $(this).attr('aria-expanded', 'true').closest('li').addClass('submenu-open').find('> .submenu-container').attr('aria-expanded', 'true');
+        }
+
+     
+        return false;
+    });
+
 })

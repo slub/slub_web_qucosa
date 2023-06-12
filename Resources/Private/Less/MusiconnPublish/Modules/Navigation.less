@@ -7,99 +7,225 @@
  *
  */
 
-nav.main-navigation {
-    display: none;
-    width: 100%;
 
-    ul {
+
+
+nav.main-navigation {
+    position: fixed;
+    inset: 0 0 0 40px;
+    background: white;
+    z-index: 90;
+    text-align: left;
+    padding: 100px 30px 70px 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: @transition;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .3);
+
+    ul.main-menu {
         position: relative;
-        height: 100%;
-        border: solid @color7;
-        border-width: 1px 0;
-        padding: 5px 0;
-        margin-bottom: 30px;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
 
         li {
             position: relative;
-            transition: all .3s ease-in-out;
+            flex: 0 0 100%;
+            padding: 5px 0;
+            line-height: 1;
+            border-bottom: 1px solid @color7;
 
             a {
-                display: block;
-                padding: 5px 15px;
+                position: relative;
+                font: 400 22px/1 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+                text-decoration: none;
                 text-transform: uppercase;
                 letter-spacing: .1ex;
+                padding: 10px 0;
                 color: @color-primary;
-                font-weight: 400;
-                font-size: 18px;
-                height: 100%;
+                transition: @transition;
+                display: block;
+            }
 
-                .highlight {
-                    text-transform: lowercase;
-                    color: @color1
+            &.has-submenu {
+                a {
+                    padding-right: 50px;
+                }
+
+                button {
+                    position: absolute;
+                    right: -10px;
+                    top: 6px;
+                    width: 40px;
+                    height: 40px;
+                    transition: @transition;
+                    overflow: hidden;
+                    text-indent: 100%;
+                    border: 0;
+                    background: transparent;
+                    white-space: nowrap;
+
+                    &:after,
+                    &:before {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        width: 2px;
+                        height: 20px;
+                        margin-left: -1px;
+                        background: @color-secondary;
+                        content: " ";
+                        transition: @transition;
+                    }
+
+                    &:after {
+                        transform: rotate(90deg);
+                    }
                 }
             }
 
-            &.active {
-                a {
-                    font-weight: 700;
+            .submenu-container {
+                position: relative;
+                max-height: 0;
+                transition: @transition;
+                overflow: hidden;
+                visibility: hidden;
+
+                ul {
+                    margin-left: 15px;
+
+                    li {
+                        border: 0;
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 600;
+                            padding: 5px 50px 5px 0;
+                        }
+
+                        &.has-submenu {
+                            button {
+                                top: -2px;
+                                transform: scale(.75);
+                            }
+
+                            &.submenu-open {
+                                > button {
+                                    transform: scale(.75) rotate(90deg);
+                                }
+                            }
+                        }
+                    }
+
+                    .submenu-container {
+                        ul li {
+                            a {
+                                font-size: 14px;
+                            }
+
+
+                        }
+                    }
                 }
+            }
+
+            &.submenu-open {
+                > button {
+                    transform: rotate(90deg);
+
+                    &:after {
+                        transform: scale(0);
+                    }
+                }
+
+                > .submenu-container {
+                    max-height: 100vh;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        left: auto;
+        width: 400px;
+    }
+
+
+    .open-main-navigation & {
+        transform: translateX(0);
+        pointer-events: all;
+        opacity: 1;
+    }
+}
+
+nav.language-navigation {
+    position: fixed;
+    top: 55px;
+    left: 40px;
+    padding-left: 30px;
+    z-index: 95;
+    transform: translateX(300px);
+    transition: @transition;
+    opacity: 0;
+    pointer-events: none;
+
+    ul {
+        display: flex;
+
+        li {
+            position: relative;
+            padding-right: 20px;
+
+            a {
+                color: @color-primary;
+
+                .language-iso {
+                    display: none;
+                }
+            }
+
+            &.language-active {
+                font-weight: 600;
+            }
+
+            &:after {
+                position: absolute;
+                top: 2px;
+                right: 4px;
+                width: 1px;
+                height: 24px;
+                background-color: @color7;
+                transform: rotate(25deg);
+                transform-origin: right top;
+                content: " ";
+            }
+
+            &:last-child {
+                padding-right: 0;
 
                 &:after {
-                    position: absolute;
-                    top: 100%;
-                    left: 50%;
-                    width: 20px;
-                    height: 20px;
-                    margin-left: -10px;
-                    color: @color-secondary;
-                    font-weight: 700;
-                    font-size: 30px;
-                    text-align: center;
-                    background: url(../../Images/MusiconnPublish/navigation-tilde.svg) no-repeat center center;
-                    background-size: 12px auto;
-                    display: block;
-                    content: " ";
+                    display: none;
                 }
             }
         }
     }
 
-    @media screen and (min-width: @tabletViewportWidth) {}
-
-    @media screen and (min-width: @tabletLandscapeViewportWidth) {
-        position: absolute;
-        top: 20px;
-        right: 35px;
-        display: block;
-        width: auto;
-
-        ul {
-            position: relative;
-            padding: 0;
-            border: none;
-            display: flex;
-
-            li {
-                a {
-                    font-size: 14px;
-                    font-weight: 600;
-                    text-transform: none;
-                    letter-spacing: normal;
-                }
-            }
-        }
+    @media screen and (min-width: @tabletViewportWidth) {
+        left: calc(100%-400px);
     }
 
-    @media screen and (min-width: @desktopViewportWidth) {
-        right: -20px;
+    .open-main-navigation & {
 
-        ul {
-            li {
-                a {
-                    font-size: 16px;
-                    padding: 5px 20px;
-                }
-            }
-        }
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
     }
 }
