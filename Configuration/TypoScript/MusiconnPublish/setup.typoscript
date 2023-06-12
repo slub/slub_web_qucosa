@@ -64,6 +64,7 @@ page {
     includeJSFooter {
         jquery = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/jquery-3.7.0.slim.min.js
         jquery.forceOnTop = 1
+        modernizr = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/Modernizr.js
         client = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/custom-dist.js
 
     }
