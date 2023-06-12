@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<header>
+<header class="page-header">
     <div class="container">
         <div class="header-brand">
             <f:link.page pageUid="{rootPageUid}" class="logo" title="musiconn - für vernetzte Musikwissenschaft">
@@ -15,6 +15,9 @@
         </button>
         <f:render section="Main" partial="Navigation" arguments="{_all}" />
         <f:render section="Language" partial="Navigation" arguments="{_all}" />
+        <div class="qucosa-provider-link">
+            <f:link.external uri="https://www.qucosa.de" title="QUCOSA Website besuchen" target="_blank">QUCOSA</f:link.external>
+        </div>
     </div>
 </header>
 

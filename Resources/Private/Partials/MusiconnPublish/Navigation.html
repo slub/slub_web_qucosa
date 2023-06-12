@@ -7,49 +7,33 @@
             <ul class="main-menu">
                 <f:for each="{mainnavigation}" as="item">
                     <li class="{f:if(condition: '{item.children}', then: 'has-submenu')}{f:if(condition: item.active, then:' active')}">
+                        <f:link.page pageUid="{item.data.uid}" title="{item.data.title}">{item.data.title}</span></f:link.page>
                         <f:if condition="{item.children}">
-                            <f:then>
-                                <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{item.data.uid}" title="{item.data.title}">{item.data.title}</button>
-                                <div class="submenu-container second-level" id="submenu-{item.data.uid}" role="region" aria-haspopup="true" aria-expanded="false">
-                                    <ul class="sub-pages">
-                                        <f:for each="{item.children}" as="SecondLevelSubItem">
-                                            <li class="{f:if(condition: '{SecondLevelSubItem.children}', then: 'has-submenu')}{f:if(condition: SecondLevelSubItem.active, then:' active')}">
-                                                <f:if condition="{SecondLevelSubItem.children}">
-                                                    <f:then>
-                                                        <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{SecondLevelSubItem.data.uid}" title="{SecondLevelSubItem.data.title}">{SecondLevelSubItem.data.title}</button>
-                                                        <div class="submenu-container third-level" id="submenu-{SecondLevelSubItem.data.uid}" role="region" aria-haspopup="true" aria-expanded="false">
-                                                            <ul class="sub-pages">
-                                                                <f:for each="{SecondLevelSubItem.children}" as="ThirdLevelSubItem">
-                                                                    <li class="{f:if(condition: ThirdLevelSubItem.active, then:'active')}">
-                                                                        <f:link.page pageUid="{ThirdLevelSubItem.data.uid}" title="{ThirdLevelSubItem.data.title}">{ThirdLevelSubItem.data.title}</f:link.page>
-                                                                    </li>
-                                                                </f:for>
-                                                            </ul>
-                                                        </div>
-                                                    </f:then>
-                                                    <f:else>
-                                                        <f:link.page pageUid="{SecondLevelSubItem.data.uid}" title="{SecondLevelSubItem.data.title}">{SecondLevelSubItem.data.title}</f:link.page>
-                                                    </f:else>
-                                                </f:if>
-                                            </li>
-                                        </f:for>
-                                    </ul>
-                                </div>
-                            </f:then>
-                            <f:else>
-                                <f:link.page pageUid="{item.data.uid}" title="{item.data.title}">
-                                    <span class="nav-label">{item.data.title}</span>
-                                    <f:if condition="{item.icon}">
-                                        <f:image image="{item.icon.0}" class="nav-icon" />
-                                    </f:if>
-                                </f:link.page>
-                            </f:else>
+                            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{item.data.uid}" title="{item.data.title}">Submenü ein/ausblenden</button>
+                            <div class="submenu-container second-level" id="submenu-{item.data.uid}" role="region" aria-haspopup="true" aria-expanded="false">
+                                <ul class="sub-pages">
+                                    <f:for each="{item.children}" as="SecondLevelSubItem">
+                                        <li class="{f:if(condition: '{SecondLevelSubItem.children}', then: 'has-submenu')}{f:if(condition: SecondLevelSubItem.active, then:' active')}">
+                                            <f:link.page pageUid="{SecondLevelSubItem.data.uid}" title="{SecondLevelSubItem.data.title}">{SecondLevelSubItem.data.title}</f:link.page>
+                                            <f:if condition="{SecondLevelSubItem.children}">
+                                                <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{SecondLevelSubItem.data.uid}" title="{SecondLevelSubItem.data.title}">Submenü ein/ausblenden</button>
+                                                <div class="submenu-container third-level" id="submenu-{SecondLevelSubItem.data.uid}" role="region" aria-haspopup="true" aria-expanded="false">
+                                                    <ul class="sub-pages">
+                                                        <f:for each="{SecondLevelSubItem.children}" as="ThirdLevelSubItem">
+                                                            <li class="{f:if(condition: ThirdLevelSubItem.active, then:'active')}">
+                                                                <f:link.page pageUid="{ThirdLevelSubItem.data.uid}" title="{ThirdLevelSubItem.data.title}">{ThirdLevelSubItem.data.title}</f:link.page>
+                                                            </li>
+                                                        </f:for>
+                                                    </ul>
+                                                </div>
+                                            </f:if>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </div>
                         </f:if>
                     </li>
                 </f:for>
-                <li class="qucosa-provider-link">
-                    <f:link.external uri="https://www.qucosa.de" title="QUCOSA Website besuchen" target="_blank">QUCOSA</f:link.external>
-                </li>
             </ul>
         </nav>
     </f:if>
@@ -58,7 +42,7 @@
 <f:comment> -------- The Language Navigation -------- </f:comment>
 <f:section name="Language">
     <f:if condition="{languagenavigation}">
-        <nav class="language-menu-container" aria-label="Sprachen">
+        <nav id="language-navigation" class="language-navigation" aria-label="Sprachen">
             <ul class="language-menu">
                 <f:for each="{languagenavigation}" as="langItem">
                     <li class="{f:if(condition: langItem.active, then: 'language-active')}{f:if(condition: '{langItem.available}', else: 'language-disabled')}">
