@@ -60,6 +60,13 @@ page {
     }
     includeCSS.client >
     includeCSS.musiconn = EXT:slub_web_qucosa/Resources/Public/Css/MusiconnPublish/Main.css
+    includeJS.client >
+    includeJSFooter {
+        jquery = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/jquery-3.7.0.slim.min.js
+        jquery.forceOnTop = 1
+        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/custom-dist.js
+
+    }
     
 }
 
