@@ -43,8 +43,8 @@ page {
             }
             
             # ----- rootline navigation -----
-            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            30 {
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
                 special = rootline
                 special.range = 0|-1
                 as = rootline
