@@ -20,7 +20,7 @@ $(function () {
         }
     });
 
-    // Open submenus and push navigation forward on mobile devices
+    // Open submenus on mobile devices and larger touch devices
     $('button.submenu-toggle').on('click', function () {
         if ($(this).closest('li').hasClass('submenu-open')) {
             $(this).attr('aria-expanded', 'false').closest('li').removeClass('submenu-open').find('.submenu-container').attr('aria-expanded', 'false');
@@ -29,8 +29,24 @@ $(function () {
             $(this).attr('aria-expanded', 'true').closest('li').addClass('submenu-open').find('> .submenu-container').attr('aria-expanded', 'true');
         }
 
-     
         return false;
     });
+
+    // Handle mouse and keyboard controls
+    if (!(Modernizr.pointerevents || Modernizr.touchevents)) {
+        $('ul.main-menu > li.has-submenu').on('mouseenter focusin', function () {
+            $(this).addClass('submenu-open').find('> .submenu-container').attr('aria-expanded', 'true');
+        }).on('mouseleave focusout', function () {
+            $(this).removeClass('submenu-open').find('> .submenu-container').attr('aria-expanded', 'false');
+        });
+    }
+
+    $(window).resize(function () {
+        if ($(window).width() > 1024) {
+            $('nav.main-navigation').removeAttr('aria-haspopup aria-expanded');
+        } else {
+            $('nav.main-navigation').attr({ 'aria-haspopup': 'true', 'aria-expanded': 'false' });
+        }
+    })
 
 })

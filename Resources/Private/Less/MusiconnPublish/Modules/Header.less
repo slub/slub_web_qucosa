@@ -96,8 +96,29 @@ header.page-header {
         }
     }
 
-    .qucosa-provider-link {
-        display: none;
+    .qucosa-provider-link a {
+        position: fixed;
+        left: 60px;
+        bottom: 30px;
+        height: 25px;
+        width: 100px;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(300px);
+        transition: @transition;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: url(../../Images/logo/Logo_Qucosa_Black.svg) no-repeat 0 0;
+        background-size: auto 100%;
+        display: block;
+
+        .open-main-navigation & {
+            transform: translateX(0);
+            pointer-events: all;
+            opacity: .3;
+        }
     }
 
     @media screen and (min-width: @tabletViewportWidth) {
@@ -109,6 +130,10 @@ header.page-header {
 
         .main-navigation-toggle {
             right: 45px;
+        }
+
+        .qucosa-provider-link a {
+            left: calc(100%-400px + 30px);
         }
     }
 
@@ -128,6 +153,25 @@ header.page-header {
 
             .logo {
                 margin-bottom: 0;
+            }
+        }
+
+        .main-navigation-toggle {
+            display: none;
+        }
+
+        .qucosa-provider-link a {
+            position: relative;
+            inset: auto;
+            opacity: .3;
+            width: 25px;
+            transform: none;
+            margin-left: 10px;
+            pointer-events: all;
+
+            &:hover {
+                width: 110px;
+                opacity: .5;
             }
         }
     }
