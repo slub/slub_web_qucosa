@@ -1,0 +1,22 @@
+mod.web_layout.BackendLayouts {
+  musiconn_default {
+    title = Musiconn Default Page
+    icon = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/BackendLayouts/Default.png
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 1 
+        rows {
+          1 {
+            columns {
+              1 {
+                name = Content
+                colPos = 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

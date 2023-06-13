@@ -1,17 +1,5 @@
 TCEFORM {
   tt_content {
-    # 0: normal, 1: left, 2: right, 3: border
-    colPos.removeItems = 1,3
-    colPos.altLabels.0 = Hauptinhalt
-    colPos.altLabels.2 = Seitenleiste
-    # section frame only works with TYPO3 up to 7.6
-    section_frame {
-      removeItems = 5,6,10,11,12,20,21
-      addItems.22 = Musiconn: Startseite Neuerscheinungen
-      addItems.23 = Musiconn: Recherche Plugin
-      addItems.24 = Musiconn: FAQ Element
-    }
-    # frame_class is new in TYPO3 8.7
     frame_class {
         removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
         addItems {
@@ -36,3 +24,5 @@ TCEFORM {
     imagecaption_position.disabled = 1
   }
 }
+
+@import 'EXT:slub_web_qucosa/Configuration/TsConfig/Page/MusiconnPublish/BackendLayouts/'
