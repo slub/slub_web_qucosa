@@ -30,9 +30,9 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 }
 
 #navend a#dini_ready {
-   background: url('../../Images/Main/csm_dini-ready-logo-2019_fc447711da.png') no-repeat 0;
+   background: url('../../Images/Main/DINI_ready_2022.png') no-repeat 0;
    background-size: 81px auto;
-   display: block !important; 
+   display: block !important;
 }
 
 #navend a#dini {
