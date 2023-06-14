@@ -9,11 +9,10 @@ TCEFORM {
         }
     }
     header_layout.disabled = 0
-    header_layout.altLabels.0 = Standard
-    header_layout.altLabels.1 = H1 Überschrift
-    header_layout.altLabels.2 = H2 Überschrift
-    header_layout.altLabels.3 = H3 Überschrift
-    header_layout.removeItems = 0,4,5
+    header_layout.altLabels.2 = H2 Headline
+    header_layout.altLabels.3 = H3 Headline
+    header_layout.altLabels.4 = H4 Headline
+    header_layout.removeItems = 1,5,6
 
     # image orientation in image gallery
     #imageorient.types.image.removeItems = 0,1,2,7,8,9,10,17,18,25
