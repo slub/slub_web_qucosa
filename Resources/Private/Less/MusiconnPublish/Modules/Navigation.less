@@ -56,6 +56,21 @@ nav.main-navigation {
                 display: block;
             }
 
+            &.publish-button {
+                border-bottom: 0;
+                margin-bottom: 40px;
+
+                a {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 15px 15px 15px 35px;
+                    display: inline-block;
+                    background: @color-primary url(../../Images/MusiconnPublish/upload-arrow.svg) no-repeat 15px center;
+                    background-size: auto 15px;
+                }
+            }
+
             &.has-submenu {
                 a {
                     padding-right: 50px;
@@ -193,6 +208,17 @@ nav.main-navigation {
                     text-transform: none;
                     padding: 15px 0;
                     letter-spacing: 0;
+                }
+
+                &.publish-button {
+                    margin-bottom: 0;
+
+                    a {
+                        padding: 10px 15px 10px 35px;
+                        margin: 5px 0;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                    }
                 }
 
                 &.has-submenu {

@@ -20,6 +20,8 @@ page {
             isMandant.value = true
             rootPageUid = TEXT
             rootPageUid.data = leveluid:0
+            publishUid = TEXT
+            publishUid.value = {$plugin.tx_slubwebqucosa.publishUid}
             matomo_hostname = TEXT
             matomo_hostname.value = {$plugin.tx_slubwebqucosa.matomo_hostname}
             matomo_idsite = TEXT

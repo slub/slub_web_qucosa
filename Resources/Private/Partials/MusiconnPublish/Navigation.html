@@ -5,6 +5,11 @@
     <f:if condition="{mainnavigation}">
         <nav class="main-navigation" id="main-navigation" aria-label="Hauptnavigation" aria-haspopup="true" aria-expanded="false">
             <ul class="main-menu">
+                <f:if condition="{publishUid}">
+                    <li class="publish-button">
+                        <f:link.page pageUid="{publishUid}" title="Direkt zum Abgabeformular">Publizieren</f:link.page>
+                    </li>
+                </f:if>
                 <f:for each="{mainnavigation}" as="item">
                     <li class="{f:if(condition: '{item.children}', then: 'has-submenu')}{f:if(condition: item.active, then:' active')}">
                         <f:link.page pageUid="{item.data.uid}" title="{item.data.title}">{item.data.title}</span></f:link.page>

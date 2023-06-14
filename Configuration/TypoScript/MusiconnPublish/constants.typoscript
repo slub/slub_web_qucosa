@@ -3,12 +3,14 @@
 ############################################
 
 plugin.tx_slubwebqucosa {
-    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label= Rootpage Uid
+    # cat=plugin.tx_slubwebqucosa/links/0141; type=int+; label=Rootpage Uid
     rootPid = 3
-    # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
+    # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label=Imprint page Uid
     imprintPid = 16
-    # cat=plugin.tx_slubwebqucosa/links/0143; type=int+; label= Page Uid for the Meta menu
+    # cat=plugin.tx_slubwebqucosa/links/0143; type=int+; label=Page Uid for the Meta menu
     metaPid = 8
+    # cat=plugin.tx_slubwebqucosa/links/0144; type=int+; label=Page Uid for the Publish Button Link
+    publishUid = 23
     # cat=plugin.tx_slubwebqucosa/matomo/0510; type=string; label=Matomo Hostname
     matomo_hostname = matomo.slub-dresden.de
     # cat=plugin.tx_slubwebqucosa/matomo/0520; type=string; label=Matomo Idsite
