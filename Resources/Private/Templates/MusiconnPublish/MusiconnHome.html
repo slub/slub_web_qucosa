@@ -3,10 +3,16 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '11'}" />
-    <f:cObject typoscriptObjectPath="lib.navsearch" />
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '33'}" />
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+    <div class="container homepage">
+        <section class="home-search">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '11'}" />
+            <f:cObject typoscriptObjectPath="lib.navsearch" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '33'}" />
+        </section>
+        <section class="home-content">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+        </section>
+    </div>
 </f:section>
 
 </html>

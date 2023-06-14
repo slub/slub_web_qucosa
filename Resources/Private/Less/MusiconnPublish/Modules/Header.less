@@ -138,6 +138,8 @@ header.page-header {
     }
 
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        padding-top: 50px;
+
         .container {
             display: flex;
             align-items: center;
@@ -170,7 +172,6 @@ header.page-header {
             pointer-events: all;
 
             &:hover {
-                width: 110px;
                 opacity: .5;
             }
         }
@@ -185,9 +186,11 @@ header.page-header {
             }
         }
 
-        .logo {
-            height: 100px;
-            width: 290px;
+        .header-brand {
+            .logo {
+                height: 100px;
+                width: 290px;
+            }
         }
     }
 }

@@ -1,0 +1,82 @@
+/*
+ *
+ * Homepage
+ * =========================================================
+ * Guess what... ;)
+ *
+ */
+
+.homepage .qsa_content-item__content {
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin: 0 100px 0 210px;
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        margin: 0 100px 0 350px;
+    }
+}
+
+// ------ Adjustments to homepage search section --------------------
+.home-search {
+    position: relative;
+    margin: 50px 0;
+
+    .qsa_content-item__content {
+        z-index: 2;
+
+        strong {
+            color: @color-secondary-dark;
+        }
+    }
+
+    .qsa_hero__search {
+        margin-bottom: 50px;
+
+        &:before {
+            position: absolute;
+            inset: -93px 30px -30px -30px;
+            background: @color3;
+            content: " ";
+        }
+    }
+
+    .qsa_hero__footer {
+        display: none;
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        .qsa_hero__search {
+            &:before {
+                left: -50px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin: 100px 0;
+
+        .qsa_hero__search {
+            &:before {
+                inset: -70px 100px -30px -2500px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+
+        .qsa_content-item__content:first-child {
+            margin-right: 400px;
+        }
+
+        .qsa_hero__search {
+            &:before {
+                inset: -70px 150px -30px -2500px;
+            }
+        }
+    }
+}
+
+// ------ The content element section -------------------------------
+.home-content {
+    //TBD
+}

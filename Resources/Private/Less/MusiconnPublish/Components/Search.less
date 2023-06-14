@@ -1,0 +1,73 @@
+/*
+ *
+ * Search components
+ * =========================================================
+ * Stylings for search bars and forms
+ *
+ */
+
+// ------ Default search form styles -------------------------------
+.qsa_search-header__search,
+.qsa_hero__search {
+    position: relative;
+    margin: 30px 0;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, .2);
+    display: flex;
+
+    label {
+        display: none;
+    }
+
+    input[type="text"] {
+        position: relative;
+        flex-grow: 2;
+        border: none;
+        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.2;
+        background: white url(../../Images/MusiconnPublish/searchglass-small.svg) no-repeat 10px center;
+        background-size: 20px auto;
+        padding: 10px 20px 10px 40px;
+        appearance: none;
+    }
+
+    button[type="submit"] {
+        position: relative;
+        color: white;
+        margin: 0;
+        padding: 10px 20px;
+        border: 0;
+        font: 700 .75em/1.2 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        letter-spacing: .1ex;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: @color-primary;
+        appearance: none;
+
+        .qsa_icon {
+            display: none;
+        }
+    }
+
+    .qsa_hero__search__reset {
+        display: none;
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        input[type="text"] {
+            padding: 20px 20px 20px 40px;
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        input[type="text"] {
+            font-size: 16px;
+            padding-left: 60px;
+            background-position: 20px center;
+            background-size: 25px auto;
+        }
+
+        button[type="submit"] {
+            padding: 20px 50px;
+        }
+    }
+}
