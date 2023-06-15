@@ -12,6 +12,16 @@ page {
         google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
         viewport = width=device-width, initial-scale=1, maximum-scale=1    
     }
+
+    headerData.10 {
+        10.file = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/apple-touch-icon.png
+        20.file = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/favicon-32x32.png
+        30.file = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/favicon-16x16.png
+        40.data = path:EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/site.webmanifest
+    }
+
+    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/favicon.svg
+
     10 {
         layoutRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Layouts/MusiconnPublish/
         partialRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Partials/MusiconnPublish/
