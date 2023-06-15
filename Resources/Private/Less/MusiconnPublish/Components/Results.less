@@ -7,4 +7,282 @@
  *
  */
 
-// TBD
+// ------ Results Header -------------------------------------------
+.results-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h2 {
+        color: #666;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin: 50px 0 30px 0;
+    }
+}
+
+// ------ Result Listing --------------------------------------------
+ol.results-list {
+    position: relative;
+    padding: 0;
+    list-style: none;
+
+    &:before {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 1px;
+        background-color: @color7;
+        content: " ";
+    }
+
+    > li {
+        position: relative;
+        margin: 0;
+        padding: 30px 0 30px 50px;
+        min-height: 100px;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: left center;
+        }
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            margin-top: -40px;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            opacity: .07;
+            content: " ";
+        }
+
+        &:after {
+            position: absolute;
+            inset: auto 0 0 0;
+            height: 1px;
+            background-color: @color7;
+            content: " ";
+        }
+
+        .results-list-item-metadata {
+            position: relative;
+            list-style: none;
+            margin: 0 0 0 -5px;
+            font-size: 12px;
+            line-height: 1.2;
+            color: #666;
+            display: flex;
+            flex-wrap: wrap;
+            text-transform: uppercase;
+
+            li {
+                padding: 0 5px;
+                margin: 3px 0;
+                border-right: 1px solid #666;
+
+                &:last-child {
+                    border-right: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            hyphens: auto;
+            margin: 5px 0 10px 0;
+            text-transform: none;
+
+            a {
+                color: @color-secondary-dark;
+                text-decoration: none;
+            }
+        }
+
+        p.results-list-item-author {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.2;
+            color: #666;
+        }
+
+        .results-list-item-actions {
+            display: none;
+            // TBD
+        }
+
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        > li {
+            padding: 40px 0 40px 70px;
+            min-height: 140px;
+
+            &:before {
+                width: 100px;
+                height: 100px;
+                margin-top: -50px;
+            }
+
+            .icon {
+                width: 50px;
+                height: 50px;
+                margin-top: -25px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        &:before {
+            inset: 0 -150px auto -150px;
+        }
+
+        > li {
+            padding: 55px 0;
+
+            .icon {
+                left: -80px;
+            }
+
+            &:before {
+                left: -50px;
+            }
+
+            &:after {
+                inset: auto -150px 0 -150px;
+            }
+
+            .results-list-item-metadata {
+                font-size: 14px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p.results-list-item-author {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        &:before {
+            inset: 0 -200px auto -200px;
+        }
+
+        > li {
+            &:after {
+                inset: auto -200px 0 -200px;
+            }
+        }
+    }
+}
+
+// ------ Icon Assignment -------------------------------------------
+@resultTypes: book, essay, journal, score, series;
+
+ol.results-list {
+    each(@resultTypes, {
+        >li.result-type-@{value} {
+            .icon {
+                background-image: url("../../Images/MusiconnPublish/ResultIcons/@{value}-color-50x50.svg");
+            }
+
+            &:before {
+                background-image: url("../../Images/MusiconnPublish/ResultIcons/@{value}-light-30x30.svg");
+            }
+        }
+    });
+}
+
+// ------ Select boxes on result pages ------------------------------
+.results-wrapper {
+    form {
+        select {
+            position: relative;
+            appearance: none;
+            padding: 5px 25px 5px 5px;
+            border: 1px solid @color7;
+            font: 400 12px/1 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            background: url(../../Images/MusiconnPublish/triangle.svg) no-repeat 92% center;
+            background-size: 7px auto;
+        }
+    }
+}
+
+// ------ The results footer with pagination ------------------------
+.results-footer {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+
+    form {
+        label {
+            text-transform: uppercase;
+            letter-spacing: .1ex;
+            font-size: 12px;
+        }
+
+        select {
+            margin-left: 5px;
+        }
+    }
+
+    nav.results-pagination {
+        ul {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 12px;
+
+            li {
+                padding: 0 10px;
+
+                a {
+                    position: relative;
+                    display: block;
+                    background-color: @color-primary;
+                    padding: 8px 12px;
+                    line-height: 1;
+                    color: white;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        nav.results-pagination {
+            ul {
+                margin: 0 0 0 30px;
+            }
+        }
+    }
+    @media screen and (min-width: @desktopViewportWidth) {
+        margin-top: 50px;
+    }
+}
