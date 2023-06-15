@@ -326,34 +326,48 @@ nav.main-navigation {
                             max-height: 50vh;
                         }
                     }
+                }
+            }
 
+            > li.active {
+                > a {
+                    font-weight: 700;
+                    color: @color-secondary-dark;
+
+                    &:after {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        margin-left: -7px;
+                        color: #f60;
+                        font-weight: 900;
+                        font-size: 42px;
+                        background: url(../../Images/MusiconnPublish/navigation-tilde.svg) center center no-repeat;
+                        background-size: 100% auto;
+                        width: 14px;
+                        height: 10px;
+                        content: " ";
+                        transition: @transition;
+                    }
                 }
 
-                &.active {
+                &.has-submenu .submenu-container ul li.active {
                     > a {
+                        color: @color-secondary-dark;
                         font-weight: 700;
-
-                        &:after {
-                            position: absolute;
-                            left: 50%;
-                            bottom: 0;
-                            margin-left: -7px;
-                            color: #f60;
-                            font-weight: 900;
-                            font-size: 42px;
-                            background: url(../../Images/MusiconnPublish/navigation-tilde.svg) center center no-repeat;
-                            background-size: 100% auto;
-                            width: 14px;
-                            height: 10px;
-                            content: " ";
-                            transition: @transition;
-                        }
                     }
 
-                    &.submenu-open {
-                        > a:after {
-                            bottom: -10px;
+                    &.has-submenu .submenu-container ul li.active {
+                        > a {
+                            color: @color-secondary-dark;
+                            font-weight: 700;
                         }
+                    }
+                }
+
+                &.submenu-open {
+                    > a:after {
+                        bottom: -10px;
                     }
                 }
             }
@@ -501,6 +515,7 @@ nav.language-navigation {
         opacity: 1;
         transform: none;
         padding: 0 10px;
+        pointer-events: all;
 
         ul li {
             a {
@@ -525,5 +540,18 @@ nav.language-navigation {
 
     @media screen and (min-width: @desktopViewportWidth) {
         padding: 0 20px;
+    }
+
+    .no-touchevents & {
+        ul li {
+            a {
+                transition: @transition;
+                display: block;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
 }

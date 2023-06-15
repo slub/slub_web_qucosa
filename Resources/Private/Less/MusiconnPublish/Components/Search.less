@@ -43,6 +43,16 @@
         background-color: @color-primary;
         appearance: none;
 
+        .sr-only {
+            // Hacky way to bring back the hidden label.
+            position: relative;
+            clip: auto;
+            clip-path: none;
+            height: auto;
+            width: auto;
+            overflow: visible;
+        }
+
         .qsa_icon {
             display: none;
         }
