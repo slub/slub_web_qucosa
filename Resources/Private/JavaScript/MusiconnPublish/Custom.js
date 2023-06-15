@@ -41,12 +41,20 @@ $(function () {
         });
     }
 
+    // Remove or add aria attributes to main navigation based on screen width
     $(window).resize(function () {
         if ($(window).width() > 1024) {
             $('nav.main-navigation').removeAttr('aria-haspopup aria-expanded');
         } else {
             $('nav.main-navigation').attr({ 'aria-haspopup': 'true', 'aria-expanded': 'false' });
         }
-    })
+    });
+
+
+
+
+    $('.accordion-item h2 button').on('click', function () {
+        $(this).attr('aria-expanded', ($(this).parents('.accordion-item').hasClass('accordion-open')) ? 'false' : 'true').parents('.accordion-item').toggleClass('accordion-open');
+    });
 
 })

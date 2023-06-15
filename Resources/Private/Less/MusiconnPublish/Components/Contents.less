@@ -6,6 +6,7 @@
  *
  */
 
+// ------ Basic content structures and elements ---------------------
 main {
     .container.defaultpage {
         @media screen and (min-width: @desktopViewportWidth) {
@@ -60,5 +61,124 @@ main {
 
     .qsa_content-item__content {
         position: relative;
+    }
+}
+
+// ------- Accordion element ----------------------------------------
+main {
+    .accordion-item {
+        position: relative;
+        padding: 20px 0;
+
+        &:after {
+            position: absolute;
+            inset: auto 0 0 0;
+            height: 1px;
+            background-color: @color7;
+            content: " ";
+        }
+
+        h2 {
+            margin: 0;
+
+            button {
+                position: relative;
+                appearance: none;
+                border: 0;
+                padding-right: 40px;
+                background: transparent;
+                font: 600 18px/1.2 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+                color: @color-secondary-dark;
+                text-align: left;
+                width: 100%;
+                cursor: pointer;
+
+                .toggle-indicator {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 15px;
+                    margin-top: -15px;
+                    transition: @transition;
+
+                    &:after,
+                    &:before {
+                        position: absolute;
+                        top: 9px;
+                        right: 14px;
+                        width: 2px;
+                        height: 12px;
+                        background-color: @color-primary;
+                        content: " ";
+                        transition: @transition;
+                    }
+
+                    &:after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+        }
+
+        section {
+            position: relative;
+            max-height: 0;
+            padding-top: 0;
+            transition: max-height .3s cubic-bezier(0, 1, 0, 1), padding .3s ease-in-out;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        &.accordion-open {
+            .toggle-indicator {
+                transform: rotate(90deg);
+                background-color: @color-primary;
+
+                &:before,
+                &:after {
+                    background-color: white;
+                }
+
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            section {
+                max-height: 6666px;
+                padding: 20px 0 0 0;
+                transition: max-height 0.3s cubic-bezier(1, 0, 1, 0), padding .3s ease-in-out;
+                visibility: visible;
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        .accordion-item {
+            padding: 30px 0;
+
+            &:after {
+                inset: auto -150px 0 -150px;
+            }
+
+            &.accordion-open {
+                section {
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        .accordion-item {
+            padding: 40px 0;
+
+            &:after {
+                inset: auto -200px 0 -200px;
+            }
+        }
     }
 }
