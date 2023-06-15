@@ -4,6 +4,10 @@
 
 <f:section name="Main">
     <div class="container defaultpage">
+        <div class="content-header">
+            <f:render section="Rootline" partial="Navigation" arguments="{_all}" />
+            <h1>{pageTitle}</h1>
+        </div>
         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
     </div>
 </f:section>

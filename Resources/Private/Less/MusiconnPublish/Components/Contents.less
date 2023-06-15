@@ -8,6 +8,42 @@
 
 main {
 
+    .content-header {
+        position: relative;
+        padding: 30px 30px 30px 0;
+        margin-top: 50px;
+
+        &:before {
+            position: absolute;
+            inset: 0 0 53px -1000px;
+            content: " ";
+            background: @color3;
+        }
+
+        .entry-meta {
+            position: relative;
+            font-size: 14px;
+            opacity: .5;
+            margin: 0 0 15px 0;
+
+            .post-meta-author,
+            .post-meta-separator {
+                font-weight: bold;
+            }
+        }
+
+        h1 {
+            position: relative;
+            color: @color-secondary-dark;
+            font-size: 38px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: .1ex;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
     a {
         color: @color-primary;
         text-decoration: underline;

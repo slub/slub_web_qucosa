@@ -555,3 +555,49 @@ nav.language-navigation {
         }
     }
 }
+
+// ------ Rootline Navigation ---------------------------------------
+nav.rootline-navigation {
+    ol {
+        position: relative;
+        margin: 0 0 5px 0;
+        list-style: none;
+        display: flex;
+        font-size: 14px;
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            &:after {
+                position: relative;
+                content: "~";
+                margin: 0 5px;
+            }
+
+            &:last-child {
+
+                a {
+                    font-weight: 400;
+                    color: @color2;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        ol li:last-child {
+            display: inline;
+        }
+
+    }
+}
