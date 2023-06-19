@@ -50,11 +50,16 @@ $(function () {
         }
     });
 
-
-
-
+    // Toggle function for FAQ accordion elements
     $('.accordion-item h2 button').on('click', function () {
         $(this).attr('aria-expanded', ($(this).parents('.accordion-item').hasClass('accordion-open')) ? 'false' : 'true').parents('.accordion-item').toggleClass('accordion-open');
+    });
+
+    // Check form inputs for value or live input and toggle parent class 
+    $('div.form-group input[type="text"], div.form-group textarea, div.form-group select').each(function () {
+        ($(this).val() !== '') && $(this).parents('div.form-group').addClass('got-input')
+    }).on('change', function () {
+        $(this).parents('div.form-group').toggleClass('got-input', $(this).val() !== '')
     });
 
 })

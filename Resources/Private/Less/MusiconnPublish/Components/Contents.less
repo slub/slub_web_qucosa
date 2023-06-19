@@ -51,6 +51,15 @@ main {
             letter-spacing: .1ex;
             font-weight: 400;
             margin: 0;
+            hyphens: auto;
+        }
+
+        @media screen and (min-width: @desktopViewportWidth) {
+            margin-bottom: 30px;
+
+            h1 {
+                hyphens: none;
+            }
         }
     }
 

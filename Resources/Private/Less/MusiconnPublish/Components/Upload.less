@@ -1,0 +1,177 @@
+/*
+ *
+ * Upload components
+ * =========================================================
+ * Styling for the simplified upload form
+ *
+ */
+
+.upload-form {
+    position: relative;
+    margin-top: 30px;
+
+    label {
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        padding: 2px 4px;
+        line-height: 1;
+        font-weight: 700;
+        text-transform: uppercase;
+        z-index: 55;
+        font-size: 12px;
+        color: #999;
+        letter-spacing: .05em;
+        background: white;
+        transition: @transition;
+    }
+
+    textarea,
+    input {
+        position: relative;
+        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        border: 1px solid @color7;
+        padding: 10px 20px;
+        width: 100%;
+        appearance: none;
+
+        &:focus {
+            border-color: @color-primary;
+        }
+
+        &[type="file"] {
+            padding: 20px;
+            background: white;
+        }
+    }
+
+    select {
+        border-radius: 0;
+        line-height: 1;
+        font-size: 13px;
+        padding: 10px 30px 10px 10px;
+        width: 100%;
+        display: block;
+        border-color: @color7;
+        background: #fff url(../../Images/MusiconnPublish/triangle.svg) no-repeat 98% center;
+        background-size: 10px;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-appearance: none;
+        outline-color: #005ade;
+        appearance: none;
+
+        &:focus {
+            border-color: @color5
+        }
+    }
+
+    input[type="submit"],
+    button[type="submit"],
+    .btn {
+        border: none;
+        letter-spacing: .1ex;
+        cursor: pointer;
+        line-height: 1.8;
+        transition: @transition;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 auto;
+        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        text-align: center;
+        background: @color-primary;
+        color: @color4;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 100%;
+
+        &:hover {
+            background-color: @color5
+        }
+
+        &:focus {
+            border-color: @color5
+        }
+    }
+
+    fieldset {
+        border: solid @color7;
+        border-width: 1px 0 0 0;
+        padding: 15px 0 0 0;
+        margin: 30px 0;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        legend {
+            background: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: .1ex;
+            padding: 0 5px;
+            color: @color-primary;
+            font-size: 12px;
+            margin-left: 15px;
+        }
+    }
+
+    div.form-group {
+        position: relative;
+        margin-bottom: 1em;
+
+        &.got-input, &:focus-within {
+            label {
+                top: -10px;
+            }
+        }
+
+        label[for*="file"] {
+            top: -10px;
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+
+        input[type="file"] {
+            padding: 13px 20px;
+        }
+
+        fieldset {
+
+            .form-row {
+                position: relative;
+                display: flex;
+                justify-content: stretch;
+                margin: 10px -15px;
+
+                > div {
+                    flex-basis: 33.3333333%;
+                    padding: 0 15px;
+
+                    label {
+                        left: 31px;
+                    }
+                }
+            }
+
+            &#upload-form-fieldset-object {
+                .form-row > div:first-child {
+                    flex-basis: 66.6666666%;
+                }
+            }
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        margin: 50px -150px;
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        margin: 50px -200px;
+    }
+}
