@@ -15,6 +15,7 @@ TCEFORM {
     header_layout.removeItems = 1,5,6
 
     imageorient.types.textmedia.disabled = 0
+    imageborder.types.textmedia.disabled = 0
     imageorient.types.textpic.removeItems = 0,1,2,7,8,9,10,17,18,25
     imagecaption.disabled = 1
     imagecaption_position.disabled = 1
