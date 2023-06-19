@@ -97,6 +97,7 @@ plugin {
 # Override some Fluid templates
 tt_content.tx_slubwebqucosa_text.templateRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/ContentElements/
 tt_content.tx_slubwebqucosa_accordionitem.templateRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/ContentElements/
+tt_content.textmedia.templateRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/ContentElements/
 
 # Remove markup shredding on RTE parse
 lib.parseFunc_RTE.externalBlocks >

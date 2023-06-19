@@ -14,10 +14,7 @@ TCEFORM {
     header_layout.altLabels.4 = H4 Headline
     header_layout.removeItems = 1,5,6
 
-    # image orientation in image gallery
-    #imageorient.types.image.removeItems = 0,1,2,7,8,9,10,17,18,25
-    # image orientation in textpic element --> not allow 18 == "in text, left"
-    # image orientation in textpic element --> allow 26 == "in text, left nowrap"
+    imageorient.types.textmedia.disabled = 0
     imageorient.types.textpic.removeItems = 0,1,2,7,8,9,10,17,18,25
     imagecaption.disabled = 1
     imagecaption_position.disabled = 1
