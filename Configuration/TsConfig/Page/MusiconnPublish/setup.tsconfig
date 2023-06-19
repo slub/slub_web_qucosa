@@ -24,4 +24,6 @@ TCEFORM {
   }
 }
 
+RTE.default.preset = musiconn
+
 @import 'EXT:slub_web_qucosa/Configuration/TsConfig/Page/MusiconnPublish/BackendLayouts/'
