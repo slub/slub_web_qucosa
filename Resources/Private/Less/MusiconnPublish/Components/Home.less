@@ -6,7 +6,7 @@
  *
  */
 
-.homepage .qsa_content-item__content {
+.homepage .musiconn-content-element {
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
         margin: 0 100px 0 210px;
     }
@@ -21,7 +21,7 @@
     position: relative;
     margin: 50px 0;
 
-    .qsa_content-item__content {
+    .musiconn-content-element {
         z-index: 2;
 
         strong {
@@ -29,7 +29,7 @@
         }
     }
 
-    .qsa_hero__search {
+    form[class$=__search-wrapper] div.qsa_hero__search {
         margin-bottom: 50px;
 
         &:before {
@@ -41,7 +41,7 @@
     }
 
     @media screen and (min-width: @tabletViewportWidth) {
-        .qsa_hero__search {
+        form[class$=__search-wrapper] div.qsa_hero__search {
             &:before {
                 left: -50px;
             }
@@ -51,7 +51,7 @@
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
         margin: 100px 0;
 
-        .qsa_hero__search {
+        form[class$=__search-wrapper] div.qsa_hero__search {
             &:before {
                 inset: -70px 100px -30px -2500px;
             }
@@ -60,11 +60,11 @@
 
     @media screen and (min-width: @desktopViewportWidth) {
 
-        .qsa_content-item__content:first-child {
+        .musiconn-content-element:first-child {
             margin-right: 400px;
         }
 
-        .qsa_hero__search {
+        form[class$=__search-wrapper] div.qsa_hero__search {
             &:before {
                 inset: -70px 150px -30px -2500px;
             }
