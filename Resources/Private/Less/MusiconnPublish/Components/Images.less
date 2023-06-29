@@ -1,0 +1,222 @@
+/*
+ *
+ * Images
+ * =========================================================
+ * Stylings for floating images and galleries
+ *
+ */
+
+// ------ Single Images --------------------------------------------
+main .musiconn-content-element.content-type-image {
+    figure.single-image {
+        position: relative;
+        margin: 30px 0;
+
+        figcaption {
+            font-size: 12px;
+        }
+
+        &.got-border {
+            img {
+                border: 1px solid @color7;
+            }
+        }
+    }
+
+    @media screen and (min-width: @phoneLandscapeViewportWidth) {
+        figure.single-image {
+            max-width: 40%;
+
+            &.image-align-right {
+                float: right;
+                margin: 5px 0 15px 15px;
+            }
+
+            &.image-align-left {
+                float: left;
+                margin: 5px 15px 15px 0;
+            }
+        }
+
+        &:after {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: transparent;
+            clear: both;
+            content: " ";
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        figure.single-image {
+            width: 120px;
+            position: absolute;
+            top: 50%;
+            float: none;
+            transform: translateY(-50%);
+
+            &.image-align-right {
+                right: -150px;
+            }
+
+            &.image-align-left {
+                left: -150px;
+            }
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        figure.single-image {
+            width: 170px;
+
+            &.image-align-right {
+                right: -200px;
+            }
+
+            &.image-align-left {
+                left: -200px;
+            }
+        }
+    }
+}
+
+// ------ Gallery Images --------------------------------------------
+main .musiconn-content-element.content-type-image .gallery-container {
+    position: relative;
+    margin-bottom: 1.5em;
+
+    figure.gallery-image {
+        position: relative;
+        margin: 30px 0;
+
+        .image-wrap {
+            position: relative;
+            background: white;
+            box-shadow: 5px 0 20px rgba(0, 0, 0, .2);
+
+            a {
+                position: relative;
+                display: block;
+                text-decoration: none;
+                overflow: hidden;
+                line-height: 0;
+            }
+
+            img {
+                position: relative;
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 385 / 300;
+            }
+
+            figcaption {
+                position: relative;
+                padding: 15px 15px 20px 15px;
+                text-align: center;
+
+                h3 {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    letter-spacing: 0.1ex;
+                    color: @color-primary;
+                    text-transform: uppercase;
+
+                }
+            }
+        }
+    }
+
+    .no-touchevents & {
+
+        figure.gallery-image {
+
+            .image-wrap {
+                overflow: hidden;
+
+                img, h3 {
+                    transition: @transition;
+                }
+            }
+
+            &:hover {
+                .image-wrap {
+                    img {
+                        transform: scale(1.1);
+                        opacity: .8;
+                    }
+
+                    h3 {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @phoneLandscapeViewportWidth) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -15px;
+
+        figure.gallery-image {
+            flex: 0 0 50%;
+            padding: 15px;
+            margin: 0;
+
+            .image-wrap {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-items: stretch;
+
+                figcaption {
+                    position: relative;
+                    flex: 1 1 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        figure.gallery-image {
+            flex-basis: 33.333333%;
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        flex-wrap: nowrap;
+
+        figure.gallery-image {
+            flex: 1 1 1%;
+
+            .image-wrap {
+                figcaption {
+                    padding: 25px 25px 30px 25px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        margin: 0 -165px;
+    }
+
+    @media screen and (min-width: @largerViewportWidth) {
+        margin: 0 -225px;
+
+        figure.gallery-image {
+            padding: 25px;
+        }
+    }
+}

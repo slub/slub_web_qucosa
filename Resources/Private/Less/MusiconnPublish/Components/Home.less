@@ -59,7 +59,6 @@
     }
 
     @media screen and (min-width: @desktopViewportWidth) {
-
         .musiconn-content-element:first-child {
             margin-right: 400px;
         }
@@ -74,5 +73,15 @@
 
 // ------ The content element section -------------------------------
 .home-content {
-    //TBD
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        .musiconn-content-element.content-type-image .gallery-container {
+            margin: 0 -115px 100px -225px;
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        .musiconn-content-element.content-type-image .gallery-container {
+            margin-left: -365px;
+        }
+    }
 }
