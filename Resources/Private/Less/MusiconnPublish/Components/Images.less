@@ -89,7 +89,7 @@ main .musiconn-content-element.content-type-image {
 // ------ Gallery Images --------------------------------------------
 main .musiconn-content-element.content-type-image .gallery-container {
     position: relative;
-    margin-bottom: 1.5em;
+    margin-bottom: 50px;
 
     figure.gallery-image {
         position: relative;
@@ -164,7 +164,7 @@ main .musiconn-content-element.content-type-image .gallery-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 -15px;
+        margin: 0 -15px 50px -15px;
 
         figure.gallery-image {
             flex: 0 0 50%;
@@ -196,6 +196,7 @@ main .musiconn-content-element.content-type-image .gallery-container {
 
     @media screen and (min-width: @tabletLandscapeViewportWidth) {
         flex-wrap: nowrap;
+        margin-bottom: 50px;
 
         figure.gallery-image {
             flex: 1 1 1%;
@@ -209,11 +210,11 @@ main .musiconn-content-element.content-type-image .gallery-container {
     }
 
     @media screen and (min-width: @desktopViewportWidth) {
-        margin: 0 -165px;
+        margin: 0 -165px 50px -165px;
     }
 
     @media screen and (min-width: @largerViewportWidth) {
-        margin: 0 -225px;
+        margin: 0 -225px 50px -225px;
 
         figure.gallery-image {
             padding: 25px;
