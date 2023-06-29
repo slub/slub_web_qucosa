@@ -4,19 +4,17 @@
     <div class="gallery-container">
         <f:for each="{images}" as="image">
             <figure class="gallery-image{f:if(condition: border, then: ' got-border')}">
-                <f:if condition="{image.link}">
-                    <f:then>
-                        <f:link.typolink parameter="{image.link}" title="{image.title}">
-                            <f:image image="{image}" />
-                        </f:link.typolink>
-                    </f:then>
-                    <f:else>
+                <div class="image-wrap">
+                    <f:link.typolink parameter="{image.link}" title="{image.title}">
                         <f:image image="{image}" />
-                    </f:else>
-                </f:if>
-                <f:if condition="{image.description}">
-                    <figcaption>{image.description}</figcaption>
-                </f:if>
+                    </f:link.typolink>
+                    <f:if condition="{image.title}">
+                        <figcaption>
+                            <h3>{image.title}</h3>
+                        </figcaption>
+
+                    </f:if>
+                </div>
             </figure>
         </f:for>
     </div>
