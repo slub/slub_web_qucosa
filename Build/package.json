@@ -58,7 +58,7 @@
     "popper.js": "^1.16.1",
     "postcss-cli": "^9.1.0",
     "sass-resources-loader": "^2.1.1",
-    "simplelightbox": "^2.7.0",
+    "simplelightbox": "^2.14.1",
     "slick-carousel": "^1.8.1",
     "tippy.js": "^6.3.1",
     "autoprefixer": "^10.4.0",
