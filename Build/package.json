@@ -39,7 +39,7 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
-    "stylelint-selector-bem-pattern": "^2.1.0",
+    "stylelint-selector-bem-pattern": "^3.0.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "svg-spritemap-webpack-plugin": "^4.5.0",
     "webpack": "^5.13.0",
