@@ -67,7 +67,7 @@
     "npm-watch": "^0.11.0"
   },
   "scripts": {
-    "build": "run-s assets-stage prefix-css-stage",
+    "build": "run-s assets-stage prefix-css-stage musiconn-less musiconn-js",
     "watch": "nodemon -e js,scss,svg -x npm run build",
     "assets-stage": "webpack --config webpack.prod.config.js",
     "prefix-css-stage": "npx postcss ../Resources/Public/Css/qsa.min.css --use autoprefixer -d ../Resources/Public/Css/",
