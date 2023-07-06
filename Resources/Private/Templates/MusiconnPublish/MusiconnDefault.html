@@ -1,0 +1,15 @@
+<html data-namespace-typo3-fluid="true" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="container defaultpage">
+        <div class="content-header">
+            <f:render section="Rootline" partial="Navigation" arguments="{_all}" />
+            <h1>{pageTitle}</h1>
+        </div>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+    </div>
+</f:section>
+
+</html>

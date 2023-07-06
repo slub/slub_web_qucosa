@@ -1,0 +1,105 @@
+#############################################
+# Page Setup for the MusiconnPublish Client #
+#############################################
+
+# Dependencies
+@import 'EXT:slub_web_qucosa/Configuration/TypoScript/Common/setup.typoscript'
+
+# Page settings
+page {
+    meta {
+        author = Sächsische Landesbibliothek - Staats- und Universitätsbibliothek (SLUB) - Qucosa
+        google-site-verification = NzeKCsIrANJ2XkatLdX-6zEw5dhwBxX8e4OcMVUfJvA
+        viewport = width=device-width, initial-scale=1, maximum-scale=1    
+    }
+
+    headerData.10 {
+        10.file = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/apple-touch-icon.png
+        20.file = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/favicon-32x32.png
+        30.file = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/favicon-16x16.png
+        40.data = path:EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/site.webmanifest
+    }
+
+    shortcutIcon = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/FavIcons/favicon.svg
+
+    10 {
+        layoutRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Layouts/MusiconnPublish/
+        partialRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Partials/MusiconnPublish/
+        templateRootPaths.22 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/
+        variables {
+            isMandant.value = true
+            rootPageUid = TEXT
+            rootPageUid.data = leveluid:0
+            publishUid = TEXT
+            publishUid.value = {$plugin.tx_slubwebqucosa.publishUid}
+            matomo_hostname = TEXT
+            matomo_hostname.value = {$plugin.tx_slubwebqucosa.matomo_hostname}
+            matomo_idsite = TEXT
+            matomo_idsite.value = {$plugin.tx_slubwebqucosa.matomo_idsite}
+            matomo_domains = TEXT
+            matomo_domains.value = {$plugin.tx_slubwebqucosa.matomo_domains}
+        }
+        dataProcessing {
+
+            # ----- main navigation -----
+            # Is taken from the common setup at ./Configuration/TypoScript/Common/setup.typoscript
+
+            # ----- language navigation -----
+            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            30 {
+                languages = auto
+                as = languagenavigation
+            }
+
+            # ----- footer navigation -----
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                special = directory
+                special.value = {$plugin.tx_slubwebqucosa.metaPid}
+                levels = 1
+                includeNotInMenu = 1
+                as = footernavigation
+            }
+            
+            # ----- rootline navigation -----
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
+                special = rootline
+                special.range = 0|-1
+                as = rootline
+            }
+        }
+    }
+    includeCSS.client >
+    includeCSS.musiconn = EXT:slub_web_qucosa/Resources/Public/Css/MusiconnPublish/Main.css
+    includeJS.client >
+    includeJSFooter {
+        jquery = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/jquery-3.7.0.slim.min.js
+        jquery.forceOnTop = 1
+        modernizr = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/Modernizr.js
+        client = EXT:slub_web_qucosa/Resources/Public/JavaScript/MusiconnPublish/custom-dist.js
+
+    }
+    
+}
+
+# Template Configuration
+config {
+    htmlTag_stdWrap.cObject.value = musiconn-publish
+}
+
+# Plugin Configuration
+plugin {
+    # TODO: Implement proper Sitemap solution!
+    tx_xmlsitemap.settings.customSitemaps.10 = https://slub.qucosa.de/sitemap_qucosa.xml
+}
+
+# Override some Fluid templates
+tt_content.tx_slubwebqucosa_text.templateRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/ContentElements/
+tt_content.tx_slubwebqucosa_text.partialRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Partials/MusiconnPublish/ContentElements/
+tt_content.tx_slubwebqucosa_accordionitem.templateRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/ContentElements/
+tt_content.textmedia.templateRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Templates/MusiconnPublish/ContentElements/
+tt_content.textmedia.partialRootPaths.101 = EXT:slub_web_qucosa/Resources/Private/Partials/MusiconnPublish/ContentElements/
+
+# Remove markup shredding on RTE parse
+lib.parseFunc_RTE.externalBlocks >

@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="container homepage">
+        <h1 class="sr-only">{pageTitle}</h1>
+        <section class="home-search">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '11'}" />
+            <f:cObject typoscriptObjectPath="lib.navsearch" />
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '33'}" />
+        </section>
+        <section class="home-content">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+        </section>
+    </div>
+</f:section>
+
+</html>

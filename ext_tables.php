@@ -231,5 +231,11 @@ $iconRegistry->registerIcon(
     ['source' => 'EXT:slub_web_qucosa/Resources/Public/Icons/backend/content-special-html.svg']
 );
 
+$iconRegistry->registerIcon(
+    'tx-slubwebqucosa-content-gallery',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:slub_web_qucosa/Resources/Public/Icons/backend/content-gallery.svg']
+);
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_slubwebqucosa_domain_model_author', 'EXT:slub_web_qucosa/Resources/Private/Language/locallang_csh_tx_xmgtmpublications_domain_model_author.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_slubwebqucosa_domain_model_author');

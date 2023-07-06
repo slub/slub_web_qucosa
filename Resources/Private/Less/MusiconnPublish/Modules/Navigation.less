@@ -1,0 +1,603 @@
+/*
+ *
+ * Navigation
+ * =========================================================
+ * Styling for all navigation elements like
+ * root, main navigation, footer links aso.
+ *
+ */
+
+// ------ Main Menu -------------------------------------------------
+nav.main-navigation {
+    position: fixed;
+    inset: 0 0 0 40px;
+    background: white;
+    z-index: 90;
+    text-align: left;
+    padding: 100px 30px 70px 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: @transition;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .3);
+
+    ul.main-menu {
+        position: relative;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+
+        li {
+            position: relative;
+            flex: 0 0 100%;
+            padding: 5px 0;
+            line-height: 1;
+            border-bottom: 1px solid @color7;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            a {
+                position: relative;
+                font: 400 22px/1 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: .1ex;
+                padding: 10px 0;
+                color: @color-primary;
+                transition: @transition;
+                display: block;
+            }
+
+            &.publish-button {
+                border-bottom: 0;
+                margin-bottom: 40px;
+
+                a {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 15px 15px 15px 35px;
+                    display: inline-block;
+                    background: @color-primary url(../../Images/MusiconnPublish/upload-arrow.svg) no-repeat 15px center;
+                    background-size: auto 15px;
+                }
+            }
+
+            &.has-submenu {
+                a {
+                    padding-right: 50px;
+                }
+
+                button {
+                    position: absolute;
+                    right: -10px;
+                    top: 6px;
+                    width: 40px;
+                    height: 40px;
+                    transition: @transition;
+                    overflow: hidden;
+                    text-indent: 100%;
+                    border: 0;
+                    background: transparent;
+                    white-space: nowrap;
+
+                    &:after,
+                    &:before {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        width: 2px;
+                        height: 20px;
+                        margin-left: -1px;
+                        background: @color-secondary;
+                        content: " ";
+                        transition: @transition;
+                    }
+
+                    &:after {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .submenu-container {
+                    position: relative;
+                    max-height: 0;
+                    transition: @transition;
+                    overflow: hidden;
+                    visibility: hidden;
+
+                    ul {
+                        margin-left: 15px;
+
+                        li {
+                            border: 0;
+
+                            a {
+                                font-size: 16px;
+                                font-weight: 600;
+                                padding: 5px 50px 5px 0;
+                            }
+
+                            &.has-submenu {
+                                button {
+                                    top: -2px;
+                                    transform: scale(.75);
+                                }
+
+                                &.submenu-open {
+                                    > button {
+                                        transform: scale(.75) rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+
+                        .submenu-container {
+                            ul li {
+                                a {
+                                    font-size: 14px;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.submenu-open {
+                > button {
+                    transform: rotate(90deg);
+
+                    &:after {
+                        transform: scale(0);
+                    }
+                }
+
+                > .submenu-container {
+                    max-height: 100vh;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .open-main-navigation & {
+        transform: translateX(0);
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        left: auto;
+        width: 400px;
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        position: relative;
+        inset: auto;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        opacity: 1;
+        pointer-events: all;
+        transform: none;
+        overflow: visible;
+        flex: 1 1 auto;
+
+        ul.main-menu {
+            justify-content: flex-end;
+            flex-wrap: nowrap;
+
+            li {
+                border: 0;
+                padding: 0 10px;
+                flex: 0 1 auto;
+
+                a {
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: none;
+                    padding: 15px 0;
+                    letter-spacing: 0;
+                }
+
+                &.publish-button {
+                    margin-bottom: 0;
+
+                    a {
+                        padding: 10px 15px 10px 35px;
+                        margin: 5px 0;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &.has-submenu {
+                    > a {
+                        padding-right: 20px;
+
+                        &:before {
+                            position: absolute;
+                            bottom: -10px;
+                            opacity: 0;
+                            left: 50%;
+                            margin-left: -5px;
+                            width: 0;
+                            height: 0;
+                            pointer-events: none;
+                            border: 5px solid transparent;
+                            border-top-width: 0;
+                            border-bottom-color: @color-primary;
+                            transition: @transition;
+                            content: " ";
+                        }
+                    }
+
+                    button {
+                        top: 6px;
+                        right: 5px;
+                        width: 30px;
+                        height: 30px;
+
+                        &:before, &:after {
+                            height: 12px;
+                        }
+                    }
+
+                    .submenu-container {
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        margin-left: -150px;
+                        width: 300px;
+                        background-color: white;
+                        box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+                        ul {
+                            margin: 0;
+                            border-top: 1px solid @color-primary;
+                            border-bottom: 0;
+
+                            li {
+                                padding: 10px 15px;
+                                border-bottom: 1px solid @color7;
+
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+
+                                a {
+                                    font-size: 14px;
+                                    padding: 5px 0;
+                                }
+
+                                &.has-submenu {
+                                    button {
+                                        display: none;
+                                    }
+
+                                    .submenu-container {
+                                        position: relative;
+                                        inset: 0;
+                                        margin: 0;
+                                        box-shadow: none;
+                                        max-height: none;
+                                        visibility: visible;
+                                        overflow: visible;
+                                        width: auto;
+
+                                        ul {
+                                            border: solid @color7;
+                                            border-width: 0 0 0 1px;
+                                            padding-left: 15px;
+
+                                            li {
+                                                padding: 2px 0;
+                                                border: 0;
+
+                                                a {
+                                                    font-weight: 500;
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.submenu-open {
+                        > a:before {
+                            bottom: 0;
+                            opacity: 1;
+                        }
+
+                        > .submenu-container {
+                            max-height: 50vh;
+                        }
+                    }
+                }
+            }
+
+            > li.active {
+                > a {
+                    font-weight: 700;
+                    color: @color-secondary-dark;
+
+                    &:after {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        margin-left: -7px;
+                        color: #f60;
+                        font-weight: 900;
+                        font-size: 42px;
+                        background: url(../../Images/MusiconnPublish/navigation-tilde.svg) center center no-repeat;
+                        background-size: 100% auto;
+                        width: 14px;
+                        height: 10px;
+                        content: " ";
+                        transition: @transition;
+                    }
+                }
+
+                &.has-submenu .submenu-container ul li.active {
+                    > a {
+                        color: @color-secondary-dark;
+                        font-weight: 700;
+                    }
+
+                    &.has-submenu .submenu-container ul li.active {
+                        > a {
+                            color: @color-secondary-dark;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                &.submenu-open {
+                    > a:after {
+                        bottom: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        ul.main-menu {
+            li {
+                padding: 0 20px;
+
+                a {
+                    font-size: 16px;
+                }
+
+                &.has-submenu {
+                    .submenu-container {
+                        ul {
+                            li {
+                                padding: 15px 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .no-touchevents & {
+        ul.main-menu {
+            li {
+                &.has-submenu {
+                    a {
+                        padding: 15px 0;
+                    }
+
+                    button {
+                        display: none;
+                    }
+
+                    .submenu-container {
+                        a {
+                            position: relative;
+
+                            &:before {
+                                position: absolute;
+                                inset: 0 -5px;
+                                height: auto;
+                                width: auto;
+                                margin: 0;
+                                opacity: 0;
+                                border: 0;
+                                background: rgb(@color-primary, .1);
+                                mix-blend-mode: multiply;
+                                content: " ";
+                                transform: scaleY(0);
+                                transition: transform .2s ease-out;
+                            }
+
+                            &:hover {
+                                &:before {
+                                    opacity: 1;
+                                    transform: scaleY(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            > li > a:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// ------ Language Menu ---------------------------------------------
+nav.language-navigation {
+    position: fixed;
+    top: 55px;
+    left: 40px;
+    padding-left: 30px;
+    z-index: 95;
+    transform: translateX(300px);
+    transition: @transition;
+    opacity: 0;
+    pointer-events: none;
+
+    ul {
+        display: flex;
+
+        li {
+            position: relative;
+            padding-right: 20px;
+
+            a {
+                color: @color-primary;
+
+                .language-iso {
+                    display: none;
+                }
+            }
+
+            &.language-active {
+                font-weight: 600;
+            }
+
+            &:after {
+                position: absolute;
+                top: 2px;
+                right: 4px;
+                width: 1px;
+                height: 24px;
+                background-color: @color7;
+                transform: rotate(25deg);
+                transform-origin: right top;
+                content: " ";
+            }
+
+            &:last-child {
+                padding-right: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .open-main-navigation & {
+
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        left: calc(100%-400px);
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        position: relative;
+        inset: auto;
+        opacity: 1;
+        transform: none;
+        padding: 0 10px;
+        pointer-events: all;
+
+        ul li {
+            a {
+                .language-title {
+                    display: none;
+                }
+
+                .language-iso {
+                    display: inline;
+                }
+            }
+
+            &.language-active {
+                font-weight: 400;
+
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        padding: 0 20px;
+    }
+
+    .no-touchevents & {
+        ul li {
+            a {
+                transition: @transition;
+                display: block;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+// ------ Rootline Navigation ---------------------------------------
+nav.rootline-navigation {
+    ol {
+        position: relative;
+        margin: 0 0 5px 0;
+        list-style: none;
+        display: flex;
+        font-size: 14px;
+
+        li {
+            margin: 0;
+            padding: 0;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            &:after {
+                position: relative;
+                content: "~";
+                margin: 0 5px;
+            }
+
+            &:last-child {
+
+                a {
+                    font-weight: 400;
+                    color: @color2;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        ol li:last-child {
+            display: inline;
+        }
+
+    }
+}

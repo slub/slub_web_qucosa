@@ -1,0 +1,87 @@
+/*
+ *
+ * Homepage
+ * =========================================================
+ * Guess what... ;)
+ *
+ */
+
+.homepage .musiconn-content-element {
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin: 0 100px 0 210px;
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        margin: 0 100px 0 350px;
+    }
+}
+
+// ------ Adjustments to homepage search section --------------------
+.home-search {
+    position: relative;
+    margin: 50px 0;
+
+    .musiconn-content-element {
+        z-index: 2;
+
+        strong {
+            color: @color-secondary-dark;
+        }
+    }
+
+    form[class$=__search-wrapper] div.qsa_hero__search {
+        margin-bottom: 50px;
+
+        &:before {
+            position: absolute;
+            inset: -93px 30px -30px -30px;
+            background: @color3;
+            content: " ";
+        }
+    }
+
+    @media screen and (min-width: @tabletViewportWidth) {
+        form[class$=__search-wrapper] div.qsa_hero__search {
+            &:before {
+                left: -50px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        margin: 100px 0;
+
+        form[class$=__search-wrapper] div.qsa_hero__search {
+            &:before {
+                inset: -70px 100px -30px -2500px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        .musiconn-content-element:first-child {
+            margin-right: 400px;
+        }
+
+        form[class$=__search-wrapper] div.qsa_hero__search {
+            &:before {
+                inset: -70px 150px -30px -2500px;
+            }
+        }
+    }
+}
+
+// ------ The content element section -------------------------------
+.home-content {
+    @media screen and (min-width: @tabletLandscapeViewportWidth) {
+        .musiconn-content-element.content-type-image .gallery-container {
+            margin: 0 -115px 100px -225px;
+        }
+    }
+
+    @media screen and (min-width: @desktopViewportWidth) {
+        .musiconn-content-element.content-type-image .gallery-container {
+            margin-left: -365px;
+        }
+    }
+}

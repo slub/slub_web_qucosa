@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 200;
+    src: url('../../Fonts/MusiconnPublish/montserrat-v13-latin-200.eot');
+    src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-200.eot?#iefix') format('embedded-opentype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-200.woff2') format('woff2'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-200.woff') format('woff'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-200.ttf') format('truetype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-200.svg#Montserrat') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../Fonts/MusiconnPublish/montserrat-v13-latin-regular.eot');
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-regular.eot?#iefix') format('embedded-opentype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-regular.woff2') format('woff2'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-regular.woff') format('woff'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-regular.ttf') format('truetype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../Fonts/MusiconnPublish/montserrat-v13-latin-600.eot');
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-600.eot?#iefix') format('embedded-opentype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-600.woff2') format('woff2'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-600.woff') format('woff'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-600.ttf') format('truetype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-600.svg#Montserrat') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../Fonts/MusiconnPublish/montserrat-v13-latin-700.eot');
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-700.eot?#iefix') format('embedded-opentype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-700.woff2') format('woff2'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-700.woff') format('woff'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-700.ttf') format('truetype'), url('../../Fonts/MusiconnPublish/montserrat-v13-latin-700.svg#Montserrat') format('svg');
+}
+
+
+
+body {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+ul, ol {
+    margin: .5em 0 1.5em;
+    padding: 0;
+
+    li {
+        margin-left: 2em;
+        padding-left: .7em;
+    }
+}
+
+h2, h3, h4 {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    line-height: 1.2;
+    color: #bf4c00;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3, h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: .3em;
+}
+
+table {
+    margin: 1em 0;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 0;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: #005ade;
+    transition: .3s;
+}

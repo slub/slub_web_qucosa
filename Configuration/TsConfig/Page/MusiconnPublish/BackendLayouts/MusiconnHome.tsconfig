@@ -1,0 +1,38 @@
+mod.web_layout.BackendLayouts {
+  musiconn_home {
+    title = Musiconn Home Page
+    icon = EXT:slub_web_qucosa/Resources/Public/Images/MusiconnPublish/BackendLayouts/Homepage.png
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 3
+        rows {
+          1 {
+            columns {
+              1 {
+                name = Intro Text
+                colPos = 11
+              }
+            }
+          }
+          2 {
+            columns {
+              1 {
+                name = Service Text
+                colPos = 33
+              }
+            }
+          }
+          3 {
+            columns {
+              1 {
+                name = Homepage Content
+                colPos = 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:comment> -------- The Main Navigation -------- </f:comment>
+<f:section name="Main">
+    <f:if condition="{mainnavigation}">
+        <nav class="main-navigation" id="main-navigation" aria-label="Hauptnavigation" aria-haspopup="true" aria-expanded="false">
+            <ul class="main-menu">
+                <f:if condition="{publishUid}">
+                    <li class="publish-button">
+                        <f:link.page pageUid="{publishUid}" title="Direkt zum Abgabeformular">Publizieren</f:link.page>
+                    </li>
+                </f:if>
+                <f:for each="{mainnavigation}" as="item">
+                    <li class="{f:if(condition: '{item.children}', then: 'has-submenu')}{f:if(condition: item.active, then:' active')}">
+                        <f:link.page pageUid="{item.data.uid}">{item.title}</f:link.page>
+                        <f:if condition="{item.children}">
+                            <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{item.data.uid}">Submenü ein/ausblenden</button>
+                            <div class="submenu-container second-level" id="submenu-{item.data.uid}" role="region" aria-haspopup="true" aria-expanded="false">
+                                <ul class="sub-pages">
+                                    <f:for each="{item.children}" as="SecondLevelSubItem">
+                                        <li class="{f:if(condition: '{SecondLevelSubItem.children}', then: 'has-submenu')}{f:if(condition: SecondLevelSubItem.active, then:' active')}">
+                                            <f:link.page pageUid="{SecondLevelSubItem.data.uid}">{SecondLevelSubItem.title}</f:link.page>
+                                            <f:if condition="{SecondLevelSubItem.children}">
+                                                <button class="submenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-{SecondLevelSubItem.data.uid}">Submenü ein/ausblenden</button>
+                                                <div class="submenu-container third-level" id="submenu-{SecondLevelSubItem.data.uid}" role="region" aria-haspopup="true" aria-expanded="false">
+                                                    <ul class="sub-pages">
+                                                        <f:for each="{SecondLevelSubItem.children}" as="ThirdLevelSubItem">
+                                                            <li class="{f:if(condition: ThirdLevelSubItem.active, then:'active')}">
+                                                                <f:link.page pageUid="{ThirdLevelSubItem.data.uid}">{ThirdLevelSubItem.title}</f:link.page>
+                                                            </li>
+                                                        </f:for>
+                                                    </ul>
+                                                </div>
+                                            </f:if>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </div>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+    </f:if>
+</f:section>
+
+<f:comment> -------- The Language Navigation -------- </f:comment>
+<f:section name="Language">
+    <f:if condition="{languagenavigation}">
+        <nav id="language-navigation" class="language-navigation" aria-label="Sprachen">
+            <ul class="language-menu">
+                <f:for each="{languagenavigation}" as="langItem">
+                    <li class="{f:if(condition: langItem.active, then: 'language-active')}{f:if(condition: '{langItem.available}', else: 'language-disabled')}">
+                        <a class="language-button" href="{langItem.link}" hreflang="{langItem.hreflang}" title="{langItem.navigationTitle}">
+                            <span class="language-title">{langItem.navigationTitle}</span>
+                            <span class="language-iso">{langItem.twoLetterIsoCode -> f:format.case()}</span>
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+    </f:if>
+</f:section>
+<f:comment> -------- The Rootline Navigation -------- </f:comment>
+<f:section name="Rootline">
+    <f:if condition="{rootline}">
+        <nav aria-label="{f:translate(key:'rootline', extensionName: 'SlubTemplate')}" class="rootline-navigation">
+            <ol class="rootline">
+                <f:for as="rootlineItem" each="{rootline}">
+                    <li><a href="{rootlineItem.link}">{rootlineItem.title}</a></li>
+                </f:for>
+            </ol>
+        </nav>
+    </f:if>
+</f:section>
+
+<f:comment> -------- The Footer Navigation -------- </f:comment>
+<f:section name="Footer">
+    <f:if condition="{footernavigation}">
+        <nav id="footer-navigation" class="footer-navigation">
+            <ul>
+                <f:for as="footerItem" each="{footernavigation}">
+                    <li><a href="{footerItem.link}">{footerItem.title}</a></li>
+                </f:for>
+            </ul>
+        </nav>
+    </f:if>
+</f:section>
+
+</html>

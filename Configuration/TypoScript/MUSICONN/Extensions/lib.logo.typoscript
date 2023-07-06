@@ -1,8 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/Common/setup.typoscript">
-lib.logo {
-    stdWrap.typolink.title = Startseite
-    10 {
-        file = EXT:slub_web_qucosa/Resources/Public/Images/logo/Logo_Qucosa.svg
-        altText = Logo des Publikationsservers QUCOSA
-    }
-}

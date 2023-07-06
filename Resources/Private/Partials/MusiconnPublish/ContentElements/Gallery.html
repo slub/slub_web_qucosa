@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{images}">
+    <div class="gallery-container">
+        <f:for each="{images}" as="image">
+            <figure class="gallery-image{f:if(condition: border, then: ' got-border')}">
+                <div class="image-wrap">
+                    <f:link.typolink parameter="{image.link}" title="{image.title}">
+                        <f:image image="{image}" />
+                    </f:link.typolink>
+                    <f:if condition="{image.title}">
+                        <figcaption>
+                            <h3>{image.title}</h3>
+                        </figcaption>
+
+                    </f:if>
+                </div>
+            </figure>
+        </f:for>
+    </div>
+</f:if>
+
+</html>
