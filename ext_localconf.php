@@ -1,5 +1,6 @@
 <?php
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName']['index']['sitemap.xml'] = array (
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName']['index']['sitemap.xml'] = array(
     'keyValues' => array(
         'type' => 20180709,
     ),
