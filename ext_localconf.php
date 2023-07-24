@@ -94,6 +94,12 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.de']['fixedP
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.de']['fixedPostVars']['60'] = 'landingPageConfiguration';
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.de']['fixedPostVars']['50'] = 'apiConfiguration';
 
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.qucosa.de']['cache'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.qucosa.de']['fileName'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.qucosa.de']['fixedPostVars']= $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.qucosa.de']['fixedPostVars']['60'] = 'landingPageConfiguration';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['publish.fid-move.qucosa.de']['fixedPostVars']['50'] = 'apiConfiguration';
+
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['htwk-leipzig.qucosa.de']['cache'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache'];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['htwk-leipzig.qucosa.de']['fileName'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName'];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['htwk-leipzig.qucosa.de']['fixedPostVars'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'];
