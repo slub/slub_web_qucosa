@@ -1,0 +1,34 @@
+page {
+
+  bodyTag = <body>
+
+  includeCSS {
+    client = EXT:slub_web_qucosa/Resources/Public/Css/SI/client.css
+  }
+
+  10 = FLUIDTEMPLATE
+  10 {
+    file = EXT:slub_web_qucosa/Resources/Private/Templates/SI/Start.html
+    layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/
+    partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/
+
+    variables {
+      pageTitle = TEXT
+      pageTitle.data = page:title
+
+      content < styles.content.get
+
+      contentRight < styles.content.get
+      contentRight.select.where = colPos=2
+
+      rootPageId = TEXT
+      rootPageId.value = {$plugin.tx_slubwebqucosa.rootPid}
+
+      imprintPageId = TEXT
+      imprintPageId.value = {$plugin.tx_slubwebqucosa.imprintPid}
+
+    }
+  }
+}
+
+plugin.tx_xmlsitemap.settings.customSitemaps.10 = https://si.qucosa.de/sitemap_qucosa.xml
