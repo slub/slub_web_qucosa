@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
@@ -13,6 +14,12 @@ if (!defined('TYPO3_MODE')) {
     'slub_web_qucosa',
     'Configuration/TypoScript/SLUB',
     'Qucosa: SLUB Dresden (SLUB)'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'slub_web_qucosa',
+    'Configuration/TypoScript/SI',
+    'Qucosa: Sorbisches Institut (SI)'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
