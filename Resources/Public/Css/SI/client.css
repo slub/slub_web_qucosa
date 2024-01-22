@@ -21,8 +21,8 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend .processsteps a:visited,
 .tx-slubopus4frontend .processsteps a.selected:visited { background-color: #006ab2; }
 
-#navlogo #homelink { background-image:url(../../Images/SI/logo.png); }
-#ghosticon { background-image: url(../../Images/SI/ghosticon.png); }
+#navlogo #homelink { background-image:url(../../Images/SI/logo.png); background-size: contain; bottom: 30px; }
+#ghosticon { background-image: url(../../Images/SI/ghosticon.png); background-size: contain; background-position: -50px -10px; }
 
 #langnav {
   padding-right: 20px;
