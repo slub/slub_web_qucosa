@@ -151,7 +151,7 @@ $(function () {
         $('.banner h1').append('<span class="search-info-toggle"/>')
         $('main div[id^="c"] .content').addClass('search-infos search-infos-minimized')
     };
-    $('.search-info-toggle').click(() => { $('main div[id^="c"] .content').toggleClass('search-infos-minimized') });
+    $('.search-info-toggle').click(function () { $('main div[id^="c"] .content').toggleClass('search-infos-minimized') });
 
     // Disable basic header search form on pages with an additional search form in the content section
     ($('.searchForm, .searchExtForm')[0]) && $('body').addClass('searchpage');
