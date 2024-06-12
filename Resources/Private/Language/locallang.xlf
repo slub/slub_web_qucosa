@@ -30,7 +30,7 @@
 			<source>Publish</source>
 		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.footer" xml:space="preserve">
-			<source>An offer of the Saxon State Library - Dresden State and University Library </source>
+			<source>An offer of the Saxon State and University Library (SLUB)</source>
 		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.search.placeholder" xml:space="preserve">
 			<source>Search in a large number of records</source>
@@ -57,7 +57,7 @@
 			<source>Extended Search (Help)</source>
 		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.search.info" xml:space="preserve">
-			<source>You can search in more detail by restricting your query to specific search fields from the outset. This is particularly useful if you already know which publication you are looking for. Select the appropriate field (e.g. title) and then enter your search term. You can search for groups of words (phrases) by using quotation marks.</source>
+			<source>Use quotation marks to search for groups of words (phrases).</source>
 		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
 			<source>Homepage</source>

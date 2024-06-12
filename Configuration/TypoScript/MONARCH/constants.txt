@@ -13,7 +13,7 @@ text {
 	headerSubheader = auf dem Dokumentenserver der TU Chemnitz
 }
 
-[globalVar = GP:L = 1]
+[siteLanguage("languageId") == "1"]
 	# Allgemeine Textbausteine
 	text {
 		headerHeading = Scientific document search

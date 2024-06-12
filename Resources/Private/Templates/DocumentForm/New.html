@@ -8,10 +8,7 @@
         <h2 class="h1">
             <f:translate key="documentForm.new.header" arguments="{0: '{documentForm.displayName}'}"/>
         </h2>
-        <button type="button" class="qsa_wizard__header-btn btn-outline__without" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}">
-            <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}</span>
-            <f:render partial="Icon" arguments="{icon:'cancel'}" />
-        </button>
+
         <f:render partial="DocumentForm/New" arguments="{_all}"/>
     </div>
     <div class="qsa_wizard__wrapper qsa_wizard__wrapper-last d-none container">
@@ -38,9 +35,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">{f:translate(key: 'tx_slubwebqucosa.wizard.error_warning', extensionName: 'slub_web_qucosa')}</h5>
-                <button type="button" class="btn qsa_btn btn-outline__without close" data-dismiss="modal" aria-label="{f:translate(key: 'tx_slubwebqucosa.wizard.close', extensionName: 'slub_web_qucosa')}">
-                    <f:render partial="Icon" arguments="{icon:'close'}" />
-                </button>
+
             </div>
             <div class="modal-body">
                 <p>{f:translate(key: 'tx_slubwebqucosa.wizard.error', extensionName: 'slub_web_qucosa')}</p>

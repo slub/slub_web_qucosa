@@ -1,12 +1,11 @@
 {namespace s=Subugoe\Find\ViewHelpers}
-
 <div class="qsa_search__wrapper">
 	<div class="qsa_search-result__item">
 		<h2 class="h6 qsa_search-result__item-title">
 			<f:link.page class="qsa_search-result__item-title-link"
 						noCacheHash="1"
 						pageUid="{settings.landingPageUID}"
-						additionalParams="{tx_dlf: {id: '{f:uri.page(pageUid:\'{settings.rootPageId}\', absolute:1)}api/qucosa%3A{document.record_id}/mets/'}}">
+						additionalParams="{tx_dlf: {id: 'https://sdvtypo3qucosaul.slub-dresden.de/api/qucosa-{document.record_id}/mets/'}}">
 				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
 					<f:then>
 						<f:render
@@ -42,7 +41,7 @@
 				</f:for>
 			</f:if>
 		</div>
-		<p class="qsa_search-result__item-place">{f:translate(key: 'tx_slubwebqucosa.find.result_categorie', extensionName: 'slub_web_qucosa')}
+		<p class="qsa_search-result__item-place">
 			<f:if condition="{document.fields.topic}">
 				<f:for each="{document.fields.topic}" as="topic" iteration="topicIterator">
 					<q>{topic}</q><f:if condition="!{topicIterator.isLast}">,</f:if>
@@ -51,21 +50,20 @@
 		</p>
 		<div class="qsa_search-result__item-footer">
 			<f:if condition="{document.fields.author}">
-				<f:then>
+
 					<f:for each="{document.fields.author}" as="author">
 						<span class="qsa_search-result__item-footer__item btn-round">{author}</span>
 					</f:for>
-				</f:then>
-				<f:else>
-					<f:if condition="{document.fields.publisher}">
-						<f:for each="{document.fields.publisher}" as="publisher">
-							<span class="qsa_search-result__item-footer__item btn-round">{publisher}</span>
-						</f:for>
-					</f:if>
-				</f:else>
+			</f:if>
+			<f:if condition="{document.fields.publisher}">
+				<f:for each="{document.fields.publisher}" as="publisher">
+					<span class="qsa_search-result__item-footer__item btn-round">{publisher}</span>
+				</f:for>
 			</f:if>
 			<f:if condition="{document.fields.publishDateSort}">
-				<span class="qsa_search-result__item-footer__item btn-round">{document.fields.publishDateSort}</span>
+				<f:for each="{document.fields.publishDateSort}" as="publishDateSort">
+					<span class="qsa_search-result__item-footer__item btn-round">{publishDateSort}</span>
+				</f:for>
 			</f:if>
 		</div>
 	</div>

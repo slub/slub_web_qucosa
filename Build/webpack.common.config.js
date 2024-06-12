@@ -14,7 +14,7 @@ module.exports = {
     },
     output: {
         filename: 'JavaScript/[name].min.js',
-        chunkFilename: 'JavaScript/[name].bundle.js',
+        chunkFilename: 'JavaScript/[name][chunkhash].bundle.js',
         libraryTarget: 'umd', // var
         library: 'qsa',
         auxiliaryComment: 'Copyright - XIMA media GmbH | Sächsische Landesbibliothek — Staats- und Universitätsbibliothek Dresden (SLUB)'

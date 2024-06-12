@@ -39,7 +39,7 @@ text {
     headerSubheader = auf dem sächsischen Dokumenten- und Publikationsserver
 }
 
-[globalVar = GP:L = 1]
+[siteLanguage("languageId") == "1"]
     # Allgemeine Textbausteine
     text {
         languageIconDescription = Check icon to show the language-selection made

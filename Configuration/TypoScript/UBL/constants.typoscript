@@ -21,14 +21,14 @@ pageID {
 
 # Allgemeine Textbausteine
 text {
-	headerHeading = Wissenschaftliche Dokumentensuche
-	headerSubheader = auf dem Dokumentenserver der Universitätsbibliothek Leipzig
+	headerHeading = Publikationsserver der Universität Leipzig
+	headerSubheader =
 }
 
-[globalVar = GP:L = 1]
+[siteLanguage("languageId") == "1"]
 	# Allgemeine Textbausteine
 	text {
-		headerHeading = Scientific document search
-		headerSubheader = on the Universitätsbibliothek Leipzig document server
+		headerHeading = Publication Server of the Universitätsbibliothek Leipzig
+		headerSubheader =
 	}
 [global]

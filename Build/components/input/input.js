@@ -43,6 +43,11 @@ class Input {
         const searchInput = document.querySelectorAll('.qsa_input-group__input-text')
 
         searchInput.forEach(input => {
+
+			if (input.value.trim() !== '') {
+				input.setAttribute('data-empty', false);
+			}
+
             input.addEventListener('input', e => {
                 e.target.setAttribute('data-empty', !e.currentTarget.value)
             })

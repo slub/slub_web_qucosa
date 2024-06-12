@@ -111,7 +111,7 @@ plugin.tx_find.settings.sort {
         sortCriteria = title_sort asc
     }
     20 {
-        id = Titel A-Z
+        id = Titel A–Z
         sortCriteria = title_sort desc
     }
     30 {

@@ -11,9 +11,8 @@
         <span class="sr-only">{f:translate(key: 'tx_slubwebqucosa.wizard.step.files.remove', extensionName: 'slub_web_qucosa')}</span>
         <f:render partial="Icon" arguments="{icon:'delete-bin'}" />
     </button>
-    <div class="group-info-text">
-        <f:format.raw>{groupItem.infoText}</f:format.raw>
-    </div>
+    <p>{f:translate(key: 'tx_slubwebqucosa.wizard.general_field_hint', extensionName: 'slub_web_qucosa')}</p>
+
     <f:for each="{groupItem.items}" as="formField" iteration="fieldIterator">
         <f:for each="{formField}" as="fieldItem" iteration="fieldItemIterator">
             <f:if condition="{fieldItem.inputField}!=4">
