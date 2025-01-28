@@ -11,8 +11,12 @@
   "authors": [
     {
       "name": "Alexander Bigga",
-      "email": "alexander.bigga@slub-dresden.de",
-      "role": "Developer"
+      "role": "Former Maintainer"
+    },
+    {
+      "name": "Erik Sommer",
+      "email": "erik.sommer@slub-dresden.de",
+      "role": "Maintainer"
     }
   ],
   "license": "GPL-3.0-or-later",
