@@ -25,10 +25,7 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 #ghosticon { background-image: url(../../Images/SI/ghosticon.png); background-size: contain; background-position: -50px -10px; }
 
 #langnav {
-  padding-right: 20px;
-  padding-top: 5px;
-  font-size:0.8em;
-  text-align: right;
+  display: none;
 }
 
 ul#langnav li {
