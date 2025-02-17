@@ -9,7 +9,7 @@
   "author": "XIMA MEDIA GmbH",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.21",
+    "@babel/core": "^7.26",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^9.2.1",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
