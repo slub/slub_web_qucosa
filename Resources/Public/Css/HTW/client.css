@@ -6,25 +6,25 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend fieldset textarea:focus,
 #tx_slubopus4frontend-prevStep:hover,
 #tx_slubopus4frontend-submit:hover,
-#tx_slubopus4frontend-reset:hover { color:#094792; }
+#tx_slubopus4frontend-reset:hover { color:#000000; }
 
 #dedscontent .tabbar,
 #dedscontent .tabcontent,
 .tx-slubopus4frontend .processsteps a,
 .tx-slubopus4frontend .processsteps a:visited,
 .tx-slubopus4frontend fieldset textarea:focus,
-.tx-slubopus4frontend fieldset select:focus  { border-color: #094792; }
+.tx-slubopus4frontend fieldset select:focus  { border-color: #000000; }
 
 .tx-dlf-toolbox .tx-dlf-tools-pdf-page a, #smallsearch, #dedscontent .tabbar a.active,
 .tx-slubopus4frontend .processsteps a.selected, #dedscontent form#search input[type="submit"],
 .tx-slubopus4frontend .processsteps a:visited,
-.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #094792; }
+.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #000000; }
 
 
 #header { background-image:url(../../Images/HTW/header.png); }
 #navlogo #homelink { background-image:url(../../Images/HTW/logo.png); }
 
-#nav a { text-align: left; padding: 5px 10px 5px 25px; background: url(lvl1.gif) no-repeat 10px center; color: #074495; font-size: 12px; font-family: Arial, Helvetica, Sans-Serif; }
+#nav a { text-align: left; padding: 5px 10px 5px 25px; background: url(lvl1.gif) no-repeat 10px center; color: #000000; font-size: 12px; font-family: Arial, Helvetica, Sans-Serif; }
 #nav a:hover { color: #ff9d14; background: url(lvl1_aktiv.gif) no-repeat 10px center; text-decoration: underline; }
 
 a:focus, a:hover { color: #ff9d14; border-color: #ff9d14; }
@@ -45,4 +45,4 @@ div.searchExtForm form.form-inline .form-group label {
   min-width: 150px;
 }
 
-.tx-dlf-metadata .affiliation { background-color: #094792; }
+.tx-dlf-metadata .affiliation { background-color: #000000; }
