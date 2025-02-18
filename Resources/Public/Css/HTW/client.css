@@ -21,7 +21,7 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend .processsteps a.selected:visited { background-color: #094792; }
 
 
-#header { background-image:url(../../Images/HTW/header.jpg); }
+#header { background-image:url(../../Images/HTW/header.png); }
 #navlogo #homelink { background-image:url(../../Images/HTW/logo.png); }
 
 #nav a { text-align: left; padding: 5px 10px 5px 25px; background: url(lvl1.gif) no-repeat 10px center; color: #074495; font-size: 12px; font-family: Arial, Helvetica, Sans-Serif; }
