@@ -35,7 +35,7 @@
     "@eureka2/ab-datepicker": "github:eureka2/ab-datepicker",
     "autoprefixer": "^10.4.0",
     "awesomplete": "^1.1.5",
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.3.6",
     "cssnano": "^7.0.6",
     "jquery": "^3.5.1",
     "less": "^4.1.0",
