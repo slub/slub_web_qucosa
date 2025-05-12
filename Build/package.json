@@ -31,7 +31,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-env": "^7.27.2",
     "@eureka2/ab-datepicker": "github:eureka2/ab-datepicker",
     "autoprefixer": "^10.4.0",
     "awesomplete": "^1.1.5",
