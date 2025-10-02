@@ -1,6 +1,10 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/Build" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/Build"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    groups:
+      actions:
+        patterns:
+          - "*"
