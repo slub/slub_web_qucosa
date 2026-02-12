@@ -1,5 +1,5 @@
 // plugins
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin').default
 const CopyPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
@@ -44,6 +44,12 @@ module.exports = {
                     },
                     {
                         loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            sassOptions: {
+                                outputStyle: 'compressed'
+                            }
+                        }
                     },
                 ]
             },
