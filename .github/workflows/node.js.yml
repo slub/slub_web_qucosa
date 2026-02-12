@@ -1,4 +1,7 @@
 name: Build Assets CI
+permissions:
+  contents: read
+
 
 on:
   push:
