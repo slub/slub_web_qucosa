@@ -37,39 +37,7 @@ class Datepicker {
     }
 
     datepicker () {
-
-
         let $dateInput = $('.date');
-        let today = new Date();
-        let dd = today.getDate();
-
-        let mm = today.getMonth()+1;
-        let yyyy = today.getFullYear();
-        if(dd<10)
-        {
-            dd='0'+dd;
-        }
-
-        if(mm<10)
-        {
-            mm='0'+mm;
-        }
-
-        let nextMonth = new Date();
-        nextMonth.setMonth( nextMonth.getMonth() + 2 );
-        let nextMonthDay = nextMonth.getDate()
-        let nextMonthMonth = nextMonth.getMonth()
-        let nextMonthYear = nextMonth.getFullYear()
-
-        if(nextMonthDay<10)
-        {
-            nextMonthDay='0'+nextMonthDay;
-        }
-
-        if(nextMonthMonth<10)
-        {
-            nextMonthMonth='0'+nextMonthMonth;
-        }
 
         if($dateInput.data("language") === 'ger') {
             Date.dp_locales = {
@@ -146,20 +114,8 @@ class Datepicker {
 
     setDatepicker () {
         let today = new Date()
-        let dd = today.getDate()
         const customDatePicker = document.querySelectorAll('.datepicker')
-
-        let mm = today.getMonth() + 1
         const yyyy = today.getFullYear()
-        if (dd < 10) {
-            dd = '0' + dd
-        }
-
-        if (mm < 10) {
-            mm = '0' + mm
-        }
-
-        today = dd + '.' + mm + '.' + yyyy
 
         customDatePicker.forEach(datepicker => {
             if (datepicker.getAttribute('id') === 'qsa_date-year') {
