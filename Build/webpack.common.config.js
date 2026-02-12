@@ -3,7 +3,6 @@ const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin').default
 const CopyPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
-const path = require('path')
 
 module.exports = {
     mode: 'development',

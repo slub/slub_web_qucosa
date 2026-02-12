@@ -77,7 +77,6 @@ export default class UserHelpers {
      * @return String key - String that represents the key pressed
      */
     static parseKey (event) {
-        const app = this
         const keyCodes = {
             9: 'TAB',
             13: 'ENTER',

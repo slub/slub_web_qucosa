@@ -36,7 +36,6 @@ class Select {
         this.changeDefaultLanguage()
         this.createCustomSelects()
 
-        const customOptionsWrapper = document.querySelectorAll('.qsa_select__custom-options')
         const selectChange = new Event('change');
         const sortingSelect = document.querySelector('select[name="tx_find_find[sort]"]')
 

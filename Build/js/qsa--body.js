@@ -27,10 +27,7 @@
 
 import $ from 'jquery'
 // eslint-disable-next-line no-unused-vars
-import carousel from 'bootstrap/js/src/carousel'
 // eslint-disable-next-line no-unused-vars
-import SimpleLightbox from 'simplelightbox'
-import modal from 'bootstrap/js/src/modal'
 
 (function () {
     'use strict'
@@ -38,8 +35,6 @@ import modal from 'bootstrap/js/src/modal'
 
 window.jQuery = $
 window.$ = $
-
-import * as abDatepicker from '@eureka2/ab-datepicker'
 
 /** @section 1.1 Global variables */
 // import GLOBAL from './settings/variables'
