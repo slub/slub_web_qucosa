@@ -54,7 +54,6 @@ class Datepicker {
         {
             mm='0'+mm;
         }
-        today = dd+'.'+mm+'.'+yyyy;
 
         let nextMonth = new Date();
         nextMonth.setMonth( nextMonth.getMonth() + 2 );
@@ -71,8 +70,6 @@ class Datepicker {
         {
             nextMonthMonth='0'+nextMonthMonth;
         }
-
-        nextMonth = nextMonthDay+'.'+nextMonthMonth+'.'+nextMonthYear;
 
         if($dateInput.data("language") === 'ger') {
             Date.dp_locales = {
