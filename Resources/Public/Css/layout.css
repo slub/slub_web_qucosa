@@ -37,6 +37,7 @@ a, a:visited {
 }
 
 a:focus, a:hover { border-color:#999; color:#999; }
+a:focus:not(:focus-visible) { outline: none; }
 
 #skip_nav, .dontread { display:none; }
 
