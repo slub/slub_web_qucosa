@@ -108,3 +108,9 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['htwk-leipzig.qucosa.de']['fix
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['htwk-leipzig.qucosa.de']['fixedPostVars']['217'] = 'apiConfiguration';
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars']['176'] = 'apiConfiguration';
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['si.qucosa.de']['cache'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['cache'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['si.qucosa.de']['fileName'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fileName'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['si.qucosa.de']['fixedPostVars'] = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.qucosa.de']['fixedPostVars'];
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['si.qucosa.de']['fixedPostVars']['260'] = 'landingPageConfiguration';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['si.qucosa.de']['fixedPostVars']['264'] = 'apiConfiguration';
