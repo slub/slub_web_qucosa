@@ -10,6 +10,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
+	'changeLog' => 'https://github.com/slub/slub_web_qucosa/releases',
 	'version' => '1.1.1',
 	'constraints' => array(
 		'depends' => array(
