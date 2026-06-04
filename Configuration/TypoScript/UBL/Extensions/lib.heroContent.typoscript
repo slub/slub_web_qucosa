@@ -1,0 +1,20 @@
+lib.heroContent = CONTENT
+lib.heroContent {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where = colPos=10
+        pidInList.data = TSFE:id
+    }
+    renderObj = COA
+    renderObj {
+        10 = TEXT
+        10.field = header
+        10.wrap = <h1 class="h2 qsa_hero__title">|</h1>
+        20 = TEXT
+        20.field = subheader
+        20.wrap = <p class="qsa_hero__desc">|</p>
+        20.required = 1
+    }
+    stdWrap.ifEmpty = <h1 class="h2 qsa_hero__title">{$text.headerHeading}</h1><p class="qsa_hero__desc">{$text.headerSubheader}</p>
+}

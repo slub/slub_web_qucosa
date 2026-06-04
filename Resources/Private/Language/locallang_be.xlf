@@ -9,6 +9,12 @@
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
+            <trans-unit id="backend_layout.homepage">
+                <source>Homepage</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.hero">
+                <source>Hero Text (Heading + Subheading)</source>
+            </trans-unit>
             <trans-unit id="backend_layout.twoColumns">
                 <source>Content with sidebar</source>
             </trans-unit>
