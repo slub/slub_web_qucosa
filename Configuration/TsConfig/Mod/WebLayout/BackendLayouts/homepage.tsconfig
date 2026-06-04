@@ -16,9 +16,6 @@ mod {
                                         name = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_be.xlf:backend_layout.column.hero
                                         colPos = 10
                                         colspan = 1
-                                        allowed {
-                                            CType = header
-                                        }
                                         maxitems = 1
                                     }
                                 }
