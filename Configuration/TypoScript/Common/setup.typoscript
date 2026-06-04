@@ -185,23 +185,6 @@ page {
     }
 }
 
-lib.navsearch = USER
-lib.navsearch {
-    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-    vendorName = EWW
-    pluginName = Frontendsearch
-    extensionName = Dpf
-    controller = SearchFE
-    switchableControllerActions {
-        SearchFE {
-            1 = showSearchForm
-        }
-    }
-
-    settings =< plugin.tx_dpf.settings
-    persistence =< plugin.tx:dpf.persistence
-}
-
 # logo
 lib.logo = COA
 lib.logo {

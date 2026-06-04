@@ -6,6 +6,8 @@ plugin.tx_slubwebqucosa {
 	rootPid = 28
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
 	imprintPid =
+    # cat=plugin.tx_slubwebqucosa/links/0144; type=int+; label= Search results page Uid
+    searchResultsPid =
 }
 
 pageID {

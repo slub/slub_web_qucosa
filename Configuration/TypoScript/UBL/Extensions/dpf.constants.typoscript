@@ -1,11 +1,18 @@
 plugin.tx_dpf {
-
     settings {
-        pageID {
-            # cat=module.tx_dpf/link; type=int+; label== UID of the root page
-            root = 2
-            # cat=module.tx_dpf/link; type=int+; label== UID of the manual of the wizard
-            wizardManual = 2
+        universityCollection = fis_ULaffiliated
+        primaryUrnCollections = fulltext,secondary
+
+        fisDataServiceUrl = https://leuris.uni-leipzig.de/anchorwheel/api
+        zdbDataServiceUrl = https://zeitschriftendatenbank.de/api
+
+        defaultImportDocumentType {
+            crossref = 71
+            datacite = 0
+            pubmed = 0
+            k10plus = 53
+            bibtex = 0
+            riswos = 0
         }
     }
 }

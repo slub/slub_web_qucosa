@@ -20,7 +20,7 @@
                                 {settings.headerSubheader}
                             </p>
                         </div>
-                        <f:cObject typoscriptObjectPath="lib.navsearch"/>
+                        <f:render partial="Hero/Search" arguments="{_all}" />
                     </div>
                     <figure class="qsa_hero__figure">
                         <img src="{f:uri.resource(path:'Images/hero/hero-bg.png', extensionName: 'slub_web_qucosa')}"

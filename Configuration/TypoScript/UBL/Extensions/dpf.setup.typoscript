@@ -1,0 +1,27 @@
+# Restrict which GetFile API actions may be called from the public internet.
+# allowedHosts and deliverInactiveSecretKey are set per-environment in the site
+# template (not tracked here) under plugin.tx_dpf_getfile.settings.api.*
+[IP=devIP][hostname={$plugin.tx_dpf.settings.api.allowedHosts}]
+plugin.tx_dpf_getfile.settings.allowedActions {
+    1 = mets
+    2 = preview
+    3 = dataCite
+}
+[GLOBAL]
+
+lib.navsearch = FLUIDTEMPLATE
+lib.navsearch {
+    file = EXT:slub_web_qucosa/Resources/Private/Templates/Page/HeroSearch.html
+    partialRootPaths {
+        0 = EXT:slub_web_qucosa/Resources/Private/Partials/Page/
+        1 = EXT:slub_web_qucosa/Resources/Private/Partials/
+    }
+    variables {
+        searchPageUrl = TEXT
+        searchPageUrl.typolink {
+            parameter = {$plugin.tx_slubwebqucosa.searchResultsPid}
+            returnLast = url
+            forceAbsoluteUrl = 0
+        }
+    }
+}

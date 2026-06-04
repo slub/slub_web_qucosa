@@ -1,0 +1,32 @@
+<form method="get" action="/suche" class="qsa_hero__search-wrapper" id="smallsearch">
+    <div class="qsa_hero__search">
+        <input type="hidden" name="L" value="0">
+        <label class="sr-only" for="hero-search-query">
+            {f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}
+        </label>
+        <input type="text"
+               name="tx_find_find[q][default]"
+               id="hero-search-query"
+               placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}"
+               class="autocomplete" />
+        <button type="submit" id="submit" aria-label="Suche">
+            <span class="sr-only">
+                {f:translate(key: 'tx_slubwebqucosa.search.start', extensionName: 'slub_web_qucosa')}
+            </span>
+            <f:render partial="Icon" arguments="{icon: 'search'}" />
+        </button>
+        <button type="button"
+                aria-label="Sucheintrag löschen"
+                class="qsa_hero__search__reset btn-outline__without">
+            <span class="sr-only">
+                {f:translate(key: 'tx_slubwebqucosa.search.remove', extensionName: 'slub_web_qucosa')}
+            </span>
+            <f:render partial="Icon" arguments="{icon: 'close'}" />
+        </button>
+    </div>
+    <div class="qsa_hero__footer">
+        <a href="/suche" id="linkToAdvancedSearch" class="qsa_hero__link">
+            {f:translate(key: 'tx_slubwebqucosa.search.expanded', extensionName: 'slub_web_qucosa')}
+        </a>
+    </div>
+</form>
