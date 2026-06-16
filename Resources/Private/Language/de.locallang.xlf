@@ -68,8 +68,56 @@
 			</trans-unit>
 			<trans-unit id="tx_slubwebqucosa.search.info" xml:space="preserve">
 				<source>You can search in more detail by restricting your query to specific search fields from the outset. This is particularly useful if you already know which publication you are looking for. Select the appropriate field (e.g. title) and then enter your search term. You can search for groups of words (phrases) by using quotation marks.</source>
-				<target>Detaillierter suchen Sie, in dem Sie Ihre Anfrage von vornherein auf bestimmte Suchfelder gezielt einschränken. Das ist insbesondere dann sinnvoll, wenn Sie bereits wissen, welche Publikation Sie suchen. Wählen Sie das entsprechende Feld (z.B. Titel) aus und geben Sie danach Ihren Suchterm ein. Nach Wortgruppen (Phrasen) suchen Sie indem Sie Anführungszeichen verwenden.</target>
+				<target>Wählen Sie ein Feld und geben Sie Ihren Suchbegriff ein. Mit "+" lassen sich weitere Felder kombinieren. Phrasen suchen Sie in Anführungszeichen.</target>
 			</trans-unit>
+            <trans-unit id="search.form.label.title" xml:space="preserve">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="search.form.label.author" xml:space="preserve">
+                <source>Author</source>
+                <target>Autor</target>
+            </trans-unit>
+            <trans-unit id="search.form.label.abstract" xml:space="preserve">
+                <source>Abstract</source>
+                <target>Zusammenfassung</target>
+            </trans-unit>
+            <trans-unit id="search.form.label.tag" xml:space="preserve">
+                <source>Keywords</source>
+                <target>Schlagwörter</target>
+            </trans-unit>
+            <trans-unit id="search.form.label.corporation" xml:space="preserve">
+                <source>Institution</source>
+                <target>Institution</target>
+            </trans-unit>
+            <trans-unit id="search.form.addField" xml:space="preserve">
+                <source>Add field</source>
+                <target>Feld hinzufügen</target>
+            </trans-unit>
+            <trans-unit id="search.form.label.dateFrom" xml:space="preserve">
+                <source>Date</source>
+                <target>Datum</target>
+            </trans-unit>
+            <trans-unit id="search.form.label.dateTo" xml:space="preserve">
+                <source>To</source>
+                <target>Bis</target>
+            </trans-unit>
+            <trans-unit id="search.control.extendedSearch" xml:space="preserve">
+                <source>Extended Search</source>
+                <target>Erweiterte Suche</target>
+            </trans-unit>
+            <trans-unit id="search.resultList.documentsFound" xml:space="preserve">
+                <source>documents found</source>
+                <target>Dokumente gefunden</target>
+            </trans-unit>
+            <trans-unit id="search.resultList.nothingFound" xml:space="preserve">
+                <source>No results found</source>
+                <target>Keine Ergebnisse gefunden</target>
+            </trans-unit>
+            <trans-unit id="search.resultList.hasFiles" xml:space="preserve">
+                <source>Full text access</source>
+                <target>Volltextzugriff</target>
+            </trans-unit>
             <trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
 			    <source>Homepage</source>
 			    <target>Startseite</target>

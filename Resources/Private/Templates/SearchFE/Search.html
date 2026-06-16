@@ -1,4 +1,4 @@
-<div class="qsa_search-header__container">
+<div class="qsa_search-header__container{f:if(condition: '{extended}', then: ' qsa_search-header__container--expanded')}">
     <div class="qsa_search-header container">
         <div class="qsa_search-header__content">
             <div class="qsa_search-header__header">
@@ -7,87 +7,95 @@
                 </h1>
             </div>
 
-            <f:form action="search" name="query" class="qsa_search-header__search-wrapper" noCache="1" noCacheHash="1">
+            <form method="get" action="/suche" class="qsa_search-header__search-wrapper{f:if(condition: '{extended}', then: ' qsa_search-header__search-wrapper--hidden')}">
                 <div class="qsa_search-header__search">
                     <label class="sr-only" for="searchHeaderSearch">{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}</label>
-                    <f:form.textfield property="fulltext"
-                                      class="autocomplete"
-                                      name="search"
-                                      additionalAttributes="{aria-autocomplete: 'list'}"
-                                      placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}" id="searchHeaderSearch"
-                                      value="{query.fulltext}"/>
+                    <input type="text"
+                           name="tx_dpf_frontendsearch[query][fulltext]"
+                           class="autocomplete"
+                           aria-autocomplete="list"
+                           placeholder="{f:translate(key: 'tx_slubwebqucosa.search.placeholder', extensionName: 'slub_web_qucosa')}" id="searchHeaderSearch"
+                           value="{query.fulltext}"/>
 
-                    <f:form.button type="submit" additionalAttributes="{aria-label: 'Suche'}">
+                    <button type="submit" aria-label="Suche">
                         <span class="sr-only">Suche starten</span>
                         <f:render partial="Icon" arguments="{icon:'search'}" />
-                    </f:form.button>
+                    </button>
 
-                    <f:form.button class="qsa_search-header__search__reset btn-outline__without" type="button" additionalAttributes="{aria-label: 'Sucheintrag löschen'}">
+                    <button class="qsa_search-header__search__reset btn-outline__without" type="button" aria-label="Sucheintrag löschen">
                         <span class="sr-only">Sucheintrag löschen</span>
                         <f:render partial="Icon" arguments="{icon:'close'}" />
-                    </f:form.button>
+                    </button>
                 </div>
-            </f:form>
+            </form>
 
-            <f:form action="extendedSearch" name="query" class="qsa_search-header__advanced-search">
-                <div class="row qsa_search-header__advanced-search-row qsa_search-header__advanced-search__container">
+            <form method="get" action="/suche/erweitert" class="qsa_search-header__advanced-search{f:if(condition: '{extended}', then: ' qsa_search-header__advanced-search--expanded')}">
+                <div class="row qsa_search-header__advanced-search-row qsa_search-header__advanced-search__container{f:if(condition: '{extended}', then: ' qsa_search-header__advanced-search__container--expanded')}">
                     <div class="col-12 col-xl-8 qsa_search-header__advanced-search--expanded-fields">
                         <div class="qsa_search-header__advanced-search-inputs">
-                            <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="title">{f:translate(key: 'search.form.label.title', extensionName: 'slub_web_qucosa')}</label>
-                                <f:form.textfield property="title" class="qsa_input-group__input qsa_input-group__input-text"
-                                                  id="title"
-                                                  value="{query.title}"/>
+                            <div id="fieldQueryRows">
+                                <f:for each="{fieldQueries}" as="row" iteration="it">
+                                    <div class="qsa_field-query-row" style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+                                        <select class="qsa_field-query-name" name="tx_dpf_frontendsearch[fields][{it.index}][name]" style="height: 50px; padding: 0 12px; font-family: inherit; color: var(--color-gray-500); background-color: var(--color-input-background); border: 1px solid var(--color-gray-300); border-radius: 8px; box-sizing: border-box;">
+                                            <option value="title" {f:if(condition: '{row.field} == \'title\'', then: 'selected="selected"')}>{f:translate(key: 'search.form.label.title', extensionName: 'slub_web_qucosa')}</option>
+                                            <option value="author" {f:if(condition: '{row.field} == \'author\'', then: 'selected="selected"')}>{f:translate(key: 'search.form.label.author', extensionName: 'slub_web_qucosa')}</option>
+                                            <option value="abstract" {f:if(condition: '{row.field} == \'abstract\'', then: 'selected="selected"')}>{f:translate(key: 'search.form.label.abstract', extensionName: 'slub_web_qucosa')}</option>
+                                            <option value="tag" {f:if(condition: '{row.field} == \'tag\'', then: 'selected="selected"')}>{f:translate(key: 'search.form.label.tag', extensionName: 'slub_web_qucosa')}</option>
+                                            <option value="corporation" {f:if(condition: '{row.field} == \'corporation\'', then: 'selected="selected"')}>{f:translate(key: 'search.form.label.corporation', extensionName: 'slub_web_qucosa')}</option>
+                                        </select>
+                                        <input type="text" class="qsa_field-query-value qsa_input-group__input qsa_input-group__input-text"
+                                               name="tx_dpf_frontendsearch[fields][{it.index}][value]" value="{row.value}"/>
+                                        <f:if condition="{it.index} > 0">
+                                            <button type="button" class="qsa_btn__link qsa_field-query-remove" aria-label="Entfernen" onclick="this.closest('.qsa_field-query-row').remove();">&times;</button>
+                                        </f:if>
+                                    </div>
+                                </f:for>
                             </div>
-                            <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="author">{f:translate(key: 'search.form.label.author', extensionName: 'slub_web_qucosa')}</label>
-                                <f:form.textfield property="author" class="qsa_input-group__input qsa_input-group__input-text"
-                                                  id="author"
-                                                  value="{query.author}"/>
-                            </div>
-                            <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="abstract">{f:translate(key: 'search.form.label.abstract', extensionName: 'slub_web_qucosa')}</label>
-                                <f:form.textfield property="abstract" class="qsa_input-group__input qsa_input-group__input-text"
-                                                  id="abstract"
-                                                  value="{query.abstract}"/>
-                            </div>
-                            <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="tag">{f:translate(key: 'search.form.label.tag', extensionName: 'slub_web_qucosa')}</label>
-                                <f:form.textfield property="tag" class="qsa_input-group__input qsa_input-group__input-text"
-                                                  id="tag"
-                                                  value="{query.tag}"/>
-                            </div>
-                            <div class="qsa_input-group" data-input="text">
-                                <label class="qsa_input-group__label" for="corporation">{f:translate(key: 'search.form.label.corporation', extensionName: 'slub_web_qucosa')}</label>
-                                <f:form.textfield property="corporation" class="qsa_input-group__input qsa_input-group__input-text"
-                                                  id="corporation"
-                                                  value="{query.corporation}"/>
-                            </div>
+                            <button type="button" class="qsa_btn__link" id="addFieldQueryRow" style="display: block; margin-bottom: var(--spacing);">+ <f:translate key="search.form.addField" extensionName="slub_web_qucosa" /></button>
+                            <script>
+                                (function() {
+                                    document.getElementById('addFieldQueryRow').addEventListener('click', function() {
+                                        var rows = document.getElementById('fieldQueryRows');
+                                        var nextIndex = rows.querySelectorAll('.qsa_field-query-row').length;
+                                        var template = rows.querySelector('.qsa_field-query-row');
+                                        var row = template.cloneNode(true);
+                                        row.querySelector('.qsa_field-query-name').name = 'tx_dpf_frontendsearch[fields][' + nextIndex + '][name]';
+                                        row.querySelector('.qsa_field-query-name').selectedIndex = 0;
+                                        row.querySelector('.qsa_field-query-value').name = 'tx_dpf_frontendsearch[fields][' + nextIndex + '][value]';
+                                        row.querySelector('.qsa_field-query-value').value = '';
+                                        if (!row.querySelector('.qsa_field-query-remove')) {
+                                            var removeBtn = document.createElement('button');
+                                            removeBtn.type = 'button';
+                                            removeBtn.className = 'qsa_btn__link qsa_field-query-remove';
+                                            removeBtn.setAttribute('aria-label', 'Entfernen');
+                                            removeBtn.innerHTML = '&times;';
+                                            removeBtn.addEventListener('click', function() {
+                                                row.remove();
+                                            });
+                                            row.appendChild(removeBtn);
+                                        }
+                                        rows.appendChild(row);
+                                    });
+                                })();
+                            </script>
                             <div class="qsa_select qsa_select__header">
                                 <span class="qsa_select__label sr-only" id="documentType">Dokumententyp</span>
                                 <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-required="" data-showinsummary="">
-                                    <label class="qsa_select__label qsa_select__label-header" for="768999703"> Dokumententyp </label>
-
-
-                                    <f:form.select property="doctype" class="qsa_select__native js-selectNative qsa_select__native-header"
-                                                   options="{docTypes}" id="doctype" value="{query.doctype}"
-                                                   optionValueField="name" optionLabelField="displayName">
-                                        <f:form.select.option additionalAttributes="{disabled: '', label:'Leere Option'}" value="" selected="">Leere Option</f:form.select.option>
-                                    </f:form.select>
-
-                                    <div class="qsa_select__custom js-selectCustom qsa_select__custom-header " aria-hidden="true">
-                                        <div class="qsa_select__custom-trigger qsa_select__custom-trigger-header ">
-                                            <p class="">Dokumententyp </p>
-                                            <f:render partial="Icon" arguments="{icon:'arrow-down'}" />
-                                        </div>
-                                        <div class="qsa_select__custom-options ">
-                                            <div class="qsa_select__custom-option" data-value="all">
-                                                Keine Auswahl
-                                                <f:render partial="Icon" arguments="{icon:'check'}" />
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <select name="tx_dpf_frontendsearch[query][doctype]" id="doctype"
+                                            style="height: 50px; width: 100%; padding: 0 12px; font-family: inherit; color: var(--color-gray-500); background-color: var(--color-input-background); border: 1px solid var(--color-gray-300); border-radius: 8px; box-sizing: border-box;">
+                                        <option value="" {f:if(condition: '{query.doctype}', then: '', else: 'selected="selected"')}>Dokumententyp</option>
+                                        <f:for each="{docTypes}" as="label" key="value">
+                                            <option value="{value}" {f:if(condition: '{query.doctype} == {value}', then: 'selected="selected"')}>{label}</option>
+                                        </f:for>
+                                    </select>
                                 </div>
+                            </div>
+                            <div class="qsa_input-group" data-input="text" style="display: flex; align-items: center; gap: 8px; margin-top: var(--spacing);">
+                                <input type="text" name="tx_dpf_frontendsearch[query][from]" class="qsa_input-group__input qsa_input-group__input-text datepicker"
+                                       id="qsa_date-start" value="{query.from}"/>
+                                <span class="qsa_field__datepicker-connector">{f:translate(key: 'search.form.label.dateTo', extensionName: 'slub_web_qucosa')}</span>
+                                <input type="text" name="tx_dpf_frontendsearch[query][till]" class="qsa_input-group__input qsa_input-group__input-text datepicker"
+                                       id="qsa_date-end" value="{query.till}"/>
                             </div>
                         </div>
                     </div>
@@ -99,70 +107,55 @@
                     </div>
                 </div>
 
-                <div class="row qsa_search-header__advanced-search__container">
-
-                    <div class="col-12 col-xl-8">
-                        <div class="row qsa_field__datepicker-range">
-                            <div class="col-5 col-sm-3">
-                                <div class="qsa_field__datepicker-wrap qsa_hike">
-                                    <label for="qsa_date-start" class="qsa_field__datepicker-label sr-only">
-                                        Veröffentlichungszeitraum
-                                    </label>
-                                    <f:form.textfield property="qsa_date-start" type="text" class="qsa_input-group__input qsa_input-group__input-text datepicker"
-                                                      id="qsa_date-start"
-                                                      value="{query.from}"/>
-                                </div>
-                            </div>
-                            <span class="qsa_field__datepicker-connector">bis</span>
-                            <div class="col-5 col-sm-3">
-                                <div class="qsa_field__datepicker-wrap qsa_hike">
-                                    <label for="qsa_date-end" class="qsa_field__datepicker-label sr-only">
-                                        Enddatum
-                                    </label>
-                                    <f:form.textfield property="qsa_date-end" type="text" class="qsa_input-group__input qsa_input-group__input-text datepicker"
-                                                      id="qsa_date-end"
-                                                      value="{query.till}"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row qsa_search-header__advanced-search__container{f:if(condition: '{extended}', then: ' qsa_search-header__advanced-search__container--expanded')}">
 
                     <div class="col-12 col-xl-4 qsa_search-header__advanced-search__button-container">
-                        <f:form.button class="qsa_btn__submit submit" type="submit">
+                        <button class="qsa_btn__submit submit" type="submit">
                             {f:translate(key: 'tx_slubwebqucosa.search.action', extensionName: 'slub_web_qucosa')}
-                        </f:form.button>
+                        </button>
                     </div>
 
                     <div class="col-12 qsa_search-header__advanced-search-footer">
 
-                        <f:form.button class="qsa_btn__link reset" type="class">
+                        <a class="qsa_btn__link reset" href="/suche/erweitert" onclick="var f=this.closest('form');var clear=function(){f.querySelectorAll('input[type=text]').forEach(function(i){i.value='';i.setAttribute('data-empty','true');});};var resetRows=function(){var rows=f.querySelectorAll('.qsa_field-query-row');rows.forEach(function(r,idx){if(idx>0){r.remove();}else{r.querySelector('.qsa_field-query-name').selectedIndex=0;}});};var resetDoctype=function(){var d=f.querySelector('#doctype');if(d){d.selectedIndex=0;}};clear();resetRows();resetDoctype();setTimeout(function(){clear();resetDoctype();},0);setTimeout(function(){clear();resetDoctype();},50);setTimeout(function(){clear();resetDoctype();},250);return false;">
                            {f:translate(key: 'tx_slubwebqucosa.search.reset', extensionName: 'slub_web_qucosa')}
-                        </f:form.button>
+                        </a>
 
-                        <button id="closeAdvanced" class="qsa_btn__link">{f:translate(key: 'tx_slubwebqucosa.search.closeExtendedSearch', extensionName: 'slub_web_qucosa')}</button>
+                        <a id="closeAdvanced" class="qsa_btn__link" href="/suche">{f:translate(key: 'tx_slubwebqucosa.search.closeExtendedSearch', extensionName: 'slub_web_qucosa')}</a>
                     </div>
                 </div>
-            </f:form>
+            </form>
 
-            <span class="qsa_search-header__results">
-                <f:if condition="{resultList.total} > 1">
-            <f:then>
-                {resultList.total} <f:translate key="search.resultList.documentsFound"/>
-            </f:then>
-            <f:else>
-                <f:if condition="{resultList.total} == 1">
-                    <f:then>
-                        {resultList.total} <f:translate key="search.resultList.documentsFound"/>
-                    </f:then>
-                    <f:else>
-                        <f:translate key="search.resultList.nothingFound"/>
-                    </f:else>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs); width: 100%; margin-top: var(--spacing-xs);">
+                <span class="qsa_search-header__results">
+                    <f:if condition="{resultList.total} > 1">
+                <f:then>
+                    {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+                </f:then>
+                <f:else>
+                    <f:if condition="{resultList.total} == 1">
+                        <f:then>
+                            {resultList.total} <f:translate key="search.resultList.documentsFound"/>
+                        </f:then>
+                    </f:if>
+                </f:else>
+            </f:if>
+                </span>
+
+                <f:if condition="{resultList.total} > 0">
+                    <div class="qsa_search-result__filter-sort">
+                        <label for="searchSortSelect" class="sr-only">Sortierung</label>
+                        <select id="searchSortSelect" onchange="var re=/tx_dpf_frontendsearch(%5B|\[)(sort|from)(%5D|\])/;var parts=window.location.search.replace(/^\?/, '').split('&').filter(function(p){return p &amp;&amp; !re.test(p) &amp;&amp; p.indexOf('cHash')!==0;});parts.push('tx_dpf_frontendsearch[sort]=' + encodeURIComponent(this.value));window.location.href=window.location.pathname + '?' + parts.join('&');">
+                            <option value="" {f:if(condition: '{criteria.sort}', then: '', else: 'selected="selected"')}>Relevanz</option>
+                            <option value="year" {f:if(condition: '{criteria.sort} == \'year\'', then: 'selected="selected"')}>Neueste zuerst</option>
+                            <option value="title_asc" {f:if(condition: '{criteria.sort} == \'title_asc\'', then: 'selected="selected"')}>Alphabetisch (A-Z)</option>
+                            <option value="title_desc" {f:if(condition: '{criteria.sort} == \'title_desc\'', then: 'selected="selected"')}>Alphabetisch (Z-A)</option>
+                        </select>
+                    </div>
                 </f:if>
-            </f:else>
-        </f:if>
-            </span>
+            </div>
 
-            <div class="qsa_search-header__footer">
+            <div class="qsa_search-header__footer{f:if(condition: '{extended}', then: ' d-none')}">
                 <button class="qsa_search-header__link qsa_btn__link" id="openAdvanced">
                     <f:translate key="search.control.extendedSearch"/>
                 </button>
@@ -171,4 +164,9 @@
     </div>
 </div>
 
-<f:render partial="SearchFE/ResultList" arguments="{results: paginatedResults, currentPage: currentPage, resultList: resultList}"/>
+<f:if condition="{isLanding}">
+    <div id="recentSearchesContainer" class="qsa_search-result__container container" style="margin-top: var(--spacing);"></div>
+</f:if>
+
+<f:render partial="SearchFE/ResultList" arguments="{results: paginatedResults, currentPage: currentPage, resultList: resultList, docTypes: docTypes, landingPage: landingPage}"/>
+<f:render partial="SearchFE/Pagination" arguments="{pagination: pagination, criteria: criteria}"/>

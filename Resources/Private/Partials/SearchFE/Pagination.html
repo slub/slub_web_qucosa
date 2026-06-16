@@ -1,0 +1,31 @@
+<f:if condition="{pagination.totalPages} > 1">
+    <div class="qsa_pagination container">
+        <ul class="qsa_pagination__list qsa_tags">
+            <f:if condition="{pagination.hasPrev}">
+                <li>
+                    <f:link.action action="search" arguments="{pagination.prevArguments}" noCacheHash="1"
+                        class="qsa_btn__tag">&laquo;</f:link.action>
+                </li>
+            </f:if>
+            <f:for each="{pagination.pages}" as="page">
+                <li class="{f:if(condition: '{page} == {pagination.currentPage}', then: 'current')}">
+                    <f:if condition="{page} == {pagination.currentPage}">
+                        <f:then>
+                            <a class="qsa_pagination--active qsa_btn__tag qsa_btn__tag--inverted">{page}</a>
+                        </f:then>
+                        <f:else>
+                            <f:link.action action="search" arguments="{pagination.pageArguments.{page}}" noCacheHash="1"
+                                class="qsa_btn__tag">{page}</f:link.action>
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+            <f:if condition="{pagination.hasNext}">
+                <li>
+                    <f:link.action action="search" arguments="{pagination.nextArguments}" noCacheHash="1"
+                        class="qsa_btn__tag">&raquo;</f:link.action>
+                </li>
+            </f:if>
+        </ul>
+    </div>
+</f:if>

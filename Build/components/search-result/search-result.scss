@@ -3,6 +3,22 @@
 //      1. search-result
 //
 
+.qsa_search-result__filter-sort {
+    display: flex;
+    justify-content: flex-end;
+
+    select {
+        height: 50px;
+        padding: 0 12px;
+        font-family: $font-family-base-assistant;
+        color: var(--color-gray-500);
+        background-color: var(--color-input-background);
+        border: 1px solid var(--color-gray-300);
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+}
+
 .qsa_search-result {
 
     // container global auslagern?
@@ -71,6 +87,10 @@
         padding-right: var(--spacing-s);
     }
 
+    &--no-actions {
+        padding-right: var(--spacing-s);
+    }
+
     &:hover,
     &--active {
         z-index: 1;
@@ -128,9 +148,12 @@
         &-footer {
             order: 4;
             cursor: default;
+            display: flex;
+            flex-wrap: wrap;
 
             &__item {
                 font-size: $font-size-captions;
+                white-space: nowrap;
             }
         }
 

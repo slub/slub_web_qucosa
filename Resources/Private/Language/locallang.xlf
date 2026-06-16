@@ -59,6 +59,42 @@
 		<trans-unit id="tx_slubwebqucosa.search.info" xml:space="preserve">
 			<source>You can search in more detail by restricting your query to specific search fields from the outset. This is particularly useful if you already know which publication you are looking for. Select the appropriate field (e.g. title) and then enter your search term. You can search for groups of words (phrases) by using quotation marks.</source>
 		</trans-unit>
+		<trans-unit id="search.form.label.title" xml:space="preserve">
+			<source>Title</source>
+		</trans-unit>
+		<trans-unit id="search.form.label.author" xml:space="preserve">
+			<source>Author</source>
+		</trans-unit>
+		<trans-unit id="search.form.label.abstract" xml:space="preserve">
+			<source>Abstract</source>
+		</trans-unit>
+		<trans-unit id="search.form.label.tag" xml:space="preserve">
+			<source>Keywords</source>
+		</trans-unit>
+		<trans-unit id="search.form.label.corporation" xml:space="preserve">
+			<source>Institution</source>
+		</trans-unit>
+		<trans-unit id="search.form.addField" xml:space="preserve">
+			<source>Add field</source>
+		</trans-unit>
+		<trans-unit id="search.form.label.dateFrom" xml:space="preserve">
+			<source>Date</source>
+		</trans-unit>
+		<trans-unit id="search.form.label.dateTo" xml:space="preserve">
+			<source>To</source>
+		</trans-unit>
+		<trans-unit id="search.control.extendedSearch" xml:space="preserve">
+			<source>Extended Search</source>
+		</trans-unit>
+		<trans-unit id="search.resultList.documentsFound" xml:space="preserve">
+			<source>documents found</source>
+		</trans-unit>
+		<trans-unit id="search.resultList.nothingFound" xml:space="preserve">
+			<source>No results found</source>
+		</trans-unit>
+		<trans-unit id="search.resultList.hasFiles" xml:space="preserve">
+			<source>Full text access</source>
+		</trans-unit>
 		<trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
 			<source>Homepage</source>
 		</trans-unit>

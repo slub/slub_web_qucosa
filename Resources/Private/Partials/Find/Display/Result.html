@@ -4,7 +4,7 @@
 	<div class="qsa_search-result__item">
 		<h2 class="h6 qsa_search-result__item-title">
 			<a class="qsa_search-result__item-title-link"
-				href="{dpf:uri.preview(documentIdentifier: document.record_id, pageUid: settings.landingPageUID)}">
+				href="{dpf:uri.preview(documentIdentifier: document.id, pageUid: settings.landingPageUID)}">
 				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
 					<f:then>
 						<f:render

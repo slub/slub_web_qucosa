@@ -18,6 +18,24 @@
 //   @section 1. Button and links
 //
 
+// Bootstrap's utilities/api module (which generates .d-none, .sr-only etc.) isn't
+// imported, so define the utility classes actually used in this codebase manually.
+.d-none {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 // @section 1.1 Button default styles
 .btn {
     padding: 7px 10px;
@@ -137,5 +155,38 @@
 
 // @section 5. Button tags
 
+// @section 6. Landing page download tool (legacy DLF toolbox markup)
+
+.tx-dlf-toolbox {
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul li::before {
+        content: none !important;
+    }
+
+    .tx-dlf-tools-pdf-page a {
+        display: inline-block;
+        padding: 11px 23px;
+        font-family: $font-family-roboto-regular;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: var(--color-text-color-inverted);
+        text-transform: uppercase;
+        background-color: var(--color-primary);
+        border: 1px solid transparent;
+        border-radius: 8px;
+
+        &:hover {
+            color: var(--color-text-color);
+            background-color: var(--color-text-color-inverted);
+            border: 1px solid var(--color-primary);
+        }
+    }
+}
 
 // end of button.scss file

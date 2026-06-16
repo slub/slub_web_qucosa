@@ -111,6 +111,8 @@ page {
 
     includeJSFooter {
         client = EXT:slub_web_qucosa/Resources/Public/JavaScript/qsa--body.min.js
+        searchExtendedCleanup = EXT:slub_web_qucosa/Resources/Public/JavaScript/search-extended-cleanup.js
+        searchRecent = EXT:slub_web_qucosa/Resources/Public/JavaScript/search-recent.js
     }
 
     10 = FLUIDTEMPLATE
