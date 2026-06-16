@@ -2,6 +2,14 @@
 ## Tab Allgemein
 mod.wizards.newContentElement.wizardItems.common {
     elements {
+        header {
+            iconIdentifier = content-header
+            title = Header Only
+            description = Heading and subheading (used in hero area)
+            tt_content_defValues {
+                CType = header
+            }
+        }
         tx_slubwebqucosa_headericonteaser {
             iconIdentifier = tx-slubwebqucosa-content-beside-text-img-left
             title = LLL:EXT:slub_web_qucosa/Resources/Private/Language/locallang_tca.xlf:tx_slubwebqucosa_headericonteaser.label
@@ -85,10 +93,10 @@ mod.wizards.newContentElement.wizardItems.common {
         }
     }
 
-    show := addToList(tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser)
+    show := addToList(header,tx_slubwebqucosa_headericonteaser,tx_slubwebqucosa_headerteaser,tx_slubwebqucosa_carouselitem,tx_slubwebqucosa_logoitem,tx_slubwebqucosa_accordionitem,tx_slubwebqucosa_flipcarditem,tx_slubwebqucosa_text,tx_slubwebqucosa_sidebarimage,tx_slubwebqucosa_sidebarlinks,tx_slubwebqucosa_sidebarteaser)
 
     ## Nicht benötigte aus Liste entfernen
-    show := removeFromList(header,textmedia,bullets,table,uploads)
+    show := removeFromList(textmedia,bullets,table,uploads)
 }
 
 ## Tab: Special
