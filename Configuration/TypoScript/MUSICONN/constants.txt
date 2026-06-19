@@ -9,4 +9,6 @@ plugin.tx_slubwebqucosa {
 	pageIdPrivacy =
   # cat=plugin.tx_slubwebqucosa/links/0145; type=int+; label= FAQ Uid
 	pageIdFaq =
+  # cat=plugin.tx_slubwebqucosa/links/0146; type=string; label= Search URL (external)
+	searchUrl =
 }
