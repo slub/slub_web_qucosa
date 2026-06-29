@@ -6,24 +6,23 @@ a, a:visited, h3, ul.errors li, #nav .buttonactive,
 .tx-slubopus4frontend fieldset textarea:focus,
 #tx_slubopus4frontend-prevStep:hover,
 #tx_slubopus4frontend-submit:hover,
-#tx_slubopus4frontend-reset:hover { color:#025; }
+#tx_slubopus4frontend-reset:hover { color:#080890; }
 
 #dedscontent .tabbar,
 #dedscontent .tabcontent,
 .tx-slubopus4frontend .processsteps a,
 .tx-slubopus4frontend .processsteps a:visited,
 .tx-slubopus4frontend fieldset textarea:focus,
-.tx-slubopus4frontend fieldset select:focus  { border-color: #025; }
+.tx-slubopus4frontend fieldset select:focus  { border-color: #080890; }
 
 .tx-dlf-toolbox .tx-dlf-tools-pdf-page a, #smallsearch, #dedscontent .tabbar a.active,
 .tx-slubopus4frontend .processsteps a.selected, #dedscontent form#search input[type="submit"],
 .tx-slubopus4frontend .processsteps a:visited,
-.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #025; }
+.tx-slubopus4frontend .processsteps a.selected:visited { background-color: #080890; }
 
 
-#header { background-image:url(../../Images/TUD/header.jpg); }
-#navlogo #homelink { background-image:url(../../Images/TUD/logo.jpg); }
-#ghosticon { background-image: url(../../Images/TUD/ghosticon.png); }
+#header { background-image:url(../../Images/TUD/header.png); background-size: cover; background-position: right center; }
+#navlogo #homelink { background-image:url(../../Images/TUD/logo.png); background-size: 90% auto; background-repeat: no-repeat; background-position: center center; bottom: 30px; margin-left: 5px; }
 
 
 #navend a#dini {
@@ -54,4 +53,4 @@ div.searchExtForm form.form-inline .form-group label {
   min-width: 150px;
 }
 
-.tx-dlf-metadata .affiliation { background-color: #025; }
+.tx-dlf-metadata .affiliation { background-color: #080890; }
