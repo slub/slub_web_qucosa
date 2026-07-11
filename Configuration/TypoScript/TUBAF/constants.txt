@@ -3,4 +3,7 @@ plugin.tx_slubwebqucosa {
 	rootPid =
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
 	imprintPid =
+	mandant = TUBAF
+	author = Technische Universität Bergakademie Freiberg - Qucosa
+	sitemapUrl = https://tubaf.qucosa.de/sitemap_qucosa.xml
 }

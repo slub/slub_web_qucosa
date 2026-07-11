@@ -3,4 +3,7 @@ plugin.tx_slubwebqucosa {
 	rootPid =
   # cat=plugin.tx_slubwebqucosa/links/0142; type=int+; label= Imprint page Uid
 	imprintPid =
+	mandant = MONARCH
+	author = Technische Universität Chemnitz - Qucosa
+	sitemapUrl = https://monarch.qucosa.de/sitemap_qucosa.xml
 }
