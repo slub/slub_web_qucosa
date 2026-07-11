@@ -13,7 +13,7 @@
     _paq.push(['setTrackerUrl', u+'matomo.php']);
     _paq.push(['setSiteId', '{siteId}']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; <f:if condition="{defer} != 0">g.defer=true; </f:if>g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    g.type='text/javascript'; g.async=true; <f:if condition="!{noDefer}">g.defer=true; </f:if>g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
 <noscript><p><img src="//matomo.slub-dresden.de/matomo.php?idsite={siteId}&amp;rec=1" style="border:0;" alt="" /></p></noscript>
