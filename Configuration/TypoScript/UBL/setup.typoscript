@@ -3,6 +3,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/UBL/Extensions/lib.logo.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/UBL/Extensions/lib.heroContent.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/UBL/Extensions/dpf.setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slub_web_qucosa/Configuration/TypoScript/UBL/Extensions/landingpage.setup.typoscript">
 
 page {
 

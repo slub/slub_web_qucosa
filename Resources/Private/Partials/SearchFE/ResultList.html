@@ -35,13 +35,10 @@
                         </f:if>
                     </div>
 
-                    <f:if condition="{entry._source.openAccess} == 'true' || {entry._source.hasFiles}">
+                    <f:if condition="{entry._source.openAccess} == 'true'">
                         <p class="qsa_search-result__item-place">
                             <f:if condition="{entry._source.openAccess} == 'true'">
                                 <q>Open Access</q>
-                            </f:if>
-                            <f:if condition="{entry._source.hasFiles}">
-                                <q><f:translate key="search.resultList.hasFiles" extensionName="dpf" default="Volltextzugriff"/></q>
                             </f:if>
                         </p>
                     </f:if>

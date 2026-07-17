@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{hasDocument}">
+    <f:then>
+        <div class="qsa_landingpage">
+
+            <f:format.raw>{metadataHtml}</f:format.raw>
+
+            <f:if condition="{downloads}">
+                <div class="tx-dlf-toolbox">
+                    <span class="tx-dlf-tools-pdf-page">
+                        <ul>
+                            <f:for each="{downloads}" as="download">
+                                <li>
+                                    <a href="{download.url}" class="piwik_download">
+                                        {download.label}
+                                    </a>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </span>
+                </div>
+            </f:if>
+
+            <f:if condition="{relatedItems}">
+                <div class="tx-dlf-toolbox">
+                    <span class="tx-dlf-tools-related-items-page">
+                        <ul>
+                            <f:for each="{relatedItems}" as="item">
+                                <li>
+                                    <f:if condition="{item.url}">
+                                        <f:then>
+                                            <a href="{item.url}">{item.title -> f:format.htmlspecialchars()}</a>
+                                        </f:then>
+                                        <f:else>
+                                            {item.title -> f:format.htmlspecialchars()}
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </span>
+                </div>
+            </f:if>
+
+            <f:format.raw>{coinsHtml}</f:format.raw>
+
+        </div>
+    </f:then>
+    <f:else>
+        <div class="qsa_landingpage">
+            <p class="dpf-document-unavailable">
+                <f:translate key="tx_dpf.document_unavailable" extensionName="dpf"
+                             default="The requested document could not be displayed." />
+            </p>
+        </div>
+    </f:else>
+</f:if>
+
+</html>

@@ -1,0 +1,62 @@
+plugin.tx_dpf_landingpage {
+    view {
+        templateRootPaths {
+            0 = EXT:dpf/Resources/Private/Templates/
+            10 = EXT:slub_web_qucosa/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:dpf/Resources/Private/Partials/
+            10 = EXT:slub_web_qucosa/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:dpf/Resources/Private/Layouts/
+            10 = EXT:slub_web_qucosa/Resources/Private/Layouts/
+        }
+    }
+
+    settings {
+        # TYPO3 page uid for the GetFileController (apiPid=46 on test, set per environment)
+        apiPid = 46
+        # Configuration PID for tx_dpf_metadata records
+        pages = 1
+        # Landing page uid — update to new page uid after cutover from PI plugins
+        landingPage = 40
+        # METS fileGrp for downloads (DOWNLOAD on UBL)
+        fileGrpDownload = DOWNLOAD
+        # Separator for multi-value metadata fields
+        separator = ,
+
+        # Document type labels — mirrors plugin.tx_dpf_metadata.labels.type
+        labels {
+            type {
+                article = Artikel
+                bachelor_thesis = Bachelorarbeit
+                book = Buch
+                monograph = Buch
+                report = Bericht
+                contained_work = Buchbeitrag
+                in_book = Buchbeitrag
+                diploma_thesis = Diplomarbeit
+                doctoral_thesis = Dissertation
+                research_paper = Forschungsbericht
+                habilitation_thesis = Habilitation
+                musical_notation = Komposition
+                composition = Komposition
+                proceeding = Konferenzband
+                in_proceeding = Konferenzbeitrag
+                magister_thesis = Magisterarbeit
+                master_thesis = Masterarbeit / Staatsexamensarbeit
+                multivolume_work = Mehrbändiges Werk
+                preprint = Preprint
+                series = Schriftenreihe
+                text = Sonstige Veröffentlichung
+                study = Sonstige Veröffentlichung
+                paper = Studienarbeit
+                lecture = Vorlesung/Vortrag
+                journal = Zeitschrift/Zeitung
+                periodical = Zeitschrift / Periodikum
+                issue = Zeitschriftenheft / Teil eines Periodikums
+            }
+        }
+    }
+}

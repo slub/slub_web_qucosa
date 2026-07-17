@@ -114,10 +114,6 @@
                 <source>No results found</source>
                 <target>Keine Ergebnisse gefunden</target>
             </trans-unit>
-            <trans-unit id="search.resultList.hasFiles" xml:space="preserve">
-                <source>Full text access</source>
-                <target>Volltextzugriff</target>
-            </trans-unit>
             <trans-unit id="tx_slubwebqucosa.breadcrum.homepage" xml:space="preserve">
 			    <source>Homepage</source>
 			    <target>Startseite</target>
