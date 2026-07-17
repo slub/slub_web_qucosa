@@ -1,0 +1,54 @@
+//
+//    @tableOfContent
+//      1. Metadata list (doctype badge, title prominence)
+
+
+// @section 1. Metadata list
+
+.qsa_landingpage .tx-dpf-metadata {
+
+    // Doctype badge above the title (#2040) — dt/dd.doctype hooks come from
+    // the tx_dpf_metadata wrap (dpf upgrade wizard dpfFixLandingPageLayoutMetadata)
+    dt.doctype {
+        display: none;
+    }
+
+    dd.doctype {
+        display: inline-block;
+        margin-bottom: var(--spacing-xs);
+        padding: 4px 8px;
+        font-size: $font-size-captions;
+        line-height: 1;
+        letter-spacing: .4px;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        border-radius: 12px;
+    }
+
+    // Title/subtitle prominence (#2040) — keep dt.title in the accessibility
+    // tree (visually hidden), drop the redundant subtitle label entirely
+    dt.title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    dt.subtitle {
+        display: none;
+    }
+
+    dd.title {
+        margin: 0 0 var(--spacing-xs) 0;
+        font-size: 1.8em;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+
+    dd.subtitle {
+        margin-bottom: var(--spacing-s);
+        font-weight: 600;
+        color: var(--color-gray-600);
+    }
+}
