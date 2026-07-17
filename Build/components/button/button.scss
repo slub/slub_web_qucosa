@@ -168,6 +168,12 @@
         content: none !important;
     }
 
+    .tx-dlf-tools-pdf-page ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-s);
+    }
+
     .tx-dlf-tools-pdf-page a {
         display: inline-block;
         padding: 11px 23px;
@@ -185,6 +191,16 @@
             color: var(--color-text-color);
             background-color: var(--color-text-color-inverted);
             border: 1px solid var(--color-primary);
+        }
+    }
+
+    .tx-dlf-tools-related-items-page a {
+        display: block;
+        padding: var(--spacing-xs) 0;
+
+        &:hover {
+            color: var(--color-primary);
+            text-decoration: underline;
         }
     }
 }
