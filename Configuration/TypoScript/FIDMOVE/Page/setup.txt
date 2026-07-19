@@ -41,7 +41,10 @@ page {
       }
 
       layoutRootPath = EXT:slub_web_qucosa/Resources/Private/Layouts/FIDMOVE/
-      partialRootPath = EXT:slub_web_qucosa/Resources/Private/Partials/FIDMOVE/
+      partialRootPaths {
+        10 = EXT:slub_web_qucosa/Resources/Private/Partials/FIDMOVE/
+        20 = EXT:slub_web_qucosa/Resources/Private/Partials/
+      }
 
       dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
