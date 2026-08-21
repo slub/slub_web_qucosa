@@ -6,6 +6,28 @@
 
             <f:format.raw>{metadataHtml}</f:format.raw>
 
+            <f:if condition="{parentItems}">
+                <div class="tx-dpf-parentlink tx-dpf-metadata tx-dlf-metadata">
+                    <div>
+                        <dl>
+                            <f:for each="{parentItems}" as="item">
+                                <dt>{item.relationLabel}</dt>
+                                <dd>
+                                    <f:if condition="{item.url}">
+                                        <f:then>
+                                            <a href="{item.url}">{item.title -> f:format.htmlspecialchars()}</a>
+                                        </f:then>
+                                        <f:else>
+                                            {item.title -> f:format.htmlspecialchars()}
+                                        </f:else>
+                                    </f:if>
+                                </dd>
+                            </f:for>
+                        </dl>
+                    </div>
+                </div>
+            </f:if>
+
             <f:if condition="{downloads}">
                 <div class="tx-dlf-toolbox">
                     <span class="tx-dlf-tools-pdf-page">
