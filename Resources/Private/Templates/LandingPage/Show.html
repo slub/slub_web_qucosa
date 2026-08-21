@@ -4,6 +4,17 @@
     <f:then>
         <div class="qsa_landingpage">
 
+            <f:if condition="{embargoInfo.isEmbargoed}">
+                <div class="tx-dpf-embargo tx-dpf-metadata tx-dlf-metadata">
+                    <div>
+                        <dl>
+                            <dt>Zugangsstatus</dt>
+                            <dd>Embargoed Access (bis {embargoInfo.embargoDate})</dd>
+                        </dl>
+                    </div>
+                </div>
+            </f:if>
+
             <f:format.raw>{metadataHtml}</f:format.raw>
 
             <f:if condition="{parentItems}">
