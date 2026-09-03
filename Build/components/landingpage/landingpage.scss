@@ -3,6 +3,7 @@
 //      1. Metadata list (doctype badge, title prominence)
 //      2. Link styling (hierarchy/license/URN links)
 //      3. "Beziehungen" clickable-area spacing
+//      4. Author/editor prominence, above the title
 
 
 // @section 1. Metadata list
@@ -77,4 +78,57 @@
 .qsa_landingpage .tx-dpf-parentlink a::after {
     top: 0;
     bottom: 0;
+}
+
+// @section 4. Author/editor prominence (#2040 item 4) — dt/dd.author and
+// dt/dd.editor hooks come from tx_dpf_metadata (author rows shipped with
+// class="author" already; editor rows get class="editor" from dpf upgrade
+// wizard dpfMoveEditorGroupsAboveTitle, which also moves both groups above
+// the title). Role label stays visible but small ("Rollen müssen sichtbar
+// sein" — ticket rejects the mouseover-only legacy behaviour); names render
+// side by side like the legacy system, prominent over the role.
+.qsa_landingpage .tx-dpf-metadata {
+    dt.author,
+    dt.editor {
+        margin-bottom: var(--spacing-3xs);
+        font-size: $font-size-captions;
+        font-weight: 400;
+        color: var(--color-gray-600);
+    }
+
+    dd.author,
+    dd.editor {
+        display: inline;
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    dd.author + dd.author::before {
+        content: ", ";
+        font-weight: 400;
+    }
+
+    // .editor-list (not a bare ul) so qsa.scss's ul:not([class]) li::before
+    // circle-bullet rule doesn't also match and bleed its position/border/
+    // size through on the content property this rule sets.
+    ul.editor-list {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline;
+        }
+
+        li + li::before {
+            content: ", ";
+            font-weight: 400;
+        }
+    }
+
+    // No explicit line-break needed after the last dd.author/dd.editor: the
+    // next field's dt is block-level by default and starts a new line
+    // regardless of the inline dd's that precede it.
 }
