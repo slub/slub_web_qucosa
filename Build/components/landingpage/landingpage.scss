@@ -1,6 +1,8 @@
 //
 //    @tableOfContent
 //      1. Metadata list (doctype badge, title prominence)
+//      2. Link styling (hierarchy/license/URN links)
+//      3. "Beziehungen" clickable-area spacing
 
 
 // @section 1. Metadata list
@@ -51,4 +53,28 @@
         font-weight: 600;
         color: var(--color-gray-600);
     }
+}
+
+// @section 2. Link styling (#2040) — hierarchy/license/URN links render as
+// plain <a> with no .qsa_text__link class, so page.scss's global
+// a:not(.qsa_text__link) rule makes them inherit surrounding text color and
+// lose their underline. Restore standard link/visited coloring, scoped to
+// this container so download and related-item buttons (styled separately in
+// button.scss) are unaffected.
+.qsa_landingpage .tx-dpf-metadata a:not(.qsa_text__link) {
+    color: blue;
+    text-decoration: underline;
+
+    &:visited {
+        color: orange;
+    }
+}
+
+// @section 3. "Beziehungen" clickable-area spacing (#2040) — page.scss's
+// global a::after hit-area extends 15px above/below every link, bleeding
+// into neighboring dt/dd rows in this dense list. Shrink it here without
+// touching the shared global rule used elsewhere on the site.
+.qsa_landingpage .tx-dpf-parentlink a::after {
+    top: 0;
+    bottom: 0;
 }
