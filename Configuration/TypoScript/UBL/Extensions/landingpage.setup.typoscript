@@ -1,3 +1,11 @@
+# Suppress the generic "<h1>{page.title}</h1>" from Singlecolumn.html (#2040)
+# on the landing page only — its own template already shows document
+# title/subtitle prominently. Page uid must match settings.landingPage below.
+[globalVar = TSFE:id = 40]
+    page.10.variables.hideTitle = TEXT
+    page.10.variables.hideTitle.value = 1
+[global]
+
 plugin.tx_dpf_landingpage {
     view {
         templateRootPaths {
