@@ -62,7 +62,14 @@
 // lose their underline. Restore standard link/visited coloring, scoped to
 // this container so download and related-item buttons (styled separately in
 // button.scss) are unaffected.
-.qsa_landingpage .tx-dpf-metadata a:not(.qsa_text__link) {
+// .tx-dlf-tools-related-items-page (the "contained items"/constituent list,
+// getRelatedItems() — Jahresspiegel-style child docs) missed this fix
+// originally, only .tx-dpf-metadata/.tx-dpf-parentlink were scoped. Scoped by
+// its own span class, not the wider .tx-dlf-toolbox, since that class is
+// shared with the download buttons (styled separately in button.scss:158) —
+// widening to .tx-dlf-toolbox would repaint those buttons too.
+.qsa_landingpage .tx-dpf-metadata a:not(.qsa_text__link),
+.qsa_landingpage .tx-dlf-tools-related-items-page a:not(.qsa_text__link) {
     color: blue;
     text-decoration: underline;
 
