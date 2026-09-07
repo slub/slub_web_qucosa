@@ -74,6 +74,16 @@ plugin.tx_dpf_landingpage {
                 sourceEdition = Quellenedition
                 specialIssue = Sonderheft einer Zeitschrift
             }
+
+            # Peer Review status labels (#2047: German spellouts instead of raw yes/no/unknown)
+            # — mirrors plugin.tx_dpf_metadata.labels.peer_review
+            peer_review {
+                yes = ja
+                no = nein
+                unknown = unbekannt
+                true = ja
+                false = nein
+            }
         }
     }
 }
