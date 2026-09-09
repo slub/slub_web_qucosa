@@ -84,6 +84,20 @@ plugin.tx_dpf_landingpage {
                 true = ja
                 false = nein
             }
+
+            # Dokumenttyp (mods:genre) sub-classification labels (#2050)
+            document_type {
+                researchArticle = Wissenschaftlicher Artikel
+                editorial = Editorial / Vorwort / Nachwort
+                reviewArticle = Review
+                recension = Rezension
+                courseMaterial = Praxisbeitrag
+                letterToTheEditor = Letter to the Editor / Korrespondenz
+                meetingAbstract = Meeting Abstract
+                corrigendum = Erratum
+                commentary = Gesetzeskommentar
+                annotation = Entscheidungsanmerkung
+            }
         }
     }
 }
