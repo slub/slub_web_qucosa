@@ -79,11 +79,11 @@
                                 })();
                             </script>
                             <div class="qsa_select qsa_select__header">
-                                <span class="qsa_select__label sr-only" id="documentType">Dokumententyp</span>
+                                <span class="qsa_select__label sr-only" id="documentType">Publikationstyp</span>
                                 <div class="qsa_select__wrapper  qsa_select__wrapper-header" data-required="" data-showinsummary="">
                                     <select name="tx_dpf_frontendsearch[query][doctype]" id="doctype"
                                             style="height: 50px; width: 100%; padding: 0 12px; font-family: inherit; color: var(--color-gray-500); background-color: var(--color-input-background); border: 1px solid var(--color-gray-300); border-radius: 8px; box-sizing: border-box;">
-                                        <option value="" {f:if(condition: '{query.doctype}', then: '', else: 'selected="selected"')}>Dokumententyp</option>
+                                        <option value="" {f:if(condition: '{query.doctype}', then: '', else: 'selected="selected"')}>Publikationstyp</option>
                                         <f:for each="{docTypes}" as="label" key="value">
                                             <option value="{value}" {f:if(condition: '{query.doctype} == {value}', then: 'selected="selected"')}>{label}</option>
                                         </f:for>
