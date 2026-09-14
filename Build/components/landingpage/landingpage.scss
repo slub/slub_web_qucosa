@@ -4,7 +4,7 @@
 //      2. Link styling (hierarchy/license/URN links)
 //      3. "Beziehungen" clickable-area spacing
 //      4. Author/editor prominence, above the title
-//      5. AutorIn affiliation hover box (#2047 item 2)
+//      5. AutorIn/HerausgeberIn affiliation hover box (#2047 item 2)
 
 
 // @section 1. Metadata list
@@ -141,19 +141,28 @@
     // regardless of the inline dd's that precede it.
 }
 
-// @section 5. AutorIn affiliation hover box (#2047 item 2) — legacy
-// (content.css, tx-dlf-metadata .affiliation) shows the personal AutorIn's
-// institution on hover as a small popover, driven by an empty
-// <span class="affiliation"> already present in the wrap (dd.author's
-// value.override, tx_dpf_metadata uid 394/395) and populated the same way in
-// both stacks (affiliation1..15, one mods:affiliation per name position) —
-// this is a straight CSS port, no markup change needed. Legacy only ever
-// wired this for personal AutorIn, not HerausgeberIn or institution roles,
-// so scope matches: no .editor/.corporation span exists to style. The richer
-// multi-field title="" tooltip (ORCID/GND/etc, all 4 roles) is this
-// project's own separate addition and is left as-is — it's a text
-// complement for assistive tech / no-hover input, this box is the visual
-// legacy-parity piece.
+// @section 5. AutorIn/HerausgeberIn affiliation hover box (#2047 item 2) —
+// legacy (content.css, tx-dlf-metadata .affiliation) shows a personal name's
+// institution on hover as a small popover, driven by an
+// <span class="affiliation"> in the wrap. AutorIn already had the span at
+// all 3 positions (dd.author's value.override, tx_dpf_metadata uid 394/395,
+// affiliation1..3 fields, role="aut"-scoped). HerausgeberIn (personal
+// editor) never had the span at any position — dpf commit adding a parallel
+// affiliationEditor1..3 field family (role="edt"-scoped, the two roles don't
+// share one field family) and splicing the span into the editor-list <li>
+// wrap, same shape as dd.author. Institution roles (AutorIn/HerausgeberIn
+// (Institution)) are still out of scope — no affiliation concept for an
+// institution, its identity IS the display text; their title="" GND/ROR
+// tooltip already covers that. The richer multi-field title="" tooltip
+// (ORCID/GND/etc, all 4 roles) is this project's own separate addition and
+// is left as-is — it's a text complement for assistive tech / no-hover
+// input, this box is the visual legacy-parity piece.
+//
+// dd.author is a block-level dd, so position:relative lands directly on it.
+// dd.editor's names render as <li> inside .editor-list (an inline ul), so
+// the anchor for position:relative must be the <li> itself, not dd.editor —
+// anchoring on dd.editor would offset the box to the whole editor group's
+// corner instead of above the specific hovered name.
 //
 // Colors follow this stylesheet's own tokens, not legacy's literal #C00 red
 // — legacy's own content.css comment on this rule reads "Override
@@ -161,7 +170,8 @@
 // that red box was left-over dev/debug styling, never a deliberate design
 // choice worth reproducing.
 .qsa_landingpage .tx-dpf-metadata {
-    dd.author {
+    dd.author,
+    .editor-list li {
         position: relative;
         cursor: pointer;
     }
@@ -196,7 +206,8 @@
     }
 
     // Don't show an empty box when a name has no affiliation data.
-    dd.author:hover .affiliation:not(:empty) {
+    dd.author:hover .affiliation:not(:empty),
+    .editor-list li:hover .affiliation:not(:empty) {
         visibility: visible;
         opacity: 1;
     }
