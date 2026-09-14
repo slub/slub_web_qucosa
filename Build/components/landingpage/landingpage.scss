@@ -4,6 +4,7 @@
 //      2. Link styling (hierarchy/license/URN links)
 //      3. "Beziehungen" clickable-area spacing
 //      4. Author/editor prominence, above the title
+//      5. AutorIn affiliation hover box (#2047 item 2)
 
 
 // @section 1. Metadata list
@@ -138,4 +139,57 @@
     // No explicit line-break needed after the last dd.author/dd.editor: the
     // next field's dt is block-level by default and starts a new line
     // regardless of the inline dd's that precede it.
+}
+
+// @section 5. AutorIn affiliation hover box (#2047 item 2) — legacy
+// (content.css, tx-dlf-metadata .affiliation) shows the personal AutorIn's
+// institution on hover as a small popover, driven by an empty
+// <span class="affiliation"> already present in the wrap (dd.author's
+// value.override, tx_dpf_metadata uid 394/395) and populated the same way in
+// both stacks (affiliation1..15, one mods:affiliation per name position) —
+// this is a straight CSS port, no markup change needed. Legacy only ever
+// wired this for personal AutorIn, not HerausgeberIn or institution roles,
+// so scope matches: no .editor/.corporation span exists to style. The richer
+// multi-field title="" tooltip (ORCID/GND/etc, all 4 roles) is this
+// project's own separate addition and is left as-is — it's a text
+// complement for assistive tech / no-hover input, this box is the visual
+// legacy-parity piece.
+//
+// Colors follow this stylesheet's own tokens, not legacy's literal #C00 red
+// — legacy's own content.css comment on this rule reads "Override
+// display:none... Should be removed when we use this in production", i.e.
+// that red box was left-over dev/debug styling, never a deliberate design
+// choice worth reproducing.
+.qsa_landingpage .tx-dpf-metadata {
+    dd.author {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .affiliation {
+        position: absolute;
+        top: -2.2em;
+        left: 0;
+        z-index: 1;
+
+        padding: 4px 8px;
+        margin: 0;
+
+        border-radius: 4px;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        font-size: $font-size-captions;
+        font-weight: 400;
+        white-space: nowrap;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .15s ease-in-out;
+    }
+
+    // Don't show an empty box when a name has no affiliation data.
+    dd.author:hover .affiliation:not(:empty) {
+        visibility: visible;
+        opacity: 1;
+    }
 }
