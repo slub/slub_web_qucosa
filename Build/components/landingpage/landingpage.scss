@@ -167,6 +167,14 @@
     }
 
     .affiliation {
+        // The span carries an inline style="display:none" in the markup
+        // (opt-in default, same as legacy) — display:none always wins over
+        // visibility/opacity regardless of specificity, so it must be
+        // overridden here or the box never renders at all. Legacy's own rule
+        // has the identical override for the identical reason (content.css:
+        // "Override display: none at the element to opt-in").
+        display: block !important;
+
         position: absolute;
         top: -2.2em;
         left: 0;
