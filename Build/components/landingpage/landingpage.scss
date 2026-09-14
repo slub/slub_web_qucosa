@@ -77,6 +77,24 @@
     &:visited {
         color: orange;
     }
+
+    // License link icon (dd.licence's <img><text>) inherits the anchor's
+    // underline, drawing a line under the icon too (#2040).
+    // text-decoration:none on a descendant breaks the decorating box in
+    // CSS3 Text Decoration - the line stops under the icon without
+    // touching the anchor's own rule.
+    img {
+        text-decoration: none;
+    }
+}
+
+// License icon-to-label gap (#2040): the tx_dpf_metadata wrap (dpfRemoveLicenceIconGapUnderline)
+// removes the literal &nbsp; that used to sit between icon and label - it was a real
+// text character inside the underlined <a>, always underlined regardless of the img
+// rule above. Restore the visual gap via margin instead, which text-decoration never
+// paints under.
+.qsa_landingpage dd.licence img {
+    margin-right: .35em;
 }
 
 // @section 3. "Beziehungen" clickable-area spacing (#2040) — page.scss's
