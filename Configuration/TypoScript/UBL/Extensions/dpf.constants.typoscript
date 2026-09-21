@@ -3,6 +3,9 @@ plugin.tx_dpf {
         universityCollection = fis_ULaffiliated
         primaryUrnCollections = fulltext,secondary
 
+        # No research data or software is published on LeuPub (#2048)
+        searchExcludedDocTypes = researchData,software
+
         fisDataServiceUrl = https://leuris.uni-leipzig.de/anchorwheel/api
         zdbDataServiceUrl = https://zeitschriftendatenbank.de/api
 
