@@ -194,11 +194,16 @@
         }
     }
 
-    .tx-dlf-tools-related-items-page a {
+    // Links stay inline so only the link text is clickable, not the whole row (#2040).
+    .tx-dlf-tools-related-items-page {
         display: block;
-        padding: var(--spacing-xs) 0;
+        margin-bottom: var(--spacing-s);
 
-        &:hover {
+        li + li {
+            margin-top: .4em;
+        }
+
+        a:hover {
             color: var(--color-primary);
             text-decoration: underline;
         }
