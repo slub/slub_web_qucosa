@@ -31,8 +31,8 @@ plugin.tx_dpf_landingpage {
         landingPage = 40
         # METS fileGrp for downloads (DOWNLOAD on UBL)
         fileGrpDownload = DOWNLOAD
-        # Separator for multi-value metadata fields
-        separator = ,
+        # Separator for multi-value metadata fields: not set here, the assembler default ", " applies.
+        # (TypoScript trims trailing blanks, so a ", " value cannot be set in this file.)
 
         # Document type labels — mirrors plugin.tx_dpf_metadata.labels.type
         labels {
