@@ -196,9 +196,6 @@
 
     // Links stay inline so only the link text is clickable, not the whole row (#2040).
     .tx-dlf-tools-related-items-page {
-        display: block;
-        margin-bottom: var(--spacing-s);
-
         li + li {
             margin-top: .4em;
         }

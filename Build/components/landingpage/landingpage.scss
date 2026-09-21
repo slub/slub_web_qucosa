@@ -97,6 +97,13 @@
     margin-right: .35em;
 }
 
+// Usage notes text block (#2040): a separate content element that follows the
+// landing page plugin. The space above it belongs to the block itself, so it
+// keeps its distance to both the relation list and the download buttons.
+.qsa_content-area__body > .frame-type-list + .qsa_content-item__content {
+    padding-top: var(--spacing-s);
+}
+
 // @section 3. "Beziehungen" clickable-area spacing (#2040) — page.scss's
 // global a::after hit-area extends 15px above/below every link, bleeding
 // into neighboring dt/dd rows in this dense list. Shrink it here without
