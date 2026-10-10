@@ -176,12 +176,11 @@
 // affiliationEditor1..3 field family (role="edt"-scoped, the two roles don't
 // share one field family) and splicing the span into the editor-list <li>
 // wrap, same shape as dd.author. Institution roles (AutorIn/HerausgeberIn
-// (Institution)) are still out of scope — no affiliation concept for an
-// institution, its identity IS the display text; their title="" GND/ROR
-// tooltip already covers that. The richer multi-field title="" tooltip
-// (ORCID/GND/etc, all 4 roles) is this project's own separate addition and
-// is left as-is — it's a text complement for assistive tech / no-hover
-// input, this box is the visual legacy-parity piece.
+// (Institution)) use the same box through span.has-ids (#2051), filled with
+// their GND/ROR-ID. The box text for every role also carries the identifiers
+// (ORCID/GND/etc.) — there is no native title="" tooltip any more, so only
+// this one box style exists. The box is hidden with opacity, not visibility,
+// so assistive tech still reads its text.
 //
 // dd.author is a block-level dd, so position:relative lands directly on it.
 // dd.editor's names render as <li> inside .editor-list (an inline ul), so
@@ -196,7 +195,8 @@
 // choice worth reproducing.
 .qsa_landingpage .tx-dpf-metadata {
     dd.author,
-    .editor-list li {
+    .editor-list li,
+    .has-ids {
         position: relative;
         cursor: pointer;
     }
@@ -225,15 +225,15 @@
         font-weight: 400;
         white-space: nowrap;
 
-        visibility: hidden;
         opacity: 0;
+        pointer-events: none;
         transition: opacity .15s ease-in-out;
     }
 
     // Don't show an empty box when a name has no affiliation data.
     dd.author:hover .affiliation:not(:empty),
-    .editor-list li:hover .affiliation:not(:empty) {
-        visibility: visible;
+    .editor-list li:hover .affiliation:not(:empty),
+    .has-ids:hover .affiliation:not(:empty) {
         opacity: 1;
     }
 }
