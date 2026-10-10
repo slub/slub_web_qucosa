@@ -7,16 +7,10 @@
                 <div class="qsa_search-result__item">
                     <h2 class="h6 qsa_search-result__item-title">
                         <f:if condition="{entry._source.objectIdentifier}">
-                            <f:then>
-                                <a class="qsa_search-result__item-title-link"
-                                   href="/landing-page/{entry._source.objectIdentifier}">
-                                    {entry._source.title.0}
-                                </a>
-                            </f:then>
-                            <f:else>
-                                {entry._source.title.0}
-                            </f:else>
-                        </f:if>
+                            <f:then><a class="qsa_search-result__item-title-link"
+                                   href="/landing-page/{entry._source.objectIdentifier}">{entry._source.title.0}</a></f:then>
+                            <f:else>{entry._source.title.0}</f:else>
+                        </f:if><f:if condition="{entry._source.volume}">, {entry._source.volume}</f:if>
                     </h2>
 
                     <div class="qsa_search-result__item-info">
